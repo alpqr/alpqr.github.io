@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qbakedshader.cpp -->
+  <title>QBakedShaderKey Class | Shader Tools 5.12</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td >Qt 5.12</td><td ><a href="qtshadertools-index.html">Shader Tools</a></td><td ><a href="qtshadertools-module.html">C++ Classes</a></td><td >QBakedShaderKey</td></tr></table><table class="buildversion"><tr>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
+        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">QBakedShaderKey Class</h1>
+<!-- $$$QBakedShaderKey-brief -->
+<p>Specifies the shading language, the version with flags, and the variant. <a href="#details">More...</a></p>
+<!-- @@@QBakedShaderKey -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QBakedShaderKey&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += shadertools</td></tr></table></div><ul>
+<li><a href="qbakedshaderkey-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderkey.html#ShaderSource-enum">ShaderSource</a></b> { SpirvShader, GlslShader, HlslShader, DxbcShader, ..., MetalLibShader }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderkey.html#ShaderVariant-enum">ShaderVariant</a></b> { StandardShader, BatchableVertexShader }</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderkey.html#QBakedShaderKey">QBakedShaderKey</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderkey.html#QBakedShaderKey-1">QBakedShaderKey</a></b>(QBakedShaderKey::ShaderSource <i>s</i>, const QBakedShaderVersion &amp;<i>sver</i>, QBakedShaderKey::ShaderVariant <i>svar</i> = StandardShader)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderkey.html#setSource">setSource</a></b>(QBakedShaderKey::ShaderSource <i>s</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderkey.html#setSourceVariant">setSourceVariant</a></b>(QBakedShaderKey::ShaderVariant <i>svar</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderkey.html#setSourceVersion">setSourceVersion</a></b>(const QBakedShaderVersion &amp;<i>sver</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QBakedShaderKey::ShaderSource </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderkey.html#source">source</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QBakedShaderKey::ShaderVariant </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderkey.html#sourceVariant">sourceVariant</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QBakedShaderVersion </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderkey.html#sourceVersion">sourceVersion</a></b>() const</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$QBakedShaderKey-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>Specifies the shading language, the version with flags, and the variant.</p>
+<p>A default constructed <a href="qbakedshaderkey.html">QBakedShaderKey</a> has source set to <a href="qbakedshaderkey.html#ShaderSource-enum">SpirvShader</a> and <a href="qbakedshaderkey.html#sourceVersion">sourceVersion</a> set to 100. <a href="qbakedshaderkey.html#sourceVariant">sourceVariant</a> defaults to <a href="qbakedshaderkey.html#ShaderVariant-enum">StandardShader</a>.</p>
+</div>
+<!-- @@@QBakedShaderKey -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$ShaderSource$$$SpirvShader$$$GlslShader$$$HlslShader$$$DxbcShader$$$MslShader$$$DxilShader$$$MetalLibShader -->
+<h3 class="fn" id="ShaderSource-enum"><a name="ShaderSource-enum"></a>enum QBakedShaderKey::<span class="name">ShaderSource</span></h3>
+<p>Describes what kind of shader code an entry contains.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QBakedShaderKey::SpirvShader</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">SPIR-V</td></tr>
+<tr><td class="topAlign"><code>QBakedShaderKey::GlslShader</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">GLSL</td></tr>
+<tr><td class="topAlign"><code>QBakedShaderKey::HlslShader</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">HLSL</td></tr>
+<tr><td class="topAlign"><code>QBakedShaderKey::DxbcShader</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">Direct3D bytecode (HLSL compiled by <code>fxc</code>)</td></tr>
+<tr><td class="topAlign"><code>QBakedShaderKey::MslShader</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">Metal Shading Language</td></tr>
+<tr><td class="topAlign"><code>QBakedShaderKey::DxilShader</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">Direct3D bytecode (HLSL compiled by <code>dxc</code>)</td></tr>
+<tr><td class="topAlign"><code>QBakedShaderKey::MetalLibShader</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">Pre-compiled Metal bytecode</td></tr>
+</table></div>
+<!-- @@@ShaderSource -->
+<!-- $$$ShaderVariant$$$StandardShader$$$BatchableVertexShader -->
+<h3 class="fn" id="ShaderVariant-enum"><a name="ShaderVariant-enum"></a>enum QBakedShaderKey::<span class="name">ShaderVariant</span></h3>
+<p>Describes what kind of shader code an entry contains.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QBakedShaderKey::StandardShader</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">The normal, unmodified version of the shader code.</td></tr>
+<tr><td class="topAlign"><code>QBakedShaderKey::BatchableVertexShader</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Vertex shader rewritten to be suitable for Qt Quick scenegraph batching.</td></tr>
+</table></div>
+<!-- @@@ShaderVariant -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QBakedShaderKey[overload1]$$$QBakedShaderKey -->
+<h3 class="fn" id="QBakedShaderKey"><a name="QBakedShaderKey"></a>QBakedShaderKey::<span class="name">QBakedShaderKey</span>()</h3>
+<p>Default constructs an instance of QBakedShaderKey.</p><!-- @@@QBakedShaderKey -->
+<!-- $$$QBakedShaderKey$$$QBakedShaderKeyQBakedShaderKey::ShaderSourceconstQBakedShaderVersion&QBakedShaderKey::ShaderVariant -->
+<h3 class="fn" id="QBakedShaderKey-1"><a name="QBakedShaderKey-1"></a>QBakedShaderKey::<span class="name">QBakedShaderKey</span>(<span class="type"><a href="qbakedshaderkey.html#ShaderSource-enum">QBakedShaderKey::ShaderSource</a></span> <i>s</i>, const <span class="type"><a href="qbakedshaderversion.html">QBakedShaderVersion</a></span> &amp;<i>sver</i>, <span class="type"><a href="qbakedshaderkey.html#ShaderVariant-enum">QBakedShaderKey::ShaderVariant</a></span> <i>svar</i> = StandardShader)</h3>
+<p>Default constructs an instance of QBakedShaderKey.</p><!-- @@@QBakedShaderKey -->
+<!-- $$$setSource[overload1]$$$setSourceQBakedShaderKey::ShaderSource -->
+<h3 class="fn" id="setSource"><a name="setSource"></a><span class="type">void</span> QBakedShaderKey::<span class="name">setSource</span>(<span class="type"><a href="qbakedshaderkey.html#ShaderSource-enum">QBakedShaderKey::ShaderSource</a></span> <i>s</i>)</h3>
+<p><b>See also </b><a href="qbakedshaderkey.html#source">source</a>().</p>
+<!-- @@@setSource -->
+<!-- $$$setSourceVariant[overload1]$$$setSourceVariantQBakedShaderKey::ShaderVariant -->
+<h3 class="fn" id="setSourceVariant"><a name="setSourceVariant"></a><span class="type">void</span> QBakedShaderKey::<span class="name">setSourceVariant</span>(<span class="type"><a href="qbakedshaderkey.html#ShaderVariant-enum">QBakedShaderKey::ShaderVariant</a></span> <i>svar</i>)</h3>
+<p><b>See also </b><a href="qbakedshaderkey.html#sourceVariant">sourceVariant</a>().</p>
+<!-- @@@setSourceVariant -->
+<!-- $$$setSourceVersion[overload1]$$$setSourceVersionconstQBakedShaderVersion& -->
+<h3 class="fn" id="setSourceVersion"><a name="setSourceVersion"></a><span class="type">void</span> QBakedShaderKey::<span class="name">setSourceVersion</span>(const <span class="type"><a href="qbakedshaderversion.html">QBakedShaderVersion</a></span> &amp;<i>sver</i>)</h3>
+<p><b>See also </b><a href="qbakedshaderkey.html#sourceVersion">sourceVersion</a>().</p>
+<!-- @@@setSourceVersion -->
+<!-- $$$source[overload1]$$$source -->
+<h3 class="fn" id="source"><a name="source"></a><span class="type"><a href="qbakedshaderkey.html#ShaderSource-enum">QBakedShaderKey::ShaderSource</a></span> QBakedShaderKey::<span class="name">source</span>() const</h3>
+<p><b>See also </b><a href="qbakedshaderkey.html#setSource">setSource</a>().</p>
+<!-- @@@source -->
+<!-- $$$sourceVariant[overload1]$$$sourceVariant -->
+<h3 class="fn" id="sourceVariant"><a name="sourceVariant"></a><span class="type"><a href="qbakedshaderkey.html#ShaderVariant-enum">QBakedShaderKey::ShaderVariant</a></span> QBakedShaderKey::<span class="name">sourceVariant</span>() const</h3>
+<p><b>See also </b><a href="qbakedshaderkey.html#setSourceVariant">setSourceVariant</a>().</p>
+<!-- @@@sourceVariant -->
+<!-- $$$sourceVersion[overload1]$$$sourceVersion -->
+<h3 class="fn" id="sourceVersion"><a name="sourceVersion"></a><span class="type"><a href="qbakedshaderversion.html">QBakedShaderVersion</a></span> QBakedShaderKey::<span class="name">sourceVersion</span>() const</h3>
+<p><b>See also </b><a href="qbakedshaderkey.html#setSourceVersion">setSourceVersion</a>().</p>
+<!-- @@@sourceVersion -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

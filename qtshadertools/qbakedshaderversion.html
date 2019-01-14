@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qbakedshader.cpp -->
+  <title>QBakedShaderVersion Class | Shader Tools 5.12</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td >Qt 5.12</td><td ><a href="qtshadertools-index.html">Shader Tools</a></td><td ><a href="qtshadertools-module.html">C++ Classes</a></td><td >QBakedShaderVersion</td></tr></table><table class="buildversion"><tr>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
+        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">QBakedShaderVersion Class</h1>
+<!-- $$$QBakedShaderVersion-brief -->
+<p>Specifies the shading language version. <a href="#details">More...</a></p>
+<!-- @@@QBakedShaderVersion -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QBakedShaderVersion&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += shadertools</td></tr></table></div><ul>
+<li><a href="qbakedshaderversion-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderversion.html#Flag-enum">Flag</a></b> { GlslEs }</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderversion.html#QBakedShaderVersion">QBakedShaderVersion</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderversion.html#QBakedShaderVersion-1">QBakedShaderVersion</a></b>(int <i>v</i>, int <i>f</i> = ...)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderversion.html#flags">flags</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderversion.html#setFlags">setFlags</a></b>(int <i>f</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderversion.html#setVersion">setVersion</a></b>(int <i>v</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qbakedshaderversion.html#version">version</a></b>() const</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$QBakedShaderVersion-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>Specifies the shading language version.</p>
+<p>While languages like SPIR-V or the Metal Shading Language use traditional version numbers, shaders for other APIs can use slightly different versioning schemes. All those are mapped to a single version number in here, however. For HLSL, the version refers to the Shader Model version, like 5.0, 5.1, or 6.0&#x2e; For GLSL an additional flag is needed to choose between GLSL and GLSL/ES.</p>
+<p>Below is a list with the most common examples of shader versions for different graphics APIs:</p>
+<ul>
+<li>Vulkan (SPIR-V): 100</li>
+<li>OpenGL: 120, 330, 440, etc.</li>
+<li>OpenGL ES: 100 with <a href="qbakedshaderversion.html#Flag-enum">GlslEs</a>, 300 with <a href="qbakedshaderversion.html#Flag-enum">GlslEs</a>, etc.</li>
+<li>Direct3D: 50, 51, 60</li>
+<li>Metal: 12, 20</li>
+</ul>
+<p>A default constructed <a href="qbakedshaderversion.html">QBakedShaderVersion</a> contains a version of 100 and no flags set.</p>
+</div>
+<!-- @@@QBakedShaderVersion -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Flag$$$GlslEs -->
+<h3 class="fn" id="Flag-enum"><a name="Flag-enum"></a>enum QBakedShaderVersion::<span class="name">Flag</span></h3>
+<p>Describes the flags that can be set.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QBakedShaderVersion::GlslEs</code></td><td class="topAlign tblval"><code>0x01</code></td><td class="topAlign">Indicates that GLSL/ES is meant in combination with GlslShader</td></tr>
+</table></div>
+<!-- @@@Flag -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QBakedShaderVersion[overload1]$$$QBakedShaderVersion -->
+<h3 class="fn" id="QBakedShaderVersion"><a name="QBakedShaderVersion"></a>QBakedShaderVersion::<span class="name">QBakedShaderVersion</span>()</h3>
+<p>Default constructs an instance of QBakedShaderVersion.</p><!-- @@@QBakedShaderVersion -->
+<!-- $$$QBakedShaderVersion$$$QBakedShaderVersionintint -->
+<h3 class="fn" id="QBakedShaderVersion-1"><a name="QBakedShaderVersion-1"></a>QBakedShaderVersion::<span class="name">QBakedShaderVersion</span>(<span class="type">int</span> <i>v</i>, <span class="type">int</span> <i>f</i> = ...)</h3>
+<p>Default constructs an instance of QBakedShaderVersion.</p><!-- @@@QBakedShaderVersion -->
+<!-- $$$flags[overload1]$$$flags -->
+<h3 class="fn" id="flags"><a name="flags"></a><span class="type">int</span> QBakedShaderVersion::<span class="name">flags</span>() const</h3>
+<p><b>See also </b><a href="qbakedshaderversion.html#setFlags">setFlags</a>().</p>
+<!-- @@@flags -->
+<!-- $$$setFlags[overload1]$$$setFlagsint -->
+<h3 class="fn" id="setFlags"><a name="setFlags"></a><span class="type">void</span> QBakedShaderVersion::<span class="name">setFlags</span>(<span class="type">int</span> <i>f</i>)</h3>
+<p><b>See also </b><a href="qbakedshaderversion.html#flags">flags</a>().</p>
+<!-- @@@setFlags -->
+<!-- $$$setVersion[overload1]$$$setVersionint -->
+<h3 class="fn" id="setVersion"><a name="setVersion"></a><span class="type">void</span> QBakedShaderVersion::<span class="name">setVersion</span>(<span class="type">int</span> <i>v</i>)</h3>
+<p><b>See also </b><a href="qbakedshaderversion.html#version">version</a>().</p>
+<!-- @@@setVersion -->
+<!-- $$$version[overload1]$$$version -->
+<h3 class="fn" id="version"><a name="version"></a><span class="type">int</span> QBakedShaderVersion::<span class="name">version</span>() const</h3>
+<p><b>See also </b><a href="qbakedshaderversion.html#setVersion">setVersion</a>().</p>
+<!-- @@@version -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

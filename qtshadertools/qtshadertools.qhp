@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>org.qt-project.qtshadertools.5120</namespace>
+    <virtualFolder>qtshadertools</virtualFolder>
+    <metaData name="version" value="5.12.0"/>
+    <customFilter name="QtShaderTools 5.12.0">
+        <filterAttribute>5.12.0</filterAttribute>
+        <filterAttribute>qtshadertools</filterAttribute>
+    </customFilter>
+    <filterSection>
+        <filterAttribute>5.12.0</filterAttribute>
+        <filterAttribute>qtrefdoc</filterAttribute>
+        <filterAttribute>qtshadertools</filterAttribute>
+        <toc>
+            <section ref="qtshadertools-index.html" title="Qt Shader Tools">
+                <section ref="qtshadertools-module.html" title="C++ Classes">
+                    <section ref="qbakedshader.html" title="QBakedShader Class Reference">
+                        <section ref="qbakedshader-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qbakedshadercode.html" title="QBakedShaderCode Class Reference">
+                        <section ref="qbakedshadercode-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qbakedshaderkey.html" title="QBakedShaderKey Class Reference">
+                        <section ref="qbakedshaderkey-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qbakedshaderversion.html" title="QBakedShaderVersion Class Reference">
+                        <section ref="qbakedshaderversion-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qshaderbaker.html" title="QShaderBaker Class Reference">
+                        <section ref="qshaderbaker-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qshaderdescription.html" title="QShaderDescription Class Reference">
+                        <section ref="qshaderdescription-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qshaderdescription-blockvariable.html" title="QShaderDescription::BlockVariable Class Reference">
+                        <section ref="qshaderdescription-blockvariable-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qshaderdescription-inoutvariable.html" title="QShaderDescription::InOutVariable Class Reference">
+                        <section ref="qshaderdescription-inoutvariable-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qshaderdescription-pushconstantblock.html" title="QShaderDescription::PushConstantBlock Class Reference">
+                        <section ref="qshaderdescription-pushconstantblock-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qshaderdescription-uniformblock.html" title="QShaderDescription::UniformBlock Class Reference">
+                        <section ref="qshaderdescription-uniformblock-members.html" title="List of all members"/>
+                    </section>
+                </section>
+                <section ref="" title="Examples"/>
+            </section>
+        </toc>
+        <keywords>
+            <keyword name="BlockVariable" id="QShaderDescription::BlockVariable" ref="qshaderdescription-blockvariable.html"/>
+            <keyword name="Copyright Notices" id="Copyright Notices" ref="copyright-notices.html"/>
+            <keyword name="InOutVariable" id="QShaderDescription::InOutVariable" ref="qshaderdescription-inoutvariable.html"/>
+            <keyword name="PushConstantBlock" id="QShaderDescription::PushConstantBlock" ref="qshaderdescription-pushconstantblock.html"/>
+            <keyword name="QBakedShader" id="QBakedShader" ref="qbakedshader.html"/>
+            <keyword name="QBakedShader::ComputeStage" id="QBakedShader::ComputeStage" ref="qbakedshader.html#ShaderStage-enum"/>
+            <keyword name="QBakedShader::FragmentStage" id="QBakedShader::FragmentStage" ref="qbakedshader.html#ShaderStage-enum"/>
+            <keyword name="QBakedShader::GeometryStage" id="QBakedShader::GeometryStage" ref="qbakedshader.html#ShaderStage-enum"/>
+            <keyword name="QBakedShader::ShaderStage" id="QBakedShader::ShaderStage" ref="qbakedshader.html#ShaderStage-enum"/>
+            <keyword name="QBakedShader::TessControlStage" id="QBakedShader::TessControlStage" ref="qbakedshader.html#ShaderStage-enum"/>
+            <keyword name="QBakedShader::TessEvaluationStage" id="QBakedShader::TessEvaluationStage" ref="qbakedshader.html#ShaderStage-enum"/>
+            <keyword name="QBakedShader::VertexStage" id="QBakedShader::VertexStage" ref="qbakedshader.html#ShaderStage-enum"/>
+            <keyword name="QBakedShaderCode" id="QBakedShaderCode" ref="qbakedshadercode.html"/>
+            <keyword name="QBakedShaderKey" id="QBakedShaderKey" ref="qbakedshaderkey.html"/>
+            <keyword name="QBakedShaderKey::BatchableVertexShader" id="QBakedShaderKey::BatchableVertexShader" ref="qbakedshaderkey.html#ShaderVariant-enum"/>
+            <keyword name="QBakedShaderKey::DxbcShader" id="QBakedShaderKey::DxbcShader" ref="qbakedshaderkey.html#ShaderSource-enum"/>
+            <keyword name="QBakedShaderKey::DxilShader" id="QBakedShaderKey::DxilShader" ref="qbakedshaderkey.html#ShaderSource-enum"/>
+            <keyword name="QBakedShaderKey::GlslShader" id="QBakedShaderKey::GlslShader" ref="qbakedshaderkey.html#ShaderSource-enum"/>
+            <keyword name="QBakedShaderKey::HlslShader" id="QBakedShaderKey::HlslShader" ref="qbakedshaderkey.html#ShaderSource-enum"/>
+            <keyword name="QBakedShaderKey::MetalLibShader" id="QBakedShaderKey::MetalLibShader" ref="qbakedshaderkey.html#ShaderSource-enum"/>
+            <keyword name="QBakedShaderKey::MslShader" id="QBakedShaderKey::MslShader" ref="qbakedshaderkey.html#ShaderSource-enum"/>
+            <keyword name="QBakedShaderKey::ShaderSource" id="QBakedShaderKey::ShaderSource" ref="qbakedshaderkey.html#ShaderSource-enum"/>
+            <keyword name="QBakedShaderKey::ShaderVariant" id="QBakedShaderKey::ShaderVariant" ref="qbakedshaderkey.html#ShaderVariant-enum"/>
+            <keyword name="QBakedShaderKey::SpirvShader" id="QBakedShaderKey::SpirvShader" ref="qbakedshaderkey.html#ShaderSource-enum"/>
+            <keyword name="QBakedShaderKey::StandardShader" id="QBakedShaderKey::StandardShader" ref="qbakedshaderkey.html#ShaderVariant-enum"/>
+            <keyword name="QBakedShaderVersion" id="QBakedShaderVersion" ref="qbakedshaderversion.html"/>
+            <keyword name="QBakedShaderVersion::Flag" id="QBakedShaderVersion::Flag" ref="qbakedshaderversion.html#Flag-enum"/>
+            <keyword name="QBakedShaderVersion::GlslEs" id="QBakedShaderVersion::GlslEs" ref="qbakedshaderversion.html#Flag-enum"/>
+            <keyword name="QShaderBaker" id="QShaderBaker" ref="qshaderbaker.html"/>
+            <keyword name="QShaderBaker::GeneratedShader" id="QShaderBaker::GeneratedShader" ref="qshaderbaker.html#GeneratedShader-typedef"/>
+            <keyword name="QShaderDescription" id="QShaderDescription" ref="qshaderdescription.html"/>
+            <keyword name="QShaderDescription::Bool" id="QShaderDescription::Bool" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Bool2" id="QShaderDescription::Bool2" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Bool3" id="QShaderDescription::Bool3" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Bool4" id="QShaderDescription::Bool4" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::DMat2" id="QShaderDescription::DMat2" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::DMat2x3" id="QShaderDescription::DMat2x3" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::DMat2x4" id="QShaderDescription::DMat2x4" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::DMat3" id="QShaderDescription::DMat3" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::DMat3x2" id="QShaderDescription::DMat3x2" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::DMat3x4" id="QShaderDescription::DMat3x4" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::DMat4" id="QShaderDescription::DMat4" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::DMat4x2" id="QShaderDescription::DMat4x2" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::DMat4x3" id="QShaderDescription::DMat4x3" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Double" id="QShaderDescription::Double" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Double2" id="QShaderDescription::Double2" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Double3" id="QShaderDescription::Double3" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Double4" id="QShaderDescription::Double4" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Float" id="QShaderDescription::Float" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Int" id="QShaderDescription::Int" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Int2" id="QShaderDescription::Int2" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Int3" id="QShaderDescription::Int3" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Int4" id="QShaderDescription::Int4" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Mat2" id="QShaderDescription::Mat2" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Mat2x3" id="QShaderDescription::Mat2x3" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Mat2x4" id="QShaderDescription::Mat2x4" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Mat3" id="QShaderDescription::Mat3" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Mat3x2" id="QShaderDescription::Mat3x2" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Mat3x4" id="QShaderDescription::Mat3x4" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Mat4" id="QShaderDescription::Mat4" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Mat4x2" id="QShaderDescription::Mat4x2" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Mat4x3" id="QShaderDescription::Mat4x3" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Sampler1D" id="QShaderDescription::Sampler1D" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Sampler1DArray" id="QShaderDescription::Sampler1DArray" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Sampler2D" id="QShaderDescription::Sampler2D" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Sampler2DArray" id="QShaderDescription::Sampler2DArray" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Sampler2DMS" id="QShaderDescription::Sampler2DMS" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Sampler2DMSArray" id="QShaderDescription::Sampler2DMSArray" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Sampler3D" id="QShaderDescription::Sampler3D" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Sampler3DArray" id="QShaderDescription::Sampler3DArray" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::SamplerCube" id="QShaderDescription::SamplerCube" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::SamplerCubeArray" id="QShaderDescription::SamplerCubeArray" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Struct" id="QShaderDescription::Struct" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Uint" id="QShaderDescription::Uint" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Uint2" id="QShaderDescription::Uint2" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Uint3" id="QShaderDescription::Uint3" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Uint4" id="QShaderDescription::Uint4" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Unknown" id="QShaderDescription::Unknown" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::VarType" id="QShaderDescription::VarType" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Vec2" id="QShaderDescription::Vec2" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Vec3" id="QShaderDescription::Vec3" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="QShaderDescription::Vec4" id="QShaderDescription::Vec4" ref="qshaderdescription.html#VarType-enum"/>
+            <keyword name="Qt Shader Tools" id="Qt Shader Tools" ref="qtshadertools-index.html"/>
+            <keyword name="QtShaderTools" id="QtShaderTools" ref="qtshadertools-module.html"/>
+            <keyword name="SPIRV-Cross" id="SPIRV-Cross" ref="qtshadertools-attribution-spirvcross.html"/>
+            <keyword name="UniformBlock" id="QShaderDescription::UniformBlock" ref="qshaderdescription-uniformblock.html"/>
+            <keyword name="arrayDims" id="BlockVariable::arrayDims" ref="qshaderdescription-blockvariable.html#arrayDims-var"/>
+            <keyword name="arrayStride" id="BlockVariable::arrayStride" ref="qshaderdescription-blockvariable.html#arrayStride-var"/>
+            <keyword name="availableShaders" id="QBakedShader::availableShaders" ref="qbakedshader.html#availableShaders"/>
+            <keyword name="bake" id="QShaderBaker::bake" ref="qshaderbaker.html#bake"/>
+            <keyword name="binding" id="InOutVariable::binding" ref="qshaderdescription-inoutvariable.html#binding-var"/>
+            <keyword name="binding" id="UniformBlock::binding" ref="qshaderdescription-uniformblock.html#binding-var"/>
+            <keyword name="blockName" id="UniformBlock::blockName" ref="qshaderdescription-uniformblock.html#blockName-var"/>
+            <keyword name="combinedImageSamplers" id="QShaderDescription::combinedImageSamplers" ref="qshaderdescription.html#combinedImageSamplers"/>
+            <keyword name="description" id="QBakedShader::description" ref="qbakedshader.html#description"/>
+            <keyword name="descriptorSet" id="InOutVariable::descriptorSet" ref="qshaderdescription-inoutvariable.html#descriptorSet-var"/>
+            <keyword name="descriptorSet" id="UniformBlock::descriptorSet" ref="qshaderdescription-uniformblock.html#descriptorSet-var"/>
+            <keyword name="entryPoint" id="QBakedShaderCode::entryPoint" ref="qbakedshadercode.html#entryPoint"/>
+            <keyword name="errorMessage" id="QShaderBaker::errorMessage" ref="qshaderbaker.html#errorMessage"/>
+            <keyword name="flags" id="QBakedShaderVersion::flags" ref="qbakedshaderversion.html#flags"/>
+            <keyword name="fromBinaryJson" id="QShaderDescription::fromBinaryJson" ref="qshaderdescription.html#fromBinaryJson"/>
+            <keyword name="fromSerialized" id="QBakedShader::fromSerialized" ref="qbakedshader.html#fromSerialized"/>
+            <keyword name="glslang" id="glslang" ref="qtshadertools-attribution-glslang.html"/>
+            <keyword name="inputVariables" id="QShaderDescription::inputVariables" ref="qshaderdescription.html#inputVariables"/>
+            <keyword name="isValid" id="QBakedShader::isValid" ref="qbakedshader.html#isValid"/>
+            <keyword name="isValid" id="QShaderDescription::isValid" ref="qshaderdescription.html#isValid"/>
+            <keyword name="location" id="InOutVariable::location" ref="qshaderdescription-inoutvariable.html#location-var"/>
+            <keyword name="matrixIsRowMajor" id="BlockVariable::matrixIsRowMajor" ref="qshaderdescription-blockvariable.html#matrixIsRowMajor-var"/>
+            <keyword name="matrixStride" id="BlockVariable::matrixStride" ref="qshaderdescription-blockvariable.html#matrixStride-var"/>
+            <keyword name="members" id="PushConstantBlock::members" ref="qshaderdescription-pushconstantblock.html#members-var"/>
+            <keyword name="members" id="UniformBlock::members" ref="qshaderdescription-uniformblock.html#members-var"/>
+            <keyword name="name" id="BlockVariable::name" ref="qshaderdescription-blockvariable.html#name-var"/>
+            <keyword name="name" id="InOutVariable::name" ref="qshaderdescription-inoutvariable.html#name-var"/>
+            <keyword name="name" id="PushConstantBlock::name" ref="qshaderdescription-pushconstantblock.html#name-var"/>
+            <keyword name="offset" id="BlockVariable::offset" ref="qshaderdescription-blockvariable.html#offset-var"/>
+            <keyword name="outputVariables" id="QShaderDescription::outputVariables" ref="qshaderdescription.html#outputVariables"/>
+            <keyword name="pushConstantBlocks" id="QShaderDescription::pushConstantBlocks" ref="qshaderdescription.html#pushConstantBlocks"/>
+            <keyword name="removeShader" id="QBakedShader::removeShader" ref="qbakedshader.html#removeShader"/>
+            <keyword name="serialized" id="QBakedShader::serialized" ref="qbakedshader.html#serialized"/>
+            <keyword name="setDescription" id="QBakedShader::setDescription" ref="qbakedshader.html#setDescription"/>
+            <keyword name="setEntryPoint" id="QBakedShaderCode::setEntryPoint" ref="qbakedshadercode.html#setEntryPoint"/>
+            <keyword name="setFlags" id="QBakedShaderVersion::setFlags" ref="qbakedshaderversion.html#setFlags"/>
+            <keyword name="setGeneratedShaderVariants" id="QShaderBaker::setGeneratedShaderVariants" ref="qshaderbaker.html#setGeneratedShaderVariants"/>
+            <keyword name="setGeneratedShaders" id="QShaderBaker::setGeneratedShaders" ref="qshaderbaker.html#setGeneratedShaders"/>
+            <keyword name="setShader" id="QBakedShader::setShader" ref="qbakedshader.html#setShader"/>
+            <keyword name="setShader" id="QBakedShaderCode::setShader" ref="qbakedshadercode.html#setShader"/>
+            <keyword name="setSource" id="QBakedShaderKey::setSource" ref="qbakedshaderkey.html#setSource"/>
+            <keyword name="setSourceDevice" id="QShaderBaker::setSourceDevice" ref="qshaderbaker.html#setSourceDevice"/>
+            <keyword name="setSourceFileName" id="QShaderBaker::setSourceFileName" ref="qshaderbaker.html#setSourceFileName"/>
+            <keyword name="setSourceFileName" id="QShaderBaker::setSourceFileName" ref="qshaderbaker.html#setSourceFileName-1"/>
+            <keyword name="setSourceString" id="QShaderBaker::setSourceString" ref="qshaderbaker.html#setSourceString"/>
+            <keyword name="setSourceVariant" id="QBakedShaderKey::setSourceVariant" ref="qbakedshaderkey.html#setSourceVariant"/>
+            <keyword name="setSourceVersion" id="QBakedShaderKey::setSourceVersion" ref="qbakedshaderkey.html#setSourceVersion"/>
+            <keyword name="setStage" id="QBakedShader::setStage" ref="qbakedshader.html#setStage"/>
+            <keyword name="setVersion" id="QBakedShaderVersion::setVersion" ref="qbakedshaderversion.html#setVersion"/>
+            <keyword name="shader" id="QBakedShader::shader" ref="qbakedshader.html#shader"/>
+            <keyword name="shader" id="QBakedShaderCode::shader" ref="qbakedshadercode.html#shader"/>
+            <keyword name="size" id="BlockVariable::size" ref="qshaderdescription-blockvariable.html#size-var"/>
+            <keyword name="size" id="PushConstantBlock::size" ref="qshaderdescription-pushconstantblock.html#size-var"/>
+            <keyword name="size" id="UniformBlock::size" ref="qshaderdescription-uniformblock.html#size-var"/>
+            <keyword name="source" id="QBakedShaderKey::source" ref="qbakedshaderkey.html#source"/>
+            <keyword name="sourceVariant" id="QBakedShaderKey::sourceVariant" ref="qbakedshaderkey.html#sourceVariant"/>
+            <keyword name="sourceVersion" id="QBakedShaderKey::sourceVersion" ref="qbakedshaderkey.html#sourceVersion"/>
+            <keyword name="stage" id="QBakedShader::stage" ref="qbakedshader.html#stage"/>
+            <keyword name="structMembers" id="BlockVariable::structMembers" ref="qshaderdescription-blockvariable.html#structMembers-var"/>
+            <keyword name="structName" id="UniformBlock::structName" ref="qshaderdescription-uniformblock.html#structName-var"/>
+            <keyword name="toBinaryJson" id="QShaderDescription::toBinaryJson" ref="qshaderdescription.html#toBinaryJson"/>
+            <keyword name="toJson" id="QShaderDescription::toJson" ref="qshaderdescription.html#toJson"/>
+            <keyword name="type" id="BlockVariable::type" ref="qshaderdescription-blockvariable.html#type-var"/>
+            <keyword name="type" id="InOutVariable::type" ref="qshaderdescription-inoutvariable.html#type-var"/>
+            <keyword name="uniformBlocks" id="QShaderDescription::uniformBlocks" ref="qshaderdescription.html#uniformBlocks"/>
+            <keyword name="version" id="QBakedShaderVersion::version" ref="qbakedshaderversion.html#version"/>
+            <keyword name="~QBakedShader" id="QBakedShader::~QBakedShader" ref="qbakedshader.html#dtor.QBakedShader"/>
+            <keyword name="~QShaderBaker" id="QShaderBaker::~QShaderBaker" ref="qshaderbaker.html#dtor.QShaderBaker"/>
+            <keyword name="~QShaderDescription" id="QShaderDescription::~QShaderDescription" ref="qshaderdescription.html#dtor.QShaderDescription"/>
+        </keywords>
+        <files>
+            <file>copyright-notices.html</file>
+            <file>images/arrow_bc.png</file>
+            <file>images/bgrContent.png</file>
+            <file>images/btn_next.png</file>
+            <file>images/btn_prev.png</file>
+            <file>images/bullet_dn.png</file>
+            <file>images/bullet_sq.png</file>
+            <file>images/home.png</file>
+            <file>images/ico_note.png</file>
+            <file>images/ico_note_attention.png</file>
+            <file>images/ico_out.png</file>
+            <file>images/logo.png</file>
+            <file>qbakedshader-members.html</file>
+            <file>qbakedshader.html</file>
+            <file>qbakedshadercode-members.html</file>
+            <file>qbakedshadercode.html</file>
+            <file>qbakedshaderkey-members.html</file>
+            <file>qbakedshaderkey.html</file>
+            <file>qbakedshaderversion-members.html</file>
+            <file>qbakedshaderversion.html</file>
+            <file>qshaderbaker-members.html</file>
+            <file>qshaderbaker.html</file>
+            <file>qshaderdescription-blockvariable-members.html</file>
+            <file>qshaderdescription-blockvariable.html</file>
+            <file>qshaderdescription-inoutvariable-members.html</file>
+            <file>qshaderdescription-inoutvariable.html</file>
+            <file>qshaderdescription-members.html</file>
+            <file>qshaderdescription-pushconstantblock-members.html</file>
+            <file>qshaderdescription-pushconstantblock.html</file>
+            <file>qshaderdescription-uniformblock-members.html</file>
+            <file>qshaderdescription-uniformblock.html</file>
+            <file>qshaderdescription.html</file>
+            <file>qtshadertools-attribution-glslang.html</file>
+            <file>qtshadertools-attribution-spirvcross.html</file>
+            <file>qtshadertools-index.html</file>
+            <file>qtshadertools-module.html</file>
+            <file>style/offline-simple.css</file>
+            <file>style/offline.css</file>
+        </files>
+    </filterSection>
+</QtHelpProject>
