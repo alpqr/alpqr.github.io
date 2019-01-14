@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qrhi.cpp -->
+  <title>QRhiShaderResourceBinding Class | RHI 5.12</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiShaderResourceBinding</td></tr></table><table class="buildversion"><tr>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
+        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-variables">Public Variables</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">QRhiShaderResourceBinding Class</h1>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiShaderResourceBinding&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
+<li><a href="qrhishaderresourcebinding-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding-sampledtexturedata.html">SampledTextureData</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding-uniformbufferdata.html">UniformBufferData</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#StageFlag-enum">StageFlag</a></b> { VertexStage, FragmentStage, TessellationControlStage, TessellationEvaluationStage }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#Type-enum">Type</a></b> { UniformBuffer, SampledTexture }</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#Q_DECLARE_FLAGS">Q_DECLARE_FLAGS</a></b>(<i>int</i>, <i>QRhiShaderResourceBinding::StageFlag</i>)</td></tr>
+</table></div>
+<a name="public-variables"></a>
+<h2 id="public-variables">Public Variables</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#binding-var">binding</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#stage-var">stage</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBinding::Type </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#type-var">type</a></b></td></tr>
+</table></div>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBinding </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#sampledTexture">sampledTexture</a></b>(int <i>binding_</i>, int <i>stage_</i>, QRhiTexture *<i>tex_</i>, QRhiSampler *<i>sampler_</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBinding </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#uniformBuffer">uniformBuffer</a></b>(int <i>binding_</i>, int <i>stage_</i>, QRhiBuffer *<i>buf_</i>, int <i>offset_</i>, int <i>size_</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$QRhiShaderResourceBinding-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+</div>
+<!-- @@@QRhiShaderResourceBinding -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$StageFlag$$$VertexStage$$$FragmentStage$$$TessellationControlStage$$$TessellationEvaluationStage -->
+<h3 class="fn" id="StageFlag-enum"><a name="StageFlag-enum"></a>enum QRhiShaderResourceBinding::<span class="name">StageFlag</span></h3>
+<!-- @@@StageFlag -->
+<!-- $$$Type$$$UniformBuffer$$$SampledTexture -->
+<h3 class="fn" id="Type-enum"><a name="Type-enum"></a>enum QRhiShaderResourceBinding::<span class="name">Type</span></h3>
+<!-- @@@Type -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$Q_DECLARE_FLAGS[overload1]$$$Q_DECLARE_FLAGSintQRhiShaderResourceBinding::StageFlag -->
+<h3 class="fn" id="Q_DECLARE_FLAGS"><a name="Q_DECLARE_FLAGS"></a><span class="type">int</span> QRhiShaderResourceBinding::<span class="name">Q_DECLARE_FLAGS</span>(<i>int</i>, <i>QRhiShaderResourceBinding::StageFlag</i>)</h3>
+<!-- @@@Q_DECLARE_FLAGS -->
+<!-- $$$sampledTexture[overload1]$$$sampledTextureintintQRhiTexture*QRhiSampler* -->
+<h3 class="fn" id="sampledTexture"><a name="sampledTexture"></a><code>[static] </code><span class="type"><a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a></span> QRhiShaderResourceBinding::<span class="name">sampledTexture</span>(<span class="type">int</span> <i>binding_</i>, <span class="type">int</span> <i>stage_</i>, <span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>tex_</i>, <span class="type"><a href="qrhisampler.html">QRhiSampler</a></span> *<i>sampler_</i>)</h3>
+<!-- @@@sampledTexture -->
+<!-- $$$uniformBuffer[overload1]$$$uniformBufferintintQRhiBuffer*intint -->
+<h3 class="fn" id="uniformBuffer"><a name="uniformBuffer"></a><code>[static] </code><span class="type"><a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a></span> QRhiShaderResourceBinding::<span class="name">uniformBuffer</span>(<span class="type">int</span> <i>binding_</i>, <span class="type">int</span> <i>stage_</i>, <span class="type"><a href="qrhibuffer.html">QRhiBuffer</a></span> *<i>buf_</i>, <span class="type">int</span> <i>offset_</i>, <span class="type">int</span> <i>size_</i>)</h3>
+<!-- @@@uniformBuffer -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,2134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tagfile>
+    <compound kind="class">
+        <name>QRhiColorClearValue</name>
+        <filename>qrhicolorclearvalue.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiColorClearValue</name>
+            <anchorfile>qrhicolorclearvalue.html</anchorfile>
+            <anchor>QRhiColorClearValue</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiColorClearValue</name>
+            <anchorfile>qrhicolorclearvalue.html</anchorfile>
+            <anchor>QRhiColorClearValue-1</anchor>
+            <arglist>(const int &amp;rgba_)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiColorClearValue</name>
+            <anchorfile>qrhicolorclearvalue.html</anchorfile>
+            <anchor>QRhiColorClearValue-2</anchor>
+            <arglist>(float r, float g, float b, float a)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiDepthStencilClearValue</name>
+        <filename>qrhidepthstencilclearvalue.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiDepthStencilClearValue</name>
+            <anchorfile>qrhidepthstencilclearvalue.html</anchorfile>
+            <anchor>QRhiDepthStencilClearValue</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiDepthStencilClearValue</name>
+            <anchorfile>qrhidepthstencilclearvalue.html</anchorfile>
+            <anchor>QRhiDepthStencilClearValue-1</anchor>
+            <arglist>(float d_, quint32 s_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiViewport</name>
+        <filename>qrhiviewport.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiViewport</name>
+            <anchorfile>qrhiviewport.html</anchorfile>
+            <anchor>QRhiViewport</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiViewport</name>
+            <anchorfile>qrhiviewport.html</anchorfile>
+            <anchor>QRhiViewport-1</anchor>
+            <arglist>(float x, float y, float w, float h, float minDepth_, float maxDepth_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiScissor</name>
+        <filename>qrhiscissor.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiScissor</name>
+            <anchorfile>qrhiscissor.html</anchorfile>
+            <anchor>QRhiScissor</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiScissor</name>
+            <anchorfile>qrhiscissor.html</anchorfile>
+            <anchor>QRhiScissor-1</anchor>
+            <arglist>(int x, int y, int w, int h)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiVertexInputLayout</name>
+        <filename>qrhivertexinputlayout.html</filename>
+        <class>QRhiVertexInputLayout::Binding</class>
+        <class>QRhiVertexInputLayout::Attribute</class>
+    </compound>
+    <compound kind="class">
+        <name>QRhiVertexInputLayout::Binding</name>
+        <filename>qrhivertexinputlayout-binding.html</filename>
+        <member kind="enum">
+            <name>Classification</name>
+            <anchor>Classification-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="PerVertex">
+            <anchor>Classification-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="PerInstance">
+            <anchor>Classification-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>Binding</name>
+            <anchorfile>qrhivertexinputlayout-binding.html</anchorfile>
+            <anchor>Binding</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>Binding</name>
+            <anchorfile>qrhivertexinputlayout-binding.html</anchorfile>
+            <anchor>Binding-1</anchor>
+            <arglist>(quint32 stride_, Binding::Classification cls, int stepRate)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiVertexInputLayout::Attribute</name>
+        <filename>qrhivertexinputlayout-attribute.html</filename>
+        <member kind="enum">
+            <name>Format</name>
+            <anchor>Format-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Float4">
+            <anchor>Format-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Float3">
+            <anchor>Format-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Float2">
+            <anchor>Format-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Float">
+            <anchor>Format-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="UNormByte4">
+            <anchor>Format-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="UNormByte2">
+            <anchor>Format-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="UNormByte">
+            <anchor>Format-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>Attribute</name>
+            <anchorfile>qrhivertexinputlayout-attribute.html</anchorfile>
+            <anchor>Attribute</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>Attribute</name>
+            <anchorfile>qrhivertexinputlayout-attribute.html</anchorfile>
+            <anchor>Attribute-1</anchor>
+            <arglist>(int binding_, int location_, Attribute::Format format_, quint32 offset_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiGraphicsShaderStage</name>
+        <filename>qrhigraphicsshaderstage.html</filename>
+        <member kind="enum">
+            <name>Type</name>
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Vertex">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Fragment">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="TessellationControl">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="TessellationEvaluation">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiGraphicsShaderStage</name>
+            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchor>QRhiGraphicsShaderStage</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiGraphicsShaderStage</name>
+            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchor>QRhiGraphicsShaderStage-1</anchor>
+            <arglist>(QRhiGraphicsShaderStage::Type type_, const int &amp;shader_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiShaderResourceBinding</name>
+        <filename>qrhishaderresourcebinding.html</filename>
+        <member kind="enum">
+            <name>Type</name>
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="UniformBuffer">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="SampledTexture">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
+            <name>StageFlag</name>
+            <anchor>StageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="VertexStage">
+            <anchor>StageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="FragmentStage">
+            <anchor>StageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="TessellationControlStage">
+            <anchor>StageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="TessellationEvaluationStage">
+            <anchor>StageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>Q_DECLARE_FLAGS</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>Q_DECLARE_FLAGS</anchor>
+            <arglist>(int , QRhiShaderResourceBinding::StageFlag )</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QRhiShaderResourceBinding</type>
+            <name>uniformBuffer</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>uniformBuffer</anchor>
+            <arglist>(int binding_, int stage_, QRhiBuffer *buf_, int offset_, int size_)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QRhiShaderResourceBinding</type>
+            <name>sampledTexture</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>sampledTexture</anchor>
+            <arglist>(int binding_, int stage_, QRhiTexture *tex_, QRhiSampler *sampler_)</arglist>
+        </member>
+        <class>QRhiShaderResourceBinding::UniformBufferData</class>
+        <class>QRhiShaderResourceBinding::SampledTextureData</class>
+    </compound>
+    <compound kind="class">
+        <name>QRhiShaderResourceBinding::UniformBufferData</name>
+        <filename>qrhishaderresourcebinding-uniformbufferdata.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QRhiShaderResourceBinding::SampledTextureData</name>
+        <filename>qrhishaderresourcebinding-sampledtexturedata.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QRhiTextureRenderTargetDescription</name>
+        <filename>qrhitexturerendertargetdescription.html</filename>
+        <class>QRhiTextureRenderTargetDescription::ColorAttachment</class>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiTextureRenderTargetDescription</name>
+            <anchorfile>qrhitexturerendertargetdescription.html</anchorfile>
+            <anchor>QRhiTextureRenderTargetDescription</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiTextureRenderTargetDescription</name>
+            <anchorfile>qrhitexturerendertargetdescription.html</anchorfile>
+            <anchor>QRhiTextureRenderTargetDescription-1</anchor>
+            <arglist>(const QRhiTextureRenderTargetDescription::ColorAttachment &amp;colorAttachment)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiTextureRenderTargetDescription</name>
+            <anchorfile>qrhitexturerendertargetdescription.html</anchorfile>
+            <anchor>QRhiTextureRenderTargetDescription-2</anchor>
+            <arglist>(const QRhiTextureRenderTargetDescription::ColorAttachment &amp;colorAttachment, QRhiRenderBuffer *depthStencilBuffer_)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiTextureRenderTargetDescription</name>
+            <anchorfile>qrhitexturerendertargetdescription.html</anchorfile>
+            <anchor>QRhiTextureRenderTargetDescription-3</anchor>
+            <arglist>(const QRhiTextureRenderTargetDescription::ColorAttachment &amp;colorAttachment, QRhiTexture *depthTexture_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiTextureRenderTargetDescription::ColorAttachment</name>
+        <filename>qrhitexturerendertargetdescription-colorattachment.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>ColorAttachment</name>
+            <anchorfile>qrhitexturerendertargetdescription-colorattachment.html</anchorfile>
+            <anchor>ColorAttachment</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>ColorAttachment</name>
+            <anchorfile>qrhitexturerendertargetdescription-colorattachment.html</anchorfile>
+            <anchor>ColorAttachment-1</anchor>
+            <arglist>(QRhiTexture *texture_)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>ColorAttachment</name>
+            <anchorfile>qrhitexturerendertargetdescription-colorattachment.html</anchorfile>
+            <anchor>ColorAttachment-2</anchor>
+            <arglist>(QRhiRenderBuffer *renderBuffer_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiTextureUploadDescription</name>
+        <filename>qrhitextureuploaddescription.html</filename>
+        <class>QRhiTextureUploadDescription::Layer</class>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiTextureUploadDescription</name>
+            <anchorfile>qrhitextureuploaddescription.html</anchorfile>
+            <anchor>QRhiTextureUploadDescription</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiTextureUploadDescription</name>
+            <anchorfile>qrhitextureuploaddescription.html</anchorfile>
+            <anchor>QRhiTextureUploadDescription-1</anchor>
+            <arglist>(const int &amp;layers_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiTextureUploadDescription::Layer</name>
+        <filename>qrhitextureuploaddescription-layer.html</filename>
+        <class>QRhiTextureUploadDescription::Layer::MipLevel</class>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>Layer</name>
+            <anchorfile>qrhitextureuploaddescription-layer.html</anchorfile>
+            <anchor>Layer</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>Layer</name>
+            <anchorfile>qrhitextureuploaddescription-layer.html</anchorfile>
+            <anchor>Layer-1</anchor>
+            <arglist>(const int &amp;mipImages_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiTextureUploadDescription::Layer::MipLevel</name>
+        <filename>qrhitextureuploaddescription-layer-miplevel.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>MipLevel</name>
+            <anchorfile>qrhitextureuploaddescription-layer-miplevel.html</anchorfile>
+            <anchor>MipLevel</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>MipLevel</name>
+            <anchorfile>qrhitextureuploaddescription-layer-miplevel.html</anchorfile>
+            <anchor>MipLevel-1</anchor>
+            <arglist>(const int &amp;image_)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>MipLevel</name>
+            <anchorfile>qrhitextureuploaddescription-layer-miplevel.html</anchorfile>
+            <anchor>MipLevel-2</anchor>
+            <arglist>(const QByteArray &amp;compressedData_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiTextureCopyDescription</name>
+        <filename>qrhitexturecopydescription.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QRhiReadbackDescription</name>
+        <filename>qrhireadbackdescription.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiReadbackDescription</name>
+            <anchorfile>qrhireadbackdescription.html</anchorfile>
+            <anchor>QRhiReadbackDescription</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiReadbackDescription</name>
+            <anchorfile>qrhireadbackdescription.html</anchorfile>
+            <anchor>QRhiReadbackDescription-1</anchor>
+            <arglist>(QRhiTexture *texture_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiNativeHandles</name>
+        <filename>qrhinativehandles.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QRhiResource</name>
+        <filename>qrhiresource.html</filename>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual </type>
+            <name>~QRhiResource</name>
+            <anchorfile>qrhiresource.html</anchorfile>
+            <anchor>dtor.QRhiResource</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual void</type>
+            <name>release</name>
+            <anchorfile>qrhiresource.html</anchorfile>
+            <anchor>release</anchor>
+            <arglist>() = 0</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>releaseAndDestroy</name>
+            <anchorfile>qrhiresource.html</anchorfile>
+            <anchor>releaseAndDestroy</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QByteArray</type>
+            <name>name</name>
+            <anchorfile>qrhiresource.html</anchorfile>
+            <anchor>name</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setName</name>
+            <anchorfile>qrhiresource.html</anchorfile>
+            <anchor>setName</anchor>
+            <arglist>(const QByteArray &amp;name)</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiResource</name>
+            <anchorfile>qrhiresource.html</anchorfile>
+            <anchor>QRhiResource</anchor>
+            <arglist>(QRhiImplementation *rhi_)</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiResource</name>
+            <anchorfile>qrhiresource.html</anchorfile>
+            <anchor>QRhiResource-1</anchor>
+            <arglist>(const QRhiResource &amp;)</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type>QRhiResource &amp;</type>
+            <name>operator=</name>
+            <anchorfile>qrhiresource.html</anchorfile>
+            <anchor>operator-eq</anchor>
+            <arglist>(const QRhiResource &amp;)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiBuffer</name>
+        <filename>qrhibuffer.html</filename>
+        <base>QRhiResource</base>
+        <member kind="enum">
+            <name>Type</name>
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Immutable">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Static">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Dynamic">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
+            <name>UsageFlag</name>
+            <anchor>UsageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="VertexBuffer">
+            <anchor>UsageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="IndexBuffer">
+            <anchor>UsageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="UniformBuffer">
+            <anchor>UsageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>Q_DECLARE_FLAGS</name>
+            <anchorfile>qrhibuffer.html</anchorfile>
+            <anchor>Q_DECLARE_FLAGS</anchor>
+            <arglist>(int , QRhiBuffer::UsageFlag )</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiBuffer</name>
+            <anchorfile>qrhibuffer.html</anchorfile>
+            <anchor>QRhiBuffer</anchor>
+            <arglist>(QRhiImplementation *rhi, QRhiBuffer::Type type_, int usage_, int size_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiTexture</name>
+        <filename>qrhitexture.html</filename>
+        <base>QRhiResource</base>
+        <member kind="enum">
+            <name>Flag</name>
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="RenderTarget">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ChangesFrequently">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="CubeMap">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="MipMapped">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="sRGB">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="UsedAsTransferSource">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="UsedWithGenerateMips">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>Q_DECLARE_FLAGS</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>Q_DECLARE_FLAGS</anchor>
+            <arglist>(int , QRhiTexture::Flag )</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>format</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>format</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setFormat</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>setFormat</anchor>
+            <arglist>(int fmt)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>pixelSize</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>pixelSize</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setPixelSize</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>setPixelSize</anchor>
+            <arglist>(const int &amp;sz)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>flags</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>flags</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setFlags</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>setFlags</anchor>
+            <arglist>(int f)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>sampleCount</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>sampleCount</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setSampleCount</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>setSampleCount</anchor>
+            <arglist>(int s)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual bool</type>
+            <name>build</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>build</anchor>
+            <arglist>() = 0</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual const QRhiNativeHandles *</type>
+            <name>nativeHandles</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>nativeHandles</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual bool</type>
+            <name>buildFrom</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>buildFrom</anchor>
+            <arglist>(const QRhiNativeHandles *src)</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiTexture</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>QRhiTexture</anchor>
+            <arglist>(QRhiImplementation *rhi, int format_, const int &amp;pixelSize_, int sampleCount_, int flags_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiSampler</name>
+        <filename>qrhisampler.html</filename>
+        <base>QRhiResource</base>
+        <member kind="enum">
+            <name>Filter</name>
+            <anchor>Filter-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="None">
+            <anchor>Filter-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Nearest">
+            <anchor>Filter-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Linear">
+            <anchor>Filter-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
+            <name>AddressMode</name>
+            <anchor>AddressMode-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Repeat">
+            <anchor>AddressMode-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ClampToEdge">
+            <anchor>AddressMode-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Border">
+            <anchor>AddressMode-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mirror">
+            <anchor>AddressMode-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="MirrorOnce">
+            <anchor>AddressMode-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiSampler::Filter</type>
+            <name>magFilter</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>magFilter</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setMagFilter</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>setMagFilter</anchor>
+            <arglist>(QRhiSampler::Filter f)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiSampler::Filter</type>
+            <name>minFilter</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>minFilter</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setMinFilter</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>setMinFilter</anchor>
+            <arglist>(QRhiSampler::Filter f)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiSampler::Filter</type>
+            <name>mipmapMode</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>mipmapMode</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setMipmapMode</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>setMipmapMode</anchor>
+            <arglist>(QRhiSampler::Filter f)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiSampler::AddressMode</type>
+            <name>addressU</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>addressU</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setAddressU</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>setAddressU</anchor>
+            <arglist>(QRhiSampler::AddressMode mode)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiSampler::AddressMode</type>
+            <name>addressV</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>addressV</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setAddressV</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>setAddressV</anchor>
+            <arglist>(QRhiSampler::AddressMode mode)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiSampler::AddressMode</type>
+            <name>addressW</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>addressW</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setAddressW</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>setAddressW</anchor>
+            <arglist>(QRhiSampler::AddressMode mode)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual bool</type>
+            <name>build</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>build</anchor>
+            <arglist>() = 0</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiSampler</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>QRhiSampler</anchor>
+            <arglist>(QRhiImplementation *rhi, QRhiSampler::Filter magFilter_, QRhiSampler::Filter minFilter_, QRhiSampler::Filter mipmapMode_, QRhiSampler::AddressMode u_, QRhiSampler::AddressMode v_, QRhiSampler::AddressMode w_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiRenderBuffer</name>
+        <filename>qrhirenderbuffer.html</filename>
+        <base>QRhiResource</base>
+        <member kind="enum">
+            <name>Type</name>
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DepthStencil">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Color">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
+            <name>Flag</name>
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="UsedWithSwapChainOnly">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>Q_DECLARE_FLAGS</name>
+            <anchorfile>qrhirenderbuffer.html</anchorfile>
+            <anchor>Q_DECLARE_FLAGS</anchor>
+            <arglist>(int , QRhiRenderBuffer::Flag )</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>backingFormat</name>
+            <anchorfile>qrhirenderbuffer.html</anchorfile>
+            <anchor>backingFormat</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiRenderBuffer</name>
+            <anchorfile>qrhirenderbuffer.html</anchorfile>
+            <anchor>QRhiRenderBuffer</anchor>
+            <arglist>(QRhiImplementation *rhi, QRhiRenderBuffer::Type type_, const int &amp;pixelSize_, int sampleCount_, int flags_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiRenderPassDescriptor</name>
+        <filename>qrhirenderpassdescriptor.html</filename>
+        <base>QRhiResource</base>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiRenderPassDescriptor</name>
+            <anchorfile>qrhirenderpassdescriptor.html</anchorfile>
+            <anchor>QRhiRenderPassDescriptor</anchor>
+            <arglist>(QRhiImplementation *rhi)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiRenderTarget</name>
+        <filename>qrhirendertarget.html</filename>
+        <base>QRhiResource</base>
+        <member kind="enum">
+            <name>Type</name>
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="RtRef">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="RtTexture">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual QRhiRenderTarget::Type</type>
+            <name>type</name>
+            <anchorfile>qrhirendertarget.html</anchorfile>
+            <anchor>type</anchor>
+            <arglist>() const const = 0</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>sizeInPixels</name>
+            <anchorfile>qrhirendertarget.html</anchorfile>
+            <anchor>sizeInPixels</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual float</type>
+            <name>devicePixelRatio</name>
+            <anchorfile>qrhirendertarget.html</anchorfile>
+            <anchor>devicePixelRatio</anchor>
+            <arglist>() const const = 0</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiRenderPassDescriptor *</type>
+            <name>renderPassDescriptor</name>
+            <anchorfile>qrhirendertarget.html</anchorfile>
+            <anchor>renderPassDescriptor</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setRenderPassDescriptor</name>
+            <anchorfile>qrhirendertarget.html</anchorfile>
+            <anchor>setRenderPassDescriptor</anchor>
+            <arglist>(QRhiRenderPassDescriptor *desc)</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiRenderTarget</name>
+            <anchorfile>qrhirendertarget.html</anchorfile>
+            <anchor>QRhiRenderTarget</anchor>
+            <arglist>(QRhiImplementation *rhi)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiTextureRenderTarget</name>
+        <filename>qrhitexturerendertarget.html</filename>
+        <base>QRhiRenderTarget</base>
+        <member kind="enum">
+            <name>Flag</name>
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="PreserveColorContents">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="PreserveDepthStencilContents">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>Q_DECLARE_FLAGS</name>
+            <anchorfile>qrhitexturerendertarget.html</anchorfile>
+            <anchor>Q_DECLARE_FLAGS</anchor>
+            <arglist>(int , QRhiTextureRenderTarget::Flag )</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual bool</type>
+            <name>build</name>
+            <anchorfile>qrhitexturerendertarget.html</anchorfile>
+            <anchor>build</anchor>
+            <arglist>() = 0</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiTextureRenderTarget</name>
+            <anchorfile>qrhitexturerendertarget.html</anchorfile>
+            <anchor>QRhiTextureRenderTarget</anchor>
+            <arglist>(QRhiImplementation *rhi, const QRhiTextureRenderTargetDescription &amp;desc_, int flags_)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiShaderResourceBindings</name>
+        <filename>qrhishaderresourcebindings.html</filename>
+        <base>QRhiResource</base>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>bindings</name>
+            <anchorfile>qrhishaderresourcebindings.html</anchorfile>
+            <anchor>bindings</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setBindings</name>
+            <anchorfile>qrhishaderresourcebindings.html</anchorfile>
+            <anchor>setBindings</anchor>
+            <arglist>(const int &amp;b)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual bool</type>
+            <name>build</name>
+            <anchorfile>qrhishaderresourcebindings.html</anchorfile>
+            <anchor>build</anchor>
+            <arglist>() = 0</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiShaderResourceBindings</name>
+            <anchorfile>qrhishaderresourcebindings.html</anchorfile>
+            <anchor>QRhiShaderResourceBindings</anchor>
+            <arglist>(QRhiImplementation *rhi)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiGraphicsPipeline</name>
+        <filename>qrhigraphicspipeline.html</filename>
+        <base>QRhiResource</base>
+        <member kind="enum">
+            <name>Flag</name>
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="UsesBlendConstants">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="UsesStencilRef">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="UsesScissor">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>Q_DECLARE_FLAGS</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>Q_DECLARE_FLAGS</anchor>
+            <arglist>(int , QRhiGraphicsPipeline::Flag )</arglist>
+        </member>
+        <member kind="enum">
+            <name>CullMode</name>
+            <anchor>CullMode-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="None">
+            <anchor>CullMode-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Front">
+            <anchor>CullMode-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Back">
+            <anchor>CullMode-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
+            <name>FrontFace</name>
+            <anchor>FrontFace-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="CCW">
+            <anchor>FrontFace-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="CW">
+            <anchor>FrontFace-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
+            <name>ColorMaskComponent</name>
+            <anchor>ColorMaskComponent-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="R">
+            <anchor>ColorMaskComponent-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="G">
+            <anchor>ColorMaskComponent-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="B">
+            <anchor>ColorMaskComponent-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="A">
+            <anchor>ColorMaskComponent-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>Q_DECLARE_FLAGS</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>Q_DECLARE_FLAGS-1</anchor>
+            <arglist>(int , QRhiGraphicsPipeline::ColorMaskComponent )</arglist>
+        </member>
+        <member kind="enum">
+            <name>BlendOp</name>
+            <anchor>BlendOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Add">
+            <anchor>BlendOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Subtract">
+            <anchor>BlendOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ReverseSubtract">
+            <anchor>BlendOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Min">
+            <anchor>BlendOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Max">
+            <anchor>BlendOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <class>QRhiGraphicsPipeline::TargetBlend</class>
+        <member kind="enum">
+            <name>CompareOp</name>
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Never">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Less">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Equal">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="LessOrEqual">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Greater">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="NotEqual">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="GreaterOrEqual">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Always">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
+            <name>StencilOp</name>
+            <anchor>StencilOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="StencilZero">
+            <anchor>StencilOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Keep">
+            <anchor>StencilOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Replace">
+            <anchor>StencilOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="IncrementAndClamp">
+            <anchor>StencilOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DecrementAndClamp">
+            <anchor>StencilOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Invert">
+            <anchor>StencilOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="IncrementAndWrap">
+            <anchor>StencilOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DecrementAndWrap">
+            <anchor>StencilOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <class>QRhiGraphicsPipeline::StencilOpState</class>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>flags</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>flags</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setFlags</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setFlags</anchor>
+            <arglist>(int f)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>topology</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>topology</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setTopology</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setTopology</anchor>
+            <arglist>(int t)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiGraphicsPipeline::CullMode</type>
+            <name>cullMode</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>cullMode</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setCullMode</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setCullMode</anchor>
+            <arglist>(QRhiGraphicsPipeline::CullMode mode)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiGraphicsPipeline::FrontFace</type>
+            <name>frontFace</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>frontFace</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setFrontFace</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setFrontFace</anchor>
+            <arglist>(QRhiGraphicsPipeline::FrontFace f)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>targetBlends</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>targetBlends</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setTargetBlends</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setTargetBlends</anchor>
+            <arglist>(const int &amp;blends)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>bool</type>
+            <name>hasDepthTest</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>hasDepthTest</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setDepthTest</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setDepthTest</anchor>
+            <arglist>(bool enable)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>bool</type>
+            <name>hasDepthWrite</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>hasDepthWrite</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setDepthWrite</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setDepthWrite</anchor>
+            <arglist>(bool enable)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiGraphicsPipeline::CompareOp</type>
+            <name>depthOp</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>depthOp</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setDepthOp</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setDepthOp</anchor>
+            <arglist>(QRhiGraphicsPipeline::CompareOp op)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>bool</type>
+            <name>hasStencilTest</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>hasStencilTest</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setStencilTest</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setStencilTest</anchor>
+            <arglist>(bool enable)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiGraphicsPipeline::StencilOpState</type>
+            <name>stencilFront</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>stencilFront</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setStencilFront</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setStencilFront</anchor>
+            <arglist>(const QRhiGraphicsPipeline::StencilOpState &amp;state)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiGraphicsPipeline::StencilOpState</type>
+            <name>stencilBack</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>stencilBack</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setStencilBack</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setStencilBack</anchor>
+            <arglist>(const QRhiGraphicsPipeline::StencilOpState &amp;state)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>quint32</type>
+            <name>stencilReadMask</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>stencilReadMask</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setStencilReadMask</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setStencilReadMask</anchor>
+            <arglist>(quint32 mask)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>quint32</type>
+            <name>stencilWriteMask</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>stencilWriteMask</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setStencilWriteMask</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setStencilWriteMask</anchor>
+            <arglist>(quint32 mask)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>sampleCount</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>sampleCount</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setSampleCount</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setSampleCount</anchor>
+            <arglist>(int s)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>shaderStages</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>shaderStages</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setShaderStages</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setShaderStages</anchor>
+            <arglist>(const int &amp;stages)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiVertexInputLayout</type>
+            <name>vertexInputLayout</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>vertexInputLayout</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setVertexInputLayout</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setVertexInputLayout</anchor>
+            <arglist>(const QRhiVertexInputLayout &amp;layout)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiShaderResourceBindings *</type>
+            <name>shaderResourceBindings</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>shaderResourceBindings</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setShaderResourceBindings</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setShaderResourceBindings</anchor>
+            <arglist>(QRhiShaderResourceBindings *srb)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiRenderPassDescriptor *</type>
+            <name>renderPassDescriptor</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>renderPassDescriptor</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setRenderPassDescriptor</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>setRenderPassDescriptor</anchor>
+            <arglist>(QRhiRenderPassDescriptor *desc)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual bool</type>
+            <name>build</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>build</anchor>
+            <arglist>() = 0</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiGraphicsPipeline</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>QRhiGraphicsPipeline</anchor>
+            <arglist>(QRhiImplementation *rhi)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiGraphicsPipeline::TargetBlend</name>
+        <filename>qrhigraphicspipeline-targetblend.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QRhiGraphicsPipeline::StencilOpState</name>
+        <filename>qrhigraphicspipeline-stencilopstate.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QRhiSwapChain</name>
+        <filename>qrhiswapchain.html</filename>
+        <base>QRhiResource</base>
+        <member kind="enum">
+            <name>Flag</name>
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="SurfaceHasPreMulAlpha">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="SurfaceHasNonPreMulAlpha">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="sRGB">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="UsedAsTransferSource">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="NoVSync">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>Q_DECLARE_FLAGS</name>
+            <anchorfile>qrhiswapchain.html</anchorfile>
+            <anchor>Q_DECLARE_FLAGS</anchor>
+            <arglist>(int , QRhiSwapChain::Flag )</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual QRhiRenderTarget *</type>
+            <name>currentFrameRenderTarget</name>
+            <anchorfile>qrhiswapchain.html</anchorfile>
+            <anchor>currentFrameRenderTarget</anchor>
+            <arglist>() = 0</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>surfacePixelSize</name>
+            <anchorfile>qrhiswapchain.html</anchorfile>
+            <anchor>surfacePixelSize</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual QRhiRenderPassDescriptor *</type>
+            <name>newCompatibleRenderPassDescriptor</name>
+            <anchorfile>qrhiswapchain.html</anchorfile>
+            <anchor>newCompatibleRenderPassDescriptor</anchor>
+            <arglist>() = 0</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual bool</type>
+            <name>buildOrResize</name>
+            <anchorfile>qrhiswapchain.html</anchorfile>
+            <anchor>buildOrResize</anchor>
+            <arglist>() = 0</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiSwapChain</name>
+            <anchorfile>qrhiswapchain.html</anchorfile>
+            <anchor>QRhiSwapChain</anchor>
+            <arglist>(QRhiImplementation *rhi)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiCommandBuffer</name>
+        <filename>qrhicommandbuffer.html</filename>
+        <base>QRhiResource</base>
+        <member kind="enum">
+            <name>IndexFormat</name>
+            <anchor>IndexFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="IndexUInt16">
+            <anchor>IndexFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="IndexUInt32">
+            <anchor>IndexFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>resourceUpdate</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>resourceUpdate</anchor>
+            <arglist>(QRhiResourceUpdateBatch *resourceUpdates)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>beginPass</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>beginPass</anchor>
+            <arglist>(QRhiRenderTarget *rt, const QRhiColorClearValue &amp;colorClearValue, const QRhiDepthStencilClearValue &amp;depthStencilClearValue, QRhiResourceUpdateBatch *resourceUpdates)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>endPass</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>endPass</anchor>
+            <arglist>(QRhiResourceUpdateBatch *resourceUpdates)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setGraphicsPipeline</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>setGraphicsPipeline</anchor>
+            <arglist>(QRhiGraphicsPipeline *ps, QRhiShaderResourceBindings *srb)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setVertexInput</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>setVertexInput</anchor>
+            <arglist>(int startBinding, const int &amp;bindings, QRhiBuffer *indexBuf, quint32 indexOffset, QRhiCommandBuffer::IndexFormat indexFormat)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setViewport</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>setViewport</anchor>
+            <arglist>(const QRhiViewport &amp;viewport)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setScissor</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>setScissor</anchor>
+            <arglist>(const QRhiScissor &amp;scissor)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setBlendConstants</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>setBlendConstants</anchor>
+            <arglist>(const int &amp;c)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setStencilRef</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>setStencilRef</anchor>
+            <arglist>(quint32 refValue)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>draw</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>draw</anchor>
+            <arglist>(quint32 vertexCount, quint32 instanceCount, quint32 firstVertex, quint32 firstInstance)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>drawIndexed</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>drawIndexed</anchor>
+            <arglist>(quint32 indexCount, quint32 instanceCount, quint32 firstIndex, qint32 vertexOffset, quint32 firstInstance)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>debugMarkBegin</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>debugMarkBegin</anchor>
+            <arglist>(const QByteArray &amp;name)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>debugMarkEnd</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>debugMarkEnd</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>debugMarkMsg</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>debugMarkMsg</anchor>
+            <arglist>(const QByteArray &amp;msg)</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiCommandBuffer</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>QRhiCommandBuffer</anchor>
+            <arglist>(QRhiImplementation *rhi)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiReadbackResult</name>
+        <filename>qrhireadbackresult.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QRhiResourceUpdateBatch</name>
+        <filename>qrhiresourceupdatebatch.html</filename>
+        <member kind="enum">
+            <name>TexturePrepareFlag</name>
+            <anchor>TexturePrepareFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="TextureRead">
+            <anchor>TexturePrepareFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="TextureWrite">
+            <anchor>TexturePrepareFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>Q_DECLARE_FLAGS</name>
+            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
+            <anchor>Q_DECLARE_FLAGS</anchor>
+            <arglist>(int , QRhiResourceUpdateBatch::TexturePrepareFlag )</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>release</name>
+            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
+            <anchor>release</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>merge</name>
+            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
+            <anchor>merge</anchor>
+            <arglist>(QRhiResourceUpdateBatch *other)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>updateDynamicBuffer</name>
+            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
+            <anchor>updateDynamicBuffer</anchor>
+            <arglist>(QRhiBuffer *buf, int offset, int size, const void *data)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>uploadStaticBuffer</name>
+            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
+            <anchor>uploadStaticBuffer</anchor>
+            <arglist>(QRhiBuffer *buf, int offset, int size, const void *data)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>uploadStaticBuffer</name>
+            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
+            <anchor>uploadStaticBuffer-1</anchor>
+            <arglist>(QRhiBuffer *buf, const void *data)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>uploadTexture</name>
+            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
+            <anchor>uploadTexture</anchor>
+            <arglist>(QRhiTexture *tex, const QRhiTextureUploadDescription &amp;desc)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>uploadTexture</name>
+            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
+            <anchor>uploadTexture-1</anchor>
+            <arglist>(QRhiTexture *tex, const int &amp;image)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>copyTexture</name>
+            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
+            <anchor>copyTexture</anchor>
+            <arglist>(QRhiTexture *dst, QRhiTexture *src, const QRhiTextureCopyDescription &amp;desc)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>readBackTexture</name>
+            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
+            <anchor>readBackTexture</anchor>
+            <arglist>(const QRhiReadbackDescription &amp;rb, QRhiReadbackResult *result)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>generateMips</name>
+            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
+            <anchor>generateMips</anchor>
+            <arglist>(QRhiTexture *tex)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>prepareTextureForUse</name>
+            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
+            <anchor>prepareTextureForUse</anchor>
+            <arglist>(QRhiTexture *tex, int flags)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiInitParams</name>
+        <filename>qrhiinitparams.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QRhi</name>
+        <filename>qrhi.html</filename>
+        <member kind="enum">
+            <name>Implementation</name>
+            <anchor>Implementation-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Null">
+            <anchor>Implementation-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Vulkan">
+            <anchor>Implementation-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="OpenGLES2">
+            <anchor>Implementation-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="D3D11">
+            <anchor>Implementation-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Metal">
+            <anchor>Implementation-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
+            <name>Flag</name>
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="EnableProfiling">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="EnableDebugMarkers">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>Q_DECLARE_FLAGS</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>Q_DECLARE_FLAGS</anchor>
+            <arglist>(int , QRhi::Flag )</arglist>
+        </member>
+        <member kind="enum">
+            <name>Feature</name>
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="MultisampleTexture">
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="MultisampleRenderBuffer">
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DebugMarkers">
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Timestamps">
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Instancing">
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="CustomInstanceStepRate">
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
+            <name>ResourceSizeLimit</name>
+            <anchor>ResourceSizeLimit-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="TextureSizeMin">
+            <anchor>ResourceSizeLimit-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="TextureSizeMax">
+            <anchor>ResourceSizeLimit-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>~QRhi</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>dtor.QRhi</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QRhi *</type>
+            <name>create</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>create</anchor>
+            <arglist>(QRhi::Implementation impl, QRhiInitParams *params, int flags)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiGraphicsPipeline *</type>
+            <name>newGraphicsPipeline</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>newGraphicsPipeline</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiShaderResourceBindings *</type>
+            <name>newShaderResourceBindings</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>newShaderResourceBindings</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiBuffer *</type>
+            <name>newBuffer</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>newBuffer</anchor>
+            <arglist>(QRhiBuffer::Type type, int usage, int size)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiRenderBuffer *</type>
+            <name>newRenderBuffer</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>newRenderBuffer</anchor>
+            <arglist>(QRhiRenderBuffer::Type type, const int &amp;pixelSize, int sampleCount, int flags)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiTexture *</type>
+            <name>newTexture</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>newTexture</anchor>
+            <arglist>(int format, const int &amp;pixelSize, int sampleCount, int flags)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiSampler *</type>
+            <name>newSampler</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>newSampler</anchor>
+            <arglist>(QRhiSampler::Filter magFilter, QRhiSampler::Filter minFilter, QRhiSampler::Filter mipmapMode, QRhiSampler::AddressMode u, QRhiSampler::AddressMode v, QRhiSampler::AddressMode w)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiTextureRenderTarget *</type>
+            <name>newTextureRenderTarget</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>newTextureRenderTarget</anchor>
+            <arglist>(const QRhiTextureRenderTargetDescription &amp;desc, int flags)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiSwapChain *</type>
+            <name>newSwapChain</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>newSwapChain</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>beginFrame</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>beginFrame</anchor>
+            <arglist>(QRhiSwapChain *)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>endFrame</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>endFrame</anchor>
+            <arglist>(QRhiSwapChain *)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>beginOffscreenFrame</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>beginOffscreenFrame</anchor>
+            <arglist>(QRhiCommandBuffer **)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>endOffscreenFrame</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>endOffscreenFrame</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>finish</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>finish</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiResourceUpdateBatch *</type>
+            <name>nextResourceUpdateBatch</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>nextResourceUpdateBatch</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>supportedSampleCounts</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>supportedSampleCounts</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>ubufAlignment</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>ubufAlignment</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>ubufAligned</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>ubufAligned</anchor>
+            <arglist>(int v) const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>mipLevelsForSize</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>mipLevelsForSize</anchor>
+            <arglist>(const int &amp;size) const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>sizeForMipLevel</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>sizeForMipLevel</anchor>
+            <arglist>(int , const int &amp;) const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>bool</type>
+            <name>isYUpInFramebuffer</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>isYUpInFramebuffer</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QMatrix4x4</type>
+            <name>clipSpaceCorrMatrix</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>clipSpaceCorrMatrix</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>bool</type>
+            <name>isTextureFormatSupported</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>isTextureFormatSupported</anchor>
+            <arglist>(int format, int flags) const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>bool</type>
+            <name>isFeatureSupported</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>isFeatureSupported</anchor>
+            <arglist>(QRhi::Feature feature) const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>resourceSizeLimit</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>resourceSizeLimit</anchor>
+            <arglist>(QRhi::ResourceSizeLimit limit) const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>const QRhiNativeHandles *</type>
+            <name>nativeHandles</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>nativeHandles</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiProfiler *</type>
+            <name>profiler</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>profiler</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="protected" virtualness="non" static="no">
+            <type></type>
+            <name>QRhi</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>QRhi</anchor>
+            <arglist>()</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiD3D11InitParams</name>
+        <filename>qrhid3d11initparams.html</filename>
+        <base>QRhiInitParams</base>
+    </compound>
+    <compound kind="class">
+        <name>QRhiD3D11NativeHandles</name>
+        <filename>qrhid3d11nativehandles.html</filename>
+        <base>QRhiNativeHandles</base>
+    </compound>
+    <compound kind="class">
+        <name>QRhiD3D11TextureNativeHandles</name>
+        <filename>qrhid3d11texturenativehandles.html</filename>
+        <base>QRhiNativeHandles</base>
+    </compound>
+    <compound kind="class">
+        <name>QRhiGles2InitParams</name>
+        <filename>qrhigles2initparams.html</filename>
+        <base>QRhiInitParams</base>
+    </compound>
+    <compound kind="class">
+        <name>QRhiGles2NativeHandles</name>
+        <filename>qrhigles2nativehandles.html</filename>
+        <base>QRhiNativeHandles</base>
+    </compound>
+    <compound kind="class">
+        <name>QRhiGles2TextureNativeHandles</name>
+        <filename>qrhigles2texturenativehandles.html</filename>
+        <base>QRhiNativeHandles</base>
+    </compound>
+    <compound kind="class">
+        <name>QRhiMetalInitParams</name>
+        <filename>qrhimetalinitparams.html</filename>
+        <base>QRhiInitParams</base>
+    </compound>
+    <compound kind="class">
+        <name>QRhiMetalNativeHandles</name>
+        <filename>qrhimetalnativehandles.html</filename>
+        <base>QRhiNativeHandles</base>
+    </compound>
+    <compound kind="class">
+        <name>QRhiMetalTextureNativeHandles</name>
+        <filename>qrhimetaltexturenativehandles.html</filename>
+        <base>QRhiNativeHandles</base>
+    </compound>
+    <compound kind="class">
+        <name>QRhiNullNativeHandles</name>
+        <filename>qrhinullnativehandles.html</filename>
+        <base>QRhiNativeHandles</base>
+    </compound>
+    <compound kind="class">
+        <name>QRhiNullTextureNativeHandles</name>
+        <filename>qrhinulltexturenativehandles.html</filename>
+        <base>QRhiNativeHandles</base>
+    </compound>
+    <compound kind="class">
+        <name>QRhiVulkanInitParams</name>
+        <filename>qrhivulkaninitparams.html</filename>
+        <base>QRhiInitParams</base>
+    </compound>
+    <compound kind="class">
+        <name>QRhiVulkanNativeHandles</name>
+        <filename>qrhivulkannativehandles.html</filename>
+        <base>QRhiNativeHandles</base>
+    </compound>
+    <compound kind="class">
+        <name>QRhiVulkanTextureNativeHandles</name>
+        <filename>qrhivulkantexturenativehandles.html</filename>
+        <base>QRhiNativeHandles</base>
+    </compound>
+</tagfile>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qrhi.cpp -->
+  <title>QRhi Class | RHI 5.12</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhi</td></tr></table><table class="buildversion"><tr>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
+        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">QRhi Class</h1>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhi&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
+<li><a href="qrhi-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Feature-enum">Feature</a></b> { MultisampleTexture, MultisampleRenderBuffer, DebugMarkers, Timestamps, Instancing, CustomInstanceStepRate }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Flag-enum">Flag</a></b> { EnableProfiling, EnableDebugMarkers }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Implementation-enum">Implementation</a></b> { Null, Vulkan, OpenGLES2, D3D11, Metal }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#ResourceSizeLimit-enum">ResourceSizeLimit</a></b> { TextureSizeMin, TextureSizeMax }</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#dtor.QRhi">~QRhi</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Q_DECLARE_FLAGS">Q_DECLARE_FLAGS</a></b>(<i>int</i>, <i>QRhi::Flag</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#beginFrame">beginFrame</a></b>(<i>QRhiSwapChain *</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#beginOffscreenFrame">beginOffscreenFrame</a></b>(<i>QRhiCommandBuffer **</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QMatrix4x4 </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#clipSpaceCorrMatrix">clipSpaceCorrMatrix</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#endFrame">endFrame</a></b>(<i>QRhiSwapChain *</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#endOffscreenFrame">endOffscreenFrame</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#finish">finish</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#isFeatureSupported">isFeatureSupported</a></b>(QRhi::Feature <i>feature</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#isTextureFormatSupported">isTextureFormatSupported</a></b>(int <i>format</i>, int <i>flags</i> = ...) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#isYUpInFramebuffer">isYUpInFramebuffer</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#mipLevelsForSize">mipLevelsForSize</a></b>(const int &amp;<i>size</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QRhiNativeHandles *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#nativeHandles">nativeHandles</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newBuffer">newBuffer</a></b>(QRhiBuffer::Type <i>type</i>, int <i>usage</i>, int <i>size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newGraphicsPipeline">newGraphicsPipeline</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newRenderBuffer">newRenderBuffer</a></b>(QRhiRenderBuffer::Type <i>type</i>, const int &amp;<i>pixelSize</i>, int <i>sampleCount</i> = 1, int <i>flags</i> = ...)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiSampler *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newSampler">newSampler</a></b>(QRhiSampler::Filter <i>magFilter</i>, QRhiSampler::Filter <i>minFilter</i>, QRhiSampler::Filter <i>mipmapMode</i>, QRhiSampler::AddressMode <i>u</i>, QRhiSampler::AddressMode <i>v</i>, QRhiSampler::AddressMode <i>w</i> = QRhiSampler::ClampToEdge)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBindings *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newShaderResourceBindings">newShaderResourceBindings</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiSwapChain *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newSwapChain">newSwapChain</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiTexture *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newTexture">newTexture</a></b>(int <i>format</i>, const int &amp;<i>pixelSize</i>, int <i>sampleCount</i> = 1, int <i>flags</i> = ...)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiTextureRenderTarget *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newTextureRenderTarget">newTextureRenderTarget</a></b>(const QRhiTextureRenderTargetDescription &amp;<i>desc</i>, int <i>flags</i> = ...)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiResourceUpdateBatch *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#nextResourceUpdateBatch">nextResourceUpdateBatch</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiProfiler *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#profiler">profiler</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#resourceSizeLimit">resourceSizeLimit</a></b>(QRhi::ResourceSizeLimit <i>limit</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#sizeForMipLevel">sizeForMipLevel</a></b>(<i>int</i>, <i>const int &amp;</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#supportedSampleCounts">supportedSampleCounts</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#ubufAligned">ubufAligned</a></b>(int <i>v</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#ubufAlignment">ubufAlignment</a></b>() const</td></tr>
+</table></div>
+<a name="static-public-members"></a>
+<h2 id="static-public-members">Static Public Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QRhi *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#create">create</a></b>(QRhi::Implementation <i>impl</i>, QRhiInitParams *<i>params</i>, int <i>flags</i> = ...)</td></tr>
+</table></div>
+<a name="protected-functions"></a>
+<h2 id="protected-functions">Protected Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#QRhi">QRhi</a></b>()</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$QRhi-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+</div>
+<!-- @@@QRhi -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Feature$$$MultisampleTexture$$$MultisampleRenderBuffer$$$DebugMarkers$$$Timestamps$$$Instancing$$$CustomInstanceStepRate -->
+<h3 class="fn" id="Feature-enum"><a name="Feature-enum"></a>enum QRhi::<span class="name">Feature</span></h3>
+<!-- @@@Feature -->
+<!-- $$$Flag$$$EnableProfiling$$$EnableDebugMarkers -->
+<h3 class="fn" id="Flag-enum"><a name="Flag-enum"></a>enum QRhi::<span class="name">Flag</span></h3>
+<!-- @@@Flag -->
+<!-- $$$Implementation$$$Null$$$Vulkan$$$OpenGLES2$$$D3D11$$$Metal -->
+<h3 class="fn" id="Implementation-enum"><a name="Implementation-enum"></a>enum QRhi::<span class="name">Implementation</span></h3>
+<!-- @@@Implementation -->
+<!-- $$$ResourceSizeLimit$$$TextureSizeMin$$$TextureSizeMax -->
+<h3 class="fn" id="ResourceSizeLimit-enum"><a name="ResourceSizeLimit-enum"></a>enum QRhi::<span class="name">ResourceSizeLimit</span></h3>
+<!-- @@@ResourceSizeLimit -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QRhi[overload1]$$$QRhi -->
+<h3 class="fn" id="QRhi"><a name="QRhi"></a><code>[protected] </code>QRhi::<span class="name">QRhi</span>()</h3>
+<p>Default constructs an instance of QRhi.</p><!-- @@@QRhi -->
+<!-- $$$~QRhi[overload1]$$$~QRhi -->
+<h3 class="fn" id="dtor.QRhi"><a name="dtor.QRhi"></a>QRhi::<span class="name">~QRhi</span>()</h3>
+<p>Destroys the instance of QRhi.</p><!-- @@@~QRhi -->
+<!-- $$$Q_DECLARE_FLAGS[overload1]$$$Q_DECLARE_FLAGSintQRhi::Flag -->
+<h3 class="fn" id="Q_DECLARE_FLAGS"><a name="Q_DECLARE_FLAGS"></a><span class="type">int</span> QRhi::<span class="name">Q_DECLARE_FLAGS</span>(<i>int</i>, <i>QRhi::Flag</i>)</h3>
+<!-- @@@Q_DECLARE_FLAGS -->
+<!-- $$$beginFrame[overload1]$$$beginFrameQRhiSwapChain* -->
+<h3 class="fn" id="beginFrame"><a name="beginFrame"></a><span class="type">int</span> QRhi::<span class="name">beginFrame</span>(<i>QRhiSwapChain *</i>)</h3>
+<!-- @@@beginFrame -->
+<!-- $$$beginOffscreenFrame[overload1]$$$beginOffscreenFrameQRhiCommandBuffer** -->
+<h3 class="fn" id="beginOffscreenFrame"><a name="beginOffscreenFrame"></a><span class="type">int</span> QRhi::<span class="name">beginOffscreenFrame</span>(<i>QRhiCommandBuffer **</i>)</h3>
+<!-- @@@beginOffscreenFrame -->
+<!-- $$$clipSpaceCorrMatrix[overload1]$$$clipSpaceCorrMatrix -->
+<h3 class="fn" id="clipSpaceCorrMatrix"><a name="clipSpaceCorrMatrix"></a><span class="type">QMatrix4x4</span> QRhi::<span class="name">clipSpaceCorrMatrix</span>() const</h3>
+<!-- @@@clipSpaceCorrMatrix -->
+<!-- $$$create[overload1]$$$createQRhi::ImplementationQRhiInitParams*int -->
+<h3 class="fn" id="create"><a name="create"></a><code>[static] </code><span class="type"><a href="qrhi.html#QRhi">QRhi</a></span> *QRhi::<span class="name">create</span>(<span class="type"><a href="qrhi.html#Implementation-enum">QRhi::Implementation</a></span> <i>impl</i>, <span class="type"><a href="qrhiinitparams.html">QRhiInitParams</a></span> *<i>params</i>, <span class="type">int</span> <i>flags</i> = ...)</h3>
+<!-- @@@create -->
+<!-- $$$endFrame[overload1]$$$endFrameQRhiSwapChain* -->
+<h3 class="fn" id="endFrame"><a name="endFrame"></a><span class="type">int</span> QRhi::<span class="name">endFrame</span>(<i>QRhiSwapChain *</i>)</h3>
+<!-- @@@endFrame -->
+<!-- $$$endOffscreenFrame[overload1]$$$endOffscreenFrame -->
+<h3 class="fn" id="endOffscreenFrame"><a name="endOffscreenFrame"></a><span class="type">int</span> QRhi::<span class="name">endOffscreenFrame</span>()</h3>
+<!-- @@@endOffscreenFrame -->
+<!-- $$$finish[overload1]$$$finish -->
+<h3 class="fn" id="finish"><a name="finish"></a><span class="type">int</span> QRhi::<span class="name">finish</span>()</h3>
+<!-- @@@finish -->
+<!-- $$$isFeatureSupported[overload1]$$$isFeatureSupportedQRhi::Feature -->
+<h3 class="fn" id="isFeatureSupported"><a name="isFeatureSupported"></a><span class="type">bool</span> QRhi::<span class="name">isFeatureSupported</span>(<span class="type"><a href="qrhi.html#Feature-enum">QRhi::Feature</a></span> <i>feature</i>) const</h3>
+<!-- @@@isFeatureSupported -->
+<!-- $$$isTextureFormatSupported[overload1]$$$isTextureFormatSupportedintint -->
+<h3 class="fn" id="isTextureFormatSupported"><a name="isTextureFormatSupported"></a><span class="type">bool</span> QRhi::<span class="name">isTextureFormatSupported</span>(<span class="type">int</span> <i>format</i>, <span class="type">int</span> <i>flags</i> = ...) const</h3>
+<!-- @@@isTextureFormatSupported -->
+<!-- $$$isYUpInFramebuffer[overload1]$$$isYUpInFramebuffer -->
+<h3 class="fn" id="isYUpInFramebuffer"><a name="isYUpInFramebuffer"></a><span class="type">bool</span> QRhi::<span class="name">isYUpInFramebuffer</span>() const</h3>
+<!-- @@@isYUpInFramebuffer -->
+<!-- $$$mipLevelsForSize[overload1]$$$mipLevelsForSizeconstint& -->
+<h3 class="fn" id="mipLevelsForSize"><a name="mipLevelsForSize"></a><span class="type">int</span> QRhi::<span class="name">mipLevelsForSize</span>(const <span class="type">int</span> &amp;<i>size</i>) const</h3>
+<!-- @@@mipLevelsForSize -->
+<!-- $$$nativeHandles[overload1]$$$nativeHandles -->
+<h3 class="fn" id="nativeHandles"><a name="nativeHandles"></a>const <span class="type"><a href="qrhinativehandles.html">QRhiNativeHandles</a></span> *QRhi::<span class="name">nativeHandles</span>()</h3>
+<!-- @@@nativeHandles -->
+<!-- $$$newBuffer[overload1]$$$newBufferQRhiBuffer::Typeintint -->
+<h3 class="fn" id="newBuffer"><a name="newBuffer"></a><span class="type"><a href="qrhibuffer.html">QRhiBuffer</a></span> *QRhi::<span class="name">newBuffer</span>(<span class="type"><a href="qrhibuffer.html#Type-enum">QRhiBuffer::Type</a></span> <i>type</i>, <span class="type">int</span> <i>usage</i>, <span class="type">int</span> <i>size</i>)</h3>
+<!-- @@@newBuffer -->
+<!-- $$$newGraphicsPipeline[overload1]$$$newGraphicsPipeline -->
+<h3 class="fn" id="newGraphicsPipeline"><a name="newGraphicsPipeline"></a><span class="type"><a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a></span> *QRhi::<span class="name">newGraphicsPipeline</span>()</h3>
+<!-- @@@newGraphicsPipeline -->
+<!-- $$$newRenderBuffer[overload1]$$$newRenderBufferQRhiRenderBuffer::Typeconstint&intint -->
+<h3 class="fn" id="newRenderBuffer"><a name="newRenderBuffer"></a><span class="type"><a href="qrhirenderbuffer.html">QRhiRenderBuffer</a></span> *QRhi::<span class="name">newRenderBuffer</span>(<span class="type"><a href="qrhirenderbuffer.html#Type-enum">QRhiRenderBuffer::Type</a></span> <i>type</i>, const <span class="type">int</span> &amp;<i>pixelSize</i>, <span class="type">int</span> <i>sampleCount</i> = 1, <span class="type">int</span> <i>flags</i> = ...)</h3>
+<!-- @@@newRenderBuffer -->
+<!-- $$$newSampler[overload1]$$$newSamplerQRhiSampler::FilterQRhiSampler::FilterQRhiSampler::FilterQRhiSampler::AddressModeQRhiSampler::AddressModeQRhiSampler::AddressMode -->
+<h3 class="fn" id="newSampler"><a name="newSampler"></a><span class="type"><a href="qrhisampler.html">QRhiSampler</a></span> *QRhi::<span class="name">newSampler</span>(<span class="type"><a href="qrhisampler.html#Filter-enum">QRhiSampler::Filter</a></span> <i>magFilter</i>, <span class="type"><a href="qrhisampler.html#Filter-enum">QRhiSampler::Filter</a></span> <i>minFilter</i>, <span class="type"><a href="qrhisampler.html#Filter-enum">QRhiSampler::Filter</a></span> <i>mipmapMode</i>, <span class="type"><a href="qrhisampler.html#AddressMode-enum">QRhiSampler::AddressMode</a></span> <i>u</i>, <span class="type"><a href="qrhisampler.html#AddressMode-enum">QRhiSampler::AddressMode</a></span> <i>v</i>, <span class="type"><a href="qrhisampler.html#AddressMode-enum">QRhiSampler::AddressMode</a></span> <i>w</i> = QRhiSampler::ClampToEdge)</h3>
+<!-- @@@newSampler -->
+<!-- $$$newShaderResourceBindings[overload1]$$$newShaderResourceBindings -->
+<h3 class="fn" id="newShaderResourceBindings"><a name="newShaderResourceBindings"></a><span class="type"><a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a></span> *QRhi::<span class="name">newShaderResourceBindings</span>()</h3>
+<!-- @@@newShaderResourceBindings -->
+<!-- $$$newSwapChain[overload1]$$$newSwapChain -->
+<h3 class="fn" id="newSwapChain"><a name="newSwapChain"></a><span class="type"><a href="qrhiswapchain.html">QRhiSwapChain</a></span> *QRhi::<span class="name">newSwapChain</span>()</h3>
+<!-- @@@newSwapChain -->
+<!-- $$$newTexture[overload1]$$$newTextureintconstint&intint -->
+<h3 class="fn" id="newTexture"><a name="newTexture"></a><span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *QRhi::<span class="name">newTexture</span>(<span class="type">int</span> <i>format</i>, const <span class="type">int</span> &amp;<i>pixelSize</i>, <span class="type">int</span> <i>sampleCount</i> = 1, <span class="type">int</span> <i>flags</i> = ...)</h3>
+<!-- @@@newTexture -->
+<!-- $$$newTextureRenderTarget[overload1]$$$newTextureRenderTargetconstQRhiTextureRenderTargetDescription&int -->
+<h3 class="fn" id="newTextureRenderTarget"><a name="newTextureRenderTarget"></a><span class="type"><a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a></span> *QRhi::<span class="name">newTextureRenderTarget</span>(const <span class="type"><a href="qrhitexturerendertargetdescription.html">QRhiTextureRenderTargetDescription</a></span> &amp;<i>desc</i>, <span class="type">int</span> <i>flags</i> = ...)</h3>
+<!-- @@@newTextureRenderTarget -->
+<!-- $$$nextResourceUpdateBatch[overload1]$$$nextResourceUpdateBatch -->
+<h3 class="fn" id="nextResourceUpdateBatch"><a name="nextResourceUpdateBatch"></a><span class="type"><a href="qrhiresourceupdatebatch.html">QRhiResourceUpdateBatch</a></span> *QRhi::<span class="name">nextResourceUpdateBatch</span>()</h3>
+<!-- @@@nextResourceUpdateBatch -->
+<!-- $$$profiler[overload1]$$$profiler -->
+<h3 class="fn" id="profiler"><a name="profiler"></a><span class="type">QRhiProfiler</span> *QRhi::<span class="name">profiler</span>()</h3>
+<!-- @@@profiler -->
+<!-- $$$resourceSizeLimit[overload1]$$$resourceSizeLimitQRhi::ResourceSizeLimit -->
+<h3 class="fn" id="resourceSizeLimit"><a name="resourceSizeLimit"></a><span class="type">int</span> QRhi::<span class="name">resourceSizeLimit</span>(<span class="type"><a href="qrhi.html#ResourceSizeLimit-enum">QRhi::ResourceSizeLimit</a></span> <i>limit</i>) const</h3>
+<!-- @@@resourceSizeLimit -->
+<!-- $$$sizeForMipLevel[overload1]$$$sizeForMipLevelintconstint& -->
+<h3 class="fn" id="sizeForMipLevel"><a name="sizeForMipLevel"></a><span class="type">int</span> QRhi::<span class="name">sizeForMipLevel</span>(<i>int</i>, <i>const int &amp;</i>) const</h3>
+<!-- @@@sizeForMipLevel -->
+<!-- $$$supportedSampleCounts[overload1]$$$supportedSampleCounts -->
+<h3 class="fn" id="supportedSampleCounts"><a name="supportedSampleCounts"></a><span class="type">int</span> QRhi::<span class="name">supportedSampleCounts</span>() const</h3>
+<!-- @@@supportedSampleCounts -->
+<!-- $$$ubufAligned[overload1]$$$ubufAlignedint -->
+<h3 class="fn" id="ubufAligned"><a name="ubufAligned"></a><span class="type">int</span> QRhi::<span class="name">ubufAligned</span>(<span class="type">int</span> <i>v</i>) const</h3>
+<!-- @@@ubufAligned -->
+<!-- $$$ubufAlignment[overload1]$$$ubufAlignment -->
+<h3 class="fn" id="ubufAlignment"><a name="ubufAlignment"></a><span class="type">int</span> QRhi::<span class="name">ubufAlignment</span>() const</h3>
+<!-- @@@ubufAlignment -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

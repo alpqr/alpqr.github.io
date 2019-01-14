@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qrhi.cpp -->
+  <title>QRhiResourceUpdateBatch Class | RHI 5.12</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiResourceUpdateBatch</td></tr></table><table class="buildversion"><tr>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
+        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">QRhiResourceUpdateBatch Class</h1>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiResourceUpdateBatch&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
+<li><a href="qrhiresourceupdatebatch-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#TexturePrepareFlag-enum">TexturePrepareFlag</a></b> { TextureRead, TextureWrite }</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#Q_DECLARE_FLAGS">Q_DECLARE_FLAGS</a></b>(<i>int</i>, <i>QRhiResourceUpdateBatch::TexturePrepareFlag</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#copyTexture">copyTexture</a></b>(QRhiTexture *<i>dst</i>, QRhiTexture *<i>src</i>, const QRhiTextureCopyDescription &amp;<i>desc</i> = QRhiTextureCopyDescription())</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#generateMips">generateMips</a></b>(QRhiTexture *<i>tex</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#merge">merge</a></b>(QRhiResourceUpdateBatch *<i>other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#prepareTextureForUse">prepareTextureForUse</a></b>(QRhiTexture *<i>tex</i>, int <i>flags</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#readBackTexture">readBackTexture</a></b>(const QRhiReadbackDescription &amp;<i>rb</i>, QRhiReadbackResult *<i>result</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#release">release</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#updateDynamicBuffer">updateDynamicBuffer</a></b>(QRhiBuffer *<i>buf</i>, int <i>offset</i>, int <i>size</i>, const void *<i>data</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#uploadStaticBuffer">uploadStaticBuffer</a></b>(QRhiBuffer *<i>buf</i>, int <i>offset</i>, int <i>size</i>, const void *<i>data</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#uploadStaticBuffer-1">uploadStaticBuffer</a></b>(QRhiBuffer *<i>buf</i>, const void *<i>data</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#uploadTexture">uploadTexture</a></b>(QRhiTexture *<i>tex</i>, const QRhiTextureUploadDescription &amp;<i>desc</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#uploadTexture-1">uploadTexture</a></b>(QRhiTexture *<i>tex</i>, const int &amp;<i>image</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$QRhiResourceUpdateBatch-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+</div>
+<!-- @@@QRhiResourceUpdateBatch -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$TexturePrepareFlag$$$TextureRead$$$TextureWrite -->
+<h3 class="fn" id="TexturePrepareFlag-enum"><a name="TexturePrepareFlag-enum"></a>enum QRhiResourceUpdateBatch::<span class="name">TexturePrepareFlag</span></h3>
+<!-- @@@TexturePrepareFlag -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$Q_DECLARE_FLAGS[overload1]$$$Q_DECLARE_FLAGSintQRhiResourceUpdateBatch::TexturePrepareFlag -->
+<h3 class="fn" id="Q_DECLARE_FLAGS"><a name="Q_DECLARE_FLAGS"></a><span class="type">int</span> QRhiResourceUpdateBatch::<span class="name">Q_DECLARE_FLAGS</span>(<i>int</i>, <i>QRhiResourceUpdateBatch::TexturePrepareFlag</i>)</h3>
+<!-- @@@Q_DECLARE_FLAGS -->
+<!-- $$$copyTexture[overload1]$$$copyTextureQRhiTexture*QRhiTexture*constQRhiTextureCopyDescription& -->
+<h3 class="fn" id="copyTexture"><a name="copyTexture"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">copyTexture</span>(<span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>dst</i>, <span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>src</i>, const <span class="type"><a href="qrhitexturecopydescription.html">QRhiTextureCopyDescription</a></span> &amp;<i>desc</i> = QRhiTextureCopyDescription())</h3>
+<!-- @@@copyTexture -->
+<!-- $$$generateMips[overload1]$$$generateMipsQRhiTexture* -->
+<h3 class="fn" id="generateMips"><a name="generateMips"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">generateMips</span>(<span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>tex</i>)</h3>
+<!-- @@@generateMips -->
+<!-- $$$merge[overload1]$$$mergeQRhiResourceUpdateBatch* -->
+<h3 class="fn" id="merge"><a name="merge"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">merge</span>(<span class="type">QRhiResourceUpdateBatch</span> *<i>other</i>)</h3>
+<!-- @@@merge -->
+<!-- $$$prepareTextureForUse[overload1]$$$prepareTextureForUseQRhiTexture*int -->
+<h3 class="fn" id="prepareTextureForUse"><a name="prepareTextureForUse"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">prepareTextureForUse</span>(<span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>tex</i>, <span class="type">int</span> <i>flags</i>)</h3>
+<!-- @@@prepareTextureForUse -->
+<!-- $$$readBackTexture[overload1]$$$readBackTextureconstQRhiReadbackDescription&QRhiReadbackResult* -->
+<h3 class="fn" id="readBackTexture"><a name="readBackTexture"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">readBackTexture</span>(const <span class="type"><a href="qrhireadbackdescription.html">QRhiReadbackDescription</a></span> &amp;<i>rb</i>, <span class="type"><a href="qrhireadbackresult.html">QRhiReadbackResult</a></span> *<i>result</i>)</h3>
+<!-- @@@readBackTexture -->
+<!-- $$$release[overload1]$$$release -->
+<h3 class="fn" id="release"><a name="release"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">release</span>()</h3>
+<!-- @@@release -->
+<!-- $$$updateDynamicBuffer[overload1]$$$updateDynamicBufferQRhiBuffer*intintconstvoid* -->
+<h3 class="fn" id="updateDynamicBuffer"><a name="updateDynamicBuffer"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">updateDynamicBuffer</span>(<span class="type"><a href="qrhibuffer.html">QRhiBuffer</a></span> *<i>buf</i>, <span class="type">int</span> <i>offset</i>, <span class="type">int</span> <i>size</i>, const <span class="type">void</span> *<i>data</i>)</h3>
+<!-- @@@updateDynamicBuffer -->
+<!-- $$$uploadStaticBuffer[overload1]$$$uploadStaticBufferQRhiBuffer*intintconstvoid* -->
+<h3 class="fn" id="uploadStaticBuffer"><a name="uploadStaticBuffer"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">uploadStaticBuffer</span>(<span class="type"><a href="qrhibuffer.html">QRhiBuffer</a></span> *<i>buf</i>, <span class="type">int</span> <i>offset</i>, <span class="type">int</span> <i>size</i>, const <span class="type">void</span> *<i>data</i>)</h3>
+<!-- @@@uploadStaticBuffer -->
+<!-- $$$uploadStaticBuffer$$$uploadStaticBufferQRhiBuffer*constvoid* -->
+<h3 class="fn" id="uploadStaticBuffer-1"><a name="uploadStaticBuffer-1"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">uploadStaticBuffer</span>(<span class="type"><a href="qrhibuffer.html">QRhiBuffer</a></span> *<i>buf</i>, const <span class="type">void</span> *<i>data</i>)</h3>
+<!-- @@@uploadStaticBuffer -->
+<!-- $$$uploadTexture[overload1]$$$uploadTextureQRhiTexture*constQRhiTextureUploadDescription& -->
+<h3 class="fn" id="uploadTexture"><a name="uploadTexture"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">uploadTexture</span>(<span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>tex</i>, const <span class="type"><a href="qrhitextureuploaddescription.html">QRhiTextureUploadDescription</a></span> &amp;<i>desc</i>)</h3>
+<!-- @@@uploadTexture -->
+<!-- $$$uploadTexture$$$uploadTextureQRhiTexture*constint& -->
+<h3 class="fn" id="uploadTexture-1"><a name="uploadTexture-1"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">uploadTexture</span>(<span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>tex</i>, const <span class="type">int</span> &amp;<i>image</i>)</h3>
+<!-- @@@uploadTexture -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>
