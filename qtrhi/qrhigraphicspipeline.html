@@ -40,7 +40,6 @@
 <ul>
 <li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
 <li class="level1"><a href="#protected-variables">Protected Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
@@ -114,14 +113,6 @@
 <ul>
 <li class="fn">4 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
 </ul>
-<a name="protected-functions"></a>
-<h2 id="protected-functions">Protected Functions</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#QRhiGraphicsPipeline">QRhiGraphicsPipeline</a></b>(QRhiImplementation *<i>rhi</i>)</td></tr>
-</table></div>
-<ul>
-<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
-</ul>
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
@@ -148,6 +139,10 @@
 <ul>
 <li class="fn">2 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
 </ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
+</ul>
 <a name="details"></a>
 <!-- $$$QRhiGraphicsPipeline-description -->
 <div class="descr">
@@ -159,37 +154,118 @@
 <h2>Member Type Documentation</h2>
 <!-- $$$BlendFactor$$$Zero$$$One$$$SrcColor$$$OneMinusSrcColor$$$DstColor$$$OneMinusDstColor$$$SrcAlpha$$$OneMinusSrcAlpha$$$DstAlpha$$$OneMinusDstAlpha$$$ConstantColor$$$OneMinusConstantColor$$$ConstantAlpha$$$OneMinusConstantAlpha$$$SrcAlphaSaturate$$$Src1Color$$$OneMinusSrc1Color$$$Src1Alpha$$$OneMinusSrc1Alpha -->
 <h3 class="fn" id="BlendFactor-enum"><a name="BlendFactor-enum"></a>enum QRhiGraphicsPipeline::<span class="name">BlendFactor</span></h3>
+<p>Specifies the blend factor</p>
+<div class="table"><table class="valuelist"><tr><th class="tblConst">Constant</th><th class="tblVal">Value</th></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Zero</code></td><td class="topAlign tblval"><code>0</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::One</code></td><td class="topAlign tblval"><code>1</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::SrcColor</code></td><td class="topAlign tblval"><code>2</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::OneMinusSrcColor</code></td><td class="topAlign tblval"><code>3</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::DstColor</code></td><td class="topAlign tblval"><code>4</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::OneMinusDstColor</code></td><td class="topAlign tblval"><code>5</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::SrcAlpha</code></td><td class="topAlign tblval"><code>6</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::OneMinusSrcAlpha</code></td><td class="topAlign tblval"><code>7</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::DstAlpha</code></td><td class="topAlign tblval"><code>8</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::OneMinusDstAlpha</code></td><td class="topAlign tblval"><code>9</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::ConstantColor</code></td><td class="topAlign tblval"><code>10</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::OneMinusConstantColor</code></td><td class="topAlign tblval"><code>11</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::ConstantAlpha</code></td><td class="topAlign tblval"><code>12</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::OneMinusConstantAlpha</code></td><td class="topAlign tblval"><code>13</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::SrcAlphaSaturate</code></td><td class="topAlign tblval"><code>14</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Src1Color</code></td><td class="topAlign tblval"><code>15</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::OneMinusSrc1Color</code></td><td class="topAlign tblval"><code>16</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Src1Alpha</code></td><td class="topAlign tblval"><code>17</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::OneMinusSrc1Alpha</code></td><td class="topAlign tblval"><code>18</code></td></tr>
+</table></div>
 <!-- @@@BlendFactor -->
 <!-- $$$BlendOp$$$Add$$$Subtract$$$ReverseSubtract$$$Min$$$Max -->
 <h3 class="fn" id="BlendOp-enum"><a name="BlendOp-enum"></a>enum QRhiGraphicsPipeline::<span class="name">BlendOp</span></h3>
+<p>Specifies the blend operation</p>
+<div class="table"><table class="valuelist"><tr><th class="tblConst">Constant</th><th class="tblVal">Value</th></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Add</code></td><td class="topAlign tblval"><code>0</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Subtract</code></td><td class="topAlign tblval"><code>1</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::ReverseSubtract</code></td><td class="topAlign tblval"><code>2</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Min</code></td><td class="topAlign tblval"><code>3</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Max</code></td><td class="topAlign tblval"><code>4</code></td></tr>
+</table></div>
 <!-- @@@BlendOp -->
 <!-- $$$ColorMaskComponent$$$R$$$G$$$B$$$A -->
 <h3 class="fn" id="ColorMaskComponent-enum"><a name="ColorMaskComponent-enum"></a>enum QRhiGraphicsPipeline::<span class="name">ColorMaskComponent</span></h3>
+<p>Flag values for specifying the color write mask</p>
+<div class="table"><table class="valuelist"><tr><th class="tblConst">Constant</th><th class="tblVal">Value</th></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::R</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::G</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::B</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::A</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 3</code></td></tr>
+</table></div>
 <!-- @@@ColorMaskComponent -->
 <!-- $$$CompareOp$$$Never$$$Less$$$Equal$$$LessOrEqual$$$Greater$$$NotEqual$$$GreaterOrEqual$$$Always -->
 <h3 class="fn" id="CompareOp-enum"><a name="CompareOp-enum"></a>enum QRhiGraphicsPipeline::<span class="name">CompareOp</span></h3>
+<p>Specifies the depth or stencil comparison function</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Never</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Less</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">(default for depth)</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Equal</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::LessOrEqual</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Greater</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::NotEqual</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::GreaterOrEqual</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Always</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">(default for stencil)</td></tr>
+</table></div>
 <!-- @@@CompareOp -->
 <!-- $$$CullMode$$$None$$$Front$$$Back -->
 <h3 class="fn" id="CullMode-enum"><a name="CullMode-enum"></a>enum QRhiGraphicsPipeline::<span class="name">CullMode</span></h3>
+<p>Specifies the culling mode</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::None</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">No culling (default)</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Front</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Cull front faces</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Back</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Cull back faces</td></tr>
+</table></div>
 <!-- @@@CullMode -->
 <!-- $$$Flag$$$UsesBlendConstants$$$UsesStencilRef$$$UsesScissor -->
 <h3 class="fn" id="Flag-enum"><a name="Flag-enum"></a>enum QRhiGraphicsPipeline::<span class="name">Flag</span></h3>
+<p>Flag values for describing the dynamic state of the pipeline. The viewport is always dynamic.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::UsesBlendConstants</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">Indicates that a blend color constant will be set via <a href="qrhicommandbuffer.html#setBlendConstants">QRhiCommandBuffer::setBlendConstants</a>()</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::UsesStencilRef</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Indicates that a stencil reference value will be set via <a href="qrhicommandbuffer.html#setStencilRef">QRhiCommandBuffer::setStencilRef</a>()</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::UsesScissor</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">Indicates that a scissor rectangle will be set via <a href="qrhicommandbuffer.html#setScissor">QRhiCommandBuffer::setScissor</a>()</td></tr>
+</table></div>
 <!-- @@@Flag -->
 <!-- $$$FrontFace$$$CCW$$$CW -->
 <h3 class="fn" id="FrontFace-enum"><a name="FrontFace-enum"></a>enum QRhiGraphicsPipeline::<span class="name">FrontFace</span></h3>
+<p>Specifies the front face winding order</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::CCW</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Counter clockwise (default)</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::CW</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Clockwise</td></tr>
+</table></div>
 <!-- @@@FrontFace -->
 <!-- $$$StencilOp$$$StencilZero$$$Keep$$$Replace$$$IncrementAndClamp$$$DecrementAndClamp$$$Invert$$$IncrementAndWrap$$$DecrementAndWrap -->
 <h3 class="fn" id="StencilOp-enum"><a name="StencilOp-enum"></a>enum QRhiGraphicsPipeline::<span class="name">StencilOp</span></h3>
+<p>Specifies the stencil operation</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::StencilZero</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Keep</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">(default)</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Replace</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::IncrementAndClamp</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::DecrementAndClamp</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Invert</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::IncrementAndWrap</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::DecrementAndWrap</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">&nbsp;</td></tr>
+</table></div>
 <!-- @@@StencilOp -->
 <!-- $$$Topology$$$Triangles$$$TriangleStrip$$$Lines$$$LineStrip$$$Points -->
 <h3 class="fn" id="Topology-enum"><a name="Topology-enum"></a>enum QRhiGraphicsPipeline::<span class="name">Topology</span></h3>
+<p>Specifies the primitive topology</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Triangles</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">(default)</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::TriangleStrip</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Lines</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::LineStrip</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsPipeline::Points</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">&nbsp;</td></tr>
+</table></div>
 <!-- @@@Topology -->
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$QRhiGraphicsPipeline[overload1]$$$QRhiGraphicsPipelineQRhiImplementation* -->
-<h3 class="fn" id="QRhiGraphicsPipeline"><a name="QRhiGraphicsPipeline"></a><code>[protected] </code>QRhiGraphicsPipeline::<span class="name">QRhiGraphicsPipeline</span>(<span class="type">QRhiImplementation</span> *<i>rhi</i>)</h3>
-<p>Default constructs an instance of QRhiGraphicsPipeline.</p><!-- @@@QRhiGraphicsPipeline -->
 <!-- $$$build[overload1]$$$build -->
 <h3 class="fn" id="build"><a name="build"></a><code>[pure virtual] </code><span class="type">bool</span> QRhiGraphicsPipeline::<span class="name">build</span>()</h3>
 <!-- @@@build -->

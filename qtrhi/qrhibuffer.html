@@ -40,7 +40,6 @@
 <ul>
 <li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
 <li class="level1"><a href="#protected-variables">Protected Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
@@ -75,14 +74,6 @@
 <ul>
 <li class="fn">4 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
 </ul>
-<a name="protected-functions"></a>
-<h2 id="protected-functions">Protected Functions</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#QRhiBuffer">QRhiBuffer</a></b>(QRhiImplementation *<i>rhi</i>, QRhiBuffer::Type <i>type_</i>, int <i>usage_</i>, int <i>size_</i>)</td></tr>
-</table></div>
-<ul>
-<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
-</ul>
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
@@ -93,6 +84,10 @@
 </table></div>
 <ul>
 <li class="fn">2 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
 </ul>
 <a name="details"></a>
 <!-- $$$QRhiBuffer-description -->
@@ -105,16 +100,25 @@
 <h2>Member Type Documentation</h2>
 <!-- $$$Type$$$Immutable$$$Static$$$Dynamic -->
 <h3 class="fn" id="Type-enum"><a name="Type-enum"></a>enum QRhiBuffer::<span class="name">Type</span></h3>
+<p>Specifies type of buffer resource.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiBuffer::Immutable</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Indicates that the data is not expected to change ever after the initial upload. Under the hood such buffer resources are typically placed in device local (GPU) memory (on systems where applicable). Uploading new data is possible, but frequent changes can be expensive. Upload typically happens by copying to a separate, host visible staging buffer from which a GPU buffer-to-buffer copy is issued into the actual GPU-only buffer.</td></tr>
+<tr><td class="topAlign"><code>QRhiBuffer::Static</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Indicates that the data is expected to change only infrequently. Typically placed in device local (GPU) memory, where applicable. On backends where host visible staging buffers are used for uploading, the staging buffers are kept around for this type, unlike with Immutable, so subsequent uploads do not suffer in performance. Frequent updates should be avoided.</td></tr>
+<tr><td class="topAlign"><code>QRhiBuffer::Dynamic</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Indicates that the data is expected to change frequently. Not recommended for large buffers. Typically backed by host visible memory in 2 copies in order to allow for changing without stalling the graphics pipeline. The double buffering is managed transparently to the applications and is not exposed in the API here in any form.</td></tr>
+</table></div>
 <!-- @@@Type -->
 <!-- $$$UsageFlag$$$VertexBuffer$$$IndexBuffer$$$UniformBuffer -->
 <h3 class="fn" id="UsageFlag-enum"><a name="UsageFlag-enum"></a>enum QRhiBuffer::<span class="name">UsageFlag</span></h3>
+<p>Flag values to specify how the buffer is going to be used.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiBuffer::VertexBuffer</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">Vertex buffer</td></tr>
+<tr><td class="topAlign"><code>QRhiBuffer::IndexBuffer</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Index buffer</td></tr>
+<tr><td class="topAlign"><code>QRhiBuffer::UniformBuffer</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">Uniform (constant) buffer</td></tr>
+</table></div>
 <!-- @@@UsageFlag -->
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$QRhiBuffer[overload1]$$$QRhiBufferQRhiImplementation*QRhiBuffer::Typeintint -->
-<h3 class="fn" id="QRhiBuffer"><a name="QRhiBuffer"></a><code>[protected] </code>QRhiBuffer::<span class="name">QRhiBuffer</span>(<span class="type">QRhiImplementation</span> *<i>rhi</i>, <span class="type"><a href="qrhibuffer.html#Type-enum">QRhiBuffer::Type</a></span> <i>type_</i>, <span class="type">int</span> <i>usage_</i>, <span class="type">int</span> <i>size_</i>)</h3>
-<p>Default constructs an instance of QRhiBuffer.</p><!-- @@@QRhiBuffer -->
 <!-- $$$build[overload1]$$$build -->
 <h3 class="fn" id="build"><a name="build"></a><code>[pure virtual] </code><span class="type">bool</span> QRhiBuffer::<span class="name">build</span>()</h3>
 <!-- @@@build -->

@@ -70,6 +70,8 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Describes the blend state for one color attachment.</p>
+<p>Defaults to color write enabled, blending disabled. The blend values are set up for pre-multiplied alpha (One, <a href="qrhigraphicspipeline.html#BlendFactor-enum">OneMinusSrcAlpha</a>, One, <a href="qrhigraphicspipeline.html#BlendFactor-enum">OneMinusSrcAlpha</a>) by default.</p>
+<p>Not having any <a href="qrhigraphicspipeline-targetblend.html">TargetBlend</a> specified in <a href="qrhigraphicspipeline.html#setTargetBlends">QRhiGraphicsPipeline::setTargetBlends</a>() disables blending and is a convenient shortcut when having only one color attachment and no blending is desired. Otherwise a <a href="qrhigraphicspipeline-targetblend.html">TargetBlend</a> for each color attachment is expected.</p>
 </div>
 <!-- @@@TargetBlend -->
         </div>

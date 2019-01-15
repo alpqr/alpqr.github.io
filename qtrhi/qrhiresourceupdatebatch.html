@@ -38,7 +38,6 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
-<li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
@@ -53,11 +52,6 @@
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
 <li><a href="qrhiresourceupdatebatch-members.html">List of all members, including inherited members</a></li>
 </ul>
-<a name="public-types"></a>
-<h2 id="public-types">Public Types</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#TexturePrepareFlag-enum">TexturePrepareFlag</a></b> { TextureRead, TextureWrite }</td></tr>
-</table></div>
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
@@ -65,7 +59,6 @@
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#copyTexture">copyTexture</a></b>(QRhiTexture *<i>dst</i>, QRhiTexture *<i>src</i>, const QRhiTextureCopyDescription &amp;<i>desc</i> = QRhiTextureCopyDescription())</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#generateMips">generateMips</a></b>(QRhiTexture *<i>tex</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#merge">merge</a></b>(QRhiResourceUpdateBatch *<i>other</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#prepareTextureForUse">prepareTextureForUse</a></b>(QRhiTexture *<i>tex</i>, int <i>flags</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#readBackTexture">readBackTexture</a></b>(const QRhiReadbackDescription &amp;<i>rb</i>, QRhiReadbackResult *<i>result</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#release">release</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourceupdatebatch.html#updateDynamicBuffer">updateDynamicBuffer</a></b>(QRhiBuffer *<i>buf</i>, int <i>offset</i>, int <i>size</i>, const void *<i>data</i>)</td></tr>
@@ -81,12 +74,6 @@
 <p>Records upload and copy type of operations.</p>
 </div>
 <!-- @@@QRhiResourceUpdateBatch -->
-<div class="types">
-<h2>Member Type Documentation</h2>
-<!-- $$$TexturePrepareFlag$$$TextureRead$$$TextureWrite -->
-<h3 class="fn" id="TexturePrepareFlag-enum"><a name="TexturePrepareFlag-enum"></a>enum QRhiResourceUpdateBatch::<span class="name">TexturePrepareFlag</span></h3>
-<!-- @@@TexturePrepareFlag -->
-</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$~QRhiResourceUpdateBatch[overload1]$$$~QRhiResourceUpdateBatch -->
@@ -101,9 +88,6 @@
 <!-- $$$merge[overload1]$$$mergeQRhiResourceUpdateBatch* -->
 <h3 class="fn" id="merge"><a name="merge"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">merge</span>(<span class="type">QRhiResourceUpdateBatch</span> *<i>other</i>)</h3>
 <!-- @@@merge -->
-<!-- $$$prepareTextureForUse[overload1]$$$prepareTextureForUseQRhiTexture*int -->
-<h3 class="fn" id="prepareTextureForUse"><a name="prepareTextureForUse"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">prepareTextureForUse</span>(<span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>tex</i>, <span class="type">int</span> <i>flags</i>)</h3>
-<!-- @@@prepareTextureForUse -->
 <!-- $$$readBackTexture[overload1]$$$readBackTextureconstQRhiReadbackDescription&QRhiReadbackResult* -->
 <h3 class="fn" id="readBackTexture"><a name="readBackTexture"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">readBackTexture</span>(const <span class="type"><a href="qrhireadbackdescription.html">QRhiReadbackDescription</a></span> &amp;<i>rb</i>, <span class="type"><a href="qrhireadbackresult.html">QRhiReadbackResult</a></span> *<i>result</i>)</h3>
 <!-- @@@readBackTexture -->

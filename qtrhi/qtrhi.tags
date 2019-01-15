@@ -465,13 +465,6 @@
             <name>QRhiResource</name>
             <anchorfile>qrhiresource.html</anchorfile>
             <anchor>QRhiResource</anchor>
-            <arglist>(QRhiImplementation *rhi_)</arglist>
-        </member>
-        <member kind="function" protection="protected" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiResource</name>
-            <anchorfile>qrhiresource.html</anchorfile>
-            <anchor>QRhiResource-1</anchor>
             <arglist>(const QRhiResource &amp;)</arglist>
         </member>
         <member kind="function" protection="protected" virtualness="non" static="no">
@@ -568,13 +561,6 @@
             <anchorfile>qrhibuffer.html</anchorfile>
             <anchor>build</anchor>
             <arglist>() = 0</arglist>
-        </member>
-        <member kind="function" protection="protected" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiBuffer</name>
-            <anchorfile>qrhibuffer.html</anchorfile>
-            <anchor>QRhiBuffer</anchor>
-            <arglist>(QRhiImplementation *rhi, QRhiBuffer::Type type_, int usage_, int size_)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -820,13 +806,6 @@
             <anchor>buildFrom</anchor>
             <arglist>(const QRhiNativeHandles *src)</arglist>
         </member>
-        <member kind="function" protection="protected" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiTexture</name>
-            <anchorfile>qrhitexture.html</anchorfile>
-            <anchor>QRhiTexture</anchor>
-            <arglist>(QRhiImplementation *rhi, QRhiTexture::Format format_, const int &amp;pixelSize_, int sampleCount_, int flags_)</arglist>
-        </member>
     </compound>
     <compound kind="class">
         <name>QRhiSampler</name>
@@ -965,13 +944,6 @@
             <anchor>build</anchor>
             <arglist>() = 0</arglist>
         </member>
-        <member kind="function" protection="protected" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiSampler</name>
-            <anchorfile>qrhisampler.html</anchorfile>
-            <anchor>QRhiSampler</anchor>
-            <arglist>(QRhiImplementation *rhi, QRhiSampler::Filter magFilter_, QRhiSampler::Filter minFilter_, QRhiSampler::Filter mipmapMode_, QRhiSampler::AddressMode u_, QRhiSampler::AddressMode v_, QRhiSampler::AddressMode w_)</arglist>
-        </member>
     </compound>
     <compound kind="class">
         <name>QRhiRenderBuffer</name>
@@ -1069,25 +1041,11 @@
             <anchor>backingFormat</anchor>
             <arglist>() const const = 0</arglist>
         </member>
-        <member kind="function" protection="protected" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiRenderBuffer</name>
-            <anchorfile>qrhirenderbuffer.html</anchorfile>
-            <anchor>QRhiRenderBuffer</anchor>
-            <arglist>(QRhiImplementation *rhi, QRhiRenderBuffer::Type type_, const int &amp;pixelSize_, int sampleCount_, int flags_)</arglist>
-        </member>
     </compound>
     <compound kind="class">
         <name>QRhiRenderPassDescriptor</name>
         <filename>qrhirenderpassdescriptor.html</filename>
         <base>QRhiResource</base>
-        <member kind="function" protection="protected" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiRenderPassDescriptor</name>
-            <anchorfile>qrhirenderpassdescriptor.html</anchorfile>
-            <anchor>QRhiRenderPassDescriptor</anchor>
-            <arglist>(QRhiImplementation *rhi)</arglist>
-        </member>
     </compound>
     <compound kind="class">
         <name>QRhiRenderTarget</name>
@@ -1140,13 +1098,6 @@
             <anchorfile>qrhirendertarget.html</anchorfile>
             <anchor>setRenderPassDescriptor</anchor>
             <arglist>(QRhiRenderPassDescriptor *desc)</arglist>
-        </member>
-        <member kind="function" protection="protected" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiRenderTarget</name>
-            <anchorfile>qrhirendertarget.html</anchorfile>
-            <anchor>QRhiRenderTarget</anchor>
-            <arglist>(QRhiImplementation *rhi)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -1208,13 +1159,6 @@
             <anchor>build</anchor>
             <arglist>() = 0</arglist>
         </member>
-        <member kind="function" protection="protected" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiTextureRenderTarget</name>
-            <anchorfile>qrhitexturerendertarget.html</anchorfile>
-            <anchor>QRhiTextureRenderTarget</anchor>
-            <arglist>(QRhiImplementation *rhi, const QRhiTextureRenderTargetDescription &amp;desc_, int flags_)</arglist>
-        </member>
     </compound>
     <compound kind="class">
         <name>QRhiShaderResourceBindings</name>
@@ -1240,13 +1184,6 @@
             <anchorfile>qrhishaderresourcebindings.html</anchorfile>
             <anchor>build</anchor>
             <arglist>() = 0</arglist>
-        </member>
-        <member kind="function" protection="protected" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiShaderResourceBindings</name>
-            <anchorfile>qrhishaderresourcebindings.html</anchorfile>
-            <anchor>QRhiShaderResourceBindings</anchor>
-            <arglist>(QRhiImplementation *rhi)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -1787,13 +1724,6 @@
             <anchor>build</anchor>
             <arglist>() = 0</arglist>
         </member>
-        <member kind="function" protection="protected" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiGraphicsPipeline</name>
-            <anchorfile>qrhigraphicspipeline.html</anchorfile>
-            <anchor>QRhiGraphicsPipeline</anchor>
-            <arglist>(QRhiImplementation *rhi)</arglist>
-        </member>
     </compound>
     <compound kind="class">
         <name>QRhiGraphicsPipeline::TargetBlend</name>
@@ -1958,13 +1888,6 @@
             <anchor>buildOrResize</anchor>
             <arglist>() = 0</arglist>
         </member>
-        <member kind="function" protection="protected" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiSwapChain</name>
-            <anchorfile>qrhiswapchain.html</anchorfile>
-            <anchor>QRhiSwapChain</anchor>
-            <arglist>(QRhiImplementation *rhi)</arglist>
-        </member>
     </compound>
     <compound kind="class">
         <name>QRhiCommandBuffer</name>
@@ -2081,13 +2004,6 @@
             <anchor>debugMarkMsg</anchor>
             <arglist>(const QByteArray &amp;msg)</arglist>
         </member>
-        <member kind="function" protection="protected" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiCommandBuffer</name>
-            <anchorfile>qrhicommandbuffer.html</anchorfile>
-            <anchor>QRhiCommandBuffer</anchor>
-            <arglist>(QRhiImplementation *rhi)</arglist>
-        </member>
     </compound>
     <compound kind="class">
         <name>QRhiReadbackResult</name>
@@ -2096,19 +2012,6 @@
     <compound kind="class">
         <name>QRhiResourceUpdateBatch</name>
         <filename>qrhiresourceupdatebatch.html</filename>
-        <member kind="enum">
-            <name>TexturePrepareFlag</name>
-            <anchor>TexturePrepareFlag-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="TextureRead">
-            <anchor>TexturePrepareFlag-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="TextureWrite">
-            <anchor>TexturePrepareFlag-enum</anchor>
-            <arglist></arglist>
-        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
             <name>~QRhiResourceUpdateBatch</name>
@@ -2185,13 +2088,6 @@
             <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
             <anchor>generateMips</anchor>
             <arglist>(QRhiTexture *tex)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>prepareTextureForUse</name>
-            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
-            <anchor>prepareTextureForUse</anchor>
-            <arglist>(QRhiTexture *tex, int flags)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -2496,13 +2392,6 @@
             <name>profiler</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>profiler</anchor>
-            <arglist>()</arglist>
-        </member>
-        <member kind="function" protection="protected" virtualness="non" static="no">
-            <type></type>
-            <name>QRhi</name>
-            <anchorfile>qrhi.html</anchorfile>
-            <anchor>QRhi</anchor>
             <arglist>()</arglist>
         </member>
     </compound>

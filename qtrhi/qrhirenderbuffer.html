@@ -40,7 +40,6 @@
 <ul>
 <li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
 <li class="level1"><a href="#protected-variables">Protected Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
@@ -78,14 +77,6 @@
 <ul>
 <li class="fn">4 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
 </ul>
-<a name="protected-functions"></a>
-<h2 id="protected-functions">Protected Functions</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhirenderbuffer.html#QRhiRenderBuffer">QRhiRenderBuffer</a></b>(QRhiImplementation *<i>rhi</i>, QRhiRenderBuffer::Type <i>type_</i>, const int &amp;<i>pixelSize_</i>, int <i>sampleCount_</i>, int <i>flags_</i>)</td></tr>
-</table></div>
-<ul>
-<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
-</ul>
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
@@ -98,6 +89,10 @@
 <ul>
 <li class="fn">2 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
 </ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
+</ul>
 <a name="details"></a>
 <!-- $$$QRhiRenderBuffer-description -->
 <div class="descr">
@@ -109,16 +104,22 @@
 <h2>Member Type Documentation</h2>
 <!-- $$$Flag$$$UsedWithSwapChainOnly -->
 <h3 class="fn" id="Flag-enum"><a name="Flag-enum"></a>enum QRhiRenderBuffer::<span class="name">Flag</span></h3>
+<p>Flag values for <a href="qrhirenderbuffer.html#flags">flags</a>() and <a href="qrhirenderbuffer.html#setFlags">setFlags</a>()</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiRenderBuffer::UsedWithSwapChainOnly</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">For <a href="qrhirenderbuffer.html#Type-enum">DepthStencil</a> renderbuffers this indicates that the renderbuffer is only used in combination with a <a href="qrhiswapchain.html">QRhiSwapChain</a> and never in other ways. Relevant with some backends, while others ignore it. With OpenGL where a separate windowing system interface API is in use (EGL, GLX, etc.), the flag is important since it avoids creating any actual resource as there is already a windowing system provided depth/stencil buffer as requested by QSurfaceFormat.</td></tr>
+</table></div>
 <!-- @@@Flag -->
 <!-- $$$Type$$$DepthStencil$$$Color -->
 <h3 class="fn" id="Type-enum"><a name="Type-enum"></a>enum QRhiRenderBuffer::<span class="name">Type</span></h3>
+<p>Specifies the type of the renderbuffer</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiRenderBuffer::DepthStencil</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Combined depth/stencil</td></tr>
+<tr><td class="topAlign"><code>QRhiRenderBuffer::Color</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Color</td></tr>
+</table></div>
 <!-- @@@Type -->
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$QRhiRenderBuffer[overload1]$$$QRhiRenderBufferQRhiImplementation*QRhiRenderBuffer::Typeconstint&intint -->
-<h3 class="fn" id="QRhiRenderBuffer"><a name="QRhiRenderBuffer"></a><code>[protected] </code>QRhiRenderBuffer::<span class="name">QRhiRenderBuffer</span>(<span class="type">QRhiImplementation</span> *<i>rhi</i>, <span class="type"><a href="qrhirenderbuffer.html#Type-enum">QRhiRenderBuffer::Type</a></span> <i>type_</i>, const <span class="type">int</span> &amp;<i>pixelSize_</i>, <span class="type">int</span> <i>sampleCount_</i>, <span class="type">int</span> <i>flags_</i>)</h3>
-<p>Default constructs an instance of QRhiRenderBuffer.</p><!-- @@@QRhiRenderBuffer -->
 <!-- $$$backingFormat[overload1]$$$backingFormat -->
 <h3 class="fn" id="backingFormat"><a name="backingFormat"></a><code>[pure virtual] </code><span class="type"><a href="qrhitexture.html#Format-enum">QRhiTexture::Format</a></span> QRhiRenderBuffer::<span class="name">backingFormat</span>() const</h3>
 <!-- @@@backingFormat -->

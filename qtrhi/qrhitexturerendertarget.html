@@ -40,7 +40,6 @@
 <ul>
 <li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
 <li class="level1"><a href="#protected-variables">Protected Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
@@ -74,14 +73,6 @@
 <li class="fn">5 public functions inherited from <a href="qrhirendertarget.html#public-functions">QRhiRenderTarget</a></li>
 <li class="fn">4 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
 </ul>
-<a name="protected-functions"></a>
-<h2 id="protected-functions">Protected Functions</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#QRhiTextureRenderTarget">QRhiTextureRenderTarget</a></b>(QRhiImplementation *<i>rhi</i>, const QRhiTextureRenderTargetDescription &amp;<i>desc_</i>, int <i>flags_</i>)</td></tr>
-</table></div>
-<ul>
-<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
-</ul>
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
@@ -91,6 +82,10 @@
 <ul>
 <li class="fn">2 protected variables inherited from <a href="qrhirendertarget.html#protected-variables">QRhiRenderTarget</a></li>
 <li class="fn">2 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
 </ul>
 <a name="details"></a>
 <!-- $$$QRhiTextureRenderTarget-description -->
@@ -103,13 +98,15 @@
 <h2>Member Type Documentation</h2>
 <!-- $$$Flag$$$PreserveColorContents$$$PreserveDepthStencilContents -->
 <h3 class="fn" id="Flag-enum"><a name="Flag-enum"></a>enum QRhiTextureRenderTarget::<span class="name">Flag</span></h3>
+<p>Flag values describing the load/store behavior for the render target</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiTextureRenderTarget::PreserveColorContents</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">Indicates that the contents of the color attachments is to be loaded when starting a render pass, instead of clearing. This is potentially more expensive, especially on mobile (tiled) GPUs, but allows preserving the existing contents between passes.</td></tr>
+<tr><td class="topAlign"><code>QRhiTextureRenderTarget::PreserveDepthStencilContents</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Indicates that the contents of the depth texture is to be loaded when starting a render pass, instead clearing. Only applicable when a texture is used as the depth buffer (<a href="qrhitexturerendertargetdescription.html#depthTexture-var">QRhiTextureRenderTargetDescription::depthTexture</a> is set) because depth/stencil renderbuffers may not have any physical backing and data may not be written out in the first place.</td></tr>
+</table></div>
 <!-- @@@Flag -->
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$QRhiTextureRenderTarget[overload1]$$$QRhiTextureRenderTargetQRhiImplementation*constQRhiTextureRenderTargetDescription&int -->
-<h3 class="fn" id="QRhiTextureRenderTarget"><a name="QRhiTextureRenderTarget"></a><code>[protected] </code>QRhiTextureRenderTarget::<span class="name">QRhiTextureRenderTarget</span>(<span class="type">QRhiImplementation</span> *<i>rhi</i>, const <span class="type"><a href="qrhitexturerendertargetdescription.html">QRhiTextureRenderTargetDescription</a></span> &amp;<i>desc_</i>, <span class="type">int</span> <i>flags_</i>)</h3>
-<p>Default constructs an instance of QRhiTextureRenderTarget.</p><!-- @@@QRhiTextureRenderTarget -->
 <!-- $$$build[overload1]$$$build -->
 <h3 class="fn" id="build"><a name="build"></a><code>[pure virtual] </code><span class="type">bool</span> QRhiTextureRenderTarget::<span class="name">build</span>()</h3>
 <!-- @@@build -->

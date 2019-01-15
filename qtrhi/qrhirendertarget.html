@@ -40,7 +40,6 @@
 <ul>
 <li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
 <li class="level1"><a href="#protected-variables">Protected Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
@@ -73,14 +72,6 @@
 <ul>
 <li class="fn">4 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
 </ul>
-<a name="protected-functions"></a>
-<h2 id="protected-functions">Protected Functions</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#QRhiRenderTarget">QRhiRenderTarget</a></b>(QRhiImplementation *<i>rhi</i>)</td></tr>
-</table></div>
-<ul>
-<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
-</ul>
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
@@ -89,6 +80,10 @@
 </table></div>
 <ul>
 <li class="fn">2 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
 </ul>
 <a name="details"></a>
 <!-- $$$QRhiRenderTarget-description -->
@@ -101,13 +96,15 @@
 <h2>Member Type Documentation</h2>
 <!-- $$$Type$$$RtRef$$$RtTexture -->
 <h3 class="fn" id="Type-enum"><a name="Type-enum"></a>enum QRhiRenderTarget::<span class="name">Type</span></h3>
+<p>Specifies the type of the render target</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiRenderTarget::RtRef</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">This is a reference to another resource's buffer(s). Used by targets returned from <a href="qrhiswapchain.html#currentFrameRenderTarget">QRhiSwapChain::currentFrameRenderTarget</a>().</td></tr>
+<tr><td class="topAlign"><code>QRhiRenderTarget::RtTexture</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">This is a <a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a>.</td></tr>
+</table></div>
 <!-- @@@Type -->
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$QRhiRenderTarget[overload1]$$$QRhiRenderTargetQRhiImplementation* -->
-<h3 class="fn" id="QRhiRenderTarget"><a name="QRhiRenderTarget"></a><code>[protected] </code>QRhiRenderTarget::<span class="name">QRhiRenderTarget</span>(<span class="type">QRhiImplementation</span> *<i>rhi</i>)</h3>
-<p>Default constructs an instance of QRhiRenderTarget.</p><!-- @@@QRhiRenderTarget -->
 <!-- $$$devicePixelRatio[overload1]$$$devicePixelRatio -->
 <h3 class="fn" id="devicePixelRatio"><a name="devicePixelRatio"></a><code>[pure virtual] </code><span class="type">float</span> QRhiRenderTarget::<span class="name">devicePixelRatio</span>() const</h3>
 <!-- @@@devicePixelRatio -->

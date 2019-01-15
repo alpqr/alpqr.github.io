@@ -40,7 +40,6 @@
 <ul>
 <li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
 <li class="level1"><a href="#protected-variables">Protected Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
@@ -79,14 +78,6 @@
 <ul>
 <li class="fn">4 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
 </ul>
-<a name="protected-functions"></a>
-<h2 id="protected-functions">Protected Functions</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#QRhiTexture">QRhiTexture</a></b>(QRhiImplementation *<i>rhi</i>, QRhiTexture::Format <i>format_</i>, const int &amp;<i>pixelSize_</i>, int <i>sampleCount_</i>, int <i>flags_</i>)</td></tr>
-</table></div>
-<ul>
-<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
-</ul>
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
@@ -99,6 +90,10 @@
 <ul>
 <li class="fn">2 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
 </ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
+</ul>
 <a name="details"></a>
 <!-- $$$QRhiTexture-description -->
 <div class="descr">
@@ -110,16 +105,57 @@
 <h2>Member Type Documentation</h2>
 <!-- $$$Flag$$$RenderTarget$$$ChangesFrequently$$$CubeMap$$$MipMapped$$$sRGB$$$UsedAsTransferSource$$$UsedWithGenerateMips -->
 <h3 class="fn" id="Flag-enum"><a name="Flag-enum"></a>enum QRhiTexture::<span class="name">Flag</span></h3>
+<p>Flag values to specify how the texture is going to be used. Not honoring the flags set before <a href="qrhitexture.html#build">build</a>() and attempting to use the texture in ways that was not declared upfront can lead to unspecified behavior or decreased performance depending on the backend and the underlying graphics API.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiTexture::RenderTarget</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">The texture going to be used in combination with <a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a></td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ChangesFrequently</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Performance hint to indicate that the texture contents will change frequently and so staging buffers, if any, are to be kept alive to avoid performance hits</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::CubeMap</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">The texture is a cubemap. Such textures have 6 layers, one for each face in the order of +X, -X, +Y, -Y, +Z, -Z. Cubemap textures cannot be multisample.</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::MipMapped</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 3</code></td><td class="topAlign">The texture has mipmaps. The appropriate mip count is calculated automatically and can also be retrieved via <a href="qrhi.html#mipLevelsForSize">QRhi::mipLevelsForSize</a>(). The images for the mip levels have to be provided in the texture uploaded or generated via <a href="qrhiresourceupdatebatch.html#generateMips">QRhiResourceUpdateBatch::generateMips</a>(). Multisample textures cannot have mipmaps.</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::sRGB</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 4</code></td><td class="topAlign">Use an sRGB format</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::UsedAsTransferSource</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 5</code></td><td class="topAlign">The texture is used as the source of a texture copy or readback, meaning the texture is given as the source in <a href="qrhiresourceupdatebatch.html#copyTexture">QRhiResourceUpdateBatch::copyTexture</a>() or <a href="qrhiresourceupdatebatch.html#readBackTexture">QRhiResourceUpdateBatch::readBackTexture</a>().</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::UsedWithGenerateMips</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 6</code></td><td class="topAlign">The texture is going to be used with <a href="qrhiresourceupdatebatch.html#generateMips">QRhiResourceUpdateBatch::generateMips</a>().</td></tr>
+</table></div>
 <!-- @@@Flag -->
 <!-- $$$Format$$$UnknownFormat$$$RGBA8$$$BGRA8$$$R8$$$R16$$$D16$$$D32$$$BC1$$$BC2$$$BC3$$$BC4$$$BC5$$$BC6H$$$BC7$$$ETC2_RGB8$$$ETC2_RGB8A1$$$ETC2_RGBA8$$$ASTC_4x4$$$ASTC_5x4$$$ASTC_5x5$$$ASTC_6x5$$$ASTC_6x6$$$ASTC_8x5$$$ASTC_8x6$$$ASTC_8x8$$$ASTC_10x5$$$ASTC_10x6$$$ASTC_10x8$$$ASTC_10x10$$$ASTC_12x10$$$ASTC_12x12 -->
 <h3 class="fn" id="Format-enum"><a name="Format-enum"></a>enum QRhiTexture::<span class="name">Format</span></h3>
+<p>Specifies the texture format. See also <a href="qrhi.html#isTextureFormatSupported">QRhi::isTextureFormatSupported</a>() and note that <a href="qrhitexture.html#flags">flags</a>() can modify the format when <a href="qrhitexture.html#Flag-enum">QRhiTexture::sRGB</a> is set.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiTexture::UnknownFormat</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Not a valid format. This cannot be passed to <a href="qrhitexture.html#setFormat">setFormat</a>().</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::RGBA8</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BGRA8</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::R8</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::R16</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::D16</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::D32</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC1</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC2</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC3</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC4</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC5</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC6H</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC7</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ETC2_RGB8</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ETC2_RGB8A1</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ETC2_RGBA8</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_4x4</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_5x4</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_5x5</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_6x5</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_6x6</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_8x5</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_8x6</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_8x8</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_10x5</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_10x6</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_10x8</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_10x10</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_12x10</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_12x12</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">&nbsp;</td></tr>
+</table></div>
 <!-- @@@Format -->
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$QRhiTexture[overload1]$$$QRhiTextureQRhiImplementation*QRhiTexture::Formatconstint&intint -->
-<h3 class="fn" id="QRhiTexture"><a name="QRhiTexture"></a><code>[protected] </code>QRhiTexture::<span class="name">QRhiTexture</span>(<span class="type">QRhiImplementation</span> *<i>rhi</i>, <span class="type"><a href="qrhitexture.html#Format-enum">QRhiTexture::Format</a></span> <i>format_</i>, const <span class="type">int</span> &amp;<i>pixelSize_</i>, <span class="type">int</span> <i>sampleCount_</i>, <span class="type">int</span> <i>flags_</i>)</h3>
-<p>Default constructs an instance of QRhiTexture.</p><!-- @@@QRhiTexture -->
 <!-- $$$build[overload1]$$$build -->
 <h3 class="fn" id="build"><a name="build"></a><code>[pure virtual] </code><span class="type">bool</span> QRhiTexture::<span class="name">build</span>()</h3>
 <!-- @@@build -->

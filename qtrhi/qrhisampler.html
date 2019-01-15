@@ -40,7 +40,6 @@
 <ul>
 <li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
 <li class="level1"><a href="#protected-variables">Protected Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
@@ -81,14 +80,6 @@
 <ul>
 <li class="fn">4 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
 </ul>
-<a name="protected-functions"></a>
-<h2 id="protected-functions">Protected Functions</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#QRhiSampler">QRhiSampler</a></b>(QRhiImplementation *<i>rhi</i>, QRhiSampler::Filter <i>magFilter_</i>, QRhiSampler::Filter <i>minFilter_</i>, QRhiSampler::Filter <i>mipmapMode_</i>, QRhiSampler::AddressMode <i>u_</i>, QRhiSampler::AddressMode <i>v_</i>, QRhiSampler::AddressMode <i>w_</i>)</td></tr>
-</table></div>
-<ul>
-<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
-</ul>
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
@@ -103,6 +94,10 @@
 <ul>
 <li class="fn">2 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
 </ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
+</ul>
 <a name="details"></a>
 <!-- $$$QRhiSampler-description -->
 <div class="descr">
@@ -114,16 +109,27 @@
 <h2>Member Type Documentation</h2>
 <!-- $$$AddressMode$$$Repeat$$$ClampToEdge$$$Border$$$Mirror$$$MirrorOnce -->
 <h3 class="fn" id="AddressMode-enum"><a name="AddressMode-enum"></a>enum QRhiSampler::<span class="name">AddressMode</span></h3>
+<p>Specifies the addressing mode</p>
+<div class="table"><table class="valuelist"><tr><th class="tblConst">Constant</th><th class="tblVal">Value</th></tr>
+<tr><td class="topAlign"><code>QRhiSampler::Repeat</code></td><td class="topAlign tblval"><code>0</code></td></tr>
+<tr><td class="topAlign"><code>QRhiSampler::ClampToEdge</code></td><td class="topAlign tblval"><code>1</code></td></tr>
+<tr><td class="topAlign"><code>QRhiSampler::Border</code></td><td class="topAlign tblval"><code>2</code></td></tr>
+<tr><td class="topAlign"><code>QRhiSampler::Mirror</code></td><td class="topAlign tblval"><code>3</code></td></tr>
+<tr><td class="topAlign"><code>QRhiSampler::MirrorOnce</code></td><td class="topAlign tblval"><code>4</code></td></tr>
+</table></div>
 <!-- @@@AddressMode -->
 <!-- $$$Filter$$$None$$$Nearest$$$Linear -->
 <h3 class="fn" id="Filter-enum"><a name="Filter-enum"></a>enum QRhiSampler::<span class="name">Filter</span></h3>
+<p>Specifies the minification, magnification, or mipmap filtering</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiSampler::None</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Applicable only for <a href="qrhisampler.html#mipmapMode">mipmapMode</a>(), indicates no mipmaps to be used</td></tr>
+<tr><td class="topAlign"><code>QRhiSampler::Nearest</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiSampler::Linear</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">&nbsp;</td></tr>
+</table></div>
 <!-- @@@Filter -->
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$QRhiSampler[overload1]$$$QRhiSamplerQRhiImplementation*QRhiSampler::FilterQRhiSampler::FilterQRhiSampler::FilterQRhiSampler::AddressModeQRhiSampler::AddressModeQRhiSampler::AddressMode -->
-<h3 class="fn" id="QRhiSampler"><a name="QRhiSampler"></a><code>[protected] </code>QRhiSampler::<span class="name">QRhiSampler</span>(<span class="type">QRhiImplementation</span> *<i>rhi</i>, <span class="type"><a href="qrhisampler.html#Filter-enum">QRhiSampler::Filter</a></span> <i>magFilter_</i>, <span class="type"><a href="qrhisampler.html#Filter-enum">QRhiSampler::Filter</a></span> <i>minFilter_</i>, <span class="type"><a href="qrhisampler.html#Filter-enum">QRhiSampler::Filter</a></span> <i>mipmapMode_</i>, <span class="type"><a href="qrhisampler.html#AddressMode-enum">QRhiSampler::AddressMode</a></span> <i>u_</i>, <span class="type"><a href="qrhisampler.html#AddressMode-enum">QRhiSampler::AddressMode</a></span> <i>v_</i>, <span class="type"><a href="qrhisampler.html#AddressMode-enum">QRhiSampler::AddressMode</a></span> <i>w_</i>)</h3>
-<p>Default constructs an instance of QRhiSampler.</p><!-- @@@QRhiSampler -->
 <!-- $$$addressU[overload1]$$$addressU -->
 <h3 class="fn" id="addressU"><a name="addressU"></a><span class="type"><a href="qrhisampler.html#AddressMode-enum">QRhiSampler::AddressMode</a></span> QRhiSampler::<span class="name">addressU</span>() const</h3>
 <p><b>See also </b><a href="qrhisampler.html#setAddressU">setAddressU</a>().</p>

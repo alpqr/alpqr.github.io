@@ -40,7 +40,6 @@
 <ul>
 <li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
 <li class="level1"><a href="#protected-variables">Protected Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
@@ -85,14 +84,6 @@
 <ul>
 <li class="fn">4 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
 </ul>
-<a name="protected-functions"></a>
-<h2 id="protected-functions">Protected Functions</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#QRhiSwapChain">QRhiSwapChain</a></b>(QRhiImplementation *<i>rhi</i>)</td></tr>
-</table></div>
-<ul>
-<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
-</ul>
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
@@ -108,6 +99,10 @@
 <ul>
 <li class="fn">2 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
 </ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
+</ul>
 <a name="details"></a>
 <!-- $$$QRhiSwapChain-description -->
 <div class="descr">
@@ -119,13 +114,18 @@
 <h2>Member Type Documentation</h2>
 <!-- $$$Flag$$$SurfaceHasPreMulAlpha$$$SurfaceHasNonPreMulAlpha$$$sRGB$$$UsedAsTransferSource$$$NoVSync -->
 <h3 class="fn" id="Flag-enum"><a name="Flag-enum"></a>enum QRhiSwapChain::<span class="name">Flag</span></h3>
+<p>Flag values to describe swapchain properties</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiSwapChain::SurfaceHasPreMulAlpha</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">Indicates that the target surface has transparency with premultiplied alpha.</td></tr>
+<tr><td class="topAlign"><code>QRhiSwapChain::SurfaceHasNonPreMulAlpha</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Indicates the target surface has transparencyt with non-premultiplied alpha.</td></tr>
+<tr><td class="topAlign"><code>QRhiSwapChain::sRGB</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">Requests to pick an sRGB format.</td></tr>
+<tr><td class="topAlign"><code>QRhiSwapChain::UsedAsTransferSource</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 3</code></td><td class="topAlign">Indicates the the swapchain will be used as the source of a readback in <a href="qrhiresourceupdatebatch.html#readBackTexture">QRhiResourceUpdateBatch::readBackTexture</a>().</td></tr>
+<tr><td class="topAlign"><code>QRhiSwapChain::NoVSync</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 4</code></td><td class="topAlign">Requests disabling waiting for vertical sync, also avoiding throttling the rendering thread. The behavior is backend specific and applicable only where it is possible to control this. Some may ignore the request altogether. For OpenGL, use QSurfaceFormat::setSwapInterval().</td></tr>
+</table></div>
 <!-- @@@Flag -->
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$QRhiSwapChain[overload1]$$$QRhiSwapChainQRhiImplementation* -->
-<h3 class="fn" id="QRhiSwapChain"><a name="QRhiSwapChain"></a><code>[protected] </code>QRhiSwapChain::<span class="name">QRhiSwapChain</span>(<span class="type">QRhiImplementation</span> *<i>rhi</i>)</h3>
-<p>Default constructs an instance of QRhiSwapChain.</p><!-- @@@QRhiSwapChain -->
 <!-- $$$buildOrResize[overload1]$$$buildOrResize -->
 <h3 class="fn" id="buildOrResize"><a name="buildOrResize"></a><code>[pure virtual] </code><span class="type">bool</span> QRhiSwapChain::<span class="name">buildOrResize</span>()</h3>
 <!-- @@@buildOrResize -->

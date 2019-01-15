@@ -40,7 +40,6 @@
 <ul>
 <li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
 <li class="level1"><a href="#protected-variables">Protected Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
@@ -81,14 +80,6 @@
 <ul>
 <li class="fn">4 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
 </ul>
-<a name="protected-functions"></a>
-<h2 id="protected-functions">Protected Functions</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#QRhiCommandBuffer">QRhiCommandBuffer</a></b>(QRhiImplementation *<i>rhi</i>)</td></tr>
-</table></div>
-<ul>
-<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
-</ul>
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
@@ -97,25 +88,31 @@
 <ul>
 <li class="fn">2 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
 </ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
+</ul>
 <a name="details"></a>
 <!-- $$$QRhiCommandBuffer-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Command buffer resource.</p>
-<p>Not creatable by applications at the moment. The only ways to obtain a valid <a href="qrhicommandbuffer.html">QRhiCommandBuffer</a> are to get it from the targeted swapchain via <a href="qrhiswapchain.html#currentFrameCommandBuffer">QRhiSwapChain::currentFrameCommandBuffer</a>(), or, in case of rendering compeletely offscreen, initializing one via beginOffscreenFrame().</p>
+<p>Not creatable by applications at the moment. The only ways to obtain a valid <a href="qrhicommandbuffer.html">QRhiCommandBuffer</a> are to get it from the targeted swapchain via <a href="qrhiswapchain.html#currentFrameCommandBuffer">QRhiSwapChain::currentFrameCommandBuffer</a>(), or, in case of rendering compeletely offscreen, initializing one via <a href="qrhi.html#beginOffscreenFrame">QRhi::beginOffscreenFrame</a>().</p>
 </div>
 <!-- @@@QRhiCommandBuffer -->
 <div class="types">
 <h2>Member Type Documentation</h2>
 <!-- $$$IndexFormat$$$IndexUInt16$$$IndexUInt32 -->
 <h3 class="fn" id="IndexFormat-enum"><a name="IndexFormat-enum"></a>enum QRhiCommandBuffer::<span class="name">IndexFormat</span></h3>
+<p>Specifies the index data type</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiCommandBuffer::IndexUInt16</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Unsigned 16-bit (quint16)</td></tr>
+<tr><td class="topAlign"><code>QRhiCommandBuffer::IndexUInt32</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Unsigned 32-bit (quint32)</td></tr>
+</table></div>
 <!-- @@@IndexFormat -->
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$QRhiCommandBuffer[overload1]$$$QRhiCommandBufferQRhiImplementation* -->
-<h3 class="fn" id="QRhiCommandBuffer"><a name="QRhiCommandBuffer"></a><code>[protected] </code>QRhiCommandBuffer::<span class="name">QRhiCommandBuffer</span>(<span class="type">QRhiImplementation</span> *<i>rhi</i>)</h3>
-<p>Default constructs an instance of QRhiCommandBuffer.</p><!-- @@@QRhiCommandBuffer -->
 <!-- $$$beginPass[overload1]$$$beginPassQRhiRenderTarget*constQRhiColorClearValue&constQRhiDepthStencilClearValue&QRhiResourceUpdateBatch* -->
 <h3 class="fn" id="beginPass"><a name="beginPass"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">beginPass</span>(<span class="type"><a href="qrhirendertarget.html">QRhiRenderTarget</a></span> *<i>rt</i>, const <span class="type"><a href="qrhicolorclearvalue.html">QRhiColorClearValue</a></span> &amp;<i>colorClearValue</i>, const <span class="type"><a href="qrhidepthstencilclearvalue.html">QRhiDepthStencilClearValue</a></span> &amp;<i>depthStencilClearValue</i>, <span class="type"><a href="qrhiresourceupdatebatch.html">QRhiResourceUpdateBatch</a></span> *<i>resourceUpdates</i> = nullptr)</h3>
 <!-- @@@beginPass -->

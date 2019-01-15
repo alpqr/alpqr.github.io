@@ -362,9 +362,6 @@
             <keyword name="QRhiRenderTarget::Type" id="QRhiRenderTarget::Type" ref="qrhirendertarget.html#Type-enum"/>
             <keyword name="QRhiResource" id="QRhiResource" ref="qrhiresource.html"/>
             <keyword name="QRhiResourceUpdateBatch" id="QRhiResourceUpdateBatch" ref="qrhiresourceupdatebatch.html"/>
-            <keyword name="QRhiResourceUpdateBatch::TexturePrepareFlag" id="QRhiResourceUpdateBatch::TexturePrepareFlag" ref="qrhiresourceupdatebatch.html#TexturePrepareFlag-enum"/>
-            <keyword name="QRhiResourceUpdateBatch::TextureRead" id="QRhiResourceUpdateBatch::TextureRead" ref="qrhiresourceupdatebatch.html#TexturePrepareFlag-enum"/>
-            <keyword name="QRhiResourceUpdateBatch::TextureWrite" id="QRhiResourceUpdateBatch::TextureWrite" ref="qrhiresourceupdatebatch.html#TexturePrepareFlag-enum"/>
             <keyword name="QRhiSampler" id="QRhiSampler" ref="qrhisampler.html"/>
             <keyword name="QRhiSampler::AddressMode" id="QRhiSampler::AddressMode" ref="qrhisampler.html#AddressMode-enum"/>
             <keyword name="QRhiSampler::Border" id="QRhiSampler::Border" ref="qrhisampler.html#AddressMode-enum"/>
@@ -667,7 +664,6 @@
             <keyword name="pixelSize" id="QRhiRenderBuffer::pixelSize" ref="qrhirenderbuffer.html#pixelSize"/>
             <keyword name="pixelSize" id="QRhiTexture::pixelSize" ref="qrhitexture.html#pixelSize"/>
             <keyword name="pixelSize" id="QRhiTextureCopyDescription::pixelSize" ref="qrhitexturecopydescription.html#pixelSize-var"/>
-            <keyword name="prepareTextureForUse" id="QRhiResourceUpdateBatch::prepareTextureForUse" ref="qrhiresourceupdatebatch.html#prepareTextureForUse"/>
             <keyword name="profiler" id="QRhi::profiler" ref="qrhi.html#profiler"/>
             <keyword name="r" id="QRhiScissor::r" ref="qrhiscissor.html#r-var"/>
             <keyword name="r" id="QRhiViewport::r" ref="qrhiviewport.html#r-var"/>
