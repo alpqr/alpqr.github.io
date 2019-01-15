@@ -38,6 +38,7 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#introduction">Introduction</a></li>
 <li class="level1"><a href="#table-of-contents">Table of Contents</a></li>
 </ul>
 </div>
@@ -46,6 +47,15 @@
 <span class="subtitle"></span>
 <!-- $$$qtshadertools-index.html-description -->
 <div class="descr"> <a name="details"></a>
+<a name="introduction"></a>
+<h2 id="introduction">Introduction</h2>
+<p>The Qt Shader Tools module builds on the SPIR-V Open Source Ecosystem as described at <a href="https://www.khronos.org/spir/">the Khronos SPIR-V web site</a>. For compiling into SPIR-V <a href="https://github.com/KhronosGroup/glslang">glslang</a> is used, while translating and reflecting is done via <a href="https://github.com/KhronosGroup/SPIRV-Cross">SPIRV-Cross</a>.</p>
+<p>In order to allow shader code to be written once in Qt applications and libraries, all shaders are expected to be written in a single language which is then compiled into SPIR-V. Versions for various shading language are then generated from that, together with reflection information (inputs, outputs, shader resources). This is then packed into easily and efficiently serializable <a href="qbakedshader.html">QBakedShader</a> instances. The Qt Rendering Hardware Interface consumes <a href="qbakedshader.html">QBakedShader</a> instances directly.</p>
+<p>The two main components are:</p>
+<ul>
+<li><a href="qshaderbaker.html">QShaderBaker</a> and the <code>qsb</code> command-line tool, and</li>
+<li><a href="qbakedshader.html">QBakedShader</a></li>
+</ul>
 <a name="table-of-contents"></a>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
