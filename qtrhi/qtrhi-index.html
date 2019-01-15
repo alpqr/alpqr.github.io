@@ -38,6 +38,7 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#introduction">Introduction</a></li>
 <li class="level1"><a href="#table-of-contents">Table of Contents</a></li>
 </ul>
 </div>
@@ -46,6 +47,26 @@
 <span class="subtitle"></span>
 <!-- $$$qtrhi-index.html-description -->
 <div class="descr"> <a name="details"></a>
+<a name="introduction"></a>
+<h2 id="introduction">Introduction</h2>
+<p>The Qt Rendering Hardware Interface is an abstraction for hardware accelerated graphics APIs, such as, <a href="https://www.khronos.org/opengl/">OpenGL</a>, <a href="https://www.khronos.org/opengles/">OpenGL ES</a>, <a href="https://docs.microsoft.com/en-us/windows/desktop/direct3d">Direct3D</a>, <a href="https://developer.apple.com/metal/">Metal</a>, and <a href="https://www.khronos.org/vulkan/">Vulkan</a>.</p>
+<p>Some of the main design goals are:</p>
+<ul>
+<li>Simple, minimal, understandable, extensible. Follow the proven path of the Qt Quick scenegraph.</li>
+<li>Aim to be a product - and in the bigger picture, part of a product (Qt) - that is usable out of the box both by internal (such as, Qt Quick) and, eventually, external users.</li>
+<li>Not a complete 1:1 wrapper for any of the underlying APIs. The feature set is tuned towards the needs of Qt's 2D and 3D offering (QPainter, Qt Quick, Qt 3D Studio). Iterate and evolve in a sustainable manner.</li>
+<li>Intrinsically cross-platform, without reinventing: abstracting cross-platform aspects of certain APIs (such as, OpenGL context creation and windowing system interfaces, Vulkan instance and surface management) is not in scope here. These are delegated to the existing <a href="../qtgui/qtgui-module.html">QtGui</a> facilities (QWindow, QOpenGLContext, QVulkanInstance) and its backing QPA architecture.</li>
+</ul>
+<p>The main class in the module is <a href="qrhi.html">QRhi</a>. Each <a href="qrhi.html">QRhi</a> instance is backed by a backend for a specific graphics API. The selection of the backend is a run time choice and is up to the application or library that creates the <a href="qrhi.html">QRhi</a> instance. Some backends are available on multiple platforms (OpenGL, Vulkan, Null), while APIs specific to a given platform are only available when running on the platform in question.</p>
+<p>The available backends currently are:</p>
+<ul>
+<li>OpenGL 2.1 or OpenGL ES 2.0 or newer. Some extensions are utilized when present, for example to enable multisample framebuffers.</li>
+<li>Direct3D 11.1</li>
+<li>Metal</li>
+<li>Vulkan 1.0, optionally with some extensions that are part of Vulkan 1.1</li>
+<li>Null - A &quot;dummy&quot; backend that issues no graphics calls at all.</li>
+</ul>
+<p>Managing shader code and dealing with shading language differences is not in the scope of this module. Rather, it is delegated to the <a href="../qtshadertools/qtshadertools-index.html">Qt Shader Tools</a> module. Classes like <a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a> and <a href="qrhigraphicsshaderstage.html">QRhiGraphicsShaderStage</a> are prepared to work directly with <a href="../qtshadertools/qbakedshader.html">QBakedShader</a> instances.</p>
 <a name="table-of-contents"></a>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>

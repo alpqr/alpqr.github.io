@@ -60,11 +60,24 @@
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#Q_DECLARE_FLAGS">Q_DECLARE_FLAGS</a></b>(<i>int</i>, <i>QRhiSwapChain::Flag</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#buildOrResize">buildOrResize</a></b>() = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QRhiCommandBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#currentFrameCommandBuffer">currentFrameCommandBuffer</a></b>() = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QRhiRenderTarget *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#currentFrameRenderTarget">currentFrameRenderTarget</a></b>() = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#currentPixelSize">currentPixelSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#depthStencil">depthStencil</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#flags">flags</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QRhiRenderPassDescriptor *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#newCompatibleRenderPassDescriptor">newCompatibleRenderPassDescriptor</a></b>() = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderPassDescriptor *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#renderPassDescriptor">renderPassDescriptor</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#sampleCount">sampleCount</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#setDepthStencil">setDepthStencil</a></b>(QRhiRenderBuffer *<i>ds</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#setFlags">setFlags</a></b>(int <i>f</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#setRenderPassDescriptor">setRenderPassDescriptor</a></b>(QRhiRenderPassDescriptor *<i>desc</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#setSampleCount">setSampleCount</a></b>(int <i>samples</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#setTarget">setTarget</a></b>(int *<i>obj</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#setWindow">setWindow</a></b>(QWindow *<i>window</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#surfacePixelSize">surfacePixelSize</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#target">target</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QWindow *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#window">window</a></b>() const</td></tr>
 </table></div>
 <ul>
 <li class="fn">4 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
@@ -109,21 +122,72 @@
 <!-- $$$QRhiSwapChain[overload1]$$$QRhiSwapChainQRhiImplementation* -->
 <h3 class="fn" id="QRhiSwapChain"><a name="QRhiSwapChain"></a><code>[protected] </code>QRhiSwapChain::<span class="name">QRhiSwapChain</span>(<span class="type">QRhiImplementation</span> *<i>rhi</i>)</h3>
 <p>Default constructs an instance of QRhiSwapChain.</p><!-- @@@QRhiSwapChain -->
-<!-- $$$Q_DECLARE_FLAGS[overload1]$$$Q_DECLARE_FLAGSintQRhiSwapChain::Flag -->
-<h3 class="fn" id="Q_DECLARE_FLAGS"><a name="Q_DECLARE_FLAGS"></a><span class="type">int</span> QRhiSwapChain::<span class="name">Q_DECLARE_FLAGS</span>(<i>int</i>, <i>QRhiSwapChain::Flag</i>)</h3>
-<!-- @@@Q_DECLARE_FLAGS -->
 <!-- $$$buildOrResize[overload1]$$$buildOrResize -->
 <h3 class="fn" id="buildOrResize"><a name="buildOrResize"></a><code>[pure virtual] </code><span class="type">bool</span> QRhiSwapChain::<span class="name">buildOrResize</span>()</h3>
 <!-- @@@buildOrResize -->
+<!-- $$$currentFrameCommandBuffer[overload1]$$$currentFrameCommandBuffer -->
+<h3 class="fn" id="currentFrameCommandBuffer"><a name="currentFrameCommandBuffer"></a><code>[pure virtual] </code><span class="type"><a href="qrhicommandbuffer.html">QRhiCommandBuffer</a></span> *QRhiSwapChain::<span class="name">currentFrameCommandBuffer</span>()</h3>
+<!-- @@@currentFrameCommandBuffer -->
 <!-- $$$currentFrameRenderTarget[overload1]$$$currentFrameRenderTarget -->
 <h3 class="fn" id="currentFrameRenderTarget"><a name="currentFrameRenderTarget"></a><code>[pure virtual] </code><span class="type"><a href="qrhirendertarget.html">QRhiRenderTarget</a></span> *QRhiSwapChain::<span class="name">currentFrameRenderTarget</span>()</h3>
 <!-- @@@currentFrameRenderTarget -->
+<!-- $$$currentPixelSize[overload1]$$$currentPixelSize -->
+<h3 class="fn" id="currentPixelSize"><a name="currentPixelSize"></a><span class="type">int</span> QRhiSwapChain::<span class="name">currentPixelSize</span>() const</h3>
+<!-- @@@currentPixelSize -->
+<!-- $$$depthStencil[overload1]$$$depthStencil -->
+<h3 class="fn" id="depthStencil"><a name="depthStencil"></a><span class="type"><a href="qrhirenderbuffer.html">QRhiRenderBuffer</a></span> *QRhiSwapChain::<span class="name">depthStencil</span>() const</h3>
+<p><b>See also </b><a href="qrhiswapchain.html#setDepthStencil">setDepthStencil</a>().</p>
+<!-- @@@depthStencil -->
+<!-- $$$flags[overload1]$$$flags -->
+<h3 class="fn" id="flags"><a name="flags"></a><span class="type">int</span> QRhiSwapChain::<span class="name">flags</span>() const</h3>
+<p><b>See also </b><a href="qrhiswapchain.html#setFlags">setFlags</a>().</p>
+<!-- @@@flags -->
 <!-- $$$newCompatibleRenderPassDescriptor[overload1]$$$newCompatibleRenderPassDescriptor -->
 <h3 class="fn" id="newCompatibleRenderPassDescriptor"><a name="newCompatibleRenderPassDescriptor"></a><code>[pure virtual] </code><span class="type"><a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a></span> *QRhiSwapChain::<span class="name">newCompatibleRenderPassDescriptor</span>()</h3>
 <!-- @@@newCompatibleRenderPassDescriptor -->
+<!-- $$$renderPassDescriptor[overload1]$$$renderPassDescriptor -->
+<h3 class="fn" id="renderPassDescriptor"><a name="renderPassDescriptor"></a><span class="type"><a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a></span> *QRhiSwapChain::<span class="name">renderPassDescriptor</span>() const</h3>
+<p><b>See also </b><a href="qrhiswapchain.html#setRenderPassDescriptor">setRenderPassDescriptor</a>().</p>
+<!-- @@@renderPassDescriptor -->
+<!-- $$$sampleCount[overload1]$$$sampleCount -->
+<h3 class="fn" id="sampleCount"><a name="sampleCount"></a><span class="type">int</span> QRhiSwapChain::<span class="name">sampleCount</span>() const</h3>
+<p><b>See also </b><a href="qrhiswapchain.html#setSampleCount">setSampleCount</a>().</p>
+<!-- @@@sampleCount -->
+<!-- $$$setDepthStencil[overload1]$$$setDepthStencilQRhiRenderBuffer* -->
+<h3 class="fn" id="setDepthStencil"><a name="setDepthStencil"></a><span class="type">void</span> QRhiSwapChain::<span class="name">setDepthStencil</span>(<span class="type"><a href="qrhirenderbuffer.html">QRhiRenderBuffer</a></span> *<i>ds</i>)</h3>
+<p><b>See also </b><a href="qrhiswapchain.html#depthStencil">depthStencil</a>().</p>
+<!-- @@@setDepthStencil -->
+<!-- $$$setFlags[overload1]$$$setFlagsint -->
+<h3 class="fn" id="setFlags"><a name="setFlags"></a><span class="type">void</span> QRhiSwapChain::<span class="name">setFlags</span>(<span class="type">int</span> <i>f</i>)</h3>
+<p><b>See also </b><a href="qrhiswapchain.html#flags">flags</a>().</p>
+<!-- @@@setFlags -->
+<!-- $$$setRenderPassDescriptor[overload1]$$$setRenderPassDescriptorQRhiRenderPassDescriptor* -->
+<h3 class="fn" id="setRenderPassDescriptor"><a name="setRenderPassDescriptor"></a><span class="type">void</span> QRhiSwapChain::<span class="name">setRenderPassDescriptor</span>(<span class="type"><a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a></span> *<i>desc</i>)</h3>
+<p><b>See also </b><a href="qrhiswapchain.html#renderPassDescriptor">renderPassDescriptor</a>().</p>
+<!-- @@@setRenderPassDescriptor -->
+<!-- $$$setSampleCount[overload1]$$$setSampleCountint -->
+<h3 class="fn" id="setSampleCount"><a name="setSampleCount"></a><span class="type">void</span> QRhiSwapChain::<span class="name">setSampleCount</span>(<span class="type">int</span> <i>samples</i>)</h3>
+<p><b>See also </b><a href="qrhiswapchain.html#sampleCount">sampleCount</a>().</p>
+<!-- @@@setSampleCount -->
+<!-- $$$setTarget[overload1]$$$setTargetint* -->
+<h3 class="fn" id="setTarget"><a name="setTarget"></a><span class="type">void</span> QRhiSwapChain::<span class="name">setTarget</span>(<span class="type">int</span> *<i>obj</i>)</h3>
+<p><b>See also </b><a href="qrhiswapchain.html#target">target</a>().</p>
+<!-- @@@setTarget -->
+<!-- $$$setWindow[overload1]$$$setWindowQWindow* -->
+<h3 class="fn" id="setWindow"><a name="setWindow"></a><span class="type">void</span> QRhiSwapChain::<span class="name">setWindow</span>(<span class="type">QWindow</span> *<i>window</i>)</h3>
+<p><b>See also </b><a href="qrhiswapchain.html#window">window</a>().</p>
+<!-- @@@setWindow -->
 <!-- $$$surfacePixelSize[overload1]$$$surfacePixelSize -->
 <h3 class="fn" id="surfacePixelSize"><a name="surfacePixelSize"></a><span class="type">int</span> QRhiSwapChain::<span class="name">surfacePixelSize</span>()</h3>
 <!-- @@@surfacePixelSize -->
+<!-- $$$target[overload1]$$$target -->
+<h3 class="fn" id="target"><a name="target"></a><span class="type">int</span> *QRhiSwapChain::<span class="name">target</span>() const</h3>
+<p><b>See also </b><a href="qrhiswapchain.html#setTarget">setTarget</a>().</p>
+<!-- @@@target -->
+<!-- $$$window[overload1]$$$window -->
+<h3 class="fn" id="window"><a name="window"></a><span class="type">QWindow</span> *QRhiSwapChain::<span class="name">window</span>() const</h3>
+<p><b>See also </b><a href="qrhiswapchain.html#setWindow">setWindow</a>().</p>
+<!-- @@@window -->
 </div>
         </div>
        </div>

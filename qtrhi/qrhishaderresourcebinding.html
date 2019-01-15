@@ -39,7 +39,6 @@
 <h3><a name="toc">Contents</a></h3>
 <ul>
 <li class="level1"><a href="#public-types">Public Types</a></li>
-<li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#public-variables">Public Variables</a></li>
 <li class="level1"><a href="#static-public-members">Static Public Members</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
@@ -60,11 +59,6 @@
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#StageFlag-enum">StageFlag</a></b> { VertexStage, FragmentStage, TessellationControlStage, TessellationEvaluationStage }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#Type-enum">Type</a></b> { UniformBuffer, SampledTexture }</td></tr>
 </table></div>
-<a name="public-functions"></a>
-<h2 id="public-functions">Public Functions</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#Q_DECLARE_FLAGS">Q_DECLARE_FLAGS</a></b>(<i>int</i>, <i>QRhiShaderResourceBinding::StageFlag</i>)</td></tr>
-</table></div>
 <a name="public-variables"></a>
 <h2 id="public-variables">Public Variables</h2>
 <div class="table"><table class="alignedsummary">
@@ -76,7 +70,8 @@
 <h2 id="static-public-members">Static Public Members</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBinding </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#sampledTexture">sampledTexture</a></b>(int <i>binding_</i>, int <i>stage_</i>, QRhiTexture *<i>tex_</i>, QRhiSampler *<i>sampler_</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBinding </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#uniformBuffer">uniformBuffer</a></b>(int <i>binding_</i>, int <i>stage_</i>, QRhiBuffer *<i>buf_</i>, int <i>offset_</i>, int <i>size_</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBinding </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#uniformBuffer">uniformBuffer</a></b>(int <i>binding_</i>, int <i>stage_</i>, QRhiBuffer *<i>buf_</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBinding </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#uniformBuffer-1">uniformBuffer</a></b>(int <i>binding_</i>, int <i>stage_</i>, QRhiBuffer *<i>buf_</i>, int <i>offset_</i>, int <i>size_</i>)</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$QRhiShaderResourceBinding-description -->
@@ -95,14 +90,14 @@
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$Q_DECLARE_FLAGS[overload1]$$$Q_DECLARE_FLAGSintQRhiShaderResourceBinding::StageFlag -->
-<h3 class="fn" id="Q_DECLARE_FLAGS"><a name="Q_DECLARE_FLAGS"></a><span class="type">int</span> QRhiShaderResourceBinding::<span class="name">Q_DECLARE_FLAGS</span>(<i>int</i>, <i>QRhiShaderResourceBinding::StageFlag</i>)</h3>
-<!-- @@@Q_DECLARE_FLAGS -->
 <!-- $$$sampledTexture[overload1]$$$sampledTextureintintQRhiTexture*QRhiSampler* -->
 <h3 class="fn" id="sampledTexture"><a name="sampledTexture"></a><code>[static] </code><span class="type"><a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a></span> QRhiShaderResourceBinding::<span class="name">sampledTexture</span>(<span class="type">int</span> <i>binding_</i>, <span class="type">int</span> <i>stage_</i>, <span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>tex_</i>, <span class="type"><a href="qrhisampler.html">QRhiSampler</a></span> *<i>sampler_</i>)</h3>
 <!-- @@@sampledTexture -->
-<!-- $$$uniformBuffer[overload1]$$$uniformBufferintintQRhiBuffer*intint -->
-<h3 class="fn" id="uniformBuffer"><a name="uniformBuffer"></a><code>[static] </code><span class="type"><a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a></span> QRhiShaderResourceBinding::<span class="name">uniformBuffer</span>(<span class="type">int</span> <i>binding_</i>, <span class="type">int</span> <i>stage_</i>, <span class="type"><a href="qrhibuffer.html">QRhiBuffer</a></span> *<i>buf_</i>, <span class="type">int</span> <i>offset_</i>, <span class="type">int</span> <i>size_</i>)</h3>
+<!-- $$$uniformBuffer[overload1]$$$uniformBufferintintQRhiBuffer* -->
+<h3 class="fn" id="uniformBuffer"><a name="uniformBuffer"></a><code>[static] </code><span class="type"><a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a></span> QRhiShaderResourceBinding::<span class="name">uniformBuffer</span>(<span class="type">int</span> <i>binding_</i>, <span class="type">int</span> <i>stage_</i>, <span class="type"><a href="qrhibuffer.html">QRhiBuffer</a></span> *<i>buf_</i>)</h3>
+<!-- @@@uniformBuffer -->
+<!-- $$$uniformBuffer$$$uniformBufferintintQRhiBuffer*intint -->
+<h3 class="fn" id="uniformBuffer-1"><a name="uniformBuffer-1"></a><code>[static] </code><span class="type"><a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a></span> QRhiShaderResourceBinding::<span class="name">uniformBuffer</span>(<span class="type">int</span> <i>binding_</i>, <span class="type">int</span> <i>stage_</i>, <span class="type"><a href="qrhibuffer.html">QRhiBuffer</a></span> *<i>buf_</i>, <span class="type">int</span> <i>offset_</i>, <span class="type">int</span> <i>size_</i>)</h3>
 <!-- @@@uniformBuffer -->
 </div>
         </div>

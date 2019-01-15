@@ -41,20 +41,20 @@
 <tr><td class="topAlign"><ul>
 <li class="fn">enum <span class="name"><b><a href="qrhi.html#Feature-enum">Feature</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhi.html#Flag-enum">Flag</a></b></span></li>
+<li class="fn">enum <span class="name"><b><a href="qrhi.html#FrameOpResult-enum">FrameOpResult</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhi.html#Implementation-enum">Implementation</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhi.html#ResourceSizeLimit-enum">ResourceSizeLimit</a></b></span></li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#QRhi">QRhi</a></b></span>()</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#dtor.QRhi">~QRhi</a></b></span>()</li>
-<li class="fn"><span class="name"><b><a href="qrhi.html#Q_DECLARE_FLAGS">Q_DECLARE_FLAGS</a></b></span>(<i>int</i>, <i>QRhi::Flag</i>) : int</li>
-<li class="fn"><span class="name"><b><a href="qrhi.html#beginFrame">beginFrame</a></b></span>(<i>QRhiSwapChain *</i>) : int</li>
-<li class="fn"><span class="name"><b><a href="qrhi.html#beginOffscreenFrame">beginOffscreenFrame</a></b></span>(<i>QRhiCommandBuffer **</i>) : int</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#beginFrame">beginFrame</a></b></span>(QRhiSwapChain *) : QRhi::FrameOpResult</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#beginOffscreenFrame">beginOffscreenFrame</a></b></span>(QRhiCommandBuffer **) : QRhi::FrameOpResult</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#clipSpaceCorrMatrix">clipSpaceCorrMatrix</a></b></span>() const : QMatrix4x4</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#create">create</a></b></span>(QRhi::Implementation , QRhiInitParams *, int ) : QRhi *</li>
-<li class="fn"><span class="name"><b><a href="qrhi.html#endFrame">endFrame</a></b></span>(<i>QRhiSwapChain *</i>) : int</li>
-<li class="fn"><span class="name"><b><a href="qrhi.html#endOffscreenFrame">endOffscreenFrame</a></b></span>() : int</li>
-<li class="fn"><span class="name"><b><a href="qrhi.html#finish">finish</a></b></span>() : int</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#endFrame">endFrame</a></b></span>(QRhiSwapChain *) : QRhi::FrameOpResult</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#endOffscreenFrame">endOffscreenFrame</a></b></span>() : QRhi::FrameOpResult</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#finish">finish</a></b></span>() : QRhi::FrameOpResult</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#isFeatureSupported">isFeatureSupported</a></b></span>(QRhi::Feature ) const : bool</li>
-<li class="fn"><span class="name"><b><a href="qrhi.html#isTextureFormatSupported">isTextureFormatSupported</a></b></span>(int , int ) const : bool</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#isTextureFormatSupported">isTextureFormatSupported</a></b></span>(QRhiTexture::Format , int ) const : bool</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#isYUpInFramebuffer">isYUpInFramebuffer</a></b></span>() const : bool</li>
 </ul></td><td class="topAlign"><ul>
 <li class="fn"><span class="name"><b><a href="qrhi.html#mipLevelsForSize">mipLevelsForSize</a></b></span>(const int &amp;) const : int</li>
@@ -65,7 +65,7 @@
 <li class="fn"><span class="name"><b><a href="qrhi.html#newSampler">newSampler</a></b></span>(QRhiSampler::Filter , QRhiSampler::Filter , QRhiSampler::Filter , QRhiSampler::AddressMode , QRhiSampler::AddressMode , QRhiSampler::AddressMode ) : QRhiSampler *</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#newShaderResourceBindings">newShaderResourceBindings</a></b></span>() : QRhiShaderResourceBindings *</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#newSwapChain">newSwapChain</a></b></span>() : QRhiSwapChain *</li>
-<li class="fn"><span class="name"><b><a href="qrhi.html#newTexture">newTexture</a></b></span>(int , const int &amp;, int , int ) : QRhiTexture *</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#newTexture">newTexture</a></b></span>(QRhiTexture::Format , const int &amp;, int , int ) : QRhiTexture *</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#newTextureRenderTarget">newTextureRenderTarget</a></b></span>(const QRhiTextureRenderTargetDescription &amp;, int ) : QRhiTextureRenderTarget *</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#nextResourceUpdateBatch">nextResourceUpdateBatch</a></b></span>() : QRhiResourceUpdateBatch *</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#profiler">profiler</a></b></span>() : QRhiProfiler *</li>
