@@ -40,10 +40,14 @@
 <ul>
 <li class="level1"><a href="#public-variables">Public Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#working-with-existing-direct3d-11-devices">Working with existing Direct3D 11 devices</a></li>
 </ul>
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
 <h1 class="title">QRhiD3D11InitParams Class</h1>
+<!-- $$$QRhiD3D11InitParams-brief -->
+<p>Direct3D 11 specific initialization parameters. <a href="#details">More...</a></p>
+<!-- @@@QRhiD3D11InitParams -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiD3D11InitParams&gt;</span>
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qrhiinitparams.html">QRhiInitParams</a></td></tr></table></div><ul>
@@ -61,6 +65,19 @@
 <!-- $$$QRhiD3D11InitParams-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
+<p>Direct3D 11 specific initialization parameters.</p>
+<p>A D3D11-based <a href="qrhi.html">QRhi</a> needs no special parameters for initialization. If desired, <a href="qrhid3d11initparams.html#enableDebugLayer-var">enableDebugLayer</a> can be set to <code>true</code> to enable the Direct3D debug layer. This can be useful during development, but should be avoided in production builds.</p>
+<pre class="cpp plain">
+
+  QRhiD3D11InitParams params;
+  params.enableDebugLayer = true;
+  rhi = QRhi::create(QRhi::D3D11, &amp;params);
+
+</pre>
+<p><b>Note: </b><a href="qrhiswapchain.html">QRhiSwapChain</a> should only be used in combination with QWindow instances that have their surface type set to QSurface::OpenGLSurface. There are currently no Direct3D specifics in the Windows platform support of Qt and therefore there is no separate QSurface type available.</p><a name="working-with-existing-direct3d-11-devices"></a>
+<h4 >Working with existing Direct3D 11 devices</h4>
+<p>When interoperating with another graphics engine, it may be necessary to get a <a href="qrhi.html">QRhi</a> instance that uses the same Direct3D device and device context. This can be achieved by setting <a href="qrhid3d11initparams.html#importExistingDevice-var">importExistingDevice</a> to <code>true</code> and providing both dev and context.</p>
+<p><b>Note: </b><a href="qrhi.html">QRhi</a> works with immediate contexts only. Deferred contexts are not used in any way.</p><p><b>Note: </b>The class uses <code>void *</code> as the type since including the COM-based <code>d3d11.h</code> headers is not acceptable here. The actual types are <code>ID3D11Device *</code> and <code>ID3D11DeviceContext *</code>.</p><p><b>Note: </b>Regardless of using an imported or a <a href="qrhi.html">QRhi</a>-created device context, <code>ID3D11DeviceContext1</code> must be supported. Initialization will fail otherwise.</p><p>The <a href="qrhi.html">QRhi</a> does not take ownership of any of the external objects.</p>
 </div>
 <!-- @@@QRhiD3D11InitParams -->
         </div>

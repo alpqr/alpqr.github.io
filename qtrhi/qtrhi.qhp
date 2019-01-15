@@ -70,6 +70,9 @@
                         <section ref="qrhimetaltexturenativehandles-members.html" title="List of all members"/>
                     </section>
                     <section ref="qrhinativehandles.html" title="QRhiNativeHandles Class Reference"/>
+                    <section ref="qrhinullinitparams.html" title="QRhiNullInitParams Class Reference">
+                        <section ref="qrhinullinitparams-members.html" title="List of all members"/>
+                    </section>
                     <section ref="qrhinullnativehandles.html" title="QRhiNullNativeHandles Class Reference">
                         <section ref="qrhinullnativehandles-members.html" title="List of all members"/>
                     </section>
@@ -321,6 +324,7 @@
             <keyword name="QRhiMetalNativeHandles" id="QRhiMetalNativeHandles" ref="qrhimetalnativehandles.html"/>
             <keyword name="QRhiMetalTextureNativeHandles" id="QRhiMetalTextureNativeHandles" ref="qrhimetaltexturenativehandles.html"/>
             <keyword name="QRhiNativeHandles" id="QRhiNativeHandles" ref="qrhinativehandles.html"/>
+            <keyword name="QRhiNullInitParams" id="QRhiNullInitParams" ref="qrhinullinitparams.html"/>
             <keyword name="QRhiNullNativeHandles" id="QRhiNullNativeHandles" ref="qrhinullnativehandles.html"/>
             <keyword name="QRhiNullTextureNativeHandles" id="QRhiNullTextureNativeHandles" ref="qrhinulltexturenativehandles.html"/>
             <keyword name="QRhiProfiler" id="QRhiProfiler" ref="qrhiprofiler.html"/>
@@ -851,6 +855,7 @@
             <file>qrhimetaltexturenativehandles-members.html</file>
             <file>qrhimetaltexturenativehandles.html</file>
             <file>qrhinativehandles.html</file>
+            <file>qrhinullinitparams.html</file>
             <file>qrhinullnativehandles.html</file>
             <file>qrhinulltexturenativehandles-members.html</file>
             <file>qrhinulltexturenativehandles.html</file>

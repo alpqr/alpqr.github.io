@@ -47,6 +47,9 @@
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
 <h1 class="title">QRhiCommandBuffer Class</h1>
+<!-- $$$QRhiCommandBuffer-brief -->
+<p>Command buffer resource. <a href="#details">More...</a></p>
+<!-- @@@QRhiCommandBuffer -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiCommandBuffer&gt;</span>
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qrhiresource.html">QRhiResource</a></td></tr></table></div><ul>
@@ -98,6 +101,8 @@
 <!-- $$$QRhiCommandBuffer-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
+<p>Command buffer resource.</p>
+<p>Not creatable by applications at the moment. The only ways to obtain a valid <a href="qrhicommandbuffer.html">QRhiCommandBuffer</a> are to get it from the targeted swapchain via <a href="qrhiswapchain.html#currentFrameCommandBuffer">QRhiSwapChain::currentFrameCommandBuffer</a>(), or, in case of rendering compeletely offscreen, initializing one via beginOffscreenFrame().</p>
 </div>
 <!-- @@@QRhiCommandBuffer -->
 <div class="types">

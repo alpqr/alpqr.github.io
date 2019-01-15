@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- qrhinull.cpp -->
-  <title>QRhiNullNativeHandles Class | RHI 5.12</title>
+  <title>QRhiNullInitParams Class | RHI 5.12</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -26,7 +26,7 @@
     <div class="main-rounded">
       <div class="navigationbar">
         <table><tr>
-<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiNullNativeHandles</td></tr></table><table class="buildversion"><tr>
+<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiNullInitParams</td></tr></table><table class="buildversion"><tr>
 <td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
         </tr></table>
       </div>
@@ -42,21 +42,29 @@
 </ul>
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
-<h1 class="title">QRhiNullNativeHandles Class</h1>
-<!-- $$$QRhiNullNativeHandles-brief -->
-<p>Empty. <a href="#details">More...</a></p>
-<!-- @@@QRhiNullNativeHandles -->
+<h1 class="title">QRhiNullInitParams Class</h1>
+<!-- $$$QRhiNullInitParams-brief -->
+<p>Null backend specific initialization parameters. <a href="#details">More...</a></p>
+<!-- @@@QRhiNullInitParams -->
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiNullNativeHandles&gt;</span>
-</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qrhinativehandles.html">QRhiNativeHandles</a></td></tr></table></div><ul>
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiNullInitParams&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qrhiinitparams.html">QRhiInitParams</a></td></tr></table></div><ul>
 </ul>
 <a name="details"></a>
-<!-- $$$QRhiNullNativeHandles-description -->
+<!-- $$$QRhiNullInitParams-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>Empty.</p>
+<p>Null backend specific initialization parameters.</p>
+<p>A Null <a href="qrhi.html">QRhi</a> needs no special parameters for initialization.</p>
+<pre class="cpp plain">
+
+  QRhiNullInitParams params;
+  rhi = QRhi::create(QRhi::Null, &amp;params);
+
+</pre>
+<p>The Null backend does not issue any graphics calls and creates no resources. All <a href="qrhi.html">QRhi</a> operations will succeed as normal so applications can still be run, albeit potentially at an unthrottled speed, depending on their frame rendering strategy. The backend reports resources to <a href="qrhiprofiler.html">QRhiProfiler</a> as usual.</p>
 </div>
-<!-- @@@QRhiNullNativeHandles -->
+<!-- @@@QRhiNullInitParams -->
         </div>
        </div>
    </div>

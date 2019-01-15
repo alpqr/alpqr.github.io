@@ -40,10 +40,14 @@
 <ul>
 <li class="level1"><a href="#public-variables">Public Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#working-with-existing-metal-devices">Working with existing Metal devices</a></li>
 </ul>
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
 <h1 class="title">QRhiMetalInitParams Class</h1>
+<!-- $$$QRhiMetalInitParams-brief -->
+<p>Metal specific initialization parameters. <a href="#details">More...</a></p>
+<!-- @@@QRhiMetalInitParams -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiMetalInitParams&gt;</span>
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qrhiinitparams.html">QRhiInitParams</a></td></tr></table></div><ul>
@@ -59,6 +63,18 @@
 <!-- $$$QRhiMetalInitParams-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
+<p>Metal specific initialization parameters.</p>
+<p>A Metal-based <a href="qrhi.html">QRhi</a> needs no special parameters for initialization.</p>
+<pre class="cpp plain">
+
+  QRhiMetalInitParams params;
+  rhi = QRhi::create(QRhi::Metal, &amp;params);
+
+</pre>
+<p><b>Note: </b>Metal API validation cannot be enabled by the application. Instead, run the debug build of the application in XCode. Generating a <code>.xcodeproj</code> file via <code>qmake -spec macx-xcode</code> provides a convenient way to enable this.</p><p><b>Note: </b><a href="qrhiswapchain.html">QRhiSwapChain</a> can only target QWindow instances that have their surface type set to QSurface::MetalSurface.</p><a name="working-with-existing-metal-devices"></a>
+<h4 >Working with existing Metal devices</h4>
+<p>When interoperating with another graphics engine, it may be necessary to get a <a href="qrhi.html">QRhi</a> instance that uses the same Metal device. This can be achieved by setting <a href="qrhimetalinitparams.html#importExistingDevice-var">importExistingDevice</a> to <code>true</code> and providing dev.</p>
+<p><b>Note: </b>The class uses <code>void *</code> as the type since including the Objective C headers is not acceptable here. The actual type is <code>id&lt;MTLDevice&gt;</code> or <code>MTLDevice *</code>.</p><p>The <a href="qrhi.html">QRhi</a> does not take ownership of any of the external objects.</p>
 </div>
 <!-- @@@QRhiMetalInitParams -->
         </div>

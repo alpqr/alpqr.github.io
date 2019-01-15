@@ -2552,6 +2552,11 @@
         <base>QRhiNativeHandles</base>
     </compound>
     <compound kind="class">
+        <name>QRhiNullInitParams</name>
+        <filename>qrhinullinitparams.html</filename>
+        <base>QRhiInitParams</base>
+    </compound>
+    <compound kind="class">
         <name>QRhiNullNativeHandles</name>
         <filename>qrhinullnativehandles.html</filename>
         <base>QRhiNativeHandles</base>
