@@ -120,7 +120,7 @@
 
   srb2 = rhi-&gt;newShaderResourceBindings();
   QVector&lt;QRhiShaderResourceBinding&gt; bindings = srb-&gt;bindings();
-  bindings[1].stex.tex = anotherTexture;
+  bindings[1] = QRhiShaderResourceBinding::sampledTexture(1, QRhiShaderResourceBinding::FragmentStage, anotherTexture, sampler);
   srb2-&gt;setBindings(bindings);
   srb2-&gt;build();
   ..&#x2e;
