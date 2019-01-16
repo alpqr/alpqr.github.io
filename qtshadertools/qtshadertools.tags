@@ -318,6 +318,12 @@
             <anchor>Flag-enum</anchor>
             <arglist></arglist>
         </member>
+        <member kind="typedef" type="QBakedShaderVersion::Flag">
+            <name>Flags</name>
+            <anchorfile>qbakedshaderversion.html</anchorfile>
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
             <name>QBakedShaderVersion</name>
@@ -330,7 +336,7 @@
             <name>QBakedShaderVersion</name>
             <anchorfile>qbakedshaderversion.html</anchorfile>
             <anchor>QBakedShaderVersion-1</anchor>
-            <arglist>(int v, int f)</arglist>
+            <arglist>(int v, QBakedShaderVersion::Flags f)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>int</type>
@@ -347,7 +353,7 @@
             <arglist>(int v)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QBakedShaderVersion::Flags</type>
             <name>flags</name>
             <anchorfile>qbakedshaderversion.html</anchorfile>
             <anchor>flags</anchor>
@@ -358,7 +364,7 @@
             <name>setFlags</name>
             <anchorfile>qbakedshaderversion.html</anchorfile>
             <anchor>setFlags</anchor>
-            <arglist>(int f)</arglist>
+            <arglist>(QBakedShaderVersion::Flags f)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -595,7 +601,7 @@
             <arglist>(const QShaderDescription &amp;desc)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QList&lt;QBakedShaderKey&gt;</type>
             <name>availableShaders</name>
             <anchorfile>qbakedshader.html</anchorfile>
             <anchor>availableShaders</anchor>

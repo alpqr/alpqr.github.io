@@ -64,7 +64,7 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>OpenGL specific initialization parameters.</p>
-<p>An OpenGL-based <a href="qrhi.html">QRhi</a> needs an already initialized QOpenGLContext and QOffscreenSurface. Additionally, while optional, it is recommended that the QWindow the first <a href="qrhiswapchain.html">QRhiSwapChain</a> will target is passed in as well.</p>
+<p>An OpenGL-based <a href="qrhi.html">QRhi</a> needs an already initialized <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a> and <a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a>. Additionally, while optional, it is recommended that the <a href="../qtgui/qwindow.html">QWindow</a> the first <a href="qrhiswapchain.html">QRhiSwapChain</a> will target is passed in as well.</p>
 <pre class="cpp plain">
 
   QSurfaceFormat format;
@@ -87,9 +87,27 @@
   rhi = QRhi::create(QRhi::OpenGLES2, &amp;params);
 
 </pre>
-<p><b>Note: </b>The example here shows the creation of the context and fallback surface as well. Watch out for the fact that, unlike QOpenGLContext, a QOffscreenSurface can only be created on the gui/main thread.</p><p><b>Note: </b><a href="qrhiswapchain.html">QRhiSwapChain</a> can only target QWindow instances that have their surface type set to QSurface::OpenGLSurface.</p><p>The <a href="qrhi.html">QRhi</a> does not take ownership of any of the external objects.</p>
+<p><b>Note: </b>The example here shows the creation of the context and fallback surface as well. Watch out for the fact that, unlike <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a>, a <a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a> can only be created on the gui/main thread.</p><p><b>Note: </b><a href="qrhiswapchain.html">QRhiSwapChain</a> can only target <a href="../qtgui/qwindow.html">QWindow</a> instances that have their surface type set to <a href="../qtgui/qsurface.html#SurfaceType-enum">QSurface::OpenGLSurface</a>.</p><p>The <a href="qrhi.html">QRhi</a> does not take ownership of any of the external objects.</p>
 </div>
 <!-- @@@QRhiGles2InitParams -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+</div>
         </div>
        </div>
    </div>

@@ -71,12 +71,30 @@
   rhi = QRhi::create(QRhi::Metal, &amp;params);
 
 </pre>
-<p><b>Note: </b>Metal API validation cannot be enabled by the application. Instead, run the debug build of the application in XCode. Generating a <code>.xcodeproj</code> file via <code>qmake -spec macx-xcode</code> provides a convenient way to enable this.</p><p><b>Note: </b><a href="qrhiswapchain.html">QRhiSwapChain</a> can only target QWindow instances that have their surface type set to QSurface::MetalSurface.</p><a name="working-with-existing-metal-devices"></a>
+<p><b>Note: </b>Metal API validation cannot be enabled by the application. Instead, run the debug build of the application in XCode. Generating a <code>.xcodeproj</code> file via <code>qmake -spec macx-xcode</code> provides a convenient way to enable this.</p><p><b>Note: </b><a href="qrhiswapchain.html">QRhiSwapChain</a> can only target <a href="../qtgui/qwindow.html">QWindow</a> instances that have their surface type set to <a href="../qtgui/qsurface.html#SurfaceType-enum">QSurface::MetalSurface</a>.</p><a name="working-with-existing-metal-devices"></a>
 <h4 >Working with existing Metal devices</h4>
 <p>When interoperating with another graphics engine, it may be necessary to get a <a href="qrhi.html">QRhi</a> instance that uses the same Metal device. This can be achieved by setting <a href="qrhimetalinitparams.html#importExistingDevice-var">importExistingDevice</a> to <code>true</code> and providing dev.</p>
 <p><b>Note: </b>The class uses <code>void *</code> as the type since including the Objective C headers is not acceptable here. The actual type is <code>id&lt;MTLDevice&gt;</code> or <code>MTLDevice *</code>.</p><p>The <a href="qrhi.html">QRhi</a> does not take ownership of any of the external objects.</p>
 </div>
 <!-- @@@QRhiMetalInitParams -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+</div>
         </div>
        </div>
    </div>

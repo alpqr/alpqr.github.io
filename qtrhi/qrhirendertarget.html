@@ -66,7 +66,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> virtual float </td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#devicePixelRatio">devicePixelRatio</a></b>() const = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderPassDescriptor *</td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#renderPassDescriptor">renderPassDescriptor</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#setRenderPassDescriptor">setRenderPassDescriptor</a></b>(QRhiRenderPassDescriptor *<i>desc</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#sizeInPixels">sizeInPixels</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QSize </td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#sizeInPixels">sizeInPixels</a></b>() const = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QRhiRenderTarget::Type </td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#type">type</a></b>() const = 0</td></tr>
 </table></div>
 <ul>
@@ -103,10 +103,14 @@
 </table></div>
 <!-- @@@Type -->
 </div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$devicePixelRatio[overload1]$$$devicePixelRatio -->
 <h3 class="fn" id="devicePixelRatio"><a name="devicePixelRatio"></a><code>[pure virtual] </code><span class="type">float</span> QRhiRenderTarget::<span class="name">devicePixelRatio</span>() const</h3>
+<p>Returns the device pixel ratio. For <a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a> this is always 1. For targets retrieved from a <a href="qrhiswapchain.html">QRhiSwapChain</a> the value reflects the <a href="../qtgui/qwindow.html#devicePixelRatio">device pixel ratio</a> of the targeted <a href="../qtgui/qwindow.html">QWindow</a>.</p>
 <!-- @@@devicePixelRatio -->
 <!-- $$$renderPassDescriptor[overload1]$$$renderPassDescriptor -->
 <h3 class="fn" id="renderPassDescriptor"><a name="renderPassDescriptor"></a><span class="type"><a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a></span> *QRhiRenderTarget::<span class="name">renderPassDescriptor</span>() const</h3>
@@ -117,11 +121,22 @@
 <p><b>See also </b><a href="qrhirendertarget.html#renderPassDescriptor">renderPassDescriptor</a>().</p>
 <!-- @@@setRenderPassDescriptor -->
 <!-- $$$sizeInPixels[overload1]$$$sizeInPixels -->
-<h3 class="fn" id="sizeInPixels"><a name="sizeInPixels"></a><span class="type">int</span> QRhiRenderTarget::<span class="name">sizeInPixels</span>() const</h3>
+<h3 class="fn" id="sizeInPixels"><a name="sizeInPixels"></a><code>[pure virtual] </code><span class="type"><a href="../qtcore/qsize.html">QSize</a></span> QRhiRenderTarget::<span class="name">sizeInPixels</span>() const</h3>
+<p>Returns the size in pixels.</p>
 <!-- @@@sizeInPixels -->
 <!-- $$$type[overload1]$$$type -->
 <h3 class="fn" id="type"><a name="type"></a><code>[pure virtual] </code><span class="type"><a href="qrhirendertarget.html#Type-enum">QRhiRenderTarget::Type</a></span> QRhiRenderTarget::<span class="name">type</span>() const</h3>
+<p>Returns the type of the render target.</p>
 <!-- @@@type -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
 </div>
         </div>
        </div>

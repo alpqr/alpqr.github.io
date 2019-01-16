@@ -83,6 +83,12 @@
 <p>Base class for classes encapsulating native resource objects.</p>
 </div>
 <!-- @@@QRhiResource -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$QRhiResource[overload1]$$$QRhiResourceconstQRhiResource& -->
@@ -90,24 +96,41 @@
 <p>Default constructs an instance of QRhiResource.</p><!-- @@@QRhiResource -->
 <!-- $$$~QRhiResource[overload1]$$$~QRhiResource -->
 <h3 class="fn" id="dtor.QRhiResource"><a name="dtor.QRhiResource"></a><code>[virtual] </code>QRhiResource::<span class="name">~QRhiResource</span>()</h3>
-<p>Destroys the instance of QRhiResource. The destructor is virtual.</p><!-- @@@~QRhiResource -->
+<p>Destructor.</p>
+<!-- @@@~QRhiResource -->
 <!-- $$$name[overload1]$$$name -->
-<h3 class="fn" id="name"><a name="name"></a><span class="type">QByteArray</span> QRhiResource::<span class="name">name</span>() const</h3>
+<h3 class="fn" id="name"><a name="name"></a><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> QRhiResource::<span class="name">name</span>() const</h3>
+<p>Returns the currently set object name. By default the name is empty.</p>
 <p><b>See also </b><a href="qrhiresource.html#setName">setName</a>().</p>
 <!-- @@@name -->
 <!-- $$$release[overload1]$$$release -->
 <h3 class="fn" id="release"><a name="release"></a><code>[pure virtual] </code><span class="type">void</span> QRhiResource::<span class="name">release</span>()</h3>
+<p>Releases the underlying native graphics resources. Safe to call multiple times, subsequent invocations will be a no-op then.</p>
+<p>Once release() is called, the <a href="qrhiresource.html">QRhiResource</a> instance can be reused, by calling the appropriate <code>build()</code> function again, or destroyed.</p>
 <!-- @@@release -->
 <!-- $$$releaseAndDestroy[overload1]$$$releaseAndDestroy -->
 <h3 class="fn" id="releaseAndDestroy"><a name="releaseAndDestroy"></a><span class="type">void</span> QRhiResource::<span class="name">releaseAndDestroy</span>()</h3>
+<p>Releases native graphics resources, if there is any, and destroys the <a href="qrhiresource.html">QRhiResource</a>. Equivalent to <code>r-&gt;release(); delete r;</code>.</p>
 <!-- @@@releaseAndDestroy -->
 <!-- $$$setName[overload1]$$$setNameconstQByteArray& -->
-<h3 class="fn" id="setName"><a name="setName"></a><span class="type">void</span> QRhiResource::<span class="name">setName</span>(const <span class="type">QByteArray</span> &amp;<i>name</i>)</h3>
-<p><b>See also </b><a href="qrhiresource.html#name">name</a>().</p>
+<h3 class="fn" id="setName"><a name="setName"></a><span class="type">void</span> QRhiResource::<span class="name">setName</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>name</i>)</h3>
+<p>Sets a <i>name</i> for the object.</p>
+<p>This has two uses: to get descriptive names for the native graphics resources visible in graphics debugging tools, such as <a href="https://renderdoc.org/">RenderDoc</a> and <a href="https://developer.apple.com/xcode/">XCode</a>, and in the output stream of <a href="qrhiprofiler.html">QRhiProfiler</a>.</p>
+<p>When it comes to naming native objects by relaying the name via the appropriate graphics API, note that the name is ignored when <a href="qrhi.html#Feature-enum">QRhi::DebugMarkers</a> are not supported, and may, depending on the backend, also be ignored when <a href="qrhi.html#Flag-enum">QRhi::EnableDebugMarkers</a> is not set.</p>
+<p><b>Note: </b>The name may be ignored for objects other than buffers, renderbuffers, and textures, depending on the backend.</p><p><b>Note: </b>The name may be modified. For slotted resources, such as a <a href="qrhibuffer.html">QRhiBuffer</a> backed by multiple native buffers, <a href="qrhi.html">QRhi</a> will append a suffix to make the underlying native buffers easily distinguishable from each other.</p><p><b>See also </b><a href="qrhiresource.html#name">name</a>().</p>
 <!-- @@@setName -->
 <!-- $$$operator=[overload1]$$$operator=constQRhiResource& -->
 <h3 class="fn" id="operator-eq"><a name="operator-eq"></a><code>[protected] </code><span class="type"><a href="qrhiresource.html#QRhiResource">QRhiResource</a></span> &amp;QRhiResource::<span class="name">operator=</span>(<i>const QRhiResource &amp;</i>)</h3>
 <p>Copy-assignment operator.</p><!-- @@@operator= -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
 </div>
         </div>
        </div>

@@ -58,6 +58,7 @@
 <h2 id="public-types">Public Types</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#Flag-enum">Flag</a></b> { RenderTarget, ChangesFrequently, CubeMap, MipMapped, ..., UsedWithGenerateMips }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#Flag-enum">Flags</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#Format-enum">Format</a></b> { UnknownFormat, RGBA8, BGRA8, R8, ..., ASTC_12x12 }</td></tr>
 </table></div>
 <a name="public-functions"></a>
@@ -65,14 +66,14 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#build">build</a></b>() = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#buildFrom">buildFrom</a></b>(const QRhiNativeHandles *<i>src</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#flags">flags</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiTexture::Flags </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#flags">flags</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiTexture::Format </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#format">format</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual const QRhiNativeHandles *</td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#nativeHandles">nativeHandles</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#pixelSize">pixelSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#pixelSize">pixelSize</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#sampleCount">sampleCount</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#setFlags">setFlags</a></b>(int <i>f</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#setFlags">setFlags</a></b>(QRhiTexture::Flags <i>f</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#setFormat">setFormat</a></b>(QRhiTexture::Format <i>fmt</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#setPixelSize">setPixelSize</a></b>(const int &amp;<i>sz</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#setPixelSize">setPixelSize</a></b>(const QSize &amp;<i>sz</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#setSampleCount">setSampleCount</a></b>(int <i>s</i>)</td></tr>
 </table></div>
 <ul>
@@ -81,9 +82,9 @@
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#m_flags-var">m_flags</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiTexture::Flags </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#m_flags-var">m_flags</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiTexture::Format </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#m_format-var">m_format</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#m_pixelSize-var">m_pixelSize</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#m_pixelSize-var">m_pixelSize</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#m_reserved-var">m_reserved</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#m_sampleCount-var">m_sampleCount</a></b></td></tr>
 </table></div>
@@ -104,7 +105,7 @@
 <div class="types">
 <h2>Member Type Documentation</h2>
 <!-- $$$Flag$$$RenderTarget$$$ChangesFrequently$$$CubeMap$$$MipMapped$$$sRGB$$$UsedAsTransferSource$$$UsedWithGenerateMips -->
-<h3 class="fn" id="Flag-enum"><a name="Flag-enum"></a>enum QRhiTexture::<span class="name">Flag</span></h3>
+<h3 class="flags" id="Flag-enum"><a name="Flag-enum"></a>enum QRhiTexture::<span class="name">Flag</span><br/>flags QRhiTexture::<span class="name">Flags</span></h3>
 <p>Flag values to specify how the texture is going to be used. Not honoring the flags set before <a href="qrhitexture.html#build">build</a>() and attempting to use the texture in ways that was not declared upfront can lead to unspecified behavior or decreased performance depending on the backend and the underlying graphics API.</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
 <tr><td class="topAlign"><code>QRhiTexture::RenderTarget</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">The texture going to be used in combination with <a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a></td></tr>
@@ -115,6 +116,7 @@
 <tr><td class="topAlign"><code>QRhiTexture::UsedAsTransferSource</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 5</code></td><td class="topAlign">The texture is used as the source of a texture copy or readback, meaning the texture is given as the source in <a href="qrhiresourceupdatebatch.html#copyTexture">QRhiResourceUpdateBatch::copyTexture</a>() or <a href="qrhiresourceupdatebatch.html#readBackTexture">QRhiResourceUpdateBatch::readBackTexture</a>().</td></tr>
 <tr><td class="topAlign"><code>QRhiTexture::UsedWithGenerateMips</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 6</code></td><td class="topAlign">The texture is going to be used with <a href="qrhiresourceupdatebatch.html#generateMips">QRhiResourceUpdateBatch::generateMips</a>().</td></tr>
 </table></div>
+<p>The Flags type is a typedef for <a href="../qtcore/qflags.html">QFlags</a>&lt;Flag&gt;. It stores an OR combination of Flag values.</p>
 <!-- @@@Flag -->
 <!-- $$$Format$$$UnknownFormat$$$RGBA8$$$BGRA8$$$R8$$$R16$$$D16$$$D32$$$BC1$$$BC2$$$BC3$$$BC4$$$BC5$$$BC6H$$$BC7$$$ETC2_RGB8$$$ETC2_RGB8A1$$$ETC2_RGBA8$$$ASTC_4x4$$$ASTC_5x4$$$ASTC_5x5$$$ASTC_6x5$$$ASTC_6x6$$$ASTC_8x5$$$ASTC_8x6$$$ASTC_8x8$$$ASTC_10x5$$$ASTC_10x6$$$ASTC_10x8$$$ASTC_10x10$$$ASTC_12x10$$$ASTC_12x12 -->
 <h3 class="fn" id="Format-enum"><a name="Format-enum"></a>enum QRhiTexture::<span class="name">Format</span></h3>
@@ -154,16 +156,24 @@
 </table></div>
 <!-- @@@Format -->
 </div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$build[overload1]$$$build -->
 <h3 class="fn" id="build"><a name="build"></a><code>[pure virtual] </code><span class="type">bool</span> QRhiTexture::<span class="name">build</span>()</h3>
+<p>Creates the corresponding native graphics resources. If there are already resources present due to an earlier build() with no corresponding <a href="qrhiresource.html#release">release</a>(), then <a href="qrhiresource.html#release">release</a>() is called implicitly first.</p>
+<p>Returns <code>true</code> when successful, <code>false</code> when a graphics operation failed. Regardless of the return value, calling <a href="qrhiresource.html#release">release</a>() is always safe.</p>
 <!-- @@@build -->
 <!-- $$$buildFrom[overload1]$$$buildFromconstQRhiNativeHandles* -->
 <h3 class="fn" id="buildFrom"><a name="buildFrom"></a><code>[virtual] </code><span class="type">bool</span> QRhiTexture::<span class="name">buildFrom</span>(const <span class="type"><a href="qrhinativehandles.html">QRhiNativeHandles</a></span> *<i>src</i>)</h3>
+<p>Similar to <a href="qrhitexture.html#build">build</a>() except that no new native textures are created. Instead, the texture from <i>src</i> is used.</p>
+<p>// Calling this instead of <a href="qrhitexture.html#build">build</a>() allows importing an existing native // texture object (must belong to the same device or a sharing context). // Note that format, <a href="qrhitexture.html#pixelSize">pixelSize</a>, etc. must still be set correctly (typically // via <a href="qrhi.html#newTexture">QRhi::newTexture</a>()). Ownership of the native resource is not taken.</p>
+<p><b>Note: </b><a href="qrhitexture.html">QRhiTexture</a> does not take ownership of the texture object. <a href="qrhiresource.html#release">release</a>() does not free the object or any associated memory.</p><p><b>See also </b><a href="qrhivulkantexturenativehandles.html">QRhiVulkanTextureNativeHandles</a>.</p>
 <!-- @@@buildFrom -->
 <!-- $$$flags[overload1]$$$flags -->
-<h3 class="fn" id="flags"><a name="flags"></a><span class="type">int</span> QRhiTexture::<span class="name">flags</span>() const</h3>
+<h3 class="fn" id="flags"><a name="flags"></a><span class="type"><a href="qrhitexture.html#Flag-enum">QRhiTexture::Flags</a></span> QRhiTexture::<span class="name">flags</span>() const</h3>
 <p><b>See also </b><a href="qrhitexture.html#setFlags">setFlags</a>().</p>
 <!-- @@@flags -->
 <!-- $$$format[overload1]$$$format -->
@@ -172,31 +182,41 @@
 <!-- @@@format -->
 <!-- $$$nativeHandles[overload1]$$$nativeHandles -->
 <h3 class="fn" id="nativeHandles"><a name="nativeHandles"></a><code>[virtual] </code>const <span class="type"><a href="qrhinativehandles.html">QRhiNativeHandles</a></span> *QRhiTexture::<span class="name">nativeHandles</span>()</h3>
+<p>Returns a pointer to a backend-specific <a href="qrhinativehandles.html">QRhiNativeHandles</a> subclass, such as <a href="qrhivulkantexturenativehandles.html">QRhiVulkanTextureNativeHandles</a>. The returned value is null when exposing the underlying native resources is not supported by the backend.</p>
 <!-- @@@nativeHandles -->
 <!-- $$$pixelSize[overload1]$$$pixelSize -->
-<h3 class="fn" id="pixelSize"><a name="pixelSize"></a><span class="type">int</span> QRhiTexture::<span class="name">pixelSize</span>() const</h3>
+<h3 class="fn" id="pixelSize"><a name="pixelSize"></a><span class="type"><a href="../qtcore/qsize.html">QSize</a></span> QRhiTexture::<span class="name">pixelSize</span>() const</h3>
 <p><b>See also </b><a href="qrhitexture.html#setPixelSize">setPixelSize</a>().</p>
 <!-- @@@pixelSize -->
 <!-- $$$sampleCount[overload1]$$$sampleCount -->
 <h3 class="fn" id="sampleCount"><a name="sampleCount"></a><span class="type">int</span> QRhiTexture::<span class="name">sampleCount</span>() const</h3>
 <p><b>See also </b><a href="qrhitexture.html#setSampleCount">setSampleCount</a>().</p>
 <!-- @@@sampleCount -->
-<!-- $$$setFlags[overload1]$$$setFlagsint -->
-<h3 class="fn" id="setFlags"><a name="setFlags"></a><span class="type">void</span> QRhiTexture::<span class="name">setFlags</span>(<span class="type">int</span> <i>f</i>)</h3>
+<!-- $$$setFlags[overload1]$$$setFlagsQRhiTexture::Flags -->
+<h3 class="fn" id="setFlags"><a name="setFlags"></a><span class="type">void</span> QRhiTexture::<span class="name">setFlags</span>(<span class="type"><a href="qrhitexture.html#Flag-enum">QRhiTexture::Flags</a></span> <i>f</i>)</h3>
 <p><b>See also </b><a href="qrhitexture.html#flags">flags</a>().</p>
 <!-- @@@setFlags -->
 <!-- $$$setFormat[overload1]$$$setFormatQRhiTexture::Format -->
 <h3 class="fn" id="setFormat"><a name="setFormat"></a><span class="type">void</span> QRhiTexture::<span class="name">setFormat</span>(<span class="type"><a href="qrhitexture.html#Format-enum">QRhiTexture::Format</a></span> <i>fmt</i>)</h3>
 <p><b>See also </b><a href="qrhitexture.html#format">format</a>().</p>
 <!-- @@@setFormat -->
-<!-- $$$setPixelSize[overload1]$$$setPixelSizeconstint& -->
-<h3 class="fn" id="setPixelSize"><a name="setPixelSize"></a><span class="type">void</span> QRhiTexture::<span class="name">setPixelSize</span>(const <span class="type">int</span> &amp;<i>sz</i>)</h3>
+<!-- $$$setPixelSize[overload1]$$$setPixelSizeconstQSize& -->
+<h3 class="fn" id="setPixelSize"><a name="setPixelSize"></a><span class="type">void</span> QRhiTexture::<span class="name">setPixelSize</span>(const <span class="type"><a href="../qtcore/qsize.html">QSize</a></span> &amp;<i>sz</i>)</h3>
 <p><b>See also </b><a href="qrhitexture.html#pixelSize">pixelSize</a>().</p>
 <!-- @@@setPixelSize -->
 <!-- $$$setSampleCount[overload1]$$$setSampleCountint -->
 <h3 class="fn" id="setSampleCount"><a name="setSampleCount"></a><span class="type">void</span> QRhiTexture::<span class="name">setSampleCount</span>(<span class="type">int</span> <i>s</i>)</h3>
 <p><b>See also </b><a href="qrhitexture.html#sampleCount">sampleCount</a>().</p>
 <!-- @@@setSampleCount -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
 </div>
         </div>
        </div>

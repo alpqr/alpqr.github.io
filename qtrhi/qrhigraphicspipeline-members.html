@@ -43,17 +43,19 @@
 <li class="fn">class <span class="name"><b><a href="qrhigraphicspipeline-targetblend.html">TargetBlend</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhigraphicspipeline.html#BlendFactor-enum">BlendFactor</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhigraphicspipeline.html#BlendOp-enum">BlendOp</a></b></span></li>
+<li class="fn">flags <span class="name"><b><a href="qrhigraphicspipeline.html#ColorMaskComponent-enum">ColorMask</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhigraphicspipeline.html#ColorMaskComponent-enum">ColorMaskComponent</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhigraphicspipeline.html#CompareOp-enum">CompareOp</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhigraphicspipeline.html#CullMode-enum">CullMode</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhigraphicspipeline.html#Flag-enum">Flag</a></b></span></li>
+<li class="fn">flags <span class="name"><b><a href="qrhigraphicspipeline.html#Flag-enum">Flags</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhigraphicspipeline.html#FrontFace-enum">FrontFace</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhigraphicspipeline.html#StencilOp-enum">StencilOp</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhigraphicspipeline.html#Topology-enum">Topology</a></b></span></li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#build">build</a></b></span>() : bool</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#cullMode">cullMode</a></b></span>() const : QRhiGraphicsPipeline::CullMode</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#depthOp">depthOp</a></b></span>() const : QRhiGraphicsPipeline::CompareOp</li>
-<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#flags">flags</a></b></span>() const : int</li>
+<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#flags">flags</a></b></span>() const : QRhiGraphicsPipeline::Flags</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#frontFace">frontFace</a></b></span>() const : QRhiGraphicsPipeline::FrontFace</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#hasDepthTest">hasDepthTest</a></b></span>() const : bool</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#hasDepthWrite">hasDepthWrite</a></b></span>() const : bool</li>
@@ -62,20 +64,20 @@
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_depthOp-var">m_depthOp</a></b></span> : QRhiGraphicsPipeline::CompareOp</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_depthTest-var">m_depthTest</a></b></span> : bool</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_depthWrite-var">m_depthWrite</a></b></span> : bool</li>
-<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_flags-var">m_flags</a></b></span> : int</li>
+<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_flags-var">m_flags</a></b></span> : QRhiGraphicsPipeline::Flags</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_frontFace-var">m_frontFace</a></b></span> : QRhiGraphicsPipeline::FrontFace</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_renderPassDesc-var">m_renderPassDesc</a></b></span> : QRhiRenderPassDescriptor *</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_reserved-var">m_reserved</a></b></span> : void *</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_sampleCount-var">m_sampleCount</a></b></span> : int</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_shaderResourceBindings-var">m_shaderResourceBindings</a></b></span> : QRhiShaderResourceBindings *</li>
-<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_shaderStages-var">m_shaderStages</a></b></span> : int</li>
+<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_shaderStages-var">m_shaderStages</a></b></span> : QVector&lt;QRhiGraphicsShaderStage&gt;</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_stencilBack-var">m_stencilBack</a></b></span> : QRhiGraphicsPipeline::StencilOpState</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_stencilFront-var">m_stencilFront</a></b></span> : QRhiGraphicsPipeline::StencilOpState</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_stencilReadMask-var">m_stencilReadMask</a></b></span> : quint32</li>
-<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_stencilTest-var">m_stencilTest</a></b></span> : bool</li>
 </ul></td><td class="topAlign"><ul>
+<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_stencilTest-var">m_stencilTest</a></b></span> : bool</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_stencilWriteMask-var">m_stencilWriteMask</a></b></span> : quint32</li>
-<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_targetBlends-var">m_targetBlends</a></b></span> : int</li>
+<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_targetBlends-var">m_targetBlends</a></b></span> : QVector&lt;QRhiGraphicsPipeline::TargetBlend&gt;</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_topology-var">m_topology</a></b></span> : QRhiGraphicsPipeline::Topology</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#m_vertexInputLayout-var">m_vertexInputLayout</a></b></span> : QRhiVertexInputLayout</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#renderPassDescriptor">renderPassDescriptor</a></b></span>() const : QRhiRenderPassDescriptor *</li>
@@ -84,27 +86,27 @@
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setDepthOp">setDepthOp</a></b></span>(QRhiGraphicsPipeline::CompareOp )</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setDepthTest">setDepthTest</a></b></span>(bool )</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setDepthWrite">setDepthWrite</a></b></span>(bool )</li>
-<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setFlags">setFlags</a></b></span>(int )</li>
+<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setFlags">setFlags</a></b></span>(QRhiGraphicsPipeline::Flags )</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setFrontFace">setFrontFace</a></b></span>(QRhiGraphicsPipeline::FrontFace )</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setRenderPassDescriptor">setRenderPassDescriptor</a></b></span>(QRhiRenderPassDescriptor *)</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setSampleCount">setSampleCount</a></b></span>(int )</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setShaderResourceBindings">setShaderResourceBindings</a></b></span>(QRhiShaderResourceBindings *)</li>
-<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setShaderStages">setShaderStages</a></b></span>(const int &amp;)</li>
+<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setShaderStages">setShaderStages</a></b></span>(const QVector&lt;QRhiGraphicsShaderStage&gt; &amp;)</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setStencilBack">setStencilBack</a></b></span>(const QRhiGraphicsPipeline::StencilOpState &amp;)</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setStencilFront">setStencilFront</a></b></span>(const QRhiGraphicsPipeline::StencilOpState &amp;)</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setStencilReadMask">setStencilReadMask</a></b></span>(quint32 )</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setStencilTest">setStencilTest</a></b></span>(bool )</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setStencilWriteMask">setStencilWriteMask</a></b></span>(quint32 )</li>
-<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setTargetBlends">setTargetBlends</a></b></span>(const int &amp;)</li>
+<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setTargetBlends">setTargetBlends</a></b></span>(const QVector&lt;QRhiGraphicsPipeline::TargetBlend&gt; &amp;)</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setTopology">setTopology</a></b></span>(QRhiGraphicsPipeline::Topology )</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#setVertexInputLayout">setVertexInputLayout</a></b></span>(const QRhiVertexInputLayout &amp;)</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#shaderResourceBindings">shaderResourceBindings</a></b></span>() const : QRhiShaderResourceBindings *</li>
-<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#shaderStages">shaderStages</a></b></span>() const : int</li>
+<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#shaderStages">shaderStages</a></b></span>() const : QVector&lt;QRhiGraphicsShaderStage&gt;</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#stencilBack">stencilBack</a></b></span>() const : QRhiGraphicsPipeline::StencilOpState</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#stencilFront">stencilFront</a></b></span>() const : QRhiGraphicsPipeline::StencilOpState</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#stencilReadMask">stencilReadMask</a></b></span>() const : quint32</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#stencilWriteMask">stencilWriteMask</a></b></span>() const : quint32</li>
-<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#targetBlends">targetBlends</a></b></span>() const : int</li>
+<li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#targetBlends">targetBlends</a></b></span>() const : QVector&lt;QRhiGraphicsPipeline::TargetBlend&gt;</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#topology">topology</a></b></span>() const : QRhiGraphicsPipeline::Topology</li>
 <li class="fn"><span class="name"><b><a href="qrhigraphicspipeline.html#vertexInputLayout">vertexInputLayout</a></b></span>() const : QRhiVertexInputLayout</li>
 </ul>

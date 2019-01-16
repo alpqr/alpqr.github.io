@@ -56,7 +56,7 @@
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qbakedshadercode.html#QBakedShaderCode">QBakedShaderCode</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qbakedshadercode.html#QBakedShaderCode-1">QBakedShaderCode</a></b>(const QByteArray &amp;<i>code</i>, const QByteArray &amp;<i>entry</i> = ...)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qbakedshadercode.html#QBakedShaderCode-1">QBakedShaderCode</a></b>(const QByteArray &amp;<i>code</i>, const QByteArray &amp;<i>entry</i> = QByteArray())</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qbakedshadercode.html#entryPoint">entryPoint</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qbakedshadercode.html#setEntryPoint">setEntryPoint</a></b>(const QByteArray &amp;<i>entry</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qbakedshadercode.html#setShader">setShader</a></b>(const QByteArray &amp;<i>code</i>)</td></tr>
@@ -70,30 +70,45 @@
 <p>When <a href="qbakedshadercode.html#shader">shader</a>() is empty after retrieving a <a href="qbakedshadercode.html">QBakedShaderCode</a> instance from <a href="qbakedshader.html">QBakedShader</a>, it indicates no shader code was found for the requested key.</p>
 </div>
 <!-- @@@QBakedShaderCode -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$QBakedShaderCode[overload1]$$$QBakedShaderCode -->
 <h3 class="fn" id="QBakedShaderCode"><a name="QBakedShaderCode"></a>QBakedShaderCode::<span class="name">QBakedShaderCode</span>()</h3>
 <p>Default constructs an instance of QBakedShaderCode.</p><!-- @@@QBakedShaderCode -->
 <!-- $$$QBakedShaderCode$$$QBakedShaderCodeconstQByteArray&constQByteArray& -->
-<h3 class="fn" id="QBakedShaderCode-1"><a name="QBakedShaderCode-1"></a>QBakedShaderCode::<span class="name">QBakedShaderCode</span>(const <span class="type">QByteArray</span> &amp;<i>code</i>, const <span class="type">QByteArray</span> &amp;<i>entry</i> = ...)</h3>
+<h3 class="fn" id="QBakedShaderCode-1"><a name="QBakedShaderCode-1"></a>QBakedShaderCode::<span class="name">QBakedShaderCode</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>code</i>, const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>entry</i> = QByteArray())</h3>
 <p>Default constructs an instance of QBakedShaderCode.</p><!-- @@@QBakedShaderCode -->
 <!-- $$$entryPoint[overload1]$$$entryPoint -->
-<h3 class="fn" id="entryPoint"><a name="entryPoint"></a><span class="type">QByteArray</span> QBakedShaderCode::<span class="name">entryPoint</span>() const</h3>
+<h3 class="fn" id="entryPoint"><a name="entryPoint"></a><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> QBakedShaderCode::<span class="name">entryPoint</span>() const</h3>
 <p><b>See also </b><a href="qbakedshadercode.html#setEntryPoint">setEntryPoint</a>().</p>
 <!-- @@@entryPoint -->
 <!-- $$$setEntryPoint[overload1]$$$setEntryPointconstQByteArray& -->
-<h3 class="fn" id="setEntryPoint"><a name="setEntryPoint"></a><span class="type">void</span> QBakedShaderCode::<span class="name">setEntryPoint</span>(const <span class="type">QByteArray</span> &amp;<i>entry</i>)</h3>
+<h3 class="fn" id="setEntryPoint"><a name="setEntryPoint"></a><span class="type">void</span> QBakedShaderCode::<span class="name">setEntryPoint</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>entry</i>)</h3>
 <p><b>See also </b><a href="qbakedshadercode.html#entryPoint">entryPoint</a>().</p>
 <!-- @@@setEntryPoint -->
 <!-- $$$setShader[overload1]$$$setShaderconstQByteArray& -->
-<h3 class="fn" id="setShader"><a name="setShader"></a><span class="type">void</span> QBakedShaderCode::<span class="name">setShader</span>(const <span class="type">QByteArray</span> &amp;<i>code</i>)</h3>
+<h3 class="fn" id="setShader"><a name="setShader"></a><span class="type">void</span> QBakedShaderCode::<span class="name">setShader</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>code</i>)</h3>
 <p><b>See also </b><a href="qbakedshadercode.html#shader">shader</a>().</p>
 <!-- @@@setShader -->
 <!-- $$$shader[overload1]$$$shader -->
-<h3 class="fn" id="shader"><a name="shader"></a><span class="type">QByteArray</span> QBakedShaderCode::<span class="name">shader</span>() const</h3>
+<h3 class="fn" id="shader"><a name="shader"></a><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> QBakedShaderCode::<span class="name">shader</span>() const</h3>
 <p><b>See also </b><a href="qbakedshadercode.html#setShader">setShader</a>().</p>
 <!-- @@@shader -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
 </div>
         </div>
        </div>

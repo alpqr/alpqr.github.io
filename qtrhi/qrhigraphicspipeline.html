@@ -61,10 +61,12 @@
 <tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline-targetblend.html">TargetBlend</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#BlendFactor-enum">BlendFactor</a></b> { Zero, One, SrcColor, OneMinusSrcColor, ..., OneMinusSrc1Alpha }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#BlendOp-enum">BlendOp</a></b> { Add, Subtract, ReverseSubtract, Min, Max }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#ColorMaskComponent-enum">ColorMask</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#ColorMaskComponent-enum">ColorMaskComponent</a></b> { R, G, B, A }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#CompareOp-enum">CompareOp</a></b> { Never, Less, Equal, LessOrEqual, ..., Always }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#CullMode-enum">CullMode</a></b> { None, Front, Back }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#Flag-enum">Flag</a></b> { UsesBlendConstants, UsesStencilRef, UsesScissor }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#Flag-enum">Flags</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#FrontFace-enum">FrontFace</a></b> { CCW, CW }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#StencilOp-enum">StencilOp</a></b> { StencilZero, Keep, Replace, IncrementAndClamp, ..., DecrementAndWrap }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#Topology-enum">Topology</a></b> { Triangles, TriangleStrip, Lines, LineStrip, Points }</td></tr>
@@ -75,7 +77,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#build">build</a></b>() = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::CullMode </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#cullMode">cullMode</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::CompareOp </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#depthOp">depthOp</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#flags">flags</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::Flags </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#flags">flags</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::FrontFace </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#frontFace">frontFace</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#hasDepthTest">hasDepthTest</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#hasDepthWrite">hasDepthWrite</a></b>() const</td></tr>
@@ -86,27 +88,27 @@
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setDepthOp">setDepthOp</a></b>(QRhiGraphicsPipeline::CompareOp <i>op</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setDepthTest">setDepthTest</a></b>(bool <i>enable</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setDepthWrite">setDepthWrite</a></b>(bool <i>enable</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setFlags">setFlags</a></b>(int <i>f</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setFlags">setFlags</a></b>(QRhiGraphicsPipeline::Flags <i>f</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setFrontFace">setFrontFace</a></b>(QRhiGraphicsPipeline::FrontFace <i>f</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setRenderPassDescriptor">setRenderPassDescriptor</a></b>(QRhiRenderPassDescriptor *<i>desc</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setSampleCount">setSampleCount</a></b>(int <i>s</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setShaderResourceBindings">setShaderResourceBindings</a></b>(QRhiShaderResourceBindings *<i>srb</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setShaderStages">setShaderStages</a></b>(const int &amp;<i>stages</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setShaderStages">setShaderStages</a></b>(const QVector&lt;QRhiGraphicsShaderStage&gt; &amp;<i>stages</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setStencilBack">setStencilBack</a></b>(const QRhiGraphicsPipeline::StencilOpState &amp;<i>state</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setStencilFront">setStencilFront</a></b>(const QRhiGraphicsPipeline::StencilOpState &amp;<i>state</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setStencilReadMask">setStencilReadMask</a></b>(quint32 <i>mask</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setStencilTest">setStencilTest</a></b>(bool <i>enable</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setStencilWriteMask">setStencilWriteMask</a></b>(quint32 <i>mask</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setTargetBlends">setTargetBlends</a></b>(const int &amp;<i>blends</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setTargetBlends">setTargetBlends</a></b>(const QVector&lt;QRhiGraphicsPipeline::TargetBlend&gt; &amp;<i>blends</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setTopology">setTopology</a></b>(QRhiGraphicsPipeline::Topology <i>t</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setVertexInputLayout">setVertexInputLayout</a></b>(const QRhiVertexInputLayout &amp;<i>layout</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBindings *</td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#shaderResourceBindings">shaderResourceBindings</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#shaderStages">shaderStages</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiGraphicsShaderStage&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#shaderStages">shaderStages</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::StencilOpState </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#stencilBack">stencilBack</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::StencilOpState </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#stencilFront">stencilFront</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> quint32 </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#stencilReadMask">stencilReadMask</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> quint32 </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#stencilWriteMask">stencilWriteMask</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#targetBlends">targetBlends</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiGraphicsPipeline::TargetBlend&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#targetBlends">targetBlends</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::Topology </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#topology">topology</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiVertexInputLayout </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#vertexInputLayout">vertexInputLayout</a></b>() const</td></tr>
 </table></div>
@@ -120,19 +122,19 @@
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::CompareOp </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_depthOp-var">m_depthOp</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_depthTest-var">m_depthTest</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_depthWrite-var">m_depthWrite</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_flags-var">m_flags</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::Flags </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_flags-var">m_flags</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::FrontFace </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_frontFace-var">m_frontFace</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderPassDescriptor *</td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_renderPassDesc-var">m_renderPassDesc</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_reserved-var">m_reserved</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_sampleCount-var">m_sampleCount</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBindings *</td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_shaderResourceBindings-var">m_shaderResourceBindings</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_shaderStages-var">m_shaderStages</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiGraphicsShaderStage&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_shaderStages-var">m_shaderStages</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::StencilOpState </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_stencilBack-var">m_stencilBack</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::StencilOpState </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_stencilFront-var">m_stencilFront</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> quint32 </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_stencilReadMask-var">m_stencilReadMask</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_stencilTest-var">m_stencilTest</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> quint32 </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_stencilWriteMask-var">m_stencilWriteMask</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_targetBlends-var">m_targetBlends</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiGraphicsPipeline::TargetBlend&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_targetBlends-var">m_targetBlends</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::Topology </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_topology-var">m_topology</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiVertexInputLayout </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_vertexInputLayout-var">m_vertexInputLayout</a></b></td></tr>
 </table></div>
@@ -189,7 +191,7 @@
 </table></div>
 <!-- @@@BlendOp -->
 <!-- $$$ColorMaskComponent$$$R$$$G$$$B$$$A -->
-<h3 class="fn" id="ColorMaskComponent-enum"><a name="ColorMaskComponent-enum"></a>enum QRhiGraphicsPipeline::<span class="name">ColorMaskComponent</span></h3>
+<h3 class="flags" id="ColorMaskComponent-enum"><a name="ColorMaskComponent-enum"></a>enum QRhiGraphicsPipeline::<span class="name">ColorMaskComponent</span><br/>flags QRhiGraphicsPipeline::<span class="name">ColorMask</span></h3>
 <p>Flag values for specifying the color write mask</p>
 <div class="table"><table class="valuelist"><tr><th class="tblConst">Constant</th><th class="tblVal">Value</th></tr>
 <tr><td class="topAlign"><code>QRhiGraphicsPipeline::R</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td></tr>
@@ -197,6 +199,7 @@
 <tr><td class="topAlign"><code>QRhiGraphicsPipeline::B</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td></tr>
 <tr><td class="topAlign"><code>QRhiGraphicsPipeline::A</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 3</code></td></tr>
 </table></div>
+<p>The ColorMask type is a typedef for <a href="../qtcore/qflags.html">QFlags</a>&lt;ColorMaskComponent&gt;. It stores an OR combination of ColorMaskComponent values.</p>
 <!-- @@@ColorMaskComponent -->
 <!-- $$$CompareOp$$$Never$$$Less$$$Equal$$$LessOrEqual$$$Greater$$$NotEqual$$$GreaterOrEqual$$$Always -->
 <h3 class="fn" id="CompareOp-enum"><a name="CompareOp-enum"></a>enum QRhiGraphicsPipeline::<span class="name">CompareOp</span></h3>
@@ -222,13 +225,14 @@
 </table></div>
 <!-- @@@CullMode -->
 <!-- $$$Flag$$$UsesBlendConstants$$$UsesStencilRef$$$UsesScissor -->
-<h3 class="fn" id="Flag-enum"><a name="Flag-enum"></a>enum QRhiGraphicsPipeline::<span class="name">Flag</span></h3>
+<h3 class="flags" id="Flag-enum"><a name="Flag-enum"></a>enum QRhiGraphicsPipeline::<span class="name">Flag</span><br/>flags QRhiGraphicsPipeline::<span class="name">Flags</span></h3>
 <p>Flag values for describing the dynamic state of the pipeline. The viewport is always dynamic.</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
 <tr><td class="topAlign"><code>QRhiGraphicsPipeline::UsesBlendConstants</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">Indicates that a blend color constant will be set via <a href="qrhicommandbuffer.html#setBlendConstants">QRhiCommandBuffer::setBlendConstants</a>()</td></tr>
 <tr><td class="topAlign"><code>QRhiGraphicsPipeline::UsesStencilRef</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Indicates that a stencil reference value will be set via <a href="qrhicommandbuffer.html#setStencilRef">QRhiCommandBuffer::setStencilRef</a>()</td></tr>
 <tr><td class="topAlign"><code>QRhiGraphicsPipeline::UsesScissor</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">Indicates that a scissor rectangle will be set via <a href="qrhicommandbuffer.html#setScissor">QRhiCommandBuffer::setScissor</a>()</td></tr>
 </table></div>
+<p>The Flags type is a typedef for <a href="../qtcore/qflags.html">QFlags</a>&lt;Flag&gt;. It stores an OR combination of Flag values.</p>
 <!-- @@@Flag -->
 <!-- $$$FrontFace$$$CCW$$$CW -->
 <h3 class="fn" id="FrontFace-enum"><a name="FrontFace-enum"></a>enum QRhiGraphicsPipeline::<span class="name">FrontFace</span></h3>
@@ -264,10 +268,15 @@
 </table></div>
 <!-- @@@Topology -->
 </div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$build[overload1]$$$build -->
 <h3 class="fn" id="build"><a name="build"></a><code>[pure virtual] </code><span class="type">bool</span> QRhiGraphicsPipeline::<span class="name">build</span>()</h3>
+<p>Creates the corresponding native graphics resources. If there are already resources present due to an earlier build() with no corresponding <a href="qrhiresource.html#release">release</a>(), then <a href="qrhiresource.html#release">release</a>() is called implicitly first.</p>
+<p>Returns <code>true</code> when successful, <code>false</code> when a graphics operation failed. Regardless of the return value, calling <a href="qrhiresource.html#release">release</a>() is always safe.</p>
 <!-- @@@build -->
 <!-- $$$cullMode[overload1]$$$cullMode -->
 <h3 class="fn" id="cullMode"><a name="cullMode"></a><span class="type"><a href="qrhigraphicspipeline.html#CullMode-enum">QRhiGraphicsPipeline::CullMode</a></span> QRhiGraphicsPipeline::<span class="name">cullMode</span>() const</h3>
@@ -278,7 +287,7 @@
 <p><b>See also </b><a href="qrhigraphicspipeline.html#setDepthOp">setDepthOp</a>().</p>
 <!-- @@@depthOp -->
 <!-- $$$flags[overload1]$$$flags -->
-<h3 class="fn" id="flags"><a name="flags"></a><span class="type">int</span> QRhiGraphicsPipeline::<span class="name">flags</span>() const</h3>
+<h3 class="fn" id="flags"><a name="flags"></a><span class="type"><a href="qrhigraphicspipeline.html#Flag-enum">QRhiGraphicsPipeline::Flags</a></span> QRhiGraphicsPipeline::<span class="name">flags</span>() const</h3>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#setFlags">setFlags</a>().</p>
 <!-- @@@flags -->
 <!-- $$$frontFace[overload1]$$$frontFace -->
@@ -318,8 +327,8 @@
 <h3 class="fn" id="setDepthWrite"><a name="setDepthWrite"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setDepthWrite</span>(<span class="type">bool</span> <i>enable</i>)</h3>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#hasDepthWrite">hasDepthWrite</a>().</p>
 <!-- @@@setDepthWrite -->
-<!-- $$$setFlags[overload1]$$$setFlagsint -->
-<h3 class="fn" id="setFlags"><a name="setFlags"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setFlags</span>(<span class="type">int</span> <i>f</i>)</h3>
+<!-- $$$setFlags[overload1]$$$setFlagsQRhiGraphicsPipeline::Flags -->
+<h3 class="fn" id="setFlags"><a name="setFlags"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setFlags</span>(<span class="type"><a href="qrhigraphicspipeline.html#Flag-enum">QRhiGraphicsPipeline::Flags</a></span> <i>f</i>)</h3>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#flags">flags</a>().</p>
 <!-- @@@setFlags -->
 <!-- $$$setFrontFace[overload1]$$$setFrontFaceQRhiGraphicsPipeline::FrontFace -->
@@ -338,8 +347,8 @@
 <h3 class="fn" id="setShaderResourceBindings"><a name="setShaderResourceBindings"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setShaderResourceBindings</span>(<span class="type"><a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a></span> *<i>srb</i>)</h3>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#shaderResourceBindings">shaderResourceBindings</a>().</p>
 <!-- @@@setShaderResourceBindings -->
-<!-- $$$setShaderStages[overload1]$$$setShaderStagesconstint& -->
-<h3 class="fn" id="setShaderStages"><a name="setShaderStages"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setShaderStages</span>(const <span class="type">int</span> &amp;<i>stages</i>)</h3>
+<!-- $$$setShaderStages[overload1]$$$setShaderStagesconstQVector<QRhiGraphicsShaderStage>& -->
+<h3 class="fn" id="setShaderStages"><a name="setShaderStages"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setShaderStages</span>(const <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhigraphicsshaderstage.html">QRhiGraphicsShaderStage</a></span>&gt; &amp;<i>stages</i>)</h3>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#shaderStages">shaderStages</a>().</p>
 <!-- @@@setShaderStages -->
 <!-- $$$setStencilBack[overload1]$$$setStencilBackconstQRhiGraphicsPipeline::StencilOpState& -->
@@ -362,8 +371,8 @@
 <h3 class="fn" id="setStencilWriteMask"><a name="setStencilWriteMask"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setStencilWriteMask</span>(<span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>mask</i>)</h3>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#stencilWriteMask">stencilWriteMask</a>().</p>
 <!-- @@@setStencilWriteMask -->
-<!-- $$$setTargetBlends[overload1]$$$setTargetBlendsconstint& -->
-<h3 class="fn" id="setTargetBlends"><a name="setTargetBlends"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setTargetBlends</span>(const <span class="type">int</span> &amp;<i>blends</i>)</h3>
+<!-- $$$setTargetBlends[overload1]$$$setTargetBlendsconstQVector<QRhiGraphicsPipeline::TargetBlend>& -->
+<h3 class="fn" id="setTargetBlends"><a name="setTargetBlends"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setTargetBlends</span>(const <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhigraphicspipeline-targetblend.html">QRhiGraphicsPipeline::TargetBlend</a></span>&gt; &amp;<i>blends</i>)</h3>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#targetBlends">targetBlends</a>().</p>
 <!-- @@@setTargetBlends -->
 <!-- $$$setTopology[overload1]$$$setTopologyQRhiGraphicsPipeline::Topology -->
@@ -379,7 +388,7 @@
 <p><b>See also </b><a href="qrhigraphicspipeline.html#setShaderResourceBindings">setShaderResourceBindings</a>().</p>
 <!-- @@@shaderResourceBindings -->
 <!-- $$$shaderStages[overload1]$$$shaderStages -->
-<h3 class="fn" id="shaderStages"><a name="shaderStages"></a><span class="type">int</span> QRhiGraphicsPipeline::<span class="name">shaderStages</span>() const</h3>
+<h3 class="fn" id="shaderStages"><a name="shaderStages"></a><span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhigraphicsshaderstage.html">QRhiGraphicsShaderStage</a></span>&gt; QRhiGraphicsPipeline::<span class="name">shaderStages</span>() const</h3>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#setShaderStages">setShaderStages</a>().</p>
 <!-- @@@shaderStages -->
 <!-- $$$stencilBack[overload1]$$$stencilBack -->
@@ -399,7 +408,7 @@
 <p><b>See also </b><a href="qrhigraphicspipeline.html#setStencilWriteMask">setStencilWriteMask</a>().</p>
 <!-- @@@stencilWriteMask -->
 <!-- $$$targetBlends[overload1]$$$targetBlends -->
-<h3 class="fn" id="targetBlends"><a name="targetBlends"></a><span class="type">int</span> QRhiGraphicsPipeline::<span class="name">targetBlends</span>() const</h3>
+<h3 class="fn" id="targetBlends"><a name="targetBlends"></a><span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhigraphicspipeline-targetblend.html">QRhiGraphicsPipeline::TargetBlend</a></span>&gt; QRhiGraphicsPipeline::<span class="name">targetBlends</span>() const</h3>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#setTargetBlends">setTargetBlends</a>().</p>
 <!-- @@@targetBlends -->
 <!-- $$$topology[overload1]$$$topology -->
@@ -410,6 +419,15 @@
 <h3 class="fn" id="vertexInputLayout"><a name="vertexInputLayout"></a><span class="type"><a href="qrhivertexinputlayout.html">QRhiVertexInputLayout</a></span> QRhiGraphicsPipeline::<span class="name">vertexInputLayout</span>() const</h3>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#setVertexInputLayout">setVertexInputLayout</a>().</p>
 <!-- @@@vertexInputLayout -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
 </div>
         </div>
        </div>

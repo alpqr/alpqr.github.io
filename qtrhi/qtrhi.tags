@@ -15,7 +15,7 @@
             <name>QRhiColorClearValue</name>
             <anchorfile>qrhicolorclearvalue.html</anchorfile>
             <anchor>QRhiColorClearValue-1</anchor>
-            <arglist>(const int &amp;rgba_)</arglist>
+            <arglist>(const QVector4D &amp;rgba_)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
@@ -203,7 +203,7 @@
             <name>QRhiGraphicsShaderStage</name>
             <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
             <anchor>QRhiGraphicsShaderStage-1</anchor>
-            <arglist>(QRhiGraphicsShaderStage::Type type_, const int &amp;shader_)</arglist>
+            <arglist>(QRhiGraphicsShaderStage::Type type_, const QBakedShader &amp;shader_)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -243,26 +243,32 @@
             <anchor>StageFlag-enum</anchor>
             <arglist></arglist>
         </member>
+        <member kind="typedef" type="QRhiShaderResourceBinding::StageFlag">
+            <name>StageFlags</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>StageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="yes">
             <type>QRhiShaderResourceBinding</type>
             <name>uniformBuffer</name>
             <anchorfile>qrhishaderresourcebinding.html</anchorfile>
             <anchor>uniformBuffer</anchor>
-            <arglist>(int binding_, int stage_, QRhiBuffer *buf_)</arglist>
+            <arglist>(int binding_, QRhiShaderResourceBinding::StageFlags stage_, QRhiBuffer *buf_)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="yes">
             <type>QRhiShaderResourceBinding</type>
             <name>uniformBuffer</name>
             <anchorfile>qrhishaderresourcebinding.html</anchorfile>
             <anchor>uniformBuffer-1</anchor>
-            <arglist>(int binding_, int stage_, QRhiBuffer *buf_, int offset_, int size_)</arglist>
+            <arglist>(int binding_, QRhiShaderResourceBinding::StageFlags stage_, QRhiBuffer *buf_, int offset_, int size_)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="yes">
             <type>QRhiShaderResourceBinding</type>
             <name>sampledTexture</name>
             <anchorfile>qrhishaderresourcebinding.html</anchorfile>
             <anchor>sampledTexture</anchor>
-            <arglist>(int binding_, int stage_, QRhiTexture *tex_, QRhiSampler *sampler_)</arglist>
+            <arglist>(int binding_, QRhiShaderResourceBinding::StageFlags stage_, QRhiTexture *tex_, QRhiSampler *sampler_)</arglist>
         </member>
         <class>QRhiShaderResourceBinding::UniformBufferData</class>
         <class>QRhiShaderResourceBinding::SampledTextureData</class>
@@ -349,7 +355,7 @@
             <name>QRhiTextureUploadDescription</name>
             <anchorfile>qrhitextureuploaddescription.html</anchorfile>
             <anchor>QRhiTextureUploadDescription-1</anchor>
-            <arglist>(const int &amp;layers_)</arglist>
+            <arglist>(const QVector&lt;QRhiTextureUploadDescription::Layer&gt; &amp;layers_)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -368,7 +374,7 @@
             <name>Layer</name>
             <anchorfile>qrhitextureuploaddescription-layer.html</anchorfile>
             <anchor>Layer-1</anchor>
-            <arglist>(const int &amp;mipImages_)</arglist>
+            <arglist>(const QVector&lt;QRhiTextureUploadDescription::Layer::MipLevel&gt; &amp;mipImages_)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -386,7 +392,7 @@
             <name>MipLevel</name>
             <anchorfile>qrhitextureuploaddescription-layer-miplevel.html</anchorfile>
             <anchor>MipLevel-1</anchor>
-            <arglist>(const int &amp;image_)</arglist>
+            <arglist>(const QImage &amp;image_)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
@@ -513,6 +519,12 @@
             <anchor>UsageFlag-enum</anchor>
             <arglist></arglist>
         </member>
+        <member kind="typedef" type="QRhiBuffer::UsageFlag">
+            <name>UsageFlags</name>
+            <anchorfile>qrhibuffer.html</anchorfile>
+            <anchor>UsageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiBuffer::Type</type>
             <name>type</name>
@@ -528,7 +540,7 @@
             <arglist>(QRhiBuffer::Type t)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QRhiBuffer::UsageFlags</type>
             <name>usage</name>
             <anchorfile>qrhibuffer.html</anchorfile>
             <anchor>usage</anchor>
@@ -539,7 +551,7 @@
             <name>setUsage</name>
             <anchorfile>qrhibuffer.html</anchorfile>
             <anchor>setUsage</anchor>
-            <arglist>(int u)</arglist>
+            <arglist>(QRhiBuffer::UsageFlags u)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>int</type>
@@ -597,6 +609,12 @@
             <arglist></arglist>
         </member>
         <member name="UsedWithGenerateMips">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="typedef" type="QRhiTexture::Flag">
+            <name>Flags</name>
+            <anchorfile>qrhitexture.html</anchorfile>
             <anchor>Flag-enum</anchor>
             <arglist></arglist>
         </member>
@@ -744,7 +762,7 @@
             <arglist>(QRhiTexture::Format fmt)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QSize</type>
             <name>pixelSize</name>
             <anchorfile>qrhitexture.html</anchorfile>
             <anchor>pixelSize</anchor>
@@ -755,10 +773,10 @@
             <name>setPixelSize</name>
             <anchorfile>qrhitexture.html</anchorfile>
             <anchor>setPixelSize</anchor>
-            <arglist>(const int &amp;sz)</arglist>
+            <arglist>(const QSize &amp;sz)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QRhiTexture::Flags</type>
             <name>flags</name>
             <anchorfile>qrhitexture.html</anchorfile>
             <anchor>flags</anchor>
@@ -769,7 +787,7 @@
             <name>setFlags</name>
             <anchorfile>qrhitexture.html</anchorfile>
             <anchor>setFlags</anchor>
-            <arglist>(int f)</arglist>
+            <arglist>(QRhiTexture::Flags f)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>int</type>
@@ -971,6 +989,12 @@
             <anchor>Flag-enum</anchor>
             <arglist></arglist>
         </member>
+        <member kind="typedef" type="QRhiRenderBuffer::Flag">
+            <name>Flags</name>
+            <anchorfile>qrhirenderbuffer.html</anchorfile>
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiRenderBuffer::Type</type>
             <name>type</name>
@@ -986,7 +1010,7 @@
             <arglist>(QRhiRenderBuffer::Type t)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QSize</type>
             <name>pixelSize</name>
             <anchorfile>qrhirenderbuffer.html</anchorfile>
             <anchor>pixelSize</anchor>
@@ -997,7 +1021,7 @@
             <name>setPixelSize</name>
             <anchorfile>qrhirenderbuffer.html</anchorfile>
             <anchor>setPixelSize</anchor>
-            <arglist>(const int &amp;sz)</arglist>
+            <arglist>(const QSize &amp;sz)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>int</type>
@@ -1014,7 +1038,7 @@
             <arglist>(int s)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QRhiRenderBuffer::Flags</type>
             <name>flags</name>
             <anchorfile>qrhirenderbuffer.html</anchorfile>
             <anchor>flags</anchor>
@@ -1025,7 +1049,7 @@
             <name>setFlags</name>
             <anchorfile>qrhirenderbuffer.html</anchorfile>
             <anchor>setFlags</anchor>
-            <arglist>(int h)</arglist>
+            <arglist>(QRhiRenderBuffer::Flags h)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="pure" static="no">
             <type>virtual bool</type>
@@ -1071,12 +1095,12 @@
             <anchor>type</anchor>
             <arglist>() const const = 0</arglist>
         </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual QSize</type>
             <name>sizeInPixels</name>
             <anchorfile>qrhirendertarget.html</anchorfile>
             <anchor>sizeInPixels</anchor>
-            <arglist>() const const</arglist>
+            <arglist>() const const = 0</arglist>
         </member>
         <member kind="function" protection="public" virtualness="pure" static="no">
             <type>virtual float</type>
@@ -1117,6 +1141,12 @@
             <anchor>Flag-enum</anchor>
             <arglist></arglist>
         </member>
+        <member kind="typedef" type="QRhiTextureRenderTarget::Flag">
+            <name>Flags</name>
+            <anchorfile>qrhitexturerendertarget.html</anchorfile>
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiTextureRenderTargetDescription</type>
             <name>description</name>
@@ -1132,7 +1162,7 @@
             <arglist>(const QRhiTextureRenderTargetDescription &amp;desc)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QRhiTextureRenderTarget::Flags</type>
             <name>flags</name>
             <anchorfile>qrhitexturerendertarget.html</anchorfile>
             <anchor>flags</anchor>
@@ -1143,7 +1173,7 @@
             <name>setFlags</name>
             <anchorfile>qrhitexturerendertarget.html</anchorfile>
             <anchor>setFlags</anchor>
-            <arglist>(int f)</arglist>
+            <arglist>(QRhiTextureRenderTarget::Flags f)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="pure" static="no">
             <type>virtual QRhiRenderPassDescriptor *</type>
@@ -1165,7 +1195,7 @@
         <filename>qrhishaderresourcebindings.html</filename>
         <base>QRhiResource</base>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QVector&lt;QRhiShaderResourceBinding&gt;</type>
             <name>bindings</name>
             <anchorfile>qrhishaderresourcebindings.html</anchorfile>
             <anchor>bindings</anchor>
@@ -1176,7 +1206,7 @@
             <name>setBindings</name>
             <anchorfile>qrhishaderresourcebindings.html</anchorfile>
             <anchor>setBindings</anchor>
-            <arglist>(const int &amp;b)</arglist>
+            <arglist>(const QVector&lt;QRhiShaderResourceBinding&gt; &amp;b)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="pure" static="no">
             <type>virtual bool</type>
@@ -1204,6 +1234,12 @@
             <arglist></arglist>
         </member>
         <member name="UsesScissor">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="typedef" type="QRhiGraphicsPipeline::Flag">
+            <name>Flags</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
             <anchor>Flag-enum</anchor>
             <arglist></arglist>
         </member>
@@ -1280,6 +1316,12 @@
             <arglist></arglist>
         </member>
         <member name="A">
+            <anchor>ColorMaskComponent-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="typedef" type="QRhiGraphicsPipeline::ColorMaskComponent">
+            <name>ColorMask</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
             <anchor>ColorMaskComponent-enum</anchor>
             <arglist></arglist>
         </member>
@@ -1466,7 +1508,7 @@
         </member>
         <class>QRhiGraphicsPipeline::StencilOpState</class>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QRhiGraphicsPipeline::Flags</type>
             <name>flags</name>
             <anchorfile>qrhigraphicspipeline.html</anchorfile>
             <anchor>flags</anchor>
@@ -1477,7 +1519,7 @@
             <name>setFlags</name>
             <anchorfile>qrhigraphicspipeline.html</anchorfile>
             <anchor>setFlags</anchor>
-            <arglist>(int f)</arglist>
+            <arglist>(QRhiGraphicsPipeline::Flags f)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiGraphicsPipeline::Topology</type>
@@ -1522,7 +1564,7 @@
             <arglist>(QRhiGraphicsPipeline::FrontFace f)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QVector&lt;QRhiGraphicsPipeline::TargetBlend&gt;</type>
             <name>targetBlends</name>
             <anchorfile>qrhigraphicspipeline.html</anchorfile>
             <anchor>targetBlends</anchor>
@@ -1533,7 +1575,7 @@
             <name>setTargetBlends</name>
             <anchorfile>qrhigraphicspipeline.html</anchorfile>
             <anchor>setTargetBlends</anchor>
-            <arglist>(const int &amp;blends)</arglist>
+            <arglist>(const QVector&lt;QRhiGraphicsPipeline::TargetBlend&gt; &amp;blends)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>bool</type>
@@ -1662,7 +1704,7 @@
             <arglist>(int s)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QVector&lt;QRhiGraphicsShaderStage&gt;</type>
             <name>shaderStages</name>
             <anchorfile>qrhigraphicspipeline.html</anchorfile>
             <anchor>shaderStages</anchor>
@@ -1673,7 +1715,7 @@
             <name>setShaderStages</name>
             <anchorfile>qrhigraphicspipeline.html</anchorfile>
             <anchor>setShaderStages</anchor>
-            <arglist>(const int &amp;stages)</arglist>
+            <arglist>(const QVector&lt;QRhiGraphicsShaderStage&gt; &amp;stages)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiVertexInputLayout</type>
@@ -1762,6 +1804,12 @@
             <anchor>Flag-enum</anchor>
             <arglist></arglist>
         </member>
+        <member kind="typedef" type="QRhiSwapChain::Flag">
+            <name>Flags</name>
+            <anchorfile>qrhiswapchain.html</anchorfile>
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QWindow *</type>
             <name>window</name>
@@ -1777,7 +1825,7 @@
             <arglist>(QWindow *window)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QRhiSwapChain::Flags</type>
             <name>flags</name>
             <anchorfile>qrhiswapchain.html</anchorfile>
             <anchor>flags</anchor>
@@ -1788,7 +1836,7 @@
             <name>setFlags</name>
             <anchorfile>qrhiswapchain.html</anchorfile>
             <anchor>setFlags</anchor>
-            <arglist>(int f)</arglist>
+            <arglist>(QRhiSwapChain::Flags f)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiRenderBuffer *</type>
@@ -1833,21 +1881,7 @@
             <arglist>(QRhiRenderPassDescriptor *desc)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int *</type>
-            <name>target</name>
-            <anchorfile>qrhiswapchain.html</anchorfile>
-            <anchor>target</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>setTarget</name>
-            <anchorfile>qrhiswapchain.html</anchorfile>
-            <anchor>setTarget</anchor>
-            <arglist>(int *obj)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QSize</type>
             <name>currentPixelSize</name>
             <anchorfile>qrhiswapchain.html</anchorfile>
             <anchor>currentPixelSize</anchor>
@@ -1867,12 +1901,12 @@
             <anchor>currentFrameRenderTarget</anchor>
             <arglist>() = 0</arglist>
         </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual QSize</type>
             <name>surfacePixelSize</name>
             <anchorfile>qrhiswapchain.html</anchorfile>
             <anchor>surfacePixelSize</anchor>
-            <arglist>()</arglist>
+            <arglist>() = 0</arglist>
         </member>
         <member kind="function" protection="public" virtualness="pure" static="no">
             <type>virtual QRhiRenderPassDescriptor *</type>
@@ -1934,12 +1968,18 @@
             <anchor>setGraphicsPipeline</anchor>
             <arglist>(QRhiGraphicsPipeline *ps, QRhiShaderResourceBindings *srb)</arglist>
         </member>
+        <member kind="typedef" type="">
+            <name>VertexInput</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>VertexInput-typedef</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>void</type>
             <name>setVertexInput</name>
             <anchorfile>qrhicommandbuffer.html</anchorfile>
             <anchor>setVertexInput</anchor>
-            <arglist>(int startBinding, const int &amp;bindings, QRhiBuffer *indexBuf, quint32 indexOffset, QRhiCommandBuffer::IndexFormat indexFormat)</arglist>
+            <arglist>(int startBinding, const QVector&lt;QRhiCommandBuffer::VertexInput&gt; &amp;bindings, QRhiBuffer *indexBuf, quint32 indexOffset, QRhiCommandBuffer::IndexFormat indexFormat)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>void</type>
@@ -1960,7 +2000,7 @@
             <name>setBlendConstants</name>
             <anchorfile>qrhicommandbuffer.html</anchorfile>
             <anchor>setBlendConstants</anchor>
-            <arglist>(const int &amp;c)</arglist>
+            <arglist>(const QVector4D &amp;c)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>void</type>
@@ -2012,6 +2052,12 @@
     <compound kind="class">
         <name>QRhiResourceUpdateBatch</name>
         <filename>qrhiresourceupdatebatch.html</filename>
+        <member kind="typedef" type="QRhiResourceUpdateBatch::TexturePrepareFlag">
+            <name>TexturePrepareFlags</name>
+            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
+            <anchor>TexturePrepareFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
             <name>~QRhiResourceUpdateBatch</name>
@@ -2066,7 +2112,7 @@
             <name>uploadTexture</name>
             <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
             <anchor>uploadTexture-1</anchor>
-            <arglist>(QRhiTexture *tex, const int &amp;image)</arglist>
+            <arglist>(QRhiTexture *tex, const QImage &amp;image)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>void</type>
@@ -2132,6 +2178,12 @@
             <arglist></arglist>
         </member>
         <member name="EnableDebugMarkers">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="typedef" type="QRhi::Flag">
+            <name>Flags</name>
+            <anchorfile>qrhi.html</anchorfile>
             <anchor>Flag-enum</anchor>
             <arglist></arglist>
         </member>
@@ -2210,7 +2262,7 @@
             <name>create</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>create</anchor>
-            <arglist>(QRhi::Implementation impl, QRhiInitParams *params, int flags)</arglist>
+            <arglist>(QRhi::Implementation impl, QRhiInitParams *params, QRhi::Flags flags)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiGraphicsPipeline *</type>
@@ -2231,21 +2283,21 @@
             <name>newBuffer</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>newBuffer</anchor>
-            <arglist>(QRhiBuffer::Type type, int usage, int size)</arglist>
+            <arglist>(QRhiBuffer::Type type, QRhiBuffer::UsageFlags usage, int size)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiRenderBuffer *</type>
             <name>newRenderBuffer</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>newRenderBuffer</anchor>
-            <arglist>(QRhiRenderBuffer::Type type, const int &amp;pixelSize, int sampleCount, int flags)</arglist>
+            <arglist>(QRhiRenderBuffer::Type type, const QSize &amp;pixelSize, int sampleCount, QRhiRenderBuffer::Flags flags)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiTexture *</type>
             <name>newTexture</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>newTexture</anchor>
-            <arglist>(QRhiTexture::Format format, const int &amp;pixelSize, int sampleCount, int flags)</arglist>
+            <arglist>(QRhiTexture::Format format, const QSize &amp;pixelSize, int sampleCount, QRhiTexture::Flags flags)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiSampler *</type>
@@ -2259,7 +2311,7 @@
             <name>newTextureRenderTarget</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>newTextureRenderTarget</anchor>
-            <arglist>(const QRhiTextureRenderTargetDescription &amp;desc, int flags)</arglist>
+            <arglist>(const QRhiTextureRenderTargetDescription &amp;desc, QRhiTextureRenderTarget::Flags flags)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiSwapChain *</type>
@@ -2311,7 +2363,7 @@
             <arglist>()</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QVector&lt;int&gt;</type>
             <name>supportedSampleCounts</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>supportedSampleCounts</anchor>
@@ -2336,14 +2388,14 @@
             <name>mipLevelsForSize</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>mipLevelsForSize</anchor>
-            <arglist>(const int &amp;size) const const</arglist>
+            <arglist>(const QSize &amp;size) const const</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
+            <type>QSize</type>
             <name>sizeForMipLevel</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>sizeForMipLevel</anchor>
-            <arglist>(int , const int &amp;) const const</arglist>
+            <arglist>(int mipLevel, const QSize &amp;baseLevelSize) const const</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>bool</type>
@@ -2364,7 +2416,7 @@
             <name>isTextureFormatSupported</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>isTextureFormatSupported</anchor>
-            <arglist>(QRhiTexture::Format format, int flags) const const</arglist>
+            <arglist>(QRhiTexture::Format format, QRhiTexture::Flags flags) const const</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>bool</type>

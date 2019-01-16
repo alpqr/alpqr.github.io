@@ -231,6 +231,9 @@
 </table></div>
 <!-- @@@VarType -->
 </div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$QShaderDescription[overload1]$$$QShaderDescription -->
@@ -242,7 +245,7 @@
 <p>Destructor.</p>
 <!-- @@@~QShaderDescription -->
 <!-- $$$combinedImageSamplers[overload1]$$$combinedImageSamplers -->
-<h3 class="fn" id="combinedImageSamplers"><a name="combinedImageSamplers"></a><span class="type">QVector</span>&lt;<span class="type"><a href="qshaderdescription-inoutvariable.html">QShaderDescription::InOutVariable</a></span>&gt; QShaderDescription::<span class="name">combinedImageSamplers</span>() const</h3>
+<h3 class="fn" id="combinedImageSamplers"><a name="combinedImageSamplers"></a><span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qshaderdescription-inoutvariable.html">QShaderDescription::InOutVariable</a></span>&gt; QShaderDescription::<span class="name">combinedImageSamplers</span>() const</h3>
 <p>Returns the list of combined image samplers</p>
 <p>With GLSL/Vulkan shaders as source a <code>layout(binding = 1) uniform sampler2D tex;</code> uniform generates the following: (shown as textual JSON here)</p>
 <pre class="cpp">
@@ -260,11 +263,11 @@
 <p>This does not mean that other language versions of the shader must also use a combined image sampler, especially considering that the concept may not exist everywhere. For instance, a HLSL version will likely just use a Texture2D and SamplerState object with registers t1 and s1, respectively.</p>
 <!-- @@@combinedImageSamplers -->
 <!-- $$$fromBinaryJson[overload1]$$$fromBinaryJsonconstQByteArray& -->
-<h3 class="fn" id="fromBinaryJson"><a name="fromBinaryJson"></a><code>[static] </code><span class="type"><a href="qshaderdescription.html#QShaderDescription">QShaderDescription</a></span> QShaderDescription::<span class="name">fromBinaryJson</span>(const <span class="type">QByteArray</span> &amp;<i>data</i>)</h3>
+<h3 class="fn" id="fromBinaryJson"><a name="fromBinaryJson"></a><code>[static] </code><span class="type"><a href="qshaderdescription.html#QShaderDescription">QShaderDescription</a></span> QShaderDescription::<span class="name">fromBinaryJson</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>data</i>)</h3>
 <p>Deserializes the given binary JSON <i>data</i> and returns a new <a href="qshaderdescription.html">QShaderDescription</a>.</p>
 <!-- @@@fromBinaryJson -->
 <!-- $$$inputVariables[overload1]$$$inputVariables -->
-<h3 class="fn" id="inputVariables"><a name="inputVariables"></a><span class="type">QVector</span>&lt;<span class="type"><a href="qshaderdescription-inoutvariable.html">QShaderDescription::InOutVariable</a></span>&gt; QShaderDescription::<span class="name">inputVariables</span>() const</h3>
+<h3 class="fn" id="inputVariables"><a name="inputVariables"></a><span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qshaderdescription-inoutvariable.html">QShaderDescription::InOutVariable</a></span>&gt; QShaderDescription::<span class="name">inputVariables</span>() const</h3>
 <p>Returns the list of input variables. This includes vertex inputs (sometimes called attributes) for the vertex stage, and inputs for other stages (sometimes called varyings).</p>
 <!-- @@@inputVariables -->
 <!-- $$$isValid[overload1]$$$isValid -->
@@ -272,27 +275,36 @@
 <p>Returns true if the <a href="qshaderdescription.html">QShaderDescription</a> contains at least one entry in one of the variable and block lists.</p>
 <!-- @@@isValid -->
 <!-- $$$outputVariables[overload1]$$$outputVariables -->
-<h3 class="fn" id="outputVariables"><a name="outputVariables"></a><span class="type">QVector</span>&lt;<span class="type"><a href="qshaderdescription-inoutvariable.html">QShaderDescription::InOutVariable</a></span>&gt; QShaderDescription::<span class="name">outputVariables</span>() const</h3>
+<h3 class="fn" id="outputVariables"><a name="outputVariables"></a><span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qshaderdescription-inoutvariable.html">QShaderDescription::InOutVariable</a></span>&gt; QShaderDescription::<span class="name">outputVariables</span>() const</h3>
 <p>Returns the list of output variables.</p>
 <!-- @@@outputVariables -->
 <!-- $$$pushConstantBlocks[overload1]$$$pushConstantBlocks -->
-<h3 class="fn" id="pushConstantBlocks"><a name="pushConstantBlocks"></a><span class="type">QVector</span>&lt;<span class="type"><a href="qshaderdescription-pushconstantblock.html">QShaderDescription::PushConstantBlock</a></span>&gt; QShaderDescription::<span class="name">pushConstantBlocks</span>() const</h3>
+<h3 class="fn" id="pushConstantBlocks"><a name="pushConstantBlocks"></a><span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qshaderdescription-pushconstantblock.html">QShaderDescription::PushConstantBlock</a></span>&gt; QShaderDescription::<span class="name">pushConstantBlocks</span>() const</h3>
 <p>Returns the list of push constant blocks.</p>
 <p><b>Note: </b>Avoid relying on push constant blocks for shaders that are to be used in combination with the Qt Rendering Hardware Interface since that currently has no support for them.</p><!-- @@@pushConstantBlocks -->
 <!-- $$$toBinaryJson[overload1]$$$toBinaryJson -->
-<h3 class="fn" id="toBinaryJson"><a name="toBinaryJson"></a><span class="type">QByteArray</span> QShaderDescription::<span class="name">toBinaryJson</span>() const</h3>
+<h3 class="fn" id="toBinaryJson"><a name="toBinaryJson"></a><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> QShaderDescription::<span class="name">toBinaryJson</span>() const</h3>
 <p>Returns a serialized binary version of the data.</p>
 <p><b>See also </b><a href="qshaderdescription.html#toJson">toJson</a>().</p>
 <!-- @@@toBinaryJson -->
 <!-- $$$toJson[overload1]$$$toJson -->
-<h3 class="fn" id="toJson"><a name="toJson"></a><span class="type">QByteArray</span> QShaderDescription::<span class="name">toJson</span>() const</h3>
+<h3 class="fn" id="toJson"><a name="toJson"></a><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> QShaderDescription::<span class="name">toJson</span>() const</h3>
 <p>Returns a serialized JSON text version of the data.</p>
 <p><b>Note: </b>There is no deserialization method provided for JSON text.</p><p><b>See also </b><a href="qshaderdescription.html#toBinaryJson">toBinaryJson</a>().</p>
 <!-- @@@toJson -->
 <!-- $$$uniformBlocks[overload1]$$$uniformBlocks -->
-<h3 class="fn" id="uniformBlocks"><a name="uniformBlocks"></a><span class="type">QVector</span>&lt;<span class="type"><a href="qshaderdescription-uniformblock.html">QShaderDescription::UniformBlock</a></span>&gt; QShaderDescription::<span class="name">uniformBlocks</span>() const</h3>
+<h3 class="fn" id="uniformBlocks"><a name="uniformBlocks"></a><span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qshaderdescription-uniformblock.html">QShaderDescription::UniformBlock</a></span>&gt; QShaderDescription::<span class="name">uniformBlocks</span>() const</h3>
 <p>Returns the list of uniform blocks.</p>
 <!-- @@@uniformBlocks -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
 </div>
         </div>
        </div>

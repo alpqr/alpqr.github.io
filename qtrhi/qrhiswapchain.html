@@ -58,6 +58,7 @@
 <h2 id="public-types">Public Types</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#Flag-enum">Flag</a></b> { SurfaceHasPreMulAlpha, SurfaceHasNonPreMulAlpha, sRGB, UsedAsTransferSource, NoVSync }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#Flag-enum">Flags</a></b></td></tr>
 </table></div>
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
@@ -65,20 +66,18 @@
 <tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#buildOrResize">buildOrResize</a></b>() = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QRhiCommandBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#currentFrameCommandBuffer">currentFrameCommandBuffer</a></b>() = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QRhiRenderTarget *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#currentFrameRenderTarget">currentFrameRenderTarget</a></b>() = 0</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#currentPixelSize">currentPixelSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#currentPixelSize">currentPixelSize</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#depthStencil">depthStencil</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#flags">flags</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiSwapChain::Flags </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#flags">flags</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QRhiRenderPassDescriptor *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#newCompatibleRenderPassDescriptor">newCompatibleRenderPassDescriptor</a></b>() = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderPassDescriptor *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#renderPassDescriptor">renderPassDescriptor</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#sampleCount">sampleCount</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#setDepthStencil">setDepthStencil</a></b>(QRhiRenderBuffer *<i>ds</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#setFlags">setFlags</a></b>(int <i>f</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#setFlags">setFlags</a></b>(QRhiSwapChain::Flags <i>f</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#setRenderPassDescriptor">setRenderPassDescriptor</a></b>(QRhiRenderPassDescriptor *<i>desc</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#setSampleCount">setSampleCount</a></b>(int <i>samples</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#setTarget">setTarget</a></b>(int *<i>obj</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#setWindow">setWindow</a></b>(QWindow *<i>window</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#surfacePixelSize">surfacePixelSize</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#target">target</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QSize </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#surfacePixelSize">surfacePixelSize</a></b>() = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QWindow *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#window">window</a></b>() const</td></tr>
 </table></div>
 <ul>
@@ -87,13 +86,13 @@
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_currentPixelSize-var">m_currentPixelSize</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_currentPixelSize-var">m_currentPixelSize</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_depthStencil-var">m_depthStencil</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_flags-var">m_flags</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiSwapChain::Flags </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_flags-var">m_flags</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderPassDescriptor *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_renderPassDesc-var">m_renderPassDesc</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_reserved-var">m_reserved</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_sampleCount-var">m_sampleCount</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_target-var">m_target</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QObject *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_target-var">m_target</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QWindow *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_window-var">m_window</a></b></td></tr>
 </table></div>
 <ul>
@@ -108,42 +107,151 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Swapchain resource.</p>
+<p>A swapchain enables presenting rendering results to a surface. A swapchain is typically backed by a set of color buffers. Of these, one is displayed at a time.</p>
+<p>Below is a typical pattern for creating and managing a swapchain and some associated resources in order to render onto a <a href="../qtgui/qwindow.html">QWindow</a>:</p>
+<pre class="cpp plain">
+
+  void init()
+  {
+      sc = rhi-&gt;newSwapChain();
+      ds = rhi-&gt;newRenderBuffer(QRhiRenderBuffer::DepthStencil,
+                                QSize(), // no need to set the size yet
+                                1,
+                                QRhiRenderBuffer::UsedWithSwapChainOnly);
+      sc-&gt;setWindow(window);
+      sc-&gt;setDepthStencil(ds);
+      rp = sc-&gt;newCompatibleRenderPassDescriptor();
+      sc-&gt;setRenderPassDescriptor(rp);
+      resizeSwapChain();
+  }
+
+  void resizeSwapChain()
+  {
+      const QSize outputSize = sc-&gt;surfacePixelSize();
+      ds-&gt;setPixelSize(outputSize);
+      ds-&gt;build();
+      hasSwapChain = sc-&gt;buildOrResize();
+  }
+
+  void render()
+  {
+      if (!hasSwapChain || notExposed)
+          return;
+
+      if (sc-&gt;currentPixelSize() != sc-&gt;surfacePixelSize() || newlyExposed) {
+          resizeSwapChain();
+          if (!hasSwapChain)
+              return;
+          newlyExposed = false;
+      }
+
+      rhi-&gt;beginFrame(sc);
+      // ..&#x2e;
+      rhi-&gt;endFrame(sc);
+  }
+
+</pre>
+<p>Avoid relying on <a href="../qtgui/qwindow.html">QWindow</a> resize events to resize swapchains, especially considering that surface sizes may not always fully match the <a href="../qtgui/qwindow.html">QWindow</a> reported dimensions. The safe, cross-platform approach is to do the check via <a href="qrhiswapchain.html#surfacePixelSize">surfacePixelSize</a>() whenever starting a new frame.</p>
+<p>Releasing the swapchain must happen while the <a href="../qtgui/qwindow.html">QWindow</a> and the underlying native window is fully up and running. Building on the previous example:</p>
+<pre class="cpp plain">
+
+  void releaseSwapChain()
+  {
+      sc-&gt;release();
+      hasSwapChain = false;
+  }
+
+  // assuming Window is our QWindow subclass
+  bool Window::event(QEvent *e)
+  {
+      switch (e-&gt;type()) {
+      case QEvent::UpdateRequest: // for QWindow::requestUpdate()
+          render();
+          break;
+      case QEvent::PlatformSurface:
+          if (static_cast&lt;QPlatformSurfaceEvent *&gt;(e)-&gt;surfaceEventType() == QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed)
+              releaseSwapChain();
+          break;
+      default:
+          break;
+      }
+      return QWindow::event(e);
+  }
+
+</pre>
+<p>Initializing the swapchain and starting to render the first frame cannot start at any time. The safe, cross-platform approach is to rely on expose events. <a href="../qtgui/qexposeevent.html">QExposeEvent</a> is a loosely specified event that is sent whenever a window gets mapped, obscured, and resized, depending on the platform.</p>
+<pre class="cpp plain">
+
+  void Window::exposeEvent(QExposeEvent *)
+  {
+      // initialize and start rendering when the window becomes usable for graphics purposes
+      if (isExposed() &amp;&amp; !running) {
+          running = true;
+          init();
+          render();
+      }
+
+      // stop pushing frames when not exposed or size becomes 0
+      if ((!isExposed() || (hasSwapChain &amp;&amp; sc-&gt;surfacePixelSize().isEmpty())) &amp;&amp; running)
+          notExposed = true;
+
+      // continue when exposed again and the surface has a valid size
+      if (isExposed() &amp;&amp; running &amp;&amp; notExposed &amp;&amp; !sc-&gt;surfacePixelSize().isEmpty()) {
+          notExposed = false;
+          newlyExposed = true;
+          render();
+      }
+  }
+
+</pre>
+<p>Once the rendering has started, a simple way to request a new frame is <a href="../qtgui/qwindow.html#requestUpdate">QWindow::requestUpdate</a>(). While on some platforms this is merely a small timer, on others it has a specific implementation: for instance on macOS or iOS it may be backed by <a href="https://developer.apple.com/documentation/corevideo/cvdisplaylink?language=objc">CVDisplayLink</a>. The example above is already prepared for update requests by handling <a href="../qtcore/qevent.html#Type-enum">QEvent::UpdateRequest</a>.</p>
+<p>While acting as a <a href="qrhirendertarget.html">QRhiRenderTarget</a>, <a href="qrhiswapchain.html">QRhiSwapChain</a> also manages a <a href="qrhicommandbuffer.html">QRhiCommandBuffer</a>. Calling <a href="qrhi.html#endFrame">QRhi::endFrame</a>() submits the recorded commands and also enqueues a <code>present</code> request. The default behavior is to do this with a swap interval of 1, meaning synchronizing to the display's vertical refresh is enabled. Thus the rendering thread calling beginFrame() and endFrame() will get throttled to vsync. On some backends this can be disabled by passing <a href="qrhiswapchain.html">QRhiSwapChain</a>:<a href="qrhiswapchain.html#Flag-enum">NoVSync</a> in <a href="qrhiswapchain.html#flags">flags</a>().</p>
 </div>
 <!-- @@@QRhiSwapChain -->
 <div class="types">
 <h2>Member Type Documentation</h2>
 <!-- $$$Flag$$$SurfaceHasPreMulAlpha$$$SurfaceHasNonPreMulAlpha$$$sRGB$$$UsedAsTransferSource$$$NoVSync -->
-<h3 class="fn" id="Flag-enum"><a name="Flag-enum"></a>enum QRhiSwapChain::<span class="name">Flag</span></h3>
+<h3 class="flags" id="Flag-enum"><a name="Flag-enum"></a>enum QRhiSwapChain::<span class="name">Flag</span><br/>flags QRhiSwapChain::<span class="name">Flags</span></h3>
 <p>Flag values to describe swapchain properties</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
 <tr><td class="topAlign"><code>QRhiSwapChain::SurfaceHasPreMulAlpha</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">Indicates that the target surface has transparency with premultiplied alpha.</td></tr>
 <tr><td class="topAlign"><code>QRhiSwapChain::SurfaceHasNonPreMulAlpha</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Indicates the target surface has transparencyt with non-premultiplied alpha.</td></tr>
 <tr><td class="topAlign"><code>QRhiSwapChain::sRGB</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">Requests to pick an sRGB format.</td></tr>
 <tr><td class="topAlign"><code>QRhiSwapChain::UsedAsTransferSource</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 3</code></td><td class="topAlign">Indicates the the swapchain will be used as the source of a readback in <a href="qrhiresourceupdatebatch.html#readBackTexture">QRhiResourceUpdateBatch::readBackTexture</a>().</td></tr>
-<tr><td class="topAlign"><code>QRhiSwapChain::NoVSync</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 4</code></td><td class="topAlign">Requests disabling waiting for vertical sync, also avoiding throttling the rendering thread. The behavior is backend specific and applicable only where it is possible to control this. Some may ignore the request altogether. For OpenGL, use QSurfaceFormat::setSwapInterval().</td></tr>
+<tr><td class="topAlign"><code>QRhiSwapChain::NoVSync</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 4</code></td><td class="topAlign">Requests disabling waiting for vertical sync, also avoiding throttling the rendering thread. The behavior is backend specific and applicable only where it is possible to control this. Some may ignore the request altogether. For OpenGL, use <a href="../qtgui/qsurfaceformat.html#setSwapInterval">QSurfaceFormat::setSwapInterval</a>().</td></tr>
 </table></div>
+<p>The Flags type is a typedef for <a href="../qtcore/qflags.html">QFlags</a>&lt;Flag&gt;. It stores an OR combination of Flag values.</p>
 <!-- @@@Flag -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$buildOrResize[overload1]$$$buildOrResize -->
 <h3 class="fn" id="buildOrResize"><a name="buildOrResize"></a><code>[pure virtual] </code><span class="type">bool</span> QRhiSwapChain::<span class="name">buildOrResize</span>()</h3>
+<p>Creates the swapchain if not already done and resizes the swapchain buffers to match the current size of the targeted surface. Call this whenever the size of the target surface is different than before.</p>
+<p><b>Note: </b>call <a href="qrhiresource.html#release">release</a>() only when the swapchain needs to be released completely, typically upon <a href="../qtgui/qplatformsurfaceevent.html#SurfaceEventType-enum">QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed</a>. To perform resizing, just call buildOrResize().</p><p>Returns <code>true</code> when successful, <code>false</code> when a graphics operation failed. Regardless of the return value, calling <a href="qrhiresource.html#release">release</a>() is always safe.</p>
 <!-- @@@buildOrResize -->
 <!-- $$$currentFrameCommandBuffer[overload1]$$$currentFrameCommandBuffer -->
 <h3 class="fn" id="currentFrameCommandBuffer"><a name="currentFrameCommandBuffer"></a><code>[pure virtual] </code><span class="type"><a href="qrhicommandbuffer.html">QRhiCommandBuffer</a></span> *QRhiSwapChain::<span class="name">currentFrameCommandBuffer</span>()</h3>
-<!-- @@@currentFrameCommandBuffer -->
+<p>Returns a command buffer on which rendering commands can be recorded. Only valid within a Rhi::beginFrame() - <a href="qrhi.html#endFrame">QRhi::endFrame</a>() block where beginFrame() was called with this swapchain.</p>
+<p><b>Note: </b>the value must not be cached and reused between frames</p><!-- @@@currentFrameCommandBuffer -->
 <!-- $$$currentFrameRenderTarget[overload1]$$$currentFrameRenderTarget -->
 <h3 class="fn" id="currentFrameRenderTarget"><a name="currentFrameRenderTarget"></a><code>[pure virtual] </code><span class="type"><a href="qrhirendertarget.html">QRhiRenderTarget</a></span> *QRhiSwapChain::<span class="name">currentFrameRenderTarget</span>()</h3>
-<!-- @@@currentFrameRenderTarget -->
+<p>Returns a render target that can used with beginPass() in order to render the the swapchain's current backbuffer. Only valid within a <a href="qrhi.html#beginFrame">QRhi::beginFrame</a>() - <a href="qrhi.html#endFrame">QRhi::endFrame</a>() block where beginFrame() was called with this swapchain.</p>
+<p><b>Note: </b>the value must not be cached and reused between frames</p><!-- @@@currentFrameRenderTarget -->
 <!-- $$$currentPixelSize[overload1]$$$currentPixelSize -->
-<h3 class="fn" id="currentPixelSize"><a name="currentPixelSize"></a><span class="type">int</span> QRhiSwapChain::<span class="name">currentPixelSize</span>() const</h3>
+<h3 class="fn" id="currentPixelSize"><a name="currentPixelSize"></a><span class="type"><a href="../qtcore/qsize.html">QSize</a></span> QRhiSwapChain::<span class="name">currentPixelSize</span>() const</h3>
+<p>Returns the size with which the swapchain was last successfully built. Use this to decide if <a href="qrhiswapchain.html#buildOrResize">buildOrResize</a>() needs to be called again: if <code>currentPixelSize() != surfacePixelSize()</code> then the swapchain needs to be resized.</p>
+<p><b>See also </b><a href="qrhiswapchain.html#surfacePixelSize">surfacePixelSize</a>().</p>
 <!-- @@@currentPixelSize -->
 <!-- $$$depthStencil[overload1]$$$depthStencil -->
 <h3 class="fn" id="depthStencil"><a name="depthStencil"></a><span class="type"><a href="qrhirenderbuffer.html">QRhiRenderBuffer</a></span> *QRhiSwapChain::<span class="name">depthStencil</span>() const</h3>
 <p><b>See also </b><a href="qrhiswapchain.html#setDepthStencil">setDepthStencil</a>().</p>
 <!-- @@@depthStencil -->
 <!-- $$$flags[overload1]$$$flags -->
-<h3 class="fn" id="flags"><a name="flags"></a><span class="type">int</span> QRhiSwapChain::<span class="name">flags</span>() const</h3>
+<h3 class="fn" id="flags"><a name="flags"></a><span class="type"><a href="qrhiswapchain.html#Flag-enum">QRhiSwapChain::Flags</a></span> QRhiSwapChain::<span class="name">flags</span>() const</h3>
 <p><b>See also </b><a href="qrhiswapchain.html#setFlags">setFlags</a>().</p>
 <!-- @@@flags -->
 <!-- $$$newCompatibleRenderPassDescriptor[overload1]$$$newCompatibleRenderPassDescriptor -->
@@ -161,8 +269,8 @@
 <h3 class="fn" id="setDepthStencil"><a name="setDepthStencil"></a><span class="type">void</span> QRhiSwapChain::<span class="name">setDepthStencil</span>(<span class="type"><a href="qrhirenderbuffer.html">QRhiRenderBuffer</a></span> *<i>ds</i>)</h3>
 <p><b>See also </b><a href="qrhiswapchain.html#depthStencil">depthStencil</a>().</p>
 <!-- @@@setDepthStencil -->
-<!-- $$$setFlags[overload1]$$$setFlagsint -->
-<h3 class="fn" id="setFlags"><a name="setFlags"></a><span class="type">void</span> QRhiSwapChain::<span class="name">setFlags</span>(<span class="type">int</span> <i>f</i>)</h3>
+<!-- $$$setFlags[overload1]$$$setFlagsQRhiSwapChain::Flags -->
+<h3 class="fn" id="setFlags"><a name="setFlags"></a><span class="type">void</span> QRhiSwapChain::<span class="name">setFlags</span>(<span class="type"><a href="qrhiswapchain.html#Flag-enum">QRhiSwapChain::Flags</a></span> <i>f</i>)</h3>
 <p><b>See also </b><a href="qrhiswapchain.html#flags">flags</a>().</p>
 <!-- @@@setFlags -->
 <!-- $$$setRenderPassDescriptor[overload1]$$$setRenderPassDescriptorQRhiRenderPassDescriptor* -->
@@ -173,25 +281,29 @@
 <h3 class="fn" id="setSampleCount"><a name="setSampleCount"></a><span class="type">void</span> QRhiSwapChain::<span class="name">setSampleCount</span>(<span class="type">int</span> <i>samples</i>)</h3>
 <p><b>See also </b><a href="qrhiswapchain.html#sampleCount">sampleCount</a>().</p>
 <!-- @@@setSampleCount -->
-<!-- $$$setTarget[overload1]$$$setTargetint* -->
-<h3 class="fn" id="setTarget"><a name="setTarget"></a><span class="type">void</span> QRhiSwapChain::<span class="name">setTarget</span>(<span class="type">int</span> *<i>obj</i>)</h3>
-<p><b>See also </b><a href="qrhiswapchain.html#target">target</a>().</p>
-<!-- @@@setTarget -->
 <!-- $$$setWindow[overload1]$$$setWindowQWindow* -->
-<h3 class="fn" id="setWindow"><a name="setWindow"></a><span class="type">void</span> QRhiSwapChain::<span class="name">setWindow</span>(<span class="type">QWindow</span> *<i>window</i>)</h3>
+<h3 class="fn" id="setWindow"><a name="setWindow"></a><span class="type">void</span> QRhiSwapChain::<span class="name">setWindow</span>(<span class="type"><a href="../qtgui/qwindow.html">QWindow</a></span> *<i>window</i>)</h3>
 <p><b>See also </b><a href="qrhiswapchain.html#window">window</a>().</p>
 <!-- @@@setWindow -->
 <!-- $$$surfacePixelSize[overload1]$$$surfacePixelSize -->
-<h3 class="fn" id="surfacePixelSize"><a name="surfacePixelSize"></a><span class="type">int</span> QRhiSwapChain::<span class="name">surfacePixelSize</span>()</h3>
+<h3 class="fn" id="surfacePixelSize"><a name="surfacePixelSize"></a><code>[pure virtual] </code><span class="type"><a href="../qtcore/qsize.html">QSize</a></span> QRhiSwapChain::<span class="name">surfacePixelSize</span>()</h3>
+<p>Returns The size of the window's associated surface or layer. Do not assume this is the same as <a href="../qtgui/qwindow.html#size">QWindow::size</a>() * <a href="../qtgui/qwindow.html#devicePixelRatio">QWindow::devicePixelRatio</a>().</p>
+<p>Can be called before <a href="qrhiswapchain.html#buildOrResize">buildOrResize</a>() (but with <a href="qrhiswapchain.html#window">window</a>() already set), which allows setting the correct size for the depth-stencil buffer that is then used together with the swapchain's color buffers. Also used in combination with <a href="qrhiswapchain.html#currentPixelSize">currentPixelSize</a>() to detect size changes.</p>
+<p><b>See also </b><a href="qrhiswapchain.html#currentPixelSize">currentPixelSize</a>().</p>
 <!-- @@@surfacePixelSize -->
-<!-- $$$target[overload1]$$$target -->
-<h3 class="fn" id="target"><a name="target"></a><span class="type">int</span> *QRhiSwapChain::<span class="name">target</span>() const</h3>
-<p><b>See also </b><a href="qrhiswapchain.html#setTarget">setTarget</a>().</p>
-<!-- @@@target -->
 <!-- $$$window[overload1]$$$window -->
-<h3 class="fn" id="window"><a name="window"></a><span class="type">QWindow</span> *QRhiSwapChain::<span class="name">window</span>() const</h3>
+<h3 class="fn" id="window"><a name="window"></a><span class="type"><a href="../qtgui/qwindow.html">QWindow</a></span> *QRhiSwapChain::<span class="name">window</span>() const</h3>
 <p><b>See also </b><a href="qrhiswapchain.html#setWindow">setWindow</a>().</p>
 <!-- @@@window -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
 </div>
         </div>
        </div>

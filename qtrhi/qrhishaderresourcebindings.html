@@ -56,9 +56,9 @@
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebindings.html#bindings">bindings</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiShaderResourceBinding&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebindings.html#bindings">bindings</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebindings.html#build">build</a></b>() = 0</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebindings.html#setBindings">setBindings</a></b>(const int &amp;<i>b</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebindings.html#setBindings">setBindings</a></b>(const QVector&lt;QRhiShaderResourceBinding&gt; &amp;<i>b</i>)</td></tr>
 </table></div>
 <ul>
 <li class="fn">4 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
@@ -66,7 +66,7 @@
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebindings.html#m_bindings-var">m_bindings</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiShaderResourceBinding&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebindings.html#m_bindings-var">m_bindings</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebindings.html#m_reserved-var">m_reserved</a></b></td></tr>
 </table></div>
 <ul>
@@ -81,21 +81,82 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Encapsulates resources for making buffer, texture, sampler resources visible to shaders.</p>
+<p>A <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a> is a collection of <a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a> instances, each of which describe a single binding.</p>
+<p>Take a fragment shader with the following interface:</p>
+<pre class="cpp plain">
+
+  layout(std140, binding = 0) uniform buf {
+      mat4 mvp;
+      int flip;
+  } ubuf;
+
+  layout(binding = 1) uniform sampler2D tex;
+
+</pre>
+<p>To make resources visible to the shader, the following <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a> could be created and then passed to <a href="qrhigraphicspipeline.html#setShaderResourceBindings">QRhiGraphicsPipeline::setShaderResourceBindings</a>():</p>
+<pre class="cpp plain">
+
+  srb = rhi-&gt;newShaderResourceBindings();
+  srb-&gt;setBindings({
+      QRhiShaderResourceBinding::uniformBuffer(0, QRhiShaderResourceBinding::VertexStage | QRhiShaderResourceBinding::FragmentStage, ubuf),
+      QRhiShaderResourceBinding::sampledTexture(1, QRhiShaderResourceBinding::FragmentStage, texture, sampler)
+  });
+  srb-&gt;build();
+  ..&#x2e;
+  ps = rhi-&gt;newGraphicsPipeline();
+  ..&#x2e;
+  ps-&gt;setShaderResourceBindings(srb);
+  ps-&gt;build();
+  ..&#x2e;
+  cb-&gt;setGraphicsPipeline(ps);
+
+</pre>
+<p>This assumes that <code>ubuf</code> is a <a href="qrhibuffer.html">QRhiBuffer</a>, <code>texture</code> is a <a href="qrhitexture.html">QRhiTexture</a>, while <i>sampler</i> is a <a href="qrhisampler.html">QRhiSampler</a>. The example also assumes that the uniform block is present in the vertex shader as well so the same buffer is made visible to the vertex stage too.</p>
+<a name="advanced-usage"></a>
+<h5 >Advanced usage</h5>
+<p>Building on the above example, let's assume that a pass now needs to use the exact same pipeline and shaders with a different texture. Creating a whole separate <a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a> just for this would be an overkill. This is why <a href="qrhicommandbuffer.html#setGraphicsPipeline">QRhiCommandBuffer::setGraphicsPipeline</a>() allows specifying an optional <i>srb</i> argument. As long as the layouts (so the number of bindings and the binding points) match between two <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a>, they can both be used with the same pipeline, assuming the pipeline was built with one of them in the first place.</p>
+<p>Creating and then using a new <code>srb2</code> that is very similar to <code>srb</code> with the exception of referencing another texture could be implemented like the following:</p>
+<pre class="cpp plain">
+
+  srb2 = rhi-&gt;newShaderResourceBindings();
+  QVector&lt;QRhiShaderResourceBinding&gt; bindings = srb-&gt;bindings();
+  bindings[1].stex.tex = anotherTexture;
+  srb2-&gt;setBindings(bindings);
+  srb2-&gt;build();
+  ..&#x2e;
+  cb-&gt;setGraphicsPipeline(ps, srb2);
+
+</pre>
 </div>
 <!-- @@@QRhiShaderResourceBindings -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$bindings[overload1]$$$bindings -->
-<h3 class="fn" id="bindings"><a name="bindings"></a><span class="type">int</span> QRhiShaderResourceBindings::<span class="name">bindings</span>() const</h3>
+<h3 class="fn" id="bindings"><a name="bindings"></a><span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a></span>&gt; QRhiShaderResourceBindings::<span class="name">bindings</span>() const</h3>
 <p><b>See also </b><a href="qrhishaderresourcebindings.html#setBindings">setBindings</a>().</p>
 <!-- @@@bindings -->
 <!-- $$$build[overload1]$$$build -->
 <h3 class="fn" id="build"><a name="build"></a><code>[pure virtual] </code><span class="type">bool</span> QRhiShaderResourceBindings::<span class="name">build</span>()</h3>
 <!-- @@@build -->
-<!-- $$$setBindings[overload1]$$$setBindingsconstint& -->
-<h3 class="fn" id="setBindings"><a name="setBindings"></a><span class="type">void</span> QRhiShaderResourceBindings::<span class="name">setBindings</span>(const <span class="type">int</span> &amp;<i>b</i>)</h3>
+<!-- $$$setBindings[overload1]$$$setBindingsconstQVector<QRhiShaderResourceBinding>& -->
+<h3 class="fn" id="setBindings"><a name="setBindings"></a><span class="type">void</span> QRhiShaderResourceBindings::<span class="name">setBindings</span>(const <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a></span>&gt; &amp;<i>b</i>)</h3>
 <p><b>See also </b><a href="qrhishaderresourcebindings.html#bindings">bindings</a>().</p>
 <!-- @@@setBindings -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
 </div>
         </div>
        </div>

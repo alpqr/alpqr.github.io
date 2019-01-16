@@ -61,7 +61,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhivulkaninitparams.html#gfxQueue-var">gfxQueue</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhivulkaninitparams.html#gfxQueueFamilyIdx-var">gfxQueueFamilyIdx</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhivulkaninitparams.html#importExistingDevice-var">importExistingDevice</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int *</td><td class="memItemRight bottomAlign"><b><a href="qrhivulkaninitparams.html#inst-var">inst</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVulkanInstance *</td><td class="memItemRight bottomAlign"><b><a href="qrhivulkaninitparams.html#inst-var">inst</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhivulkaninitparams.html#physDev-var">physDev</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhivulkaninitparams.html#vmemAllocator-var">vmemAllocator</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QWindow *</td><td class="memItemRight bottomAlign"><b><a href="qrhivulkaninitparams.html#window-var">window</a></b></td></tr>
@@ -71,7 +71,7 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Vulkan specific initialization parameters.</p>
-<p>A Vulkan-based <a href="qrhi.html">QRhi</a> needs at minimum a valid QVulkanInstance. It is up to the user to ensure this is available and initialized. This is typically done in main() similarly to the following:</p>
+<p>A Vulkan-based <a href="qrhi.html">QRhi</a> needs at minimum a valid <a href="../qtgui/qvulkaninstance.html">QVulkanInstance</a>. It is up to the user to ensure this is available and initialized. This is typically done in main() similarly to the following:</p>
 <pre class="cpp plain">
 
   int main(int argc, char **argv)
@@ -100,8 +100,8 @@
   }
 
 </pre>
-<p>The example here has two optional aspects: it enables the <a href="https://github.com/KhronosGroup/Vulkan-ValidationLayers">Vulkan validation layers</a>, when they are available, and also enables the VK_KHR_get_physical_device_properties2 extension (part of Vulkan 1.1), when available. The former is useful during the development phase (remember that QVulkanInstance conveniently redirects messages and warnings to <a href="../qtcore/qtglobal.html#qDebug">qDebug</a>). Avoid enabling it in production builds, however. The latter is important in order to make <a href="qrhi.html#Feature-enum">QRhi::CustomInstanceStepRate</a> available with Vulkan since VK_EXT_vertex_attribute_divisor (part of Vulkan 1.1) depends on it. It can be omitted when instanced drawing with a non-one step rate is not used.</p>
-<p>Once this is done, a Vulkan-based <a href="qrhi.html">QRhi</a> can be created by passing the instance and a QWindow with its surface type set to QSurface::VulkanSurface:</p>
+<p>The example here has two optional aspects: it enables the <a href="https://github.com/KhronosGroup/Vulkan-ValidationLayers">Vulkan validation layers</a>, when they are available, and also enables the VK_KHR_get_physical_device_properties2 extension (part of Vulkan 1.1), when available. The former is useful during the development phase (remember that <a href="../qtgui/qvulkaninstance.html">QVulkanInstance</a> conveniently redirects messages and warnings to <a href="../qtcore/qtglobal.html#qDebug">qDebug</a>). Avoid enabling it in production builds, however. The latter is important in order to make <a href="qrhi.html#Feature-enum">QRhi::CustomInstanceStepRate</a> available with Vulkan since VK_EXT_vertex_attribute_divisor (part of Vulkan 1.1) depends on it. It can be omitted when instanced drawing with a non-one step rate is not used.</p>
+<p>Once this is done, a Vulkan-based <a href="qrhi.html">QRhi</a> can be created by passing the instance and a <a href="../qtgui/qwindow.html">QWindow</a> with its surface type set to <a href="../qtgui/qsurface.html#SurfaceType-enum">QSurface::VulkanSurface</a>:</p>
 <pre class="cpp plain">
 
   QRhiVulkanInitParams params;
@@ -111,12 +111,30 @@
 
 </pre>
 <p>The window is optional and can be omitted. This is not recommended however because there is then no way to ensure presenting is supported while choosing a graphics queue.</p>
-<p><b>Note: </b>Even when a window is specified, <a href="qrhiswapchain.html">QRhiSwapChain</a> objects can be created for other windows as well, as long as they all have their QWindow::surfaceType() set to QSurface::VulkanSurface.</p><a name="working-with-existing-vulkan-devices"></a>
+<p><b>Note: </b>Even when a window is specified, <a href="qrhiswapchain.html">QRhiSwapChain</a> objects can be created for other windows as well, as long as they all have their <a href="../qtgui/qwindow.html#surfaceType">QWindow::surfaceType</a>() set to <a href="../qtgui/qsurface.html#SurfaceType-enum">QSurface::VulkanSurface</a>.</p><a name="working-with-existing-vulkan-devices"></a>
 <h4 >Working with existing Vulkan devices</h4>
 <p>When interoperating with another graphics engine, it may be necessary to get a <a href="qrhi.html">QRhi</a> instance that uses the same Vulkan device. This can be achieved by setting <a href="qrhivulkaninitparams.html#importExistingDevice-var">importExistingDevice</a> to <code>true</code> and providing the already created physical device and device objects. In addition, either the graphics queue family index or the graphics queue object itself is required. Prefer the former, whenever possible since deducing the index is not possible afterwards. Optionally, an existing command pool object can be specified as well. Finally, <a href="qrhivulkaninitparams.html#vmemAllocator-var">vmemAllocator</a> can be used to share the same <a href="https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator">Vulkan memory allocator</a> between two <a href="qrhi.html">QRhi</a> instances.</p>
 <p>The <a href="qrhi.html">QRhi</a> does not take ownership of any of the external objects.</p>
 </div>
 <!-- @@@QRhiVulkanInitParams -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+</div>
         </div>
        </div>
    </div>

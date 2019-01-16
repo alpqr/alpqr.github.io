@@ -64,7 +64,7 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qbakedshader.html#QBakedShader">QBakedShader</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qbakedshader.html#dtor.QBakedShader">~QBakedShader</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qbakedshader.html#availableShaders">availableShaders</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QList&lt;QBakedShaderKey&gt; </td><td class="memItemRight bottomAlign"><b><a href="qbakedshader.html#availableShaders">availableShaders</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QShaderDescription </td><td class="memItemRight bottomAlign"><b><a href="qbakedshader.html#description">description</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qbakedshader.html#isValid">isValid</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qbakedshader.html#removeShader">removeShader</a></b>(const QBakedShaderKey &amp;<i>key</i>)</td></tr>
@@ -88,7 +88,7 @@
 <p><a href="qbakedshader.html">QBakedShader</a> is the entry point to shader code in the graphics API agnostic Qt world. Instead of using GLSL shader sources, as was the custom with Qt 5.x, new graphics systems with backends for multiple graphics APIs, such as, Vulkan, Metal, Direct3D, and OpenGL, take <a href="qbakedshader.html">QBakedShader</a> as their input whenever a shader needs to be specified.</p>
 <p>A <a href="qbakedshader.html">QBakedShader</a> instance is empty and thus invalid by default. To get a useful instance, the two typical methods are:</p>
 <ul>
-<li>Generate the contents offline, during build time or earlier, using the <code>qsb</code> command line tool. The result is a binary file that is shipped with the application, read via QIODevice::readAll(), and then deserialized via <a href="qbakedshader.html#fromSerialized">fromSerialized</a>(). For more information, see <a href="qshaderbaker.html">QShaderBaker</a>.</li>
+<li>Generate the contents offline, during build time or earlier, using the <code>qsb</code> command line tool. The result is a binary file that is shipped with the application, read via <a href="../qtcore/qiodevice.html#readAll">QIODevice::readAll</a>(), and then deserialized via <a href="qbakedshader.html#fromSerialized">fromSerialized</a>(). For more information, see <a href="qshaderbaker.html">QShaderBaker</a>.</li>
 <li>Generate at run time via <a href="qshaderbaker.html">QShaderBaker</a>. This is an expensive operation, but allows applications to use user-provided or dynamically generated shader source strings.</li>
 </ul>
 <p>When used together with the Qt Rendering Hardware Interface and its classes, like QRhiGraphicsPipeline, no further action is needed from the application's side as these classes are prepared to consume a <a href="qbakedshader.html">QBakedShader</a> whenever a shader needs to be specified for a given stage of the graphics pipeline.</p>
@@ -126,6 +126,9 @@
 </table></div>
 <!-- @@@ShaderStage -->
 </div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$QBakedShader[overload1]$$$QBakedShader -->
@@ -137,7 +140,7 @@
 <p>Destructor.</p>
 <!-- @@@~QBakedShader -->
 <!-- $$$availableShaders[overload1]$$$availableShaders -->
-<h3 class="fn" id="availableShaders"><a name="availableShaders"></a><span class="type">int</span> QBakedShader::<span class="name">availableShaders</span>() const</h3>
+<h3 class="fn" id="availableShaders"><a name="availableShaders"></a><span class="type"><a href="../qtcore/qlist.html">QList</a></span>&lt;<span class="type"><a href="qbakedshaderkey.html">QBakedShaderKey</a></span>&gt; QBakedShader::<span class="name">availableShaders</span>() const</h3>
 <p>Returns the list of available shader versions</p>
 <!-- @@@availableShaders -->
 <!-- $$$description[overload1]$$$description -->
@@ -146,7 +149,7 @@
 <p><b>See also </b><a href="qbakedshader.html#setDescription">setDescription</a>().</p>
 <!-- @@@description -->
 <!-- $$$fromSerialized[overload1]$$$fromSerializedconstQByteArray& -->
-<h3 class="fn" id="fromSerialized"><a name="fromSerialized"></a><code>[static] </code><span class="type"><a href="qbakedshader.html#QBakedShader">QBakedShader</a></span> QBakedShader::<span class="name">fromSerialized</span>(const <span class="type">QByteArray</span> &amp;<i>data</i>)</h3>
+<h3 class="fn" id="fromSerialized"><a name="fromSerialized"></a><code>[static] </code><span class="type"><a href="qbakedshader.html#QBakedShader">QBakedShader</a></span> QBakedShader::<span class="name">fromSerialized</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>data</i>)</h3>
 <p>Creates a new <a href="qbakedshader.html">QBakedShader</a> instance from the given <i>data</i>.</p>
 <p><b>See also </b><a href="qbakedshader.html#serialized">serialized</a>().</p>
 <!-- @@@fromSerialized -->
@@ -159,7 +162,7 @@
 <p>Removes the source or binary shader code for a given <i>key</i>. Does nothing when not found.</p>
 <!-- @@@removeShader -->
 <!-- $$$serialized[overload1]$$$serialized -->
-<h3 class="fn" id="serialized"><a name="serialized"></a><span class="type">QByteArray</span> QBakedShader::<span class="name">serialized</span>() const</h3>
+<h3 class="fn" id="serialized"><a name="serialized"></a><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> QBakedShader::<span class="name">serialized</span>() const</h3>
 <p>Returns a serialized binary version of all the data held by the <a href="qbakedshader.html">QBakedShader</a>, suitable for writing to files or other I/O devices.</p>
 <p><b>See also </b><a href="qbakedshader.html#fromSerialized">fromSerialized</a>().</p>
 <!-- @@@serialized -->
@@ -188,6 +191,15 @@
 <p>Returns the pipeline stage the shader is meant for.</p>
 <p><b>See also </b><a href="qbakedshader.html#setStage">setStage</a>().</p>
 <!-- @@@stage -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
 </div>
         </div>
        </div>

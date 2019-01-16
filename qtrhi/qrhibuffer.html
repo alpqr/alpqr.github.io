@@ -59,6 +59,7 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#Type-enum">Type</a></b> { Immutable, Static, Dynamic }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#UsageFlag-enum">UsageFlag</a></b> { VertexBuffer, IndexBuffer, UniformBuffer }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#UsageFlag-enum">UsageFlags</a></b></td></tr>
 </table></div>
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
@@ -66,10 +67,10 @@
 <tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#build">build</a></b>() = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#setSize">setSize</a></b>(int <i>sz</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#setType">setType</a></b>(QRhiBuffer::Type <i>t</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#setUsage">setUsage</a></b>(int <i>u</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#setUsage">setUsage</a></b>(QRhiBuffer::UsageFlags <i>u</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#size">size</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiBuffer::Type </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#type">type</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#usage">usage</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiBuffer::UsageFlags </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#usage">usage</a></b>() const</td></tr>
 </table></div>
 <ul>
 <li class="fn">4 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
@@ -80,7 +81,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#m_reserved-var">m_reserved</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#m_size-var">m_size</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiBuffer::Type </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#m_type-var">m_type</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#m_usage-var">m_usage</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiBuffer::UsageFlags </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#m_usage-var">m_usage</a></b></td></tr>
 </table></div>
 <ul>
 <li class="fn">2 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
@@ -108,19 +109,25 @@
 </table></div>
 <!-- @@@Type -->
 <!-- $$$UsageFlag$$$VertexBuffer$$$IndexBuffer$$$UniformBuffer -->
-<h3 class="fn" id="UsageFlag-enum"><a name="UsageFlag-enum"></a>enum QRhiBuffer::<span class="name">UsageFlag</span></h3>
+<h3 class="flags" id="UsageFlag-enum"><a name="UsageFlag-enum"></a>enum QRhiBuffer::<span class="name">UsageFlag</span><br/>flags QRhiBuffer::<span class="name">UsageFlags</span></h3>
 <p>Flag values to specify how the buffer is going to be used.</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
 <tr><td class="topAlign"><code>QRhiBuffer::VertexBuffer</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">Vertex buffer</td></tr>
 <tr><td class="topAlign"><code>QRhiBuffer::IndexBuffer</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Index buffer</td></tr>
 <tr><td class="topAlign"><code>QRhiBuffer::UniformBuffer</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">Uniform (constant) buffer</td></tr>
 </table></div>
+<p>The UsageFlags type is a typedef for <a href="../qtcore/qflags.html">QFlags</a>&lt;UsageFlag&gt;. It stores an OR combination of UsageFlag values.</p>
 <!-- @@@UsageFlag -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$build[overload1]$$$build -->
 <h3 class="fn" id="build"><a name="build"></a><code>[pure virtual] </code><span class="type">bool</span> QRhiBuffer::<span class="name">build</span>()</h3>
+<p>Creates the corresponding native graphics resources. If there are already resources present due to an earlier build() with no corresponding <a href="qrhiresource.html#release">release</a>(), then <a href="qrhiresource.html#release">release</a>() is called implicitly first.</p>
+<p>Returns <code>true</code> when successful, <code>false</code> when a graphics operation failed. Regardless of the return value, calling <a href="qrhiresource.html#release">release</a>() is always safe.</p>
 <!-- @@@build -->
 <!-- $$$setSize[overload1]$$$setSizeint -->
 <h3 class="fn" id="setSize"><a name="setSize"></a><span class="type">void</span> QRhiBuffer::<span class="name">setSize</span>(<span class="type">int</span> <i>sz</i>)</h3>
@@ -130,8 +137,8 @@
 <h3 class="fn" id="setType"><a name="setType"></a><span class="type">void</span> QRhiBuffer::<span class="name">setType</span>(<span class="type"><a href="qrhibuffer.html#Type-enum">QRhiBuffer::Type</a></span> <i>t</i>)</h3>
 <p><b>See also </b><a href="qrhibuffer.html#type">type</a>().</p>
 <!-- @@@setType -->
-<!-- $$$setUsage[overload1]$$$setUsageint -->
-<h3 class="fn" id="setUsage"><a name="setUsage"></a><span class="type">void</span> QRhiBuffer::<span class="name">setUsage</span>(<span class="type">int</span> <i>u</i>)</h3>
+<!-- $$$setUsage[overload1]$$$setUsageQRhiBuffer::UsageFlags -->
+<h3 class="fn" id="setUsage"><a name="setUsage"></a><span class="type">void</span> QRhiBuffer::<span class="name">setUsage</span>(<span class="type"><a href="qrhibuffer.html#UsageFlag-enum">QRhiBuffer::UsageFlags</a></span> <i>u</i>)</h3>
 <p><b>See also </b><a href="qrhibuffer.html#usage">usage</a>().</p>
 <!-- @@@setUsage -->
 <!-- $$$size[overload1]$$$size -->
@@ -143,9 +150,18 @@
 <p><b>See also </b><a href="qrhibuffer.html#setType">setType</a>().</p>
 <!-- @@@type -->
 <!-- $$$usage[overload1]$$$usage -->
-<h3 class="fn" id="usage"><a name="usage"></a><span class="type">int</span> QRhiBuffer::<span class="name">usage</span>() const</h3>
+<h3 class="fn" id="usage"><a name="usage"></a><span class="type"><a href="qrhibuffer.html#UsageFlag-enum">QRhiBuffer::UsageFlags</a></span> QRhiBuffer::<span class="name">usage</span>() const</h3>
 <p><b>See also </b><a href="qrhibuffer.html#setUsage">setUsage</a>().</p>
 <!-- @@@usage -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
 </div>
         </div>
        </div>

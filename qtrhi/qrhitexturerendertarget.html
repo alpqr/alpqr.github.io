@@ -58,16 +58,17 @@
 <h2 id="public-types">Public Types</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#Flag-enum">Flag</a></b> { PreserveColorContents, PreserveDepthStencilContents }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#Flag-enum">Flags</a></b></td></tr>
 </table></div>
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#build">build</a></b>() = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiTextureRenderTargetDescription </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#description">description</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#flags">flags</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiTextureRenderTarget::Flags </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#flags">flags</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QRhiRenderPassDescriptor *</td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#newCompatibleRenderPassDescriptor">newCompatibleRenderPassDescriptor</a></b>() = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#setDescription">setDescription</a></b>(const QRhiTextureRenderTargetDescription &amp;<i>desc</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#setFlags">setFlags</a></b>(int <i>f</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#setFlags">setFlags</a></b>(QRhiTextureRenderTarget::Flags <i>f</i>)</td></tr>
 </table></div>
 <ul>
 <li class="fn">5 public functions inherited from <a href="qrhirendertarget.html#public-functions">QRhiRenderTarget</a></li>
@@ -77,7 +78,7 @@
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiTextureRenderTargetDescription </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#m_desc-var">m_desc</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#m_flags-var">m_flags</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiTextureRenderTarget::Flags </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertarget.html#m_flags-var">m_flags</a></b></td></tr>
 </table></div>
 <ul>
 <li class="fn">2 protected variables inherited from <a href="qrhirendertarget.html#protected-variables">QRhiRenderTarget</a></li>
@@ -92,43 +93,75 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Texture render target resource.</p>
+<p>A texture render target allows rendering into one or more textures, optionally with a depth texture or depth/stencil renderbuffer.</p>
+<p><b>Note: </b>Textures used in combination with <a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a> must be created with the <a href="qrhitexture.html#Flag-enum">QRhiTexture::RenderTarget</a> flag.</p><p>The simplest example of creating a render target with a texture as its single color attachment:</p>
+<pre class="cpp plain">
+
+  texture = rhi-&gt;newTexture(QRhiTexture::RGBA8, size, 1, QRhiTexture::RenderTarget);
+  texture-&gt;build();
+  rt = rhi-&gt;newTextureRenderTarget({ texture });
+  rp = rt-&gt;newCompatibleRenderPassDescriptor();
+  rt-&gt;setRenderPassDescriptor(rt);
+  rt-&gt;build();
+  // rt can now be used with beginPass()
+
+</pre>
 </div>
 <!-- @@@QRhiTextureRenderTarget -->
 <div class="types">
 <h2>Member Type Documentation</h2>
 <!-- $$$Flag$$$PreserveColorContents$$$PreserveDepthStencilContents -->
-<h3 class="fn" id="Flag-enum"><a name="Flag-enum"></a>enum QRhiTextureRenderTarget::<span class="name">Flag</span></h3>
+<h3 class="flags" id="Flag-enum"><a name="Flag-enum"></a>enum QRhiTextureRenderTarget::<span class="name">Flag</span><br/>flags QRhiTextureRenderTarget::<span class="name">Flags</span></h3>
 <p>Flag values describing the load/store behavior for the render target</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
 <tr><td class="topAlign"><code>QRhiTextureRenderTarget::PreserveColorContents</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">Indicates that the contents of the color attachments is to be loaded when starting a render pass, instead of clearing. This is potentially more expensive, especially on mobile (tiled) GPUs, but allows preserving the existing contents between passes.</td></tr>
 <tr><td class="topAlign"><code>QRhiTextureRenderTarget::PreserveDepthStencilContents</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Indicates that the contents of the depth texture is to be loaded when starting a render pass, instead clearing. Only applicable when a texture is used as the depth buffer (<a href="qrhitexturerendertargetdescription.html#depthTexture-var">QRhiTextureRenderTargetDescription::depthTexture</a> is set) because depth/stencil renderbuffers may not have any physical backing and data may not be written out in the first place.</td></tr>
 </table></div>
+<p>The Flags type is a typedef for <a href="../qtcore/qflags.html">QFlags</a>&lt;Flag&gt;. It stores an OR combination of Flag values.</p>
 <!-- @@@Flag -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$build[overload1]$$$build -->
 <h3 class="fn" id="build"><a name="build"></a><code>[pure virtual] </code><span class="type">bool</span> QRhiTextureRenderTarget::<span class="name">build</span>()</h3>
+<p>Creates the corresponding native graphics resources. If there are already resources present due to an earlier build() with no corresponding <a href="qrhiresource.html#release">release</a>(), then <a href="qrhiresource.html#release">release</a>() is called implicitly first.</p>
+<p><b>Note: </b><a href="qrhirendertarget.html#renderPassDescriptor">renderPassDescriptor</a>() must be set before calling build(). To obtain a <a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a> compatible with the render target, call <a href="qrhitexturerendertarget.html#newCompatibleRenderPassDescriptor">newCompatibleRenderPassDescriptor</a>() before build() but after setting all other parameters, such as <a href="qrhitexturerendertarget.html#description">description</a>() and <a href="qrhitexturerendertarget.html#flags">flags</a>(). To save resources, reuse the same <a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a> with multiple <a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a> instances, whenever possible. Sharing the same render pass descriptor is only possible when the render targets have the same number and type of attachments (the actual textures can differ) and the same flags.</p><p>Returns <code>true</code> when successful, <code>false</code> when a graphics operation failed. Regardless of the return value, calling <a href="qrhiresource.html#release">release</a>() is always safe.</p>
 <!-- @@@build -->
 <!-- $$$description[overload1]$$$description -->
 <h3 class="fn" id="description"><a name="description"></a><span class="type"><a href="qrhitexturerendertargetdescription.html">QRhiTextureRenderTargetDescription</a></span> QRhiTextureRenderTarget::<span class="name">description</span>() const</h3>
 <p><b>See also </b><a href="qrhitexturerendertarget.html#setDescription">setDescription</a>().</p>
 <!-- @@@description -->
 <!-- $$$flags[overload1]$$$flags -->
-<h3 class="fn" id="flags"><a name="flags"></a><span class="type">int</span> QRhiTextureRenderTarget::<span class="name">flags</span>() const</h3>
+<h3 class="fn" id="flags"><a name="flags"></a><span class="type"><a href="qrhitexturerendertarget.html#Flag-enum">QRhiTextureRenderTarget::Flags</a></span> QRhiTextureRenderTarget::<span class="name">flags</span>() const</h3>
 <p><b>See also </b><a href="qrhitexturerendertarget.html#setFlags">setFlags</a>().</p>
 <!-- @@@flags -->
 <!-- $$$newCompatibleRenderPassDescriptor[overload1]$$$newCompatibleRenderPassDescriptor -->
 <h3 class="fn" id="newCompatibleRenderPassDescriptor"><a name="newCompatibleRenderPassDescriptor"></a><code>[pure virtual] </code><span class="type"><a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a></span> *QRhiTextureRenderTarget::<span class="name">newCompatibleRenderPassDescriptor</span>()</h3>
+<p>Returns a new <a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a> that is compatible with this render target.</p>
+<p>The returned value is used in two ways: it can be passed to <a href="qrhirendertarget.html#setRenderPassDescriptor">setRenderPassDescriptor</a>() and <a href="qrhigraphicspipeline.html#setRenderPassDescriptor">QRhiGraphicsPipeline::setRenderPassDescriptor</a>(). A render pass descriptor describes the attachments (color, depth/stencil) and the load/store behavior that can be affected by <a href="qrhitexturerendertarget.html#flags">flags</a>(). A <a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a> can only be used in combination with a render target that has the same <a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a> set.</p>
+<p>Two <a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a> instances can share the same render pass descriptor as long as they have the same number and type of attachments. The associated <a href="qrhitexture.html">QRhiTexture</a> or <a href="qrhirenderbuffer.html">QRhiRenderBuffer</a> instances are not part of the render pass descriptor so those can differ in the two <a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a> intances.</p>
+<p><b>See also </b><a href="qrhitexturerendertarget.html#build">build</a>().</p>
 <!-- @@@newCompatibleRenderPassDescriptor -->
 <!-- $$$setDescription[overload1]$$$setDescriptionconstQRhiTextureRenderTargetDescription& -->
 <h3 class="fn" id="setDescription"><a name="setDescription"></a><span class="type">void</span> QRhiTextureRenderTarget::<span class="name">setDescription</span>(const <span class="type"><a href="qrhitexturerendertargetdescription.html">QRhiTextureRenderTargetDescription</a></span> &amp;<i>desc</i>)</h3>
 <p><b>See also </b><a href="qrhitexturerendertarget.html#description">description</a>().</p>
 <!-- @@@setDescription -->
-<!-- $$$setFlags[overload1]$$$setFlagsint -->
-<h3 class="fn" id="setFlags"><a name="setFlags"></a><span class="type">void</span> QRhiTextureRenderTarget::<span class="name">setFlags</span>(<span class="type">int</span> <i>f</i>)</h3>
+<!-- $$$setFlags[overload1]$$$setFlagsQRhiTextureRenderTarget::Flags -->
+<h3 class="fn" id="setFlags"><a name="setFlags"></a><span class="type">void</span> QRhiTextureRenderTarget::<span class="name">setFlags</span>(<span class="type"><a href="qrhitexturerendertarget.html#Flag-enum">QRhiTextureRenderTarget::Flags</a></span> <i>f</i>)</h3>
 <p><b>See also </b><a href="qrhitexturerendertarget.html#flags">flags</a>().</p>
 <!-- @@@setFlags -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
 </div>
         </div>
        </div>

@@ -74,12 +74,30 @@
   rhi = QRhi::create(QRhi::D3D11, &amp;params);
 
 </pre>
-<p><b>Note: </b><a href="qrhiswapchain.html">QRhiSwapChain</a> should only be used in combination with QWindow instances that have their surface type set to QSurface::OpenGLSurface. There are currently no Direct3D specifics in the Windows platform support of Qt and therefore there is no separate QSurface type available.</p><a name="working-with-existing-direct3d-11-devices"></a>
+<p><b>Note: </b><a href="qrhiswapchain.html">QRhiSwapChain</a> should only be used in combination with <a href="../qtgui/qwindow.html">QWindow</a> instances that have their surface type set to <a href="../qtgui/qsurface.html#SurfaceType-enum">QSurface::OpenGLSurface</a>. There are currently no Direct3D specifics in the Windows platform support of Qt and therefore there is no separate <a href="../qtgui/qsurface.html">QSurface</a> type available.</p><a name="working-with-existing-direct3d-11-devices"></a>
 <h4 >Working with existing Direct3D 11 devices</h4>
 <p>When interoperating with another graphics engine, it may be necessary to get a <a href="qrhi.html">QRhi</a> instance that uses the same Direct3D device and device context. This can be achieved by setting <a href="qrhid3d11initparams.html#importExistingDevice-var">importExistingDevice</a> to <code>true</code> and providing both dev and context.</p>
 <p><b>Note: </b><a href="qrhi.html">QRhi</a> works with immediate contexts only. Deferred contexts are not used in any way.</p><p><b>Note: </b>The class uses <code>void *</code> as the type since including the COM-based <code>d3d11.h</code> headers is not acceptable here. The actual types are <code>ID3D11Device *</code> and <code>ID3D11DeviceContext *</code>.</p><p><b>Note: </b>Regardless of using an imported or a <a href="qrhi.html">QRhi</a>-created device context, <code>ID3D11DeviceContext1</code> must be supported. Initialization will fail otherwise.</p><p>The <a href="qrhi.html">QRhi</a> does not take ownership of any of the external objects.</p>
 </div>
 <!-- @@@QRhiD3D11InitParams -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+</div>
         </div>
        </div>
    </div>

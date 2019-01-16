@@ -76,6 +76,7 @@
             <keyword name="QBakedShaderKey::StandardShader" id="QBakedShaderKey::StandardShader" ref="qbakedshaderkey.html#ShaderVariant-enum"/>
             <keyword name="QBakedShaderVersion" id="QBakedShaderVersion" ref="qbakedshaderversion.html"/>
             <keyword name="QBakedShaderVersion::Flag" id="QBakedShaderVersion::Flag" ref="qbakedshaderversion.html#Flag-enum"/>
+            <keyword name="QBakedShaderVersion::Flags" id="QBakedShaderVersion::Flags" ref="qbakedshaderversion.html#Flag-enum"/>
             <keyword name="QBakedShaderVersion::GlslEs" id="QBakedShaderVersion::GlslEs" ref="qbakedshaderversion.html#Flag-enum"/>
             <keyword name="QShaderBaker" id="QShaderBaker" ref="qshaderbaker.html"/>
             <keyword name="QShaderBaker::GeneratedShader" id="QShaderBaker::GeneratedShader" ref="qshaderbaker.html#GeneratedShader-typedef"/>
@@ -133,7 +134,6 @@
             <keyword name="QShaderDescription::Vec4" id="QShaderDescription::Vec4" ref="qshaderdescription.html#VarType-enum"/>
             <keyword name="Qt Shader Tools" id="Qt Shader Tools" ref="qtshadertools-index.html"/>
             <keyword name="QtShaderTools" id="QtShaderTools" ref="qtshadertools-module.html"/>
-            <keyword name="SPIRV-Cross" id="SPIRV-Cross" ref="qtshadertools-attribution-spirvcross.html"/>
             <keyword name="UniformBlock" id="QShaderDescription::UniformBlock" ref="qshaderdescription-uniformblock.html"/>
             <keyword name="arrayDims" id="BlockVariable::arrayDims" ref="qshaderdescription-blockvariable.html#arrayDims-var"/>
             <keyword name="arrayStride" id="BlockVariable::arrayStride" ref="qshaderdescription-blockvariable.html#arrayStride-var"/>
@@ -151,7 +151,6 @@
             <keyword name="flags" id="QBakedShaderVersion::flags" ref="qbakedshaderversion.html#flags"/>
             <keyword name="fromBinaryJson" id="QShaderDescription::fromBinaryJson" ref="qshaderdescription.html#fromBinaryJson"/>
             <keyword name="fromSerialized" id="QBakedShader::fromSerialized" ref="qbakedshader.html#fromSerialized"/>
-            <keyword name="glslang" id="glslang" ref="qtshadertools-attribution-glslang.html"/>
             <keyword name="inputVariables" id="QShaderDescription::inputVariables" ref="qshaderdescription.html#inputVariables"/>
             <keyword name="isValid" id="QBakedShader::isValid" ref="qbakedshader.html#isValid"/>
             <keyword name="isValid" id="QShaderDescription::isValid" ref="qshaderdescription.html#isValid"/>
