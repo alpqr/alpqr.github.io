@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qrhiprofiler.cpp -->
   <title>GpuTime Class | RHI 5.12</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
@@ -37,16 +38,37 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-variables">Public Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
 <h1 class="title">GpuTime Class</h1>
 <span class="small-subtitle">(<a href="qrhiprofiler-gputime.html">QRhiProfiler::GpuTime</a>)<br/></span>
-<ul>
+<!-- $$$GpuTime-brief -->
+<p>Contains GPU-side frame timings. <a href="#details">More...</a></p>
+<!-- @@@GpuTime -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;GpuTime&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
 <li><a href="qrhiprofiler-gputime-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-variables"></a>
+<h2 id="public-variables">Public Variables</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> float </td><td class="memItemRight bottomAlign"><b><a href="qrhiprofiler-gputime.html#avgTime-var">avgTime</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> float </td><td class="memItemRight bottomAlign"><b><a href="qrhiprofiler-gputime.html#maxTime-var">maxTime</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> float </td><td class="memItemRight bottomAlign"><b><a href="qrhiprofiler-gputime.html#minTime-var">minTime</a></b></td></tr>
+</table></div>
 <a name="details"></a>
+<!-- $$$GpuTime-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>Contains GPU-side frame timings.</p>
+<p>Once sufficient number of frames have been rendered, the minimum, maximum, and average values (in milliseconds) calculated from GPU command buffer timestamps are made available in this struct queriable from <a href="qrhiprofiler.html#gpuFrameTimes">QRhiProfiler::gpuFrameTimes</a>().</p>
+</div>
+<p><b>See also </b><a href="qrhiprofiler.html#setFrameTimingWriteInterval">QRhiProfiler::setFrameTimingWriteInterval</a>().</p>
+<!-- @@@GpuTime -->
 <div class="types">
 <h2>Member Type Documentation</h2>
 </div>

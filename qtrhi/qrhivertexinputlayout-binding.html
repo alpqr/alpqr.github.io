@@ -78,7 +78,34 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Describes a vertex input binding.</p>
-</div>
+<p>Specifies the stride (in bytes, must be a multiple of 4), the classification and optionally the instance step rate.</p>
+<p>As an example, assume a vertex shader with the following inputs:</p>
+<pre class="cpp plain">
+
+  layout(location = 0) in vec4 position;
+  layout(location = 1) in vec2 texcoord;
+
+</pre>
+<p>Now let's assume also that 3 component vertex positions <code>(x, y, z)</code> and 2 component texture coordinates <code>(u, v)</code> are provided in a non-interleaved format in a buffer (or separate buffers even). Definining two bindings could then be done like this:</p>
+<pre class="cpp plain">
+
+  QRhiVertexInputLayout inputLayout;
+  inputLayout.bindings = {
+      { 3 * sizeof(float) },
+      { 2 * sizeof(float) }
+  };
+
+</pre>
+<p>Only the stride is interesting here since instancing is not used. The binding number is given by the index of the <a href="qrhivertexinputlayout-binding.html">QRhiVertexInputLayout::Binding</a> element in the bindings vector of the <a href="qrhivertexinputlayout.html">QRhiVertexInputLayout</a>.</p>
+<p>Once a graphics pipeline with this vertex input layout is bound, the vertex inputs could be set up like the following for drawing a cube with 36 vertices, assuming we have a single buffer with first the positions and then the texture coordinates:</p>
+<pre class="cpp plain">
+
+  cb-&gt;setVertexInput(0, { { cubeBuf, 0 }, { cubeBuf, 36 * 3 * sizeof(float) } });
+
+</pre>
+<p>Note how the index defined by <code>startBinding + i</code>, where <code>i</code> is the index in the second argument of <a href="qrhicommandbuffer.html#setVertexInput">setVertexInput()</a>, matches the index of the corresponding entry in the <code>bindings</code> vector of the <a href="qrhivertexinputlayout.html">QRhiVertexInputLayout</a>.</p>
+<p><b>Note: </b>the stride must always be a multiple of 4.</p></div>
+<p><b>See also </b><a href="qrhicommandbuffer.html#setVertexInput">QRhiCommandBuffer::setVertexInput</a>().</p>
 <!-- @@@Binding -->
 <div class="types">
 <h2>Member Type Documentation</h2>

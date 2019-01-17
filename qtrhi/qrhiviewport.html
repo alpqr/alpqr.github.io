@@ -71,7 +71,20 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Specifies a viewport rectangle.</p>
+<p>Used with <a href="qrhicommandbuffer.html#setViewport">QRhiCommandBuffer::setViewport</a>().</p>
+<p><b>Note: </b><a href="qrhi.html">QRhi</a> assumes OpenGL-style viewport coordinates, meaning x and y are bottom-left.</p><p>Typical usage is like the following:</p>
+<pre class="cpp plain">
+
+  const QSize outputSizeInPixels = swapchain-&gt;currentPixelSize();
+  const QRhiViewport viewport(0, 0, outputSizeInPixels.width(), outputSizeInPixels.height());
+  cb-&gt;beginPass(swapchain-&gt;currentFrameRenderTarget(), { 0, 0, 0, 1 }, { 1, 0 });
+  cb-&gt;setGraphicsPipeline(ps);
+  cb-&gt;setViewport(viewport);
+  ..&#x2e;
+
+</pre>
 </div>
+<p><b>See also </b><a href="qrhicommandbuffer.html#setViewport">QRhiCommandBuffer::setViewport</a>(), <a href="qrhi.html#clipSpaceCorrMatrix">QRhi::clipSpaceCorrMatrix</a>(), and <a href="qrhiscissor.html">QRhiScissor</a>.</p>
 <!-- @@@QRhiViewport -->
 <div class="types">
 <h2>Member Type Documentation</h2>

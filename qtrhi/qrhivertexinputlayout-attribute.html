@@ -79,7 +79,55 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Describes a single vertex input element.</p>
+<p>The members specify the binding number, location, format, and offset for a single vertex input element.</p>
+<p><b>Note: </b>For HLSL it is assumed that the vertex shader uses <code>TEXCOORD&lt;location&gt;</code> as the semantic for each input. Hence no separate semantic name and index.</p><p>As an example, assume a vertex shader with the following inputs:</p>
+<pre class="cpp plain">
+
+  layout(location = 0) in vec4 position;
+  layout(location = 1) in vec2 texcoord;
+
+</pre>
+<p>Now let's assume that we have 3 component vertex positions <code>(x, y, z)</code> and 2 component texture coordinates <code>(u, v)</code> are provided in a non-interleaved format in a buffer (or separate buffers even). Once two bindings are defined, the attributes could be specified as:</p>
+<pre class="cpp plain">
+
+  QRhiVertexInputLayout inputLayout;
+  inputLayout.bindings = {
+      { 3 * sizeof(float) },
+      { 2 * sizeof(float) }
+  };
+  inputLayout.attributes = {
+      { 0, 0, QRhiVertexInputLayout::Attribute::Float3, 0 },
+      { 1, 1, QRhiVertexInputLayout::Attribute::Float2, 0 }
+  };
+
+</pre>
+<p>Once a graphics pipeline with this vertex input layout is bound, the vertex inputs could be set up like the following for drawing a cube with 36 vertices, assuming we have a single buffer with first the positions and then the texture coordinates:</p>
+<pre class="cpp plain">
+
+  cb-&gt;setVertexInput(0, { { cubeBuf, 0 }, { cubeBuf, 36 * 3 * sizeof(float) } });
+
+</pre>
+<p>When working with interleaved data, there will typically be just one binding, with multiple attributes refering to that same buffer binding point:</p>
+<pre class="cpp plain">
+
+  QRhiVertexInputLayout inputLayout;
+  inputLayout.bindings = {
+      { 5 * sizeof(float) }
+  };
+  inputLayout.attributes = {
+      { 0, 0, QRhiVertexInputLayout::Attribute::Float3, 0 },
+      { 0, 1, QRhiVertexInputLayout::Attribute::Float2, 3 * sizeof(float) }
+  };
+
+</pre>
+<p>and then:</p>
+<pre class="cpp plain">
+
+  cb-&gt;setVertexInput(0, { { interleavedCubeBuf, 0 } });
+
+</pre>
 </div>
+<p><b>See also </b><a href="qrhicommandbuffer.html#setVertexInput">QRhiCommandBuffer::setVertexInput</a>().</p>
 <!-- @@@Attribute -->
 <div class="types">
 <h2>Member Type Documentation</h2>
