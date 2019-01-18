@@ -71,7 +71,9 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Describes a readback (reading back texture contents from possibly GPU-only memory) operation.</p>
-</div>
+<p>The source of the readback operation is either a <a href="qrhitexture.html">QRhiTexture</a> or the current backbuffer of the currently targeted <a href="qrhiswapchain.html">QRhiSwapChain</a>. When <a href="qrhireadbackdescription.html#texture-var">texture</a> is not set, the swapchain is used. Otherwise the specified <a href="qrhitexture.html">QRhiTexture</a> is treated as the source.</p>
+<p><b>Note: </b>Textures used in readbacks must be created with <a href="qrhitexture.html#Flag-enum">QRhiTexture::UsedAsTransferSource</a>.</p><p><b>Note: </b>Swapchains used in readbacks must be created with <a href="qrhiswapchain.html#Flag-enum">QRhiSwapChain::UsedAsTransferSource</a>.</p><p><a href="qrhireadbackdescription.html#layer-var">layer</a> and <a href="qrhireadbackdescription.html#level-var">level</a> are only applicable when the source is a <a href="qrhitexture.html">QRhiTexture</a>.</p>
+<p><b>Note: </b>Multisample textures cannot be read back. Readbacks are supported for multisample swapchain buffers however.</p></div>
 <!-- @@@QRhiReadbackDescription -->
 <div class="types">
 <h2>Member Type Documentation</h2>

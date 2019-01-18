@@ -150,7 +150,7 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Graphics pipeline state resource.</p>
-</div>
+<p><b>Note: </b>Setting the shader resource bindings is mandatory but the referenced <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a> is not required to be built when <a href="qrhigraphicspipeline.html#build">build</a>() is called. Instead, <a href="qrhishaderresourcebindings.html#build">QRhiShaderResourceBindings::build</a>() must be done at latest before <a href="qrhicommandbuffer.html#setGraphicsPipeline">QRhiCommandBuffer::setGraphicsPipeline</a>().</p><p><b>Note: </b>Setting the render pass descriptor is mandatory. To obtain a <a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a> that can be passed to <a href="qrhigraphicspipeline.html#setRenderPassDescriptor">setRenderPassDescriptor</a>(), use either <a href="qrhitexturerendertarget.html#newCompatibleRenderPassDescriptor">QRhiTextureRenderTarget::newCompatibleRenderPassDescriptor</a>() or <a href="qrhiswapchain.html#newCompatibleRenderPassDescriptor">QRhiSwapChain::newCompatibleRenderPassDescriptor</a>().</p><p><b>Note: </b>Setting the vertex input layout is mandatory.</p><p><b>Note: </b>Setting the shader stages is mandatory.</p><p><b>Note: </b><a href="qrhigraphicspipeline.html#sampleCount">sampleCount</a>() defaults to 1 and must match the sample count of the render target's color and depth stencil attachments.</p><p><b>Note: </b>The depth test, depth write, and stencil test are disabled by default.</p><p><b>Note: </b><a href="qrhigraphicspipeline.html#stencilReadMask">stencilReadMask</a>() and <a href="qrhigraphicspipeline.html#stencilWriteMask">stencilWriteMask</a>() apply to both faces. They both default to 0xFF.</p></div>
 <!-- @@@QRhiGraphicsPipeline -->
 <div class="types">
 <h2>Member Type Documentation</h2>
@@ -373,6 +373,8 @@
 <!-- @@@setStencilWriteMask -->
 <!-- $$$setTargetBlends[overload1]$$$setTargetBlendsconstQVector<QRhiGraphicsPipeline::TargetBlend>& -->
 <h3 class="fn" id="setTargetBlends"><a name="setTargetBlends"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setTargetBlends</span>(const <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhigraphicspipeline-targetblend.html">QRhiGraphicsPipeline::TargetBlend</a></span>&gt; &amp;<i>blends</i>)</h3>
+<p>Sets the blend specification for color attachments. Each element in <i>blends</i> corresponds to a color attachment of the render target.</p>
+<p>By default no blends are set, which is a shortcut to disabling blending and enabling color write for all four channels.</p>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#targetBlends">targetBlends</a>().</p>
 <!-- @@@setTargetBlends -->
 <!-- $$$setTopology[overload1]$$$setTopologyQRhiGraphicsPipeline::Topology -->

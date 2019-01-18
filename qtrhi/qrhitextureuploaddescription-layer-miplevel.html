@@ -75,7 +75,11 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Describes one mip level in a layer in a texture upload operation.</p>
-</div>
+<p>The source content is specified either as a <a href="../qtgui/qimage.html">QImage</a> or as a raw blob. The former is only allowed for uncompressed textures, while the latter is only supported for compressed ones.</p>
+<p><b>Note: </b><a href="qrhitextureuploaddescription-layer-miplevel.html#image-var">image</a> and <a href="qrhitextureuploaddescription-layer-miplevel.html#compressedData-var">compressedData</a> cannot be both set.</p><p><a href="qrhitextureuploaddescription-layer-miplevel.html#destinationTopLeft-var">destinationTopLeft</a> specifies the top-left corner of the target rectangle. Defaults to (0, 0).</p>
+<p>An empty <a href="qrhitextureuploaddescription-layer-miplevel.html#sourceSize-var">sourceSize</a> (the default) indicates that size is assumed to be the size of the subresource. For uncompressed textures this implies that the size of the source <a href="qrhitextureuploaddescription-layer-miplevel.html#image-var">image</a> must match the subresource. For compressed textures sufficient amount of data must be provided in <a href="qrhitextureuploaddescription-layer-miplevel.html#compressedData-var">compressedData</a>.</p>
+<p><b>Note: </b>With compressed textures the first upload must always match the subresource size due to graphics API limitations with some backends.</p><p><a href="qrhitextureuploaddescription-layer-miplevel.html#sourceTopLeft-var">sourceTopLeft</a> is is only supported for uncompressed textures, and specifies the top-left corner of the source rectangle.</p>
+<p><b>Note: </b>Setting <a href="qrhitextureuploaddescription-layer-miplevel.html#sourceSize-var">sourceSize</a> or <a href="qrhitextureuploaddescription-layer-miplevel.html#sourceTopLeft-var">sourceTopLeft</a> may trigger a <a href="../qtgui/qimage.html">QImage</a> copy internally, depending on the format and the backend.</p></div>
 <!-- @@@MipLevel -->
 <div class="types">
 <h2>Member Type Documentation</h2>

@@ -47,7 +47,7 @@
 <h1 class="title">ColorAttachment Class</h1>
 <span class="small-subtitle">(<a href="qrhitexturerendertargetdescription-colorattachment.html">QRhiTextureRenderTargetDescription::ColorAttachment</a>)<br/></span>
 <!-- $$$ColorAttachment-brief -->
-<p>Describes the color attachments of a render target. <a href="#details">More...</a></p>
+<p>Describes the a single color attachment of a render target. <a href="#details">More...</a></p>
 <!-- @@@ColorAttachment -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;ColorAttachment&gt;</span>
@@ -76,8 +76,12 @@
 <!-- $$$ColorAttachment-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>Describes the color attachments of a render target.</p>
-</div>
+<p>Describes the a single color attachment of a render target.</p>
+<p>A color attachment is either a <a href="qrhitexture.html">QRhiTexture</a> or a <a href="qrhirenderbuffer.html">QRhiRenderBuffer</a>. The former, when <a href="qrhitexturerendertargetdescription-colorattachment.html#texture-var">texture</a> is set, is used in most cases.</p>
+<p><b>Note: </b><a href="qrhitexturerendertargetdescription-colorattachment.html#texture-var">texture</a> and <a href="qrhitexturerendertargetdescription-colorattachment.html#renderBuffer-var">renderBuffer</a> cannot be both set.</p><p>Setting <a href="qrhitexturerendertargetdescription-colorattachment.html#renderBuffer-var">renderBuffer</a> instead is recommended only when multisampling is needed. Relying on <a href="qrhi.html#Feature-enum">QRhi::MultisampleRenderBuffer</a> is a better choice than <a href="qrhi.html#Feature-enum">QRhi::MultisampleTexture</a> in practice since the former is available in more run time configurations (e.g&#x2e; when running on OpenGL ES 3.0 which has no support for multisample textures, but does support multisample renderbuffers).</p>
+<p>When targeting a non-multisample texture, the <a href="qrhitexturerendertargetdescription-colorattachment.html#layer-var">layer</a> and <a href="qrhitexturerendertargetdescription-colorattachment.html#level-var">level</a> indicate the targeted layer (face index <code>0-5</code> for cubemaps) and mip level.</p>
+<p>When <a href="qrhitexturerendertargetdescription-colorattachment.html#texture-var">texture</a> or <a href="qrhitexturerendertargetdescription-colorattachment.html#renderBuffer-var">renderBuffer</a> is multisample, <a href="qrhitexturerendertargetdescription-colorattachment.html#resolveTexture-var">resolveTexture</a> can be set optionally. When set, samples are resolved automatically into that (non-multisample) texture at the end of the render pass. When rendering into a multisample renderbuffers, this is the only way to get resolved, non-multisample content out of them. Multisample textures allow sampling in shaders so for them this is just one option.</p>
+<p><b>Note: </b>when resolving is enabled, the multisample data may not be written out at all. This means that the multisample <a href="qrhitexturerendertargetdescription-colorattachment.html#texture-var">texture</a> must not be used afterwards with shaders for sampling when <a href="qrhitexturerendertargetdescription-colorattachment.html#resolveTexture-var">resolveTexture</a> is set.</p></div>
 <!-- @@@ColorAttachment -->
 <div class="types">
 <h2>Member Type Documentation</h2>

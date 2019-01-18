@@ -2237,6 +2237,10 @@
             <anchor>Feature-enum</anchor>
             <arglist></arglist>
         </member>
+        <member name="PrimitiveRestart">
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="enum">
             <name>ResourceSizeLimit</name>
             <anchor>ResourceSizeLimit-enum</anchor>

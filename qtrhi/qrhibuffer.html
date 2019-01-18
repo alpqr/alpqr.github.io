@@ -131,6 +131,8 @@
 <!-- @@@build -->
 <!-- $$$setSize[overload1]$$$setSizeint -->
 <h3 class="fn" id="setSize"><a name="setSize"></a><span class="type">void</span> QRhiBuffer::<span class="name">setSize</span>(<span class="type">int</span> <i>sz</i>)</h3>
+<p>Sets the size of the buffer in bytes. The size is normally specified in <a href="qrhi.html#newBuffer">QRhi::newBuffer</a>() so this function is only used when the size has to be changed. As with other setters, the size only takes effect when calling <a href="qrhibuffer.html#build">build</a>(), and for already built buffers this involves releasing the previous native resource and creating new ones under the hood.</p>
+<p>Backends may choose to allocate buffers bigger than <i>sz</i> in order to fulfill alignment requirements. This is hidden from the applications and <a href="qrhibuffer.html#size">size</a>() will always report the size requested in <i>sz</i>.</p>
 <p><b>See also </b><a href="qrhibuffer.html#size">size</a>().</p>
 <!-- @@@setSize -->
 <!-- $$$setType[overload1]$$$setTypeQRhiBuffer::Type -->
