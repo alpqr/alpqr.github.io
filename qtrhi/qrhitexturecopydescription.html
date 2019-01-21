@@ -38,7 +38,7 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
-<li class="level1"><a href="#public-variables">Public Variables</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -52,24 +52,32 @@
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
 <li><a href="qrhitexturecopydescription-members.html">List of all members, including inherited members</a></li>
 </ul>
-<a name="public-variables"></a>
-<h2 id="public-variables">Public Variables</h2>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#destinationLayer-var">destinationLayer</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#destinationLevel-var">destinationLevel</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QPoint </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#destinationTopLeft-var">destinationTopLeft</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#pixelSize-var">pixelSize</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#sourceLayer-var">sourceLayer</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#sourceLevel-var">sourceLevel</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QPoint </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#sourceTopLeft-var">sourceTopLeft</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#QRhiTextureCopyDescription">QRhiTextureCopyDescription</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#destinationLayer">destinationLayer</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#destinationLevel">destinationLevel</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QPoint </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#destinationTopLeft">destinationTopLeft</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#pixelSize">pixelSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#setDestinationLayer">setDestinationLayer</a></b>(int <i>layer</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#setDestinationLevel">setDestinationLevel</a></b>(int <i>level</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#setDestinationTopLeft">setDestinationTopLeft</a></b>(const QPoint &amp;<i>p</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#setPixelSize">setPixelSize</a></b>(const QSize &amp;<i>sz</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#setSourceLayer">setSourceLayer</a></b>(int <i>layer</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#setSourceLevel">setSourceLevel</a></b>(int <i>level</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#setSourceTopLeft">setSourceTopLeft</a></b>(const QPoint &amp;<i>p</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#sourceLayer">sourceLayer</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#sourceLevel">sourceLevel</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QPoint </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturecopydescription.html#sourceTopLeft">sourceTopLeft</a></b>() const</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$QRhiTextureCopyDescription-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Describes a texture-to-texture copy operation.</p>
-<p>An empty <a href="qrhitexturecopydescription.html#pixelSize-var">pixelSize</a> (the default) indicates that the entire subresource is to be copied.</p>
-<p><b>Note: </b>The source texture must be created with <a href="qrhitexture.html#Flag-enum">QRhiTexture::UsedAsTransferSource</a>.</p></div>
+<p>An empty <a href="qrhitexturecopydescription.html#pixelSize">pixelSize</a>() indicates that the entire subresource is to be copied. A default constructed copy description therefore leads to copying the entire subresource at level 0 of layer 0.</p>
+<p><b>Note: </b>The source texture must be created with <a href="qrhitexture.html#Flag-enum">QRhiTexture::UsedAsTransferSource</a>.</p><p><b>Note: </b>The source and destination rectangles defined by <a href="qrhitexturecopydescription.html#pixelSize">pixelSize</a>(), <a href="qrhitexturecopydescription.html#sourceTopLeft">sourceTopLeft</a>(), and <a href="qrhitexturecopydescription.html#destinationTopLeft">destinationTopLeft</a>() must fit the source and destination textures, respectively. The behavior is undefined otherwise.</p></div>
 <!-- @@@QRhiTextureCopyDescription -->
 <div class="types">
 <h2>Member Type Documentation</h2>
@@ -79,6 +87,66 @@
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
+<!-- $$$QRhiTextureCopyDescription[overload1]$$$QRhiTextureCopyDescription -->
+<h3 class="fn" id="QRhiTextureCopyDescription"><a name="QRhiTextureCopyDescription"></a>QRhiTextureCopyDescription::<span class="name">QRhiTextureCopyDescription</span>()</h3>
+<p>Constructs an empty texture copy description.</p>
+<!-- @@@QRhiTextureCopyDescription -->
+<!-- $$$destinationLayer[overload1]$$$destinationLayer -->
+<h3 class="fn" id="destinationLayer"><a name="destinationLayer"></a><span class="type">int</span> QRhiTextureCopyDescription::<span class="name">destinationLayer</span>() const</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#setDestinationLayer">setDestinationLayer</a>().</p>
+<!-- @@@destinationLayer -->
+<!-- $$$destinationLevel[overload1]$$$destinationLevel -->
+<h3 class="fn" id="destinationLevel"><a name="destinationLevel"></a><span class="type">int</span> QRhiTextureCopyDescription::<span class="name">destinationLevel</span>() const</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#setDestinationLevel">setDestinationLevel</a>().</p>
+<!-- @@@destinationLevel -->
+<!-- $$$destinationTopLeft[overload1]$$$destinationTopLeft -->
+<h3 class="fn" id="destinationTopLeft"><a name="destinationTopLeft"></a><span class="type"><a href="../qtcore/qpoint.html">QPoint</a></span> QRhiTextureCopyDescription::<span class="name">destinationTopLeft</span>() const</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#setDestinationTopLeft">setDestinationTopLeft</a>().</p>
+<!-- @@@destinationTopLeft -->
+<!-- $$$pixelSize[overload1]$$$pixelSize -->
+<h3 class="fn" id="pixelSize"><a name="pixelSize"></a><span class="type"><a href="../qtcore/qsize.html">QSize</a></span> QRhiTextureCopyDescription::<span class="name">pixelSize</span>() const</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#setPixelSize">setPixelSize</a>().</p>
+<!-- @@@pixelSize -->
+<!-- $$$setDestinationLayer[overload1]$$$setDestinationLayerint -->
+<h3 class="fn" id="setDestinationLayer"><a name="setDestinationLayer"></a><span class="type">void</span> QRhiTextureCopyDescription::<span class="name">setDestinationLayer</span>(<span class="type">int</span> <i>layer</i>)</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#destinationLayer">destinationLayer</a>().</p>
+<!-- @@@setDestinationLayer -->
+<!-- $$$setDestinationLevel[overload1]$$$setDestinationLevelint -->
+<h3 class="fn" id="setDestinationLevel"><a name="setDestinationLevel"></a><span class="type">void</span> QRhiTextureCopyDescription::<span class="name">setDestinationLevel</span>(<span class="type">int</span> <i>level</i>)</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#destinationLevel">destinationLevel</a>().</p>
+<!-- @@@setDestinationLevel -->
+<!-- $$$setDestinationTopLeft[overload1]$$$setDestinationTopLeftconstQPoint& -->
+<h3 class="fn" id="setDestinationTopLeft"><a name="setDestinationTopLeft"></a><span class="type">void</span> QRhiTextureCopyDescription::<span class="name">setDestinationTopLeft</span>(const <span class="type"><a href="../qtcore/qpoint.html">QPoint</a></span> &amp;<i>p</i>)</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#destinationTopLeft">destinationTopLeft</a>().</p>
+<!-- @@@setDestinationTopLeft -->
+<!-- $$$setPixelSize[overload1]$$$setPixelSizeconstQSize& -->
+<h3 class="fn" id="setPixelSize"><a name="setPixelSize"></a><span class="type">void</span> QRhiTextureCopyDescription::<span class="name">setPixelSize</span>(const <span class="type"><a href="../qtcore/qsize.html">QSize</a></span> &amp;<i>sz</i>)</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#pixelSize">pixelSize</a>().</p>
+<!-- @@@setPixelSize -->
+<!-- $$$setSourceLayer[overload1]$$$setSourceLayerint -->
+<h3 class="fn" id="setSourceLayer"><a name="setSourceLayer"></a><span class="type">void</span> QRhiTextureCopyDescription::<span class="name">setSourceLayer</span>(<span class="type">int</span> <i>layer</i>)</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#sourceLayer">sourceLayer</a>().</p>
+<!-- @@@setSourceLayer -->
+<!-- $$$setSourceLevel[overload1]$$$setSourceLevelint -->
+<h3 class="fn" id="setSourceLevel"><a name="setSourceLevel"></a><span class="type">void</span> QRhiTextureCopyDescription::<span class="name">setSourceLevel</span>(<span class="type">int</span> <i>level</i>)</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#sourceLevel">sourceLevel</a>().</p>
+<!-- @@@setSourceLevel -->
+<!-- $$$setSourceTopLeft[overload1]$$$setSourceTopLeftconstQPoint& -->
+<h3 class="fn" id="setSourceTopLeft"><a name="setSourceTopLeft"></a><span class="type">void</span> QRhiTextureCopyDescription::<span class="name">setSourceTopLeft</span>(const <span class="type"><a href="../qtcore/qpoint.html">QPoint</a></span> &amp;<i>p</i>)</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#sourceTopLeft">sourceTopLeft</a>().</p>
+<!-- @@@setSourceTopLeft -->
+<!-- $$$sourceLayer[overload1]$$$sourceLayer -->
+<h3 class="fn" id="sourceLayer"><a name="sourceLayer"></a><span class="type">int</span> QRhiTextureCopyDescription::<span class="name">sourceLayer</span>() const</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#setSourceLayer">setSourceLayer</a>().</p>
+<!-- @@@sourceLayer -->
+<!-- $$$sourceLevel[overload1]$$$sourceLevel -->
+<h3 class="fn" id="sourceLevel"><a name="sourceLevel"></a><span class="type">int</span> QRhiTextureCopyDescription::<span class="name">sourceLevel</span>() const</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#setSourceLevel">setSourceLevel</a>().</p>
+<!-- @@@sourceLevel -->
+<!-- $$$sourceTopLeft[overload1]$$$sourceTopLeft -->
+<h3 class="fn" id="sourceTopLeft"><a name="sourceTopLeft"></a><span class="type"><a href="../qtcore/qpoint.html">QPoint</a></span> QRhiTextureCopyDescription::<span class="name">sourceTopLeft</span>() const</h3>
+<p><b>See also </b><a href="qrhitexturecopydescription.html#setSourceTopLeft">setSourceTopLeft</a>().</p>
+<!-- @@@sourceTopLeft -->
 </div>
 <div class="vars">
 <h2>Member Variable Documentation</h2>

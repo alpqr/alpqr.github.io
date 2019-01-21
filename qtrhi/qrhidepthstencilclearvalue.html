@@ -39,7 +39,6 @@
 <h3><a name="toc">Contents</a></h3>
 <ul>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#public-variables">Public Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -57,13 +56,11 @@
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhidepthstencilclearvalue.html#QRhiDepthStencilClearValue">QRhiDepthStencilClearValue</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhidepthstencilclearvalue.html#QRhiDepthStencilClearValue-1">QRhiDepthStencilClearValue</a></b>(float <i>d_</i>, quint32 <i>s_</i>)</td></tr>
-</table></div>
-<a name="public-variables"></a>
-<h2 id="public-variables">Public Variables</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> float </td><td class="memItemRight bottomAlign"><b><a href="qrhidepthstencilclearvalue.html#d-var">d</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> quint32 </td><td class="memItemRight bottomAlign"><b><a href="qrhidepthstencilclearvalue.html#s-var">s</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhidepthstencilclearvalue.html#QRhiDepthStencilClearValue-1">QRhiDepthStencilClearValue</a></b>(float <i>d</i>, quint32 <i>s</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> float </td><td class="memItemRight bottomAlign"><b><a href="qrhidepthstencilclearvalue.html#depthClearValue">depthClearValue</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhidepthstencilclearvalue.html#setDepthClearValue">setDepthClearValue</a></b>(float <i>d</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhidepthstencilclearvalue.html#setStencilClearValue">setStencilClearValue</a></b>(quint32 <i>s</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> quint32 </td><td class="memItemRight bottomAlign"><b><a href="qrhidepthstencilclearvalue.html#stencilClearValue">stencilClearValue</a></b>() const</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$QRhiDepthStencilClearValue-description -->
@@ -82,10 +79,28 @@
 <h2>Member Function Documentation</h2>
 <!-- $$$QRhiDepthStencilClearValue[overload1]$$$QRhiDepthStencilClearValue -->
 <h3 class="fn" id="QRhiDepthStencilClearValue"><a name="QRhiDepthStencilClearValue"></a>QRhiDepthStencilClearValue::<span class="name">QRhiDepthStencilClearValue</span>()</h3>
-<p>Default constructs an instance of QRhiDepthStencilClearValue.</p><!-- @@@QRhiDepthStencilClearValue -->
+<p>Constructs a depth/stencil clear value with depth clear value 1.0f and stencil clear value 0.</p>
+<!-- @@@QRhiDepthStencilClearValue -->
 <!-- $$$QRhiDepthStencilClearValue$$$QRhiDepthStencilClearValuefloatquint32 -->
-<h3 class="fn" id="QRhiDepthStencilClearValue-1"><a name="QRhiDepthStencilClearValue-1"></a>QRhiDepthStencilClearValue::<span class="name">QRhiDepthStencilClearValue</span>(<span class="type">float</span> <i>d_</i>, <span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>s_</i>)</h3>
-<p>Default constructs an instance of QRhiDepthStencilClearValue.</p><!-- @@@QRhiDepthStencilClearValue -->
+<h3 class="fn" id="QRhiDepthStencilClearValue-1"><a name="QRhiDepthStencilClearValue-1"></a>QRhiDepthStencilClearValue::<span class="name">QRhiDepthStencilClearValue</span>(<span class="type">float</span> <i>d</i>, <span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>s</i>)</h3>
+<p>Constructs a depth/stencil clear value with depth clear value <i>d</i> and stencil clear value <i>s</i>.</p>
+<!-- @@@QRhiDepthStencilClearValue -->
+<!-- $$$depthClearValue[overload1]$$$depthClearValue -->
+<h3 class="fn" id="depthClearValue"><a name="depthClearValue"></a><span class="type">float</span> QRhiDepthStencilClearValue::<span class="name">depthClearValue</span>() const</h3>
+<p><b>See also </b><a href="qrhidepthstencilclearvalue.html#setDepthClearValue">setDepthClearValue</a>().</p>
+<!-- @@@depthClearValue -->
+<!-- $$$setDepthClearValue[overload1]$$$setDepthClearValuefloat -->
+<h3 class="fn" id="setDepthClearValue"><a name="setDepthClearValue"></a><span class="type">void</span> QRhiDepthStencilClearValue::<span class="name">setDepthClearValue</span>(<span class="type">float</span> <i>d</i>)</h3>
+<p><b>See also </b><a href="qrhidepthstencilclearvalue.html#depthClearValue">depthClearValue</a>().</p>
+<!-- @@@setDepthClearValue -->
+<!-- $$$setStencilClearValue[overload1]$$$setStencilClearValuequint32 -->
+<h3 class="fn" id="setStencilClearValue"><a name="setStencilClearValue"></a><span class="type">void</span> QRhiDepthStencilClearValue::<span class="name">setStencilClearValue</span>(<span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>s</i>)</h3>
+<p><b>See also </b><a href="qrhidepthstencilclearvalue.html#stencilClearValue">stencilClearValue</a>().</p>
+<!-- @@@setStencilClearValue -->
+<!-- $$$stencilClearValue[overload1]$$$stencilClearValue -->
+<h3 class="fn" id="stencilClearValue"><a name="stencilClearValue"></a><span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> QRhiDepthStencilClearValue::<span class="name">stencilClearValue</span>() const</h3>
+<p><b>See also </b><a href="qrhidepthstencilclearvalue.html#setStencilClearValue">setStencilClearValue</a>().</p>
+<!-- @@@stencilClearValue -->
 </div>
 <div class="vars">
 <h2>Member Variable Documentation</h2>

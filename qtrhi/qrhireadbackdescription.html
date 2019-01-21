@@ -39,7 +39,6 @@
 <h3><a name="toc">Contents</a></h3>
 <ul>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#public-variables">Public Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -57,22 +56,21 @@
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhireadbackdescription.html#QRhiReadbackDescription">QRhiReadbackDescription</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhireadbackdescription.html#QRhiReadbackDescription-1">QRhiReadbackDescription</a></b>(QRhiTexture *<i>texture_</i>)</td></tr>
-</table></div>
-<a name="public-variables"></a>
-<h2 id="public-variables">Public Variables</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhireadbackdescription.html#layer-var">layer</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhireadbackdescription.html#level-var">level</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QRhiTexture *</td><td class="memItemRight bottomAlign"><b><a href="qrhireadbackdescription.html#texture-var">texture</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhireadbackdescription.html#QRhiReadbackDescription-1">QRhiReadbackDescription</a></b>(QRhiTexture *<i>texture</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhireadbackdescription.html#layer">layer</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhireadbackdescription.html#level">level</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhireadbackdescription.html#setLayer">setLayer</a></b>(int <i>layer</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhireadbackdescription.html#setLevel">setLevel</a></b>(int <i>level</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhireadbackdescription.html#setTexture">setTexture</a></b>(QRhiTexture *<i>tex</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiTexture *</td><td class="memItemRight bottomAlign"><b><a href="qrhireadbackdescription.html#texture">texture</a></b>() const</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$QRhiReadbackDescription-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Describes a readback (reading back texture contents from possibly GPU-only memory) operation.</p>
-<p>The source of the readback operation is either a <a href="qrhitexture.html">QRhiTexture</a> or the current backbuffer of the currently targeted <a href="qrhiswapchain.html">QRhiSwapChain</a>. When <a href="qrhireadbackdescription.html#texture-var">texture</a> is not set, the swapchain is used. Otherwise the specified <a href="qrhitexture.html">QRhiTexture</a> is treated as the source.</p>
-<p><b>Note: </b>Textures used in readbacks must be created with <a href="qrhitexture.html#Flag-enum">QRhiTexture::UsedAsTransferSource</a>.</p><p><b>Note: </b>Swapchains used in readbacks must be created with <a href="qrhiswapchain.html#Flag-enum">QRhiSwapChain::UsedAsTransferSource</a>.</p><p><a href="qrhireadbackdescription.html#layer-var">layer</a> and <a href="qrhireadbackdescription.html#level-var">level</a> are only applicable when the source is a <a href="qrhitexture.html">QRhiTexture</a>.</p>
+<p>The source of the readback operation is either a <a href="qrhitexture.html">QRhiTexture</a> or the current backbuffer of the currently targeted <a href="qrhiswapchain.html">QRhiSwapChain</a>. When <a href="qrhireadbackdescription.html#texture">texture</a>() is not set, the swapchain is used. Otherwise the specified <a href="qrhitexture.html">QRhiTexture</a> is treated as the source.</p>
+<p><b>Note: </b>Textures used in readbacks must be created with <a href="qrhitexture.html#Flag-enum">QRhiTexture::UsedAsTransferSource</a>.</p><p><b>Note: </b>Swapchains used in readbacks must be created with <a href="qrhiswapchain.html#Flag-enum">QRhiSwapChain::UsedAsTransferSource</a>.</p><p><a href="qrhireadbackdescription.html#layer">layer</a>() and <a href="qrhireadbackdescription.html#level">level</a>() are only applicable when the source is a <a href="qrhitexture.html">QRhiTexture</a>.</p>
 <p><b>Note: </b>Multisample textures cannot be read back. Readbacks are supported for multisample swapchain buffers however.</p></div>
 <!-- @@@QRhiReadbackDescription -->
 <div class="types">
@@ -85,10 +83,36 @@
 <h2>Member Function Documentation</h2>
 <!-- $$$QRhiReadbackDescription[overload1]$$$QRhiReadbackDescription -->
 <h3 class="fn" id="QRhiReadbackDescription"><a name="QRhiReadbackDescription"></a>QRhiReadbackDescription::<span class="name">QRhiReadbackDescription</span>()</h3>
-<p>Default constructs an instance of QRhiReadbackDescription.</p><!-- @@@QRhiReadbackDescription -->
+<p>Constructs an empty texture readback description.</p>
+<p><b>Note: </b>The source texture is set to null by default, which is still a valid readback: it specifies that the backbuffer of the current swapchain is to be read back. (current meaning the frame's target swapchain at the time of committing the <a href="qrhiresourceupdatebatch.html">QRhiResourceUpdateBatch</a> with the <a href="qrhiresourceupdatebatch.html#readBackTexture">texture readback</a> on it)</p><!-- @@@QRhiReadbackDescription -->
 <!-- $$$QRhiReadbackDescription$$$QRhiReadbackDescriptionQRhiTexture* -->
-<h3 class="fn" id="QRhiReadbackDescription-1"><a name="QRhiReadbackDescription-1"></a>QRhiReadbackDescription::<span class="name">QRhiReadbackDescription</span>(<span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>texture_</i>)</h3>
-<p>Default constructs an instance of QRhiReadbackDescription.</p><!-- @@@QRhiReadbackDescription -->
+<h3 class="fn" id="QRhiReadbackDescription-1"><a name="QRhiReadbackDescription-1"></a>QRhiReadbackDescription::<span class="name">QRhiReadbackDescription</span>(<span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>texture</i>)</h3>
+<p>Constructs an texture readback description that specifies that level 0 of layer 0 of <i>texture</i> is to be read back.</p>
+<p><b>Note: </b><i>texture</i> can also be null in which case this constructor is identical to the argumentless variant.</p><!-- @@@QRhiReadbackDescription -->
+<!-- $$$layer[overload1]$$$layer -->
+<h3 class="fn" id="layer"><a name="layer"></a><span class="type">int</span> QRhiReadbackDescription::<span class="name">layer</span>() const</h3>
+<p><b>See also </b><a href="qrhireadbackdescription.html#setLayer">setLayer</a>().</p>
+<!-- @@@layer -->
+<!-- $$$level[overload1]$$$level -->
+<h3 class="fn" id="level"><a name="level"></a><span class="type">int</span> QRhiReadbackDescription::<span class="name">level</span>() const</h3>
+<p><b>See also </b><a href="qrhireadbackdescription.html#setLevel">setLevel</a>().</p>
+<!-- @@@level -->
+<!-- $$$setLayer[overload1]$$$setLayerint -->
+<h3 class="fn" id="setLayer"><a name="setLayer"></a><span class="type">void</span> QRhiReadbackDescription::<span class="name">setLayer</span>(<span class="type">int</span> <i>layer</i>)</h3>
+<p><b>See also </b><a href="qrhireadbackdescription.html#layer">layer</a>().</p>
+<!-- @@@setLayer -->
+<!-- $$$setLevel[overload1]$$$setLevelint -->
+<h3 class="fn" id="setLevel"><a name="setLevel"></a><span class="type">void</span> QRhiReadbackDescription::<span class="name">setLevel</span>(<span class="type">int</span> <i>level</i>)</h3>
+<p><b>See also </b><a href="qrhireadbackdescription.html#level">level</a>().</p>
+<!-- @@@setLevel -->
+<!-- $$$setTexture[overload1]$$$setTextureQRhiTexture* -->
+<h3 class="fn" id="setTexture"><a name="setTexture"></a><span class="type">void</span> QRhiReadbackDescription::<span class="name">setTexture</span>(<span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>tex</i>)</h3>
+<p><b>See also </b><a href="qrhireadbackdescription.html#texture">texture</a>().</p>
+<!-- @@@setTexture -->
+<!-- $$$texture[overload1]$$$texture -->
+<h3 class="fn" id="texture"><a name="texture"></a><span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *QRhiReadbackDescription::<span class="name">texture</span>() const</h3>
+<p><b>See also </b><a href="qrhireadbackdescription.html#setTexture">setTexture</a>().</p>
+<!-- @@@texture -->
 </div>
 <div class="vars">
 <h2>Member Variable Documentation</h2>

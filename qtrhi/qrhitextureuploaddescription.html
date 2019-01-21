@@ -38,9 +38,7 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
-<li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#public-variables">Public Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -54,28 +52,47 @@
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
 <li><a href="qrhitextureuploaddescription-members.html">List of all members, including inherited members</a></li>
 </ul>
-<a name="public-types"></a>
-<h2 id="public-types">Public Types</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qrhitextureuploaddescription-layer.html">Layer</a></b></td></tr>
-</table></div>
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitextureuploaddescription.html#QRhiTextureUploadDescription">QRhiTextureUploadDescription</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitextureuploaddescription.html#QRhiTextureUploadDescription-1">QRhiTextureUploadDescription</a></b>(const QVector&lt;QRhiTextureUploadDescription::Layer&gt; &amp;<i>layers_</i>)</td></tr>
-</table></div>
-<a name="public-variables"></a>
-<h2 id="public-variables">Public Variables</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiTextureUploadDescription::Layer&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhitextureuploaddescription.html#layers-var">layers</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitextureuploaddescription.html#QRhiTextureUploadDescription-1">QRhiTextureUploadDescription</a></b>(const QVector&lt;QRhiTextureLayer&gt; &amp;<i>layers</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiTextureLayer&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhitextureuploaddescription.html#layers">layers</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitextureuploaddescription.html#setLayers">setLayers</a></b>(const QVector&lt;QRhiTextureLayer&gt; &amp;<i>layers</i>)</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$QRhiTextureUploadDescription-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Describes a texture upload operation.</p>
-<p><b>Note: </b>Cubemaps have one layer for each of the six faces in the order +X, -X, +Y, -Y, +Z, -Z.</p></div>
+<p>Used with <a href="qrhiresourceupdatebatch.html#uploadTexture">QRhiResourceUpdateBatch::uploadTexture</a>(). That function has two variants: one taking a <a href="../qtgui/qimage.html">QImage</a> and one taking a <a href="qrhitextureuploaddescription.html">QRhiTextureUploadDescription</a>. The former is a convenience version, internally creating a <a href="qrhitextureuploaddescription.html">QRhiTextureUploadDescription</a> with a single layer and a single image in that layer. However, when cubemaps, pre-generated mip images, or compressed textures are involved, applications will have to work directly with this class instead.</p>
+<p><b>Note: </b>Cubemaps have one layer for each of the six faces in the order +X, -X, +Y, -Y, +Z, -Z.</p><p>For example, specifying the faces of a cubemap could look like the following:</p>
+<pre class="cpp plain">
+
+  QImage faces[6];
+  ..&#x2e;
+  QVector&lt;QRhiTextureLayer&gt; layers;
+  for (int i = 0; i &lt; 6; ++i)
+    layers.append(QRhiTextureLayer({ QRhiTextureMipLevel(faces[i]) });
+  QRhiTextureUploadDescription desc(layers);
+  resourceUpdates-&gt;uploadTexture(texture, desc);
+
+</pre>
+<p>Another example that specifies mip images for a compressed texture:</p>
+<pre class="cpp plain">
+
+  QVector&lt;QRhiTextureMipLevel&gt; mipImages;
+  const int mipCount = rhi-&gt;mipLevelsForSize(compressedTexture-&gt;pixelSize());
+  for (int level = 0; level &lt; mipCount; ++level) {
+      const QByteArray compressedDataForLevel = ..&#x2e;
+      mipImages.append(QRhiTextureMipLevel(compressedDataForLevel));
+  }
+  QRhiTextureLayer layer(mipImages);
+  QRhiTextureUploadDescription desc({ layer });
+  resourceUpdates-&gt;uploadTexture(compressedTexture, desc);
+
+</pre>
+</div>
 <!-- @@@QRhiTextureUploadDescription -->
 <div class="types">
 <h2>Member Type Documentation</h2>
@@ -87,10 +104,20 @@
 <h2>Member Function Documentation</h2>
 <!-- $$$QRhiTextureUploadDescription[overload1]$$$QRhiTextureUploadDescription -->
 <h3 class="fn" id="QRhiTextureUploadDescription"><a name="QRhiTextureUploadDescription"></a>QRhiTextureUploadDescription::<span class="name">QRhiTextureUploadDescription</span>()</h3>
-<p>Default constructs an instance of QRhiTextureUploadDescription.</p><!-- @@@QRhiTextureUploadDescription -->
-<!-- $$$QRhiTextureUploadDescription$$$QRhiTextureUploadDescriptionconstQVector<QRhiTextureUploadDescription::Layer>& -->
-<h3 class="fn" id="QRhiTextureUploadDescription-1"><a name="QRhiTextureUploadDescription-1"></a>QRhiTextureUploadDescription::<span class="name">QRhiTextureUploadDescription</span>(const <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhitextureuploaddescription-layer.html">QRhiTextureUploadDescription::Layer</a></span>&gt; &amp;<i>layers_</i>)</h3>
-<p>Default constructs an instance of QRhiTextureUploadDescription.</p><!-- @@@QRhiTextureUploadDescription -->
+<p>Constructs an empty texture upload description.</p>
+<!-- @@@QRhiTextureUploadDescription -->
+<!-- $$$QRhiTextureUploadDescription$$$QRhiTextureUploadDescriptionconstQVector<QRhiTextureLayer>& -->
+<h3 class="fn" id="QRhiTextureUploadDescription-1"><a name="QRhiTextureUploadDescription-1"></a>QRhiTextureUploadDescription::<span class="name">QRhiTextureUploadDescription</span>(const <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhitexturelayer.html">QRhiTextureLayer</a></span>&gt; &amp;<i>layers</i>)</h3>
+<p>Constructs a texture upload description with the specified list of <i>layers</i>.</p>
+<!-- @@@QRhiTextureUploadDescription -->
+<!-- $$$layers[overload1]$$$layers -->
+<h3 class="fn" id="layers"><a name="layers"></a><span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhitexturelayer.html">QRhiTextureLayer</a></span>&gt; QRhiTextureUploadDescription::<span class="name">layers</span>() const</h3>
+<p><b>See also </b><a href="qrhitextureuploaddescription.html#setLayers">setLayers</a>().</p>
+<!-- @@@layers -->
+<!-- $$$setLayers[overload1]$$$setLayersconstQVector<QRhiTextureLayer>& -->
+<h3 class="fn" id="setLayers"><a name="setLayers"></a><span class="type">void</span> QRhiTextureUploadDescription::<span class="name">setLayers</span>(const <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhitexturelayer.html">QRhiTextureLayer</a></span>&gt; &amp;<i>layers</i>)</h3>
+<p><b>See also </b><a href="qrhitextureuploaddescription.html#layers">layers</a>().</p>
+<!-- @@@setLayers -->
 </div>
 <div class="vars">
 <h2>Member Variable Documentation</h2>

@@ -90,7 +90,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_depthStencil-var">m_depthStencil</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiSwapChain::Flags </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_flags-var">m_flags</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderPassDescriptor *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_renderPassDesc-var">m_renderPassDesc</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_reserved-var">m_reserved</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> quint64 </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_reserved-var">m_reserved</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_sampleCount-var">m_sampleCount</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QObject *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_target-var">m_target</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QWindow *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_window-var">m_window</a></b></td></tr>
@@ -235,7 +235,7 @@
 <!-- @@@buildOrResize -->
 <!-- $$$currentFrameCommandBuffer[overload1]$$$currentFrameCommandBuffer -->
 <h3 class="fn" id="currentFrameCommandBuffer"><a name="currentFrameCommandBuffer"></a><code>[pure virtual] </code><span class="type"><a href="qrhicommandbuffer.html">QRhiCommandBuffer</a></span> *QRhiSwapChain::<span class="name">currentFrameCommandBuffer</span>()</h3>
-<p>Returns a command buffer on which rendering commands can be recorded. Only valid within a Rhi::beginFrame() - <a href="qrhi.html#endFrame">QRhi::endFrame</a>() block where beginFrame() was called with this swapchain.</p>
+<p>Returns a command buffer on which rendering commands can be recorded. Only valid within a <a href="qrhi.html#beginFrame">QRhi::beginFrame</a>() - <a href="qrhi.html#endFrame">QRhi::endFrame</a>() block where beginFrame() was called with this swapchain.</p>
 <p><b>Note: </b>the value must not be cached and reused between frames</p><!-- @@@currentFrameCommandBuffer -->
 <!-- $$$currentFrameRenderTarget[overload1]$$$currentFrameRenderTarget -->
 <h3 class="fn" id="currentFrameRenderTarget"><a name="currentFrameRenderTarget"></a><code>[pure virtual] </code><span class="type"><a href="qrhirendertarget.html">QRhiRenderTarget</a></span> *QRhiSwapChain::<span class="name">currentFrameRenderTarget</span>()</h3>

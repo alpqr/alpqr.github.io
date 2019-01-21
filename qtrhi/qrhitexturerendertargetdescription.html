@@ -38,9 +38,7 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
-<li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#public-variables">Public Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -54,25 +52,19 @@
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
 <li><a href="qrhitexturerendertargetdescription-members.html">List of all members, including inherited members</a></li>
 </ul>
-<a name="public-types"></a>
-<h2 id="public-types">Public Types</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> class </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription-colorattachment.html">ColorAttachment</a></b></td></tr>
-</table></div>
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#QRhiTextureRenderTargetDescription">QRhiTextureRenderTargetDescription</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#QRhiTextureRenderTargetDescription-1">QRhiTextureRenderTargetDescription</a></b>(const QRhiTextureRenderTargetDescription::ColorAttachment &amp;<i>colorAttachment</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#QRhiTextureRenderTargetDescription-2">QRhiTextureRenderTargetDescription</a></b>(const QRhiTextureRenderTargetDescription::ColorAttachment &amp;<i>colorAttachment</i>, QRhiRenderBuffer *<i>depthStencilBuffer_</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#QRhiTextureRenderTargetDescription-3">QRhiTextureRenderTargetDescription</a></b>(const QRhiTextureRenderTargetDescription::ColorAttachment &amp;<i>colorAttachment</i>, QRhiTexture *<i>depthTexture_</i>)</td></tr>
-</table></div>
-<a name="public-variables"></a>
-<h2 id="public-variables">Public Variables</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiTextureRenderTargetDescription::ColorAttachment&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#colorAttachments-var">colorAttachments</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#depthStencilBuffer-var">depthStencilBuffer</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QRhiTexture *</td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#depthTexture-var">depthTexture</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#QRhiTextureRenderTargetDescription-1">QRhiTextureRenderTargetDescription</a></b>(const QRhiColorAttachment &amp;<i>colorAttachment</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#QRhiTextureRenderTargetDescription-2">QRhiTextureRenderTargetDescription</a></b>(const QRhiColorAttachment &amp;<i>colorAttachment</i>, QRhiRenderBuffer *<i>depthStencilBuffer</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#QRhiTextureRenderTargetDescription-3">QRhiTextureRenderTargetDescription</a></b>(const QRhiColorAttachment &amp;<i>colorAttachment</i>, QRhiTexture *<i>depthTexture</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiColorAttachment&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#colorAttachments">colorAttachments</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#depthStencilBuffer">depthStencilBuffer</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiTexture *</td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#depthTexture">depthTexture</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#setColorAttachments">setColorAttachments</a></b>(const QVector&lt;QRhiColorAttachment&gt; &amp;<i>att</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#setDepthStencilBuffer">setDepthStencilBuffer</a></b>(QRhiRenderBuffer *<i>renderBuffer</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturerendertargetdescription.html#setDepthTexture">setDepthTexture</a></b>(QRhiTexture *<i>texture</i>)</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$QRhiTextureRenderTargetDescription-description -->
@@ -80,7 +72,7 @@
 <h2 id="details">Detailed Description</h2>
 <p>Describes the color and depth or depth/stencil attachments of a render target.</p>
 <p>A texture render target has zero or more textures as color attachments, zero or one renderbuffer as combined depth/stencil buffer or zero or one texture as depth buffer.</p>
-<p><b>Note: </b><a href="qrhitexturerendertargetdescription.html#depthStencilBuffer-var">depthStencilBuffer</a> and <a href="qrhitexturerendertargetdescription.html#depthTexture-var">depthTexture</a> cannot be both set.</p></div>
+<p><b>Note: </b><a href="qrhitexturerendertargetdescription.html#depthStencilBuffer">depthStencilBuffer</a>() and <a href="qrhitexturerendertargetdescription.html#depthTexture">depthTexture</a>() cannot be both set (cannot be non-null at the same time).</p></div>
 <!-- @@@QRhiTextureRenderTargetDescription -->
 <div class="types">
 <h2>Member Type Documentation</h2>
@@ -92,16 +84,44 @@
 <h2>Member Function Documentation</h2>
 <!-- $$$QRhiTextureRenderTargetDescription[overload1]$$$QRhiTextureRenderTargetDescription -->
 <h3 class="fn" id="QRhiTextureRenderTargetDescription"><a name="QRhiTextureRenderTargetDescription"></a>QRhiTextureRenderTargetDescription::<span class="name">QRhiTextureRenderTargetDescription</span>()</h3>
-<p>Default constructs an instance of QRhiTextureRenderTargetDescription.</p><!-- @@@QRhiTextureRenderTargetDescription -->
-<!-- $$$QRhiTextureRenderTargetDescription$$$QRhiTextureRenderTargetDescriptionconstQRhiTextureRenderTargetDescription::ColorAttachment& -->
-<h3 class="fn" id="QRhiTextureRenderTargetDescription-1"><a name="QRhiTextureRenderTargetDescription-1"></a>QRhiTextureRenderTargetDescription::<span class="name">QRhiTextureRenderTargetDescription</span>(const <span class="type"><a href="qrhitexturerendertargetdescription-colorattachment.html">QRhiTextureRenderTargetDescription::ColorAttachment</a></span> &amp;<i>colorAttachment</i>)</h3>
-<p>Default constructs an instance of QRhiTextureRenderTargetDescription.</p><!-- @@@QRhiTextureRenderTargetDescription -->
-<!-- $$$QRhiTextureRenderTargetDescription$$$QRhiTextureRenderTargetDescriptionconstQRhiTextureRenderTargetDescription::ColorAttachment&QRhiRenderBuffer* -->
-<h3 class="fn" id="QRhiTextureRenderTargetDescription-2"><a name="QRhiTextureRenderTargetDescription-2"></a>QRhiTextureRenderTargetDescription::<span class="name">QRhiTextureRenderTargetDescription</span>(const <span class="type"><a href="qrhitexturerendertargetdescription-colorattachment.html">QRhiTextureRenderTargetDescription::ColorAttachment</a></span> &amp;<i>colorAttachment</i>, <span class="type"><a href="qrhirenderbuffer.html">QRhiRenderBuffer</a></span> *<i>depthStencilBuffer_</i>)</h3>
-<p>Default constructs an instance of QRhiTextureRenderTargetDescription.</p><!-- @@@QRhiTextureRenderTargetDescription -->
-<!-- $$$QRhiTextureRenderTargetDescription$$$QRhiTextureRenderTargetDescriptionconstQRhiTextureRenderTargetDescription::ColorAttachment&QRhiTexture* -->
-<h3 class="fn" id="QRhiTextureRenderTargetDescription-3"><a name="QRhiTextureRenderTargetDescription-3"></a>QRhiTextureRenderTargetDescription::<span class="name">QRhiTextureRenderTargetDescription</span>(const <span class="type"><a href="qrhitexturerendertargetdescription-colorattachment.html">QRhiTextureRenderTargetDescription::ColorAttachment</a></span> &amp;<i>colorAttachment</i>, <span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>depthTexture_</i>)</h3>
-<p>Default constructs an instance of QRhiTextureRenderTargetDescription.</p><!-- @@@QRhiTextureRenderTargetDescription -->
+<p>Constructs an empty texture render target description.</p>
+<!-- @@@QRhiTextureRenderTargetDescription -->
+<!-- $$$QRhiTextureRenderTargetDescription$$$QRhiTextureRenderTargetDescriptionconstQRhiColorAttachment& -->
+<h3 class="fn" id="QRhiTextureRenderTargetDescription-1"><a name="QRhiTextureRenderTargetDescription-1"></a>QRhiTextureRenderTargetDescription::<span class="name">QRhiTextureRenderTargetDescription</span>(const <span class="type"><a href="qrhicolorattachment.html">QRhiColorAttachment</a></span> &amp;<i>colorAttachment</i>)</h3>
+<p>Constructs a texture render target description with one attachment described by <i>colorAttachment</i>.</p>
+<!-- @@@QRhiTextureRenderTargetDescription -->
+<!-- $$$QRhiTextureRenderTargetDescription$$$QRhiTextureRenderTargetDescriptionconstQRhiColorAttachment&QRhiRenderBuffer* -->
+<h3 class="fn" id="QRhiTextureRenderTargetDescription-2"><a name="QRhiTextureRenderTargetDescription-2"></a>QRhiTextureRenderTargetDescription::<span class="name">QRhiTextureRenderTargetDescription</span>(const <span class="type"><a href="qrhicolorattachment.html">QRhiColorAttachment</a></span> &amp;<i>colorAttachment</i>, <span class="type"><a href="qrhirenderbuffer.html">QRhiRenderBuffer</a></span> *<i>depthStencilBuffer</i>)</h3>
+<p>Constructs a texture render target description with two attachments, a color attachment described by <i>colorAttachment</i>, and a depth/stencil attachment with <i>depthStencilBuffer</i>.</p>
+<!-- @@@QRhiTextureRenderTargetDescription -->
+<!-- $$$QRhiTextureRenderTargetDescription$$$QRhiTextureRenderTargetDescriptionconstQRhiColorAttachment&QRhiTexture* -->
+<h3 class="fn" id="QRhiTextureRenderTargetDescription-3"><a name="QRhiTextureRenderTargetDescription-3"></a>QRhiTextureRenderTargetDescription::<span class="name">QRhiTextureRenderTargetDescription</span>(const <span class="type"><a href="qrhicolorattachment.html">QRhiColorAttachment</a></span> &amp;<i>colorAttachment</i>, <span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>depthTexture</i>)</h3>
+<p>Constructs a texture render target description with two attachments, a color attachment described by <i>colorAttachment</i>, and a depth attachment with <i>depthTexture</i>.</p>
+<p><b>Note: </b><i>depthTexture</i> must have a suitable format, such as <a href="qrhitexture.html#Format-enum">QRhiTexture::D16</a> or <a href="qrhitexture.html#Format-enum">QRhiTexture::D32</a>.</p><!-- @@@QRhiTextureRenderTargetDescription -->
+<!-- $$$colorAttachments[overload1]$$$colorAttachments -->
+<h3 class="fn" id="colorAttachments"><a name="colorAttachments"></a><span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhicolorattachment.html">QRhiColorAttachment</a></span>&gt; QRhiTextureRenderTargetDescription::<span class="name">colorAttachments</span>() const</h3>
+<p><b>See also </b><a href="qrhitexturerendertargetdescription.html#setColorAttachments">setColorAttachments</a>().</p>
+<!-- @@@colorAttachments -->
+<!-- $$$depthStencilBuffer[overload1]$$$depthStencilBuffer -->
+<h3 class="fn" id="depthStencilBuffer"><a name="depthStencilBuffer"></a><span class="type"><a href="qrhirenderbuffer.html">QRhiRenderBuffer</a></span> *QRhiTextureRenderTargetDescription::<span class="name">depthStencilBuffer</span>() const</h3>
+<p><b>See also </b><a href="qrhitexturerendertargetdescription.html#setDepthStencilBuffer">setDepthStencilBuffer</a>().</p>
+<!-- @@@depthStencilBuffer -->
+<!-- $$$depthTexture[overload1]$$$depthTexture -->
+<h3 class="fn" id="depthTexture"><a name="depthTexture"></a><span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *QRhiTextureRenderTargetDescription::<span class="name">depthTexture</span>() const</h3>
+<p><b>See also </b><a href="qrhitexturerendertargetdescription.html#setDepthTexture">setDepthTexture</a>().</p>
+<!-- @@@depthTexture -->
+<!-- $$$setColorAttachments[overload1]$$$setColorAttachmentsconstQVector<QRhiColorAttachment>& -->
+<h3 class="fn" id="setColorAttachments"><a name="setColorAttachments"></a><span class="type">void</span> QRhiTextureRenderTargetDescription::<span class="name">setColorAttachments</span>(const <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhicolorattachment.html">QRhiColorAttachment</a></span>&gt; &amp;<i>att</i>)</h3>
+<p><b>See also </b><a href="qrhitexturerendertargetdescription.html#colorAttachments">colorAttachments</a>().</p>
+<!-- @@@setColorAttachments -->
+<!-- $$$setDepthStencilBuffer[overload1]$$$setDepthStencilBufferQRhiRenderBuffer* -->
+<h3 class="fn" id="setDepthStencilBuffer"><a name="setDepthStencilBuffer"></a><span class="type">void</span> QRhiTextureRenderTargetDescription::<span class="name">setDepthStencilBuffer</span>(<span class="type"><a href="qrhirenderbuffer.html">QRhiRenderBuffer</a></span> *<i>renderBuffer</i>)</h3>
+<p><b>See also </b><a href="qrhitexturerendertargetdescription.html#depthStencilBuffer">depthStencilBuffer</a>().</p>
+<!-- @@@setDepthStencilBuffer -->
+<!-- $$$setDepthTexture[overload1]$$$setDepthTextureQRhiTexture* -->
+<h3 class="fn" id="setDepthTexture"><a name="setDepthTexture"></a><span class="type">void</span> QRhiTextureRenderTargetDescription::<span class="name">setDepthTexture</span>(<span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>texture</i>)</h3>
+<p><b>See also </b><a href="qrhitexturerendertargetdescription.html#depthTexture">depthTexture</a>().</p>
+<!-- @@@setDepthTexture -->
 </div>
 <div class="vars">
 <h2>Member Variable Documentation</h2>

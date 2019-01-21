@@ -84,7 +84,7 @@
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#m_reserved-var">m_reserved</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> quint64 </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#m_reserved-var">m_reserved</a></b></td></tr>
 </table></div>
 <ul>
 <li class="fn">2 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
@@ -199,13 +199,13 @@
 <pre class="cpp plain">
 
   QRhiVertexInputLayout inputLayout;
-  inputLayout.bindings = {
+  inputLayout.setBindings({
       { 5 * sizeof(float) }
-  };
-  inputLayout.attributes = {
-      { 0, 0, QRhiVertexInputLayout::Attribute::Float2, 0 },
-      { 0, 1, QRhiVertexInputLayout::Attribute::Float3, 2 * sizeof(float) }
-  };
+  });
+  inputLayout.setAttributes({
+      { 0, 0, QRhiVertexInputAttribute::Float2, 0 },
+      { 0, 1, QRhiVertexInputAttribute::Float3, 2 * sizeof(float) }
+  });
 
 </pre>
 <p>Here there is one buffer binding (binding number 0), with two inputs referencing it. When recording the pass, once the pipeline is set, the vertex bindings can be specified simply like the following (using C++11 initializer syntax), assuming vbuf is the <a href="qrhibuffer.html">QRhiBuffer</a> with all the interleaved position+color data:</p>

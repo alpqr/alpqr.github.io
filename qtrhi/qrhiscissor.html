@@ -39,7 +39,6 @@
 <h3><a name="toc">Contents</a></h3>
 <ul>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#public-variables">Public Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -58,11 +57,8 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhiscissor.html#QRhiScissor">QRhiScissor</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhiscissor.html#QRhiScissor-1">QRhiScissor</a></b>(int <i>x</i>, int <i>y</i>, int <i>w</i>, int <i>h</i>)</td></tr>
-</table></div>
-<a name="public-variables"></a>
-<h2 id="public-variables">Public Variables</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> QVector4D </td><td class="memItemRight bottomAlign"><b><a href="qrhiscissor.html#r-var">r</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector4D </td><td class="memItemRight bottomAlign"><b><a href="qrhiscissor.html#scissor">scissor</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiscissor.html#setScissor">setScissor</a></b>(const QVector4D &amp;<i>v</i>)</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$QRhiScissor-description -->
@@ -70,7 +66,7 @@
 <h2 id="details">Detailed Description</h2>
 <p>Specifies a scissor rectangle.</p>
 <p>Used with <a href="qrhicommandbuffer.html#setScissor">QRhiCommandBuffer::setScissor</a>(). Setting a scissor rectangle is only possible with a <a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a> that has <a href="qrhigraphicspipeline.html#Flag-enum">QRhiGraphicsPipeline::UsesScissor</a> set.</p>
-<p><b>Note: </b><a href="qrhi.html">QRhi</a> assumes OpenGL-style viewport coordinates, meaning x and y are bottom-left.</p></div>
+<p><b>Note: </b><a href="qrhi.html">QRhi</a> assumes OpenGL-style scissor coordinates, meaning x and y are bottom-left.</p></div>
 <p><b>See also </b><a href="qrhicommandbuffer.html#setScissor">QRhiCommandBuffer::setScissor</a>() and <a href="qrhiviewport.html">QRhiViewport</a>.</p>
 <!-- @@@QRhiScissor -->
 <div class="types">
@@ -83,10 +79,20 @@
 <h2>Member Function Documentation</h2>
 <!-- $$$QRhiScissor[overload1]$$$QRhiScissor -->
 <h3 class="fn" id="QRhiScissor"><a name="QRhiScissor"></a>QRhiScissor::<span class="name">QRhiScissor</span>()</h3>
-<p>Default constructs an instance of QRhiScissor.</p><!-- @@@QRhiScissor -->
+<p>Constructs an empty scissor.</p>
+<!-- @@@QRhiScissor -->
 <!-- $$$QRhiScissor$$$QRhiScissorintintintint -->
 <h3 class="fn" id="QRhiScissor-1"><a name="QRhiScissor-1"></a>QRhiScissor::<span class="name">QRhiScissor</span>(<span class="type">int</span> <i>x</i>, <span class="type">int</span> <i>y</i>, <span class="type">int</span> <i>w</i>, <span class="type">int</span> <i>h</i>)</h3>
-<p>Default constructs an instance of QRhiScissor.</p><!-- @@@QRhiScissor -->
+<p>Constructs a scissor with the rectangle specified by <i>x</i>, <i>y</i>, <i>w</i>, and <i>h</i>.</p>
+<p><b>Note: </b>x and y are assumed to be the bottom-left position.</p><!-- @@@QRhiScissor -->
+<!-- $$$scissor[overload1]$$$scissor -->
+<h3 class="fn" id="scissor"><a name="scissor"></a><span class="type"><a href="../qtgui/qvector4d.html">QVector4D</a></span> QRhiScissor::<span class="name">scissor</span>() const</h3>
+<p><b>See also </b><a href="qrhiscissor.html#setScissor">setScissor</a>().</p>
+<!-- @@@scissor -->
+<!-- $$$setScissor[overload1]$$$setScissorconstQVector4D& -->
+<h3 class="fn" id="setScissor"><a name="setScissor"></a><span class="type">void</span> QRhiScissor::<span class="name">setScissor</span>(const <span class="type"><a href="../qtgui/qvector4d.html">QVector4D</a></span> &amp;<i>v</i>)</h3>
+<p><b>See also </b><a href="qrhiscissor.html#scissor">scissor</a>().</p>
+<!-- @@@setScissor -->
 </div>
 <div class="vars">
 <h2>Member Variable Documentation</h2>

@@ -15,7 +15,7 @@
             <name>QRhiColorClearValue</name>
             <anchorfile>qrhicolorclearvalue.html</anchorfile>
             <anchor>QRhiColorClearValue-1</anchor>
-            <arglist>(const QVector4D &amp;rgba_)</arglist>
+            <arglist>(const QVector4D &amp;c)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
@@ -23,6 +23,20 @@
             <anchorfile>qrhicolorclearvalue.html</anchorfile>
             <anchor>QRhiColorClearValue-2</anchor>
             <arglist>(float r, float g, float b, float a)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector4D</type>
+            <name>rgba</name>
+            <anchorfile>qrhicolorclearvalue.html</anchorfile>
+            <anchor>rgba</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setRgba</name>
+            <anchorfile>qrhicolorclearvalue.html</anchorfile>
+            <anchor>setRgba</anchor>
+            <arglist>(const QVector4D &amp;c)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -40,7 +54,35 @@
             <name>QRhiDepthStencilClearValue</name>
             <anchorfile>qrhidepthstencilclearvalue.html</anchorfile>
             <anchor>QRhiDepthStencilClearValue-1</anchor>
-            <arglist>(float d_, quint32 s_)</arglist>
+            <arglist>(float d, quint32 s)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>float</type>
+            <name>depthClearValue</name>
+            <anchorfile>qrhidepthstencilclearvalue.html</anchorfile>
+            <anchor>depthClearValue</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setDepthClearValue</name>
+            <anchorfile>qrhidepthstencilclearvalue.html</anchorfile>
+            <anchor>setDepthClearValue</anchor>
+            <arglist>(float d)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>quint32</type>
+            <name>stencilClearValue</name>
+            <anchorfile>qrhidepthstencilclearvalue.html</anchorfile>
+            <anchor>stencilClearValue</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setStencilClearValue</name>
+            <anchorfile>qrhidepthstencilclearvalue.html</anchorfile>
+            <anchor>setStencilClearValue</anchor>
+            <arglist>(quint32 s)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -58,7 +100,49 @@
             <name>QRhiViewport</name>
             <anchorfile>qrhiviewport.html</anchorfile>
             <anchor>QRhiViewport-1</anchor>
-            <arglist>(float x, float y, float w, float h, float minDepth_, float maxDepth_)</arglist>
+            <arglist>(float x, float y, float w, float h, float minDepth, float maxDepth)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector4D</type>
+            <name>viewport</name>
+            <anchorfile>qrhiviewport.html</anchorfile>
+            <anchor>viewport</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setViewport</name>
+            <anchorfile>qrhiviewport.html</anchorfile>
+            <anchor>setViewport</anchor>
+            <arglist>(const QVector4D &amp;v)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>float</type>
+            <name>minDepth</name>
+            <anchorfile>qrhiviewport.html</anchorfile>
+            <anchor>minDepth</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setMinDepth</name>
+            <anchorfile>qrhiviewport.html</anchorfile>
+            <anchor>setMinDepth</anchor>
+            <arglist>(float minDepth)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>float</type>
+            <name>maxDepth</name>
+            <anchorfile>qrhiviewport.html</anchorfile>
+            <anchor>maxDepth</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setMaxDepth</name>
+            <anchorfile>qrhiviewport.html</anchorfile>
+            <anchor>setMaxDepth</anchor>
+            <arglist>(float maxDepth)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -78,16 +162,24 @@
             <anchor>QRhiScissor-1</anchor>
             <arglist>(int x, int y, int w, int h)</arglist>
         </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector4D</type>
+            <name>scissor</name>
+            <anchorfile>qrhiscissor.html</anchorfile>
+            <anchor>scissor</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setScissor</name>
+            <anchorfile>qrhiscissor.html</anchorfile>
+            <anchor>setScissor</anchor>
+            <arglist>(const QVector4D &amp;v)</arglist>
+        </member>
     </compound>
     <compound kind="class">
-        <name>QRhiVertexInputLayout</name>
-        <filename>qrhivertexinputlayout.html</filename>
-        <class>QRhiVertexInputLayout::Binding</class>
-        <class>QRhiVertexInputLayout::Attribute</class>
-    </compound>
-    <compound kind="class">
-        <name>QRhiVertexInputLayout::Binding</name>
-        <filename>qrhivertexinputlayout-binding.html</filename>
+        <name>QRhiVertexInputBinding</name>
+        <filename>qrhivertexinputbinding.html</filename>
         <member kind="enum">
             <name>Classification</name>
             <anchor>Classification-enum</anchor>
@@ -103,22 +195,64 @@
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
-            <name>Binding</name>
-            <anchorfile>qrhivertexinputlayout-binding.html</anchorfile>
-            <anchor>Binding</anchor>
+            <name>QRhiVertexInputBinding</name>
+            <anchorfile>qrhivertexinputbinding.html</anchorfile>
+            <anchor>QRhiVertexInputBinding</anchor>
             <arglist>()</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
-            <name>Binding</name>
-            <anchorfile>qrhivertexinputlayout-binding.html</anchorfile>
-            <anchor>Binding-1</anchor>
-            <arglist>(quint32 stride_, Binding::Classification cls, int stepRate)</arglist>
+            <name>QRhiVertexInputBinding</name>
+            <anchorfile>qrhivertexinputbinding.html</anchorfile>
+            <anchor>QRhiVertexInputBinding-1</anchor>
+            <arglist>(quint32 stride, QRhiVertexInputBinding::Classification cls, int stepRate)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>quint32</type>
+            <name>stride</name>
+            <anchorfile>qrhivertexinputbinding.html</anchorfile>
+            <anchor>stride</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setStride</name>
+            <anchorfile>qrhivertexinputbinding.html</anchorfile>
+            <anchor>setStride</anchor>
+            <arglist>(quint32 s)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiVertexInputBinding::Classification</type>
+            <name>classification</name>
+            <anchorfile>qrhivertexinputbinding.html</anchorfile>
+            <anchor>classification</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setClassification</name>
+            <anchorfile>qrhivertexinputbinding.html</anchorfile>
+            <anchor>setClassification</anchor>
+            <arglist>(QRhiVertexInputBinding::Classification c)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>instanceStepRate</name>
+            <anchorfile>qrhivertexinputbinding.html</anchorfile>
+            <anchor>instanceStepRate</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setInstanceStepRate</name>
+            <anchorfile>qrhivertexinputbinding.html</anchorfile>
+            <anchor>setInstanceStepRate</anchor>
+            <arglist>(int rate)</arglist>
         </member>
     </compound>
     <compound kind="class">
-        <name>QRhiVertexInputLayout::Attribute</name>
-        <filename>qrhivertexinputlayout-attribute.html</filename>
+        <name>QRhiVertexInputAttribute</name>
+        <filename>qrhivertexinputattribute.html</filename>
         <member kind="enum">
             <name>Format</name>
             <anchor>Format-enum</anchor>
@@ -154,17 +288,112 @@
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
-            <name>Attribute</name>
-            <anchorfile>qrhivertexinputlayout-attribute.html</anchorfile>
-            <anchor>Attribute</anchor>
+            <name>QRhiVertexInputAttribute</name>
+            <anchorfile>qrhivertexinputattribute.html</anchorfile>
+            <anchor>QRhiVertexInputAttribute</anchor>
             <arglist>()</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
-            <name>Attribute</name>
-            <anchorfile>qrhivertexinputlayout-attribute.html</anchorfile>
-            <anchor>Attribute-1</anchor>
-            <arglist>(int binding_, int location_, Attribute::Format format_, quint32 offset_)</arglist>
+            <name>QRhiVertexInputAttribute</name>
+            <anchorfile>qrhivertexinputattribute.html</anchorfile>
+            <anchor>QRhiVertexInputAttribute-1</anchor>
+            <arglist>(int binding, int location, QRhiVertexInputAttribute::Format format, quint32 offset)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>binding</name>
+            <anchorfile>qrhivertexinputattribute.html</anchorfile>
+            <anchor>binding</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setBinding</name>
+            <anchorfile>qrhivertexinputattribute.html</anchorfile>
+            <anchor>setBinding</anchor>
+            <arglist>(int b)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>location</name>
+            <anchorfile>qrhivertexinputattribute.html</anchorfile>
+            <anchor>location</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setLocation</name>
+            <anchorfile>qrhivertexinputattribute.html</anchorfile>
+            <anchor>setLocation</anchor>
+            <arglist>(int loc)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiVertexInputAttribute::Format</type>
+            <name>format</name>
+            <anchorfile>qrhivertexinputattribute.html</anchorfile>
+            <anchor>format</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setFormt</name>
+            <anchorfile>qrhivertexinputattribute.html</anchorfile>
+            <anchor>setFormt</anchor>
+            <arglist>(QRhiVertexInputAttribute::Format f)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>quint32</type>
+            <name>offset</name>
+            <anchorfile>qrhivertexinputattribute.html</anchorfile>
+            <anchor>offset</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setOffset</name>
+            <anchorfile>qrhivertexinputattribute.html</anchorfile>
+            <anchor>setOffset</anchor>
+            <arglist>(quint32 ofs)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiVertexInputLayout</name>
+        <filename>qrhivertexinputlayout.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiVertexInputLayout</name>
+            <anchorfile>qrhivertexinputlayout.html</anchorfile>
+            <anchor>QRhiVertexInputLayout</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QRhiVertexInputBinding&gt;</type>
+            <name>bindings</name>
+            <anchorfile>qrhivertexinputlayout.html</anchorfile>
+            <anchor>bindings</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setBindings</name>
+            <anchorfile>qrhivertexinputlayout.html</anchorfile>
+            <anchor>setBindings</anchor>
+            <arglist>(const QVector&lt;QRhiVertexInputBinding&gt; &amp;v)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QRhiVertexInputAttribute&gt;</type>
+            <name>attributes</name>
+            <anchorfile>qrhivertexinputlayout.html</anchorfile>
+            <anchor>attributes</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setAttributes</name>
+            <anchorfile>qrhivertexinputlayout.html</anchorfile>
+            <anchor>setAttributes</anchor>
+            <arglist>(const QVector&lt;QRhiVertexInputAttribute&gt; &amp;v)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -203,7 +432,35 @@
             <name>QRhiGraphicsShaderStage</name>
             <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
             <anchor>QRhiGraphicsShaderStage-1</anchor>
-            <arglist>(QRhiGraphicsShaderStage::Type type_, const QBakedShader &amp;shader_)</arglist>
+            <arglist>(QRhiGraphicsShaderStage::Type type, const QBakedShader &amp;shader)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiGraphicsShaderStage::Type</type>
+            <name>type</name>
+            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchor>type</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setType</name>
+            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchor>setType</anchor>
+            <arglist>(QRhiGraphicsShaderStage::Type t)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QBakedShader</type>
+            <name>shader</name>
+            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchor>shader</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setShader</name>
+            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchor>setShader</anchor>
+            <arglist>(const QBakedShader &amp;s)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -249,42 +506,161 @@
             <anchor>StageFlag-enum</anchor>
             <arglist></arglist>
         </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>~QRhiShaderResourceBinding</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>dtor.QRhiShaderResourceBinding</anchor>
+            <arglist>()</arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="yes">
             <type>QRhiShaderResourceBinding</type>
             <name>uniformBuffer</name>
             <anchorfile>qrhishaderresourcebinding.html</anchorfile>
             <anchor>uniformBuffer</anchor>
-            <arglist>(int binding_, QRhiShaderResourceBinding::StageFlags stage_, QRhiBuffer *buf_)</arglist>
+            <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiBuffer *buf)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="yes">
             <type>QRhiShaderResourceBinding</type>
             <name>uniformBuffer</name>
             <anchorfile>qrhishaderresourcebinding.html</anchorfile>
             <anchor>uniformBuffer-1</anchor>
-            <arglist>(int binding_, QRhiShaderResourceBinding::StageFlags stage_, QRhiBuffer *buf_, int offset_, int size_)</arglist>
+            <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiBuffer *buf, int offset, int size)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="yes">
             <type>QRhiShaderResourceBinding</type>
             <name>sampledTexture</name>
             <anchorfile>qrhishaderresourcebinding.html</anchorfile>
             <anchor>sampledTexture</anchor>
-            <arglist>(int binding_, QRhiShaderResourceBinding::StageFlags stage_, QRhiTexture *tex_, QRhiSampler *sampler_)</arglist>
+            <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiTexture *tex, QRhiSampler *sampler)</arglist>
         </member>
-        <class>QRhiShaderResourceBinding::UniformBufferData</class>
-        <class>QRhiShaderResourceBinding::SampledTextureData</class>
     </compound>
     <compound kind="class">
-        <name>QRhiShaderResourceBinding::UniformBufferData</name>
-        <filename>qrhishaderresourcebinding-uniformbufferdata.html</filename>
-    </compound>
-    <compound kind="class">
-        <name>QRhiShaderResourceBinding::SampledTextureData</name>
-        <filename>qrhishaderresourcebinding-sampledtexturedata.html</filename>
+        <name>QRhiColorAttachment</name>
+        <filename>qrhicolorattachment.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiColorAttachment</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>QRhiColorAttachment</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiColorAttachment</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>QRhiColorAttachment-1</anchor>
+            <arglist>(QRhiTexture *texture)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiColorAttachment</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>QRhiColorAttachment-2</anchor>
+            <arglist>(QRhiRenderBuffer *renderBuffer)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiTexture *</type>
+            <name>texture</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>texture</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setTexture</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>setTexture</anchor>
+            <arglist>(QRhiTexture *tex)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiRenderBuffer *</type>
+            <name>renderBuffer</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>renderBuffer</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setRenderBuffer</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>setRenderBuffer</anchor>
+            <arglist>(QRhiRenderBuffer *rb)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>layer</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>layer</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setLayer</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>setLayer</anchor>
+            <arglist>(int layer)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>level</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>level</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setLevel</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>setLevel</anchor>
+            <arglist>(int level)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiTexture *</type>
+            <name>resolveTexture</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>resolveTexture</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setResolveTexture</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>setResolveTexture</anchor>
+            <arglist>(QRhiTexture *tex)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>resolveLayer</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>resolveLayer</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setResolveLayer</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>setResolveLayer</anchor>
+            <arglist>(int layer)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>resolveLevel</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>resolveLevel</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setResolveLevel</name>
+            <anchorfile>qrhicolorattachment.html</anchorfile>
+            <anchor>setResolveLevel</anchor>
+            <arglist>(int level)</arglist>
+        </member>
     </compound>
     <compound kind="class">
         <name>QRhiTextureRenderTargetDescription</name>
         <filename>qrhitexturerendertargetdescription.html</filename>
-        <class>QRhiTextureRenderTargetDescription::ColorAttachment</class>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
             <name>QRhiTextureRenderTargetDescription</name>
@@ -297,52 +673,195 @@
             <name>QRhiTextureRenderTargetDescription</name>
             <anchorfile>qrhitexturerendertargetdescription.html</anchorfile>
             <anchor>QRhiTextureRenderTargetDescription-1</anchor>
-            <arglist>(const QRhiTextureRenderTargetDescription::ColorAttachment &amp;colorAttachment)</arglist>
+            <arglist>(const QRhiColorAttachment &amp;colorAttachment)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
             <name>QRhiTextureRenderTargetDescription</name>
             <anchorfile>qrhitexturerendertargetdescription.html</anchorfile>
             <anchor>QRhiTextureRenderTargetDescription-2</anchor>
-            <arglist>(const QRhiTextureRenderTargetDescription::ColorAttachment &amp;colorAttachment, QRhiRenderBuffer *depthStencilBuffer_)</arglist>
+            <arglist>(const QRhiColorAttachment &amp;colorAttachment, QRhiRenderBuffer *depthStencilBuffer)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
             <name>QRhiTextureRenderTargetDescription</name>
             <anchorfile>qrhitexturerendertargetdescription.html</anchorfile>
             <anchor>QRhiTextureRenderTargetDescription-3</anchor>
-            <arglist>(const QRhiTextureRenderTargetDescription::ColorAttachment &amp;colorAttachment, QRhiTexture *depthTexture_)</arglist>
+            <arglist>(const QRhiColorAttachment &amp;colorAttachment, QRhiTexture *depthTexture)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QRhiColorAttachment&gt;</type>
+            <name>colorAttachments</name>
+            <anchorfile>qrhitexturerendertargetdescription.html</anchorfile>
+            <anchor>colorAttachments</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setColorAttachments</name>
+            <anchorfile>qrhitexturerendertargetdescription.html</anchorfile>
+            <anchor>setColorAttachments</anchor>
+            <arglist>(const QVector&lt;QRhiColorAttachment&gt; &amp;att)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiRenderBuffer *</type>
+            <name>depthStencilBuffer</name>
+            <anchorfile>qrhitexturerendertargetdescription.html</anchorfile>
+            <anchor>depthStencilBuffer</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setDepthStencilBuffer</name>
+            <anchorfile>qrhitexturerendertargetdescription.html</anchorfile>
+            <anchor>setDepthStencilBuffer</anchor>
+            <arglist>(QRhiRenderBuffer *renderBuffer)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiTexture *</type>
+            <name>depthTexture</name>
+            <anchorfile>qrhitexturerendertargetdescription.html</anchorfile>
+            <anchor>depthTexture</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setDepthTexture</name>
+            <anchorfile>qrhitexturerendertargetdescription.html</anchorfile>
+            <anchor>setDepthTexture</anchor>
+            <arglist>(QRhiTexture *texture)</arglist>
         </member>
     </compound>
     <compound kind="class">
-        <name>QRhiTextureRenderTargetDescription::ColorAttachment</name>
-        <filename>qrhitexturerendertargetdescription-colorattachment.html</filename>
+        <name>QRhiTextureMipLevel</name>
+        <filename>qrhitexturemiplevel.html</filename>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
-            <name>ColorAttachment</name>
-            <anchorfile>qrhitexturerendertargetdescription-colorattachment.html</anchorfile>
-            <anchor>ColorAttachment</anchor>
+            <name>QRhiTextureMipLevel</name>
+            <anchorfile>qrhitexturemiplevel.html</anchorfile>
+            <anchor>QRhiTextureMipLevel</anchor>
             <arglist>()</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
-            <name>ColorAttachment</name>
-            <anchorfile>qrhitexturerendertargetdescription-colorattachment.html</anchorfile>
-            <anchor>ColorAttachment-1</anchor>
-            <arglist>(QRhiTexture *texture_)</arglist>
+            <name>QRhiTextureMipLevel</name>
+            <anchorfile>qrhitexturemiplevel.html</anchorfile>
+            <anchor>QRhiTextureMipLevel-1</anchor>
+            <arglist>(const QImage &amp;image)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
-            <name>ColorAttachment</name>
-            <anchorfile>qrhitexturerendertargetdescription-colorattachment.html</anchorfile>
-            <anchor>ColorAttachment-2</anchor>
-            <arglist>(QRhiRenderBuffer *renderBuffer_)</arglist>
+            <name>QRhiTextureMipLevel</name>
+            <anchorfile>qrhitexturemiplevel.html</anchorfile>
+            <anchor>QRhiTextureMipLevel-2</anchor>
+            <arglist>(const QByteArray &amp;compressedData)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QImage</type>
+            <name>image</name>
+            <anchorfile>qrhitexturemiplevel.html</anchorfile>
+            <anchor>image</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setImage</name>
+            <anchorfile>qrhitexturemiplevel.html</anchorfile>
+            <anchor>setImage</anchor>
+            <arglist>(const QImage &amp;image)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QByteArray</type>
+            <name>compressedData</name>
+            <anchorfile>qrhitexturemiplevel.html</anchorfile>
+            <anchor>compressedData</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setCompressedData</name>
+            <anchorfile>qrhitexturemiplevel.html</anchorfile>
+            <anchor>setCompressedData</anchor>
+            <arglist>(const QByteArray &amp;data)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QPoint</type>
+            <name>destinationTopLeft</name>
+            <anchorfile>qrhitexturemiplevel.html</anchorfile>
+            <anchor>destinationTopLeft</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setDestinationTopLeft</name>
+            <anchorfile>qrhitexturemiplevel.html</anchorfile>
+            <anchor>setDestinationTopLeft</anchor>
+            <arglist>(const QPoint &amp;p)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QSize</type>
+            <name>sourceSize</name>
+            <anchorfile>qrhitexturemiplevel.html</anchorfile>
+            <anchor>sourceSize</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setSourceSize</name>
+            <anchorfile>qrhitexturemiplevel.html</anchorfile>
+            <anchor>setSourceSize</anchor>
+            <arglist>(const QSize &amp;size)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QPoint</type>
+            <name>sourceTopLeft</name>
+            <anchorfile>qrhitexturemiplevel.html</anchorfile>
+            <anchor>sourceTopLeft</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setSourceTopLeft</name>
+            <anchorfile>qrhitexturemiplevel.html</anchorfile>
+            <anchor>setSourceTopLeft</anchor>
+            <arglist>(const QPoint &amp;p)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiTextureLayer</name>
+        <filename>qrhitexturelayer.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiTextureLayer</name>
+            <anchorfile>qrhitexturelayer.html</anchorfile>
+            <anchor>QRhiTextureLayer</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiTextureLayer</name>
+            <anchorfile>qrhitexturelayer.html</anchorfile>
+            <anchor>QRhiTextureLayer-1</anchor>
+            <arglist>(const QVector&lt;QRhiTextureMipLevel&gt; &amp;mipImages)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QRhiTextureMipLevel&gt;</type>
+            <name>mipImages</name>
+            <anchorfile>qrhitexturelayer.html</anchorfile>
+            <anchor>mipImages</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setMipImages</name>
+            <anchorfile>qrhitexturelayer.html</anchorfile>
+            <anchor>setMipImages</anchor>
+            <arglist>(const QVector&lt;QRhiTextureMipLevel&gt; &amp;images)</arglist>
         </member>
     </compound>
     <compound kind="class">
         <name>QRhiTextureUploadDescription</name>
         <filename>qrhitextureuploaddescription.html</filename>
-        <class>QRhiTextureUploadDescription::Layer</class>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
             <name>QRhiTextureUploadDescription</name>
@@ -355,56 +874,131 @@
             <name>QRhiTextureUploadDescription</name>
             <anchorfile>qrhitextureuploaddescription.html</anchorfile>
             <anchor>QRhiTextureUploadDescription-1</anchor>
-            <arglist>(const QVector&lt;QRhiTextureUploadDescription::Layer&gt; &amp;layers_)</arglist>
-        </member>
-    </compound>
-    <compound kind="class">
-        <name>QRhiTextureUploadDescription::Layer</name>
-        <filename>qrhitextureuploaddescription-layer.html</filename>
-        <class>QRhiTextureUploadDescription::Layer::MipLevel</class>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>Layer</name>
-            <anchorfile>qrhitextureuploaddescription-layer.html</anchorfile>
-            <anchor>Layer</anchor>
-            <arglist>()</arglist>
+            <arglist>(const QVector&lt;QRhiTextureLayer&gt; &amp;layers)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>Layer</name>
-            <anchorfile>qrhitextureuploaddescription-layer.html</anchorfile>
-            <anchor>Layer-1</anchor>
-            <arglist>(const QVector&lt;QRhiTextureUploadDescription::Layer::MipLevel&gt; &amp;mipImages_)</arglist>
-        </member>
-    </compound>
-    <compound kind="class">
-        <name>QRhiTextureUploadDescription::Layer::MipLevel</name>
-        <filename>qrhitextureuploaddescription-layer-miplevel.html</filename>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>MipLevel</name>
-            <anchorfile>qrhitextureuploaddescription-layer-miplevel.html</anchorfile>
-            <anchor>MipLevel</anchor>
-            <arglist>()</arglist>
+            <type>QVector&lt;QRhiTextureLayer&gt;</type>
+            <name>layers</name>
+            <anchorfile>qrhitextureuploaddescription.html</anchorfile>
+            <anchor>layers</anchor>
+            <arglist>() const const</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>MipLevel</name>
-            <anchorfile>qrhitextureuploaddescription-layer-miplevel.html</anchorfile>
-            <anchor>MipLevel-1</anchor>
-            <arglist>(const QImage &amp;image_)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>MipLevel</name>
-            <anchorfile>qrhitextureuploaddescription-layer-miplevel.html</anchorfile>
-            <anchor>MipLevel-2</anchor>
-            <arglist>(const QByteArray &amp;compressedData_)</arglist>
+            <type>void</type>
+            <name>setLayers</name>
+            <anchorfile>qrhitextureuploaddescription.html</anchorfile>
+            <anchor>setLayers</anchor>
+            <arglist>(const QVector&lt;QRhiTextureLayer&gt; &amp;layers)</arglist>
         </member>
     </compound>
     <compound kind="class">
         <name>QRhiTextureCopyDescription</name>
         <filename>qrhitexturecopydescription.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiTextureCopyDescription</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>QRhiTextureCopyDescription</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QSize</type>
+            <name>pixelSize</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>pixelSize</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setPixelSize</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>setPixelSize</anchor>
+            <arglist>(const QSize &amp;sz)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>sourceLayer</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>sourceLayer</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setSourceLayer</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>setSourceLayer</anchor>
+            <arglist>(int layer)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>sourceLevel</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>sourceLevel</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setSourceLevel</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>setSourceLevel</anchor>
+            <arglist>(int level)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QPoint</type>
+            <name>sourceTopLeft</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>sourceTopLeft</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setSourceTopLeft</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>setSourceTopLeft</anchor>
+            <arglist>(const QPoint &amp;p)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>destinationLayer</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>destinationLayer</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setDestinationLayer</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>setDestinationLayer</anchor>
+            <arglist>(int layer)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>destinationLevel</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>destinationLevel</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setDestinationLevel</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>setDestinationLevel</anchor>
+            <arglist>(int level)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QPoint</type>
+            <name>destinationTopLeft</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>destinationTopLeft</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setDestinationTopLeft</name>
+            <anchorfile>qrhitexturecopydescription.html</anchorfile>
+            <anchor>setDestinationTopLeft</anchor>
+            <arglist>(const QPoint &amp;p)</arglist>
+        </member>
     </compound>
     <compound kind="class">
         <name>QRhiReadbackDescription</name>
@@ -421,7 +1015,49 @@
             <name>QRhiReadbackDescription</name>
             <anchorfile>qrhireadbackdescription.html</anchorfile>
             <anchor>QRhiReadbackDescription-1</anchor>
-            <arglist>(QRhiTexture *texture_)</arglist>
+            <arglist>(QRhiTexture *texture)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiTexture *</type>
+            <name>texture</name>
+            <anchorfile>qrhireadbackdescription.html</anchorfile>
+            <anchor>texture</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setTexture</name>
+            <anchorfile>qrhireadbackdescription.html</anchorfile>
+            <anchor>setTexture</anchor>
+            <arglist>(QRhiTexture *tex)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>layer</name>
+            <anchorfile>qrhireadbackdescription.html</anchorfile>
+            <anchor>layer</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setLayer</name>
+            <anchorfile>qrhireadbackdescription.html</anchorfile>
+            <anchor>setLayer</anchor>
+            <arglist>(int layer)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>level</name>
+            <anchorfile>qrhireadbackdescription.html</anchorfile>
+            <anchor>level</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setLevel</name>
+            <anchorfile>qrhireadbackdescription.html</anchorfile>
+            <anchor>setLevel</anchor>
+            <arglist>(int level)</arglist>
         </member>
     </compound>
     <compound kind="class">

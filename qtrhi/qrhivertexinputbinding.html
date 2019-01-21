@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qrhi.cpp -->
+  <title>QRhiVertexInputBinding Class | RHI 5.12</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiVertexInputBinding</td></tr></table><table class="buildversion"><tr>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
+        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">QRhiVertexInputBinding Class</h1>
+<!-- $$$QRhiVertexInputBinding-brief -->
+<p>Describes a vertex input binding. <a href="#details">More...</a></p>
+<!-- @@@QRhiVertexInputBinding -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiVertexInputBinding&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
+<li><a href="qrhivertexinputbinding-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2 id="public-types">Public Types</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhivertexinputbinding.html#Classification-enum">Classification</a></b> { PerVertex, PerInstance }</td></tr>
+</table></div>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhivertexinputbinding.html#QRhiVertexInputBinding">QRhiVertexInputBinding</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhivertexinputbinding.html#QRhiVertexInputBinding-1">QRhiVertexInputBinding</a></b>(quint32 <i>stride</i>, QRhiVertexInputBinding::Classification <i>cls</i> = PerVertex, int <i>stepRate</i> = 1)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiVertexInputBinding::Classification </td><td class="memItemRight bottomAlign"><b><a href="qrhivertexinputbinding.html#classification">classification</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhivertexinputbinding.html#instanceStepRate">instanceStepRate</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhivertexinputbinding.html#setClassification">setClassification</a></b>(QRhiVertexInputBinding::Classification <i>c</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhivertexinputbinding.html#setInstanceStepRate">setInstanceStepRate</a></b>(int <i>rate</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhivertexinputbinding.html#setStride">setStride</a></b>(quint32 <i>s</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> quint32 </td><td class="memItemRight bottomAlign"><b><a href="qrhivertexinputbinding.html#stride">stride</a></b>() const</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$QRhiVertexInputBinding-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>Describes a vertex input binding.</p>
+<p>Specifies the stride (in bytes, must be a multiple of 4), the classification and optionally the instance step rate.</p>
+<p>As an example, assume a vertex shader with the following inputs:</p>
+<pre class="cpp plain">
+
+  layout(location = 0) in vec4 position;
+  layout(location = 1) in vec2 texcoord;
+
+</pre>
+<p>Now let's assume also that 3 component vertex positions <code>(x, y, z)</code> and 2 component texture coordinates <code>(u, v)</code> are provided in a non-interleaved format in a buffer (or separate buffers even). Definining two bindings could then be done like this:</p>
+<pre class="cpp plain">
+
+  QRhiVertexInputLayout inputLayout;
+  inputLayout.setBindings({
+      { 3 * sizeof(float) },
+      { 2 * sizeof(float) }
+  });
+
+</pre>
+<p>Only the stride is interesting here since instancing is not used. The binding number is given by the index of the <a href="qrhivertexinputbinding.html">QRhiVertexInputBinding</a> element in the bindings vector of the <a href="qrhivertexinputlayout.html">QRhiVertexInputLayout</a>.</p>
+<p>Once a graphics pipeline with this vertex input layout is bound, the vertex inputs could be set up like the following for drawing a cube with 36 vertices, assuming we have a single buffer with first the positions and then the texture coordinates:</p>
+<pre class="cpp plain">
+
+  cb-&gt;setVertexInput(0, { { cubeBuf, 0 }, { cubeBuf, 36 * 3 * sizeof(float) } });
+
+</pre>
+<p>Note how the index defined by <code>startBinding + i</code>, where <code>i</code> is the index in the second argument of <a href="qrhicommandbuffer.html#setVertexInput">setVertexInput()</a>, matches the index of the corresponding entry in the <code>bindings</code> vector of the <a href="qrhivertexinputlayout.html">QRhiVertexInputLayout</a>.</p>
+<p><b>Note: </b>the stride must always be a multiple of 4.</p></div>
+<p><b>See also </b><a href="qrhicommandbuffer.html#setVertexInput">QRhiCommandBuffer::setVertexInput</a>().</p>
+<!-- @@@QRhiVertexInputBinding -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Classification$$$PerVertex$$$PerInstance -->
+<h3 class="fn" id="Classification-enum"><a name="Classification-enum"></a>enum QRhiVertexInputBinding::<span class="name">Classification</span></h3>
+<p>Describes the input data classification.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiVertexInputBinding::PerVertex</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Data is per-vertex</td></tr>
+<tr><td class="topAlign"><code>QRhiVertexInputBinding::PerInstance</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Data is per-instance</td></tr>
+</table></div>
+<!-- @@@Classification -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QRhiVertexInputBinding[overload1]$$$QRhiVertexInputBinding -->
+<h3 class="fn" id="QRhiVertexInputBinding"><a name="QRhiVertexInputBinding"></a>QRhiVertexInputBinding::<span class="name">QRhiVertexInputBinding</span>()</h3>
+<p>Constructs an empty vertex input binding description.</p>
+<!-- @@@QRhiVertexInputBinding -->
+<!-- $$$QRhiVertexInputBinding$$$QRhiVertexInputBindingquint32QRhiVertexInputBinding::Classificationint -->
+<h3 class="fn" id="QRhiVertexInputBinding-1"><a name="QRhiVertexInputBinding-1"></a>QRhiVertexInputBinding::<span class="name">QRhiVertexInputBinding</span>(<span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>stride</i>, <span class="type"><a href="qrhivertexinputbinding.html#Classification-enum">QRhiVertexInputBinding::Classification</a></span> <i>cls</i> = PerVertex, <span class="type">int</span> <i>stepRate</i> = 1)</h3>
+<p>Constructs a vertex input binding description with the specified <i>stride</i>, classification <i>cls</i>, and instance step rate <i>stepRate</i>.</p>
+<p><b>Note: </b><i>stepRate</i> other than 1 is only supported when <a href="qrhi.html#Feature-enum">QRhi::CustomInstanceStepRate</a> is reported to be supported.</p><!-- @@@QRhiVertexInputBinding -->
+<!-- $$$classification[overload1]$$$classification -->
+<h3 class="fn" id="classification"><a name="classification"></a><span class="type"><a href="qrhivertexinputbinding.html#Classification-enum">QRhiVertexInputBinding::Classification</a></span> QRhiVertexInputBinding::<span class="name">classification</span>() const</h3>
+<p><b>See also </b><a href="qrhivertexinputbinding.html#setClassification">setClassification</a>().</p>
+<!-- @@@classification -->
+<!-- $$$instanceStepRate[overload1]$$$instanceStepRate -->
+<h3 class="fn" id="instanceStepRate"><a name="instanceStepRate"></a><span class="type">int</span> QRhiVertexInputBinding::<span class="name">instanceStepRate</span>() const</h3>
+<p><b>See also </b><a href="qrhivertexinputbinding.html#setInstanceStepRate">setInstanceStepRate</a>().</p>
+<!-- @@@instanceStepRate -->
+<!-- $$$setClassification[overload1]$$$setClassificationQRhiVertexInputBinding::Classification -->
+<h3 class="fn" id="setClassification"><a name="setClassification"></a><span class="type">void</span> QRhiVertexInputBinding::<span class="name">setClassification</span>(<span class="type"><a href="qrhivertexinputbinding.html#Classification-enum">QRhiVertexInputBinding::Classification</a></span> <i>c</i>)</h3>
+<p><b>See also </b><a href="qrhivertexinputbinding.html#classification">classification</a>().</p>
+<!-- @@@setClassification -->
+<!-- $$$setInstanceStepRate[overload1]$$$setInstanceStepRateint -->
+<h3 class="fn" id="setInstanceStepRate"><a name="setInstanceStepRate"></a><span class="type">void</span> QRhiVertexInputBinding::<span class="name">setInstanceStepRate</span>(<span class="type">int</span> <i>rate</i>)</h3>
+<p><b>See also </b><a href="qrhivertexinputbinding.html#instanceStepRate">instanceStepRate</a>().</p>
+<!-- @@@setInstanceStepRate -->
+<!-- $$$setStride[overload1]$$$setStridequint32 -->
+<h3 class="fn" id="setStride"><a name="setStride"></a><span class="type">void</span> QRhiVertexInputBinding::<span class="name">setStride</span>(<span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>s</i>)</h3>
+<p><b>See also </b><a href="qrhivertexinputbinding.html#stride">stride</a>().</p>
+<!-- @@@setStride -->
+<!-- $$$stride[overload1]$$$stride -->
+<h3 class="fn" id="stride"><a name="stride"></a><span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> QRhiVertexInputBinding::<span class="name">stride</span>() const</h3>
+<p><b>See also </b><a href="qrhivertexinputbinding.html#setStride">setStride</a>().</p>
+<!-- @@@stride -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>
