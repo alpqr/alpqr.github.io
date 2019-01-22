@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qrhi.cpp -->
+  <title>QRhiResourceSharingHost Class | RHI 5.12</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiResourceSharingHost</td></tr></table><table class="buildversion"><tr>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
+        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">QRhiResourceSharingHost Class</h1>
+<!-- $$$QRhiResourceSharingHost-brief -->
+<p>Enables resource sharing and synchronization between <a href="qrhi.html">QRhi</a> instances. <a href="#details">More...</a></p>
+<!-- @@@QRhiResourceSharingHost -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiResourceSharingHost&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
+<li><a href="qrhiresourcesharinghost-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourcesharinghost.html#QRhiResourceSharingHost">QRhiResourceSharingHost</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhiresourcesharinghost.html#dtor.QRhiResourceSharingHost">~QRhiResourceSharingHost</a></b>()</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$QRhiResourceSharingHost-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>Enables resource sharing and synchronization between <a href="qrhi.html">QRhi</a> instances.</p>
+<p>When a <a href="qrhi.html">QRhi</a> is created with <a href="qrhiinitparams.html#resourceSharingHost-var">QRhiInitParams::resourceSharingHost</a> set, it causes the <a href="qrhi.html">QRhi</a> to share either the graphics device, or, in case of OpenGL, use a context that shares resources, with all other <a href="qrhi.html">QRhi</a> instances that have the same <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> set in their <a href="qrhiinitparams.html">QRhiInitParams</a>.</p>
+<p>Sharing the same device means that when two or more <a href="qrhi.html">QRhi</a> instances have the same QhiResourceSharingHost set, there will only be one native graphics device object, such as, <code>VkDevice</code>, <code>MTLDevice</code>, or <code>ID3D11Device</code>, created, and that device will be available as long as any of the associated <a href="qrhi.html">QRhi</a> instances are alive, thus avoiding lifetime and ownership issues.</p>
+<p>This makes the underlying graphics resources of <a href="qrhiresource.html">QRhiResource</a> subclasses such as <a href="qrhitexture.html">QRhiTexture</a> available to all the <a href="qrhi.html">QRhi</a> instances that use the same <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>.</p>
+<p><b>Note: </b>When creating <a href="qrhi.html">QRhi</a> instances on different threads, using <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> may not be supported, depending on the backend and the underlying graphics API. Support for this is indicated by the <a href="qrhi.html#Feature-enum">QRhi::CrossThreadResourceSharing</a> flag. When not supported, attempting to create a <a href="qrhi.html">QRhi</a> in such a threaded scenario with a <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> will lead to a warning and ignoring resource sharing altogether (as if <a href="qrhiinitparams.html#resourceSharingHost-var">QRhiInitParams::resourceSharingHost</a> was not set).</p><p><b>Note: </b>The <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> can be created on a thread that is different than the threads on which the associated <a href="qrhi.html">QRhi</a> instances will be created. It is however up to the application to organize those threads in a way that the <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> is only destroyed after all associated <a href="qrhi.html">QRhi</a> instances have been fully destroyed.</p></div>
+<!-- @@@QRhiResourceSharingHost -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QRhiResourceSharingHost[overload1]$$$QRhiResourceSharingHost -->
+<h3 class="fn" id="QRhiResourceSharingHost"><a name="QRhiResourceSharingHost"></a>QRhiResourceSharingHost::<span class="name">QRhiResourceSharingHost</span>()</h3>
+<p>Constructs a new <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>.</p>
+<!-- @@@QRhiResourceSharingHost -->
+<!-- $$$~QRhiResourceSharingHost[overload1]$$$~QRhiResourceSharingHost -->
+<h3 class="fn" id="dtor.QRhiResourceSharingHost"><a name="dtor.QRhiResourceSharingHost"></a>QRhiResourceSharingHost::<span class="name">~QRhiResourceSharingHost</span>()</h3>
+<p>Destructor.</p>
+<p><b>Note: </b>Destroying a <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> before all the associated <a href="qrhi.html">QRhi</a> instances are destroyed is not allowed and will lead to undefined behavior.</p><!-- @@@~QRhiResourceSharingHost -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

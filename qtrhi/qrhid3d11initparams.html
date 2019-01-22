@@ -56,11 +56,11 @@
 <a name="public-variables"></a>
 <h2 id="public-variables">Public Variables</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhid3d11initparams.html#context-var">context</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhid3d11initparams.html#dev-var">dev</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhid3d11initparams.html#enableDebugLayer-var">enableDebugLayer</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhid3d11initparams.html#importExistingDevice-var">importExistingDevice</a></b></td></tr>
 </table></div>
+<ul>
+<li class="fn">1 public variable inherited from <a href="qrhiinitparams.html#public-variables">QRhiInitParams</a></li>
+</ul>
 <a name="details"></a>
 <!-- $$$QRhiD3D11InitParams-description -->
 <div class="descr">
@@ -76,9 +76,9 @@
 </pre>
 <p><b>Note: </b><a href="qrhiswapchain.html">QRhiSwapChain</a> should only be used in combination with <a href="../qtgui/qwindow.html">QWindow</a> instances that have their surface type set to <a href="../qtgui/qsurface.html#SurfaceType-enum">QSurface::OpenGLSurface</a>. There are currently no Direct3D specifics in the Windows platform support of Qt and therefore there is no separate <a href="../qtgui/qsurface.html">QSurface</a> type available.</p><a name="working-with-existing-direct3d-11-devices"></a>
 <h4 >Working with existing Direct3D 11 devices</h4>
-<p>When interoperating with another graphics engine, it may be necessary to get a <a href="qrhi.html">QRhi</a> instance that uses the same Direct3D device and device context. This can be achieved by setting <a href="qrhid3d11initparams.html#importExistingDevice-var">importExistingDevice</a> to <code>true</code> and providing both dev and context.</p>
+<p>When interoperating with another graphics engine, it may be necessary to get a <a href="qrhi.html">QRhi</a> instance that uses the same Direct3D device. This can be achieved by passing a pointer to a <a href="qrhid3d11nativehandles.html">QRhiD3D11NativeHandles</a> to <a href="qrhi.html#create">QRhi::create</a>(). Both the device and the device context must be set to a non-null value then.</p>
 <p>The <a href="qrhi.html">QRhi</a> does not take ownership of any of the external objects.</p>
-<p><b>Note: </b><a href="qrhi.html">QRhi</a> works with immediate contexts only. Deferred contexts are not used in any way.</p><p><b>Note: </b>The class uses <code>void *</code> as the type since including the COM-based <code>d3d11.h</code> headers is not acceptable here. The actual types are <code>ID3D11Device *</code> and <code>ID3D11DeviceContext *</code>.</p><p><b>Note: </b>Regardless of using an imported or a <a href="qrhi.html">QRhi</a>-created device context, the <code>ID3D11DeviceContext1</code> interface (Direct3D 11.1) must be supported. Initialization will fail otherwise.</p><p><b>Note: </b>Advanced usages involving multiple threads should be aware of the differences in OpenGL and Direct3D when it comes to how threading works with contexts and device contexts. There can be multiple <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a> instances and one of those can be current on each thread at a time, assuming that one context is not current on any other threads. Direct 3D however has just one (immediate) device context per device and it is not thread local. Rather, the same device context allows command submission from multiple threads, but those threads then need to synchronize their operations between themselves in order to not to interfere with each others commands on the context.</p></div>
+<p><b>Note: </b><a href="qrhi.html">QRhi</a> works with immediate contexts only. Deferred contexts are not used in any way.</p><p><b>Note: </b>Regardless of using an imported or a <a href="qrhi.html">QRhi</a>-created device context, the <code>ID3D11DeviceContext1</code> interface (Direct3D 11.1) must be supported. Initialization will fail otherwise.</p><p><b>Note: </b>Advanced usages involving multiple threads should be aware of the differences in OpenGL and Direct3D when it comes to how threading works with contexts and device contexts. There can be multiple <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a> instances and one of those can be current on each thread at a time, assuming that one context is not current on any other threads. Direct 3D however has just one (immediate) device context per device and it is not thread local. Rather, the same device context allows command submission from multiple threads, but those threads then need to synchronize their operations between themselves in order to not to interfere with each others commands on the context.</p></div>
 <!-- @@@QRhiD3D11InitParams -->
 <div class="types">
 <h2>Member Type Documentation</h2>

@@ -38,7 +38,6 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
-<li class="level1"><a href="#public-variables">Public Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 <li class="level2"><a href="#working-with-existing-metal-devices">Working with existing Metal devices</a></li>
 </ul>
@@ -53,12 +52,10 @@
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qrhiinitparams.html">QRhiInitParams</a></td></tr></table></div><ul>
 <li><a href="qrhimetalinitparams-members.html">List of all members, including inherited members</a></li>
 </ul>
-<a name="public-variables"></a>
-<h2 id="public-variables">Public Variables</h2>
-<div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhimetalinitparams.html#dev-var">dev</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhimetalinitparams.html#importExistingDevice-var">importExistingDevice</a></b></td></tr>
-</table></div>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 public variable inherited from <a href="qrhiinitparams.html#public-variables">QRhiInitParams</a></li>
+</ul>
 <a name="details"></a>
 <!-- $$$QRhiMetalInitParams-description -->
 <div class="descr">
@@ -73,8 +70,8 @@
 </pre>
 <p><b>Note: </b>Metal API validation cannot be enabled by the application. Instead, run the debug build of the application in XCode. Generating a <code>.xcodeproj</code> file via <code>qmake -spec macx-xcode</code> provides a convenient way to enable this.</p><p><b>Note: </b><a href="qrhiswapchain.html">QRhiSwapChain</a> can only target <a href="../qtgui/qwindow.html">QWindow</a> instances that have their surface type set to <a href="../qtgui/qsurface.html#SurfaceType-enum">QSurface::MetalSurface</a>.</p><a name="working-with-existing-metal-devices"></a>
 <h4 >Working with existing Metal devices</h4>
-<p>When interoperating with another graphics engine, it may be necessary to get a <a href="qrhi.html">QRhi</a> instance that uses the same Metal device. This can be achieved by setting <a href="qrhimetalinitparams.html#importExistingDevice-var">importExistingDevice</a> to <code>true</code> and providing dev.</p>
-<p><b>Note: </b>The class uses <code>void *</code> as the type since including the Objective C headers is not acceptable here. The actual type is <code>id&lt;MTLDevice&gt;</code> or <code>MTLDevice *</code>.</p><p>The <a href="qrhi.html">QRhi</a> does not take ownership of any of the external objects.</p>
+<p>When interoperating with another graphics engine, it may be necessary to get a <a href="qrhi.html">QRhi</a> instance that uses the same Metal device. This can be achieved by passing a pointer to a <a href="qrhimetalnativehandles.html">QRhiMetalNativeHandles</a> to <a href="qrhi.html#create">QRhi::create</a>(). The device must be set to a non-null value then. Optionally, a command queue object can be specified as well.</p>
+<p>The <a href="qrhi.html">QRhi</a> does not take ownership of any of the external objects.</p>
 </div>
 <!-- @@@QRhiMetalInitParams -->
 <div class="types">

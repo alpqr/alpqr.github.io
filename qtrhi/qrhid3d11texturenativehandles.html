@@ -62,7 +62,7 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Holds the D3D texture object that is backing a <a href="qrhitexture.html">QRhiTexture</a> instance.</p>
-</div>
+<p><b>Note: </b>The class uses <code>void *</code> as the type since including the COM-based <code>d3d11.h</code> headers is not acceptable here. The actual type is <code>ID3D11Texture2D *</code>.</p></div>
 <!-- @@@QRhiD3D11TextureNativeHandles -->
 <div class="types">
 <h2>Member Type Documentation</h2>

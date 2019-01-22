@@ -38,6 +38,7 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-variables">Public Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -50,12 +51,20 @@
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiInitParams&gt;</span>
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qrhid3d11initparams.html">QRhiD3D11InitParams</a>, <a href="qrhigles2initparams.html">QRhiGles2InitParams</a>, <a href="qrhimetalinitparams.html">QRhiMetalInitParams</a>, <a href="qrhinullinitparams.html">QRhiNullInitParams</a>, and <a href="qrhivulkaninitparams.html">QRhiVulkanInitParams</a></p>
 </td></tr></table></div><ul>
+<li><a href="qrhiinitparams-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-variables"></a>
+<h2 id="public-variables">Public Variables</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiResourceSharingHost *</td><td class="memItemRight bottomAlign"><b><a href="qrhiinitparams.html#resourceSharingHost-var">resourceSharingHost</a></b></td></tr>
+</table></div>
 <a name="details"></a>
 <!-- $$$QRhiInitParams-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Base class for backend-specific initialization parameters.</p>
+<p>Contains fields that are relevant to all backends.</p>
+<p><a href="qrhiinitparams.html#resourceSharingHost-var">resourceSharingHost</a> is set to null by default. Setting it to an actual <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> instance is optional. When set, it causes the <a href="qrhi.html">QRhi</a> to share either the graphics device, or, in case of OpenGL, use a context that shares resources, with all other <a href="qrhi.html">QRhi</a> instances that have the same <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> set in their <a href="qrhiinitparams.html">QRhiInitParams</a>. This makes the underlying graphics resources of <a href="qrhiresource.html">QRhiResource</a> subclasses such as <a href="qrhitexture.html">QRhiTexture</a> visible to all the <a href="qrhi.html">QRhi</a> instances that use the same <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>.</p>
 </div>
 <!-- @@@QRhiInitParams -->
 <div class="types">

@@ -63,7 +63,7 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Holds the D3D device and device context used by the <a href="qrhi.html">QRhi</a>.</p>
-</div>
+<p><b>Note: </b>The class uses <code>void *</code> as the type since including the COM-based <code>d3d11.h</code> headers is not acceptable here. The actual types are <code>ID3D11Device *</code> and <code>ID3D11DeviceContext *</code>.</p></div>
 <!-- @@@QRhiD3D11NativeHandles -->
 <div class="types">
 <h2>Member Type Documentation</h2>

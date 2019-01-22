@@ -62,7 +62,9 @@
                     <section ref="qrhigraphicsshaderstage.html" title="QRhiGraphicsShaderStage Class Reference">
                         <section ref="qrhigraphicsshaderstage-members.html" title="List of all members"/>
                     </section>
-                    <section ref="qrhiinitparams.html" title="QRhiInitParams Class Reference"/>
+                    <section ref="qrhiinitparams.html" title="QRhiInitParams Class Reference">
+                        <section ref="qrhiinitparams-members.html" title="List of all members"/>
+                    </section>
                     <section ref="qrhimetalinitparams.html" title="QRhiMetalInitParams Class Reference">
                         <section ref="qrhimetalinitparams-members.html" title="List of all members"/>
                     </section>
@@ -108,6 +110,9 @@
                     </section>
                     <section ref="qrhiresource.html" title="QRhiResource Class Reference">
                         <section ref="qrhiresource-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qrhiresourcesharinghost.html" title="QRhiResourceSharingHost Class Reference">
+                        <section ref="qrhiresourcesharinghost-members.html" title="List of all members"/>
                     </section>
                     <section ref="qrhiresourceupdatebatch.html" title="QRhiResourceUpdateBatch Class Reference">
                         <section ref="qrhiresourceupdatebatch-members.html" title="List of all members"/>
@@ -179,6 +184,7 @@
             <keyword name="Dear ImGui" id="Dear ImGui" ref="qtrhi-attribution-imgui.html"/>
             <keyword name="GpuTime" id="QRhiProfiler::GpuTime" ref="qrhiprofiler-gputime.html"/>
             <keyword name="QRhi" id="QRhi" ref="qrhi.html"/>
+            <keyword name="QRhi::CrossThreadResourceSharing" id="QRhi::CrossThreadResourceSharing" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::CustomInstanceStepRate" id="QRhi::CustomInstanceStepRate" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::D3D11" id="QRhi::D3D11" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhi::DebugMarkers" id="QRhi::DebugMarkers" ref="qrhi.html#Feature-enum"/>
@@ -347,6 +353,7 @@
             <keyword name="QRhiRenderTarget::RtTexture" id="QRhiRenderTarget::RtTexture" ref="qrhirendertarget.html#Type-enum"/>
             <keyword name="QRhiRenderTarget::Type" id="QRhiRenderTarget::Type" ref="qrhirendertarget.html#Type-enum"/>
             <keyword name="QRhiResource" id="QRhiResource" ref="qrhiresource.html"/>
+            <keyword name="QRhiResourceSharingHost" id="QRhiResourceSharingHost" ref="qrhiresourcesharinghost.html"/>
             <keyword name="QRhiResourceUpdateBatch" id="QRhiResourceUpdateBatch" ref="qrhiresourceupdatebatch.html"/>
             <keyword name="QRhiResourceUpdateBatch::TexturePrepareFlags" id="QRhiResourceUpdateBatch::TexturePrepareFlags" ref="qrhiresourceupdatebatch.html#TexturePrepareFlag-enum"/>
             <keyword name="QRhiSampler" id="QRhiSampler" ref="qrhisampler.html"/>
@@ -480,7 +487,6 @@
             <keyword name="buildOrResize" id="QRhiSwapChain::buildOrResize" ref="qrhiswapchain.html#buildOrResize"/>
             <keyword name="classification" id="QRhiVertexInputBinding::classification" ref="qrhivertexinputbinding.html#classification"/>
             <keyword name="clipSpaceCorrMatrix" id="QRhi::clipSpaceCorrMatrix" ref="qrhi.html#clipSpaceCorrMatrix"/>
-            <keyword name="cmdPool" id="QRhiVulkanInitParams::cmdPool" ref="qrhivulkaninitparams.html#cmdPool-var"/>
             <keyword name="cmdPool" id="QRhiVulkanNativeHandles::cmdPool" ref="qrhivulkannativehandles.html#cmdPool-var"/>
             <keyword name="cmdQueue" id="QRhiMetalNativeHandles::cmdQueue" ref="qrhimetalnativehandles.html#cmdQueue-var"/>
             <keyword name="colorAttachments" id="QRhiTextureRenderTargetDescription::colorAttachments" ref="qrhitexturerendertargetdescription.html#colorAttachments"/>
@@ -488,9 +494,7 @@
             <keyword name="compareOp" id="StencilOpState::compareOp" ref="qrhigraphicspipeline-stencilopstate.html#compareOp-var"/>
             <keyword name="completed" id="QRhiReadbackResult::completed" ref="qrhireadbackresult.html#completed-var"/>
             <keyword name="compressedData" id="QRhiTextureMipLevel::compressedData" ref="qrhitexturemiplevel.html#compressedData"/>
-            <keyword name="context" id="QRhiD3D11InitParams::context" ref="qrhid3d11initparams.html#context-var"/>
             <keyword name="context" id="QRhiD3D11NativeHandles::context" ref="qrhid3d11nativehandles.html#context-var"/>
-            <keyword name="context" id="QRhiGles2InitParams::context" ref="qrhigles2initparams.html#context-var"/>
             <keyword name="context" id="QRhiGles2NativeHandles::context" ref="qrhigles2nativehandles.html#context-var"/>
             <keyword name="copyTexture" id="QRhiResourceUpdateBatch::copyTexture" ref="qrhiresourceupdatebatch.html#copyTexture"/>
             <keyword name="create" id="QRhi::create" ref="qrhi.html#create"/>
@@ -513,11 +517,8 @@
             <keyword name="destinationLevel" id="QRhiTextureCopyDescription::destinationLevel" ref="qrhitexturecopydescription.html#destinationLevel"/>
             <keyword name="destinationTopLeft" id="QRhiTextureCopyDescription::destinationTopLeft" ref="qrhitexturecopydescription.html#destinationTopLeft"/>
             <keyword name="destinationTopLeft" id="QRhiTextureMipLevel::destinationTopLeft" ref="qrhitexturemiplevel.html#destinationTopLeft"/>
-            <keyword name="dev" id="QRhiD3D11InitParams::dev" ref="qrhid3d11initparams.html#dev-var"/>
             <keyword name="dev" id="QRhiD3D11NativeHandles::dev" ref="qrhid3d11nativehandles.html#dev-var"/>
-            <keyword name="dev" id="QRhiMetalInitParams::dev" ref="qrhimetalinitparams.html#dev-var"/>
             <keyword name="dev" id="QRhiMetalNativeHandles::dev" ref="qrhimetalnativehandles.html#dev-var"/>
-            <keyword name="dev" id="QRhiVulkanInitParams::dev" ref="qrhivulkaninitparams.html#dev-var"/>
             <keyword name="dev" id="QRhiVulkanNativeHandles::dev" ref="qrhivulkannativehandles.html#dev-var"/>
             <keyword name="devicePixelRatio" id="QRhiRenderTarget::devicePixelRatio" ref="qrhirendertarget.html#devicePixelRatio"/>
             <keyword name="draw" id="QRhiCommandBuffer::draw" ref="qrhicommandbuffer.html#draw"/>
@@ -545,9 +546,7 @@
             <keyword name="frameToFrameTimes" id="QRhiProfiler::frameToFrameTimes" ref="qrhiprofiler.html#frameToFrameTimes"/>
             <keyword name="frontFace" id="QRhiGraphicsPipeline::frontFace" ref="qrhigraphicspipeline.html#frontFace"/>
             <keyword name="generateMips" id="QRhiResourceUpdateBatch::generateMips" ref="qrhiresourceupdatebatch.html#generateMips"/>
-            <keyword name="gfxQueue" id="QRhiVulkanInitParams::gfxQueue" ref="qrhivulkaninitparams.html#gfxQueue-var"/>
             <keyword name="gfxQueue" id="QRhiVulkanNativeHandles::gfxQueue" ref="qrhivulkannativehandles.html#gfxQueue-var"/>
-            <keyword name="gfxQueueFamilyIdx" id="QRhiVulkanInitParams::gfxQueueFamilyIdx" ref="qrhivulkaninitparams.html#gfxQueueFamilyIdx-var"/>
             <keyword name="gfxQueueFamilyIdx" id="QRhiVulkanNativeHandles::gfxQueueFamilyIdx" ref="qrhivulkannativehandles.html#gfxQueueFamilyIdx-var"/>
             <keyword name="gpuFrameTimes" id="QRhiProfiler::gpuFrameTimes" ref="qrhiprofiler.html#gpuFrameTimes"/>
             <keyword name="hasDepthTest" id="QRhiGraphicsPipeline::hasDepthTest" ref="qrhigraphicspipeline.html#hasDepthTest"/>
@@ -555,9 +554,6 @@
             <keyword name="hasStencilTest" id="QRhiGraphicsPipeline::hasStencilTest" ref="qrhigraphicspipeline.html#hasStencilTest"/>
             <keyword name="image" id="QRhiTextureMipLevel::image" ref="qrhitexturemiplevel.html#image"/>
             <keyword name="image" id="QRhiVulkanTextureNativeHandles::image" ref="qrhivulkantexturenativehandles.html#image-var"/>
-            <keyword name="importExistingDevice" id="QRhiD3D11InitParams::importExistingDevice" ref="qrhid3d11initparams.html#importExistingDevice-var"/>
-            <keyword name="importExistingDevice" id="QRhiMetalInitParams::importExistingDevice" ref="qrhimetalinitparams.html#importExistingDevice-var"/>
-            <keyword name="importExistingDevice" id="QRhiVulkanInitParams::importExistingDevice" ref="qrhivulkaninitparams.html#importExistingDevice-var"/>
             <keyword name="inst" id="QRhiVulkanInitParams::inst" ref="qrhivulkaninitparams.html#inst-var"/>
             <keyword name="instanceStepRate" id="QRhiVertexInputBinding::instanceStepRate" ref="qrhivertexinputbinding.html#instanceStepRate"/>
             <keyword name="isFeatureSupported" id="QRhi::isFeatureSupported" ref="qrhi.html#isFeatureSupported"/>
@@ -644,6 +640,7 @@
             <keyword name="newBuffer" id="QRhi::newBuffer" ref="qrhi.html#newBuffer"/>
             <keyword name="newCompatibleRenderPassDescriptor" id="QRhiSwapChain::newCompatibleRenderPassDescriptor" ref="qrhiswapchain.html#newCompatibleRenderPassDescriptor"/>
             <keyword name="newCompatibleRenderPassDescriptor" id="QRhiTextureRenderTarget::newCompatibleRenderPassDescriptor" ref="qrhitexturerendertarget.html#newCompatibleRenderPassDescriptor"/>
+            <keyword name="newFallbackSurface" id="QRhiGles2InitParams::newFallbackSurface" ref="qrhigles2initparams.html#newFallbackSurface"/>
             <keyword name="newGraphicsPipeline" id="QRhi::newGraphicsPipeline" ref="qrhi.html#newGraphicsPipeline"/>
             <keyword name="newRenderBuffer" id="QRhi::newRenderBuffer" ref="qrhi.html#newRenderBuffer"/>
             <keyword name="newSampler" id="QRhi::newSampler" ref="qrhi.html#newSampler"/>
@@ -658,7 +655,6 @@
             <keyword name="opColor" id="TargetBlend::opColor" ref="qrhigraphicspipeline-targetblend.html#opColor-var"/>
             <keyword name="operator=" id="QRhiResource::operator=" ref="qrhiresource.html#operator-eq"/>
             <keyword name="passOp" id="StencilOpState::passOp" ref="qrhigraphicspipeline-stencilopstate.html#passOp-var"/>
-            <keyword name="physDev" id="QRhiVulkanInitParams::physDev" ref="qrhivulkaninitparams.html#physDev-var"/>
             <keyword name="physDev" id="QRhiVulkanNativeHandles::physDev" ref="qrhivulkannativehandles.html#physDev-var"/>
             <keyword name="pixelSize" id="QRhiReadbackResult::pixelSize" ref="qrhireadbackresult.html#pixelSize-var"/>
             <keyword name="pixelSize" id="QRhiRenderBuffer::pixelSize" ref="qrhirenderbuffer.html#pixelSize"/>
@@ -676,6 +672,7 @@
             <keyword name="resolveLayer" id="QRhiColorAttachment::resolveLayer" ref="qrhicolorattachment.html#resolveLayer"/>
             <keyword name="resolveLevel" id="QRhiColorAttachment::resolveLevel" ref="qrhicolorattachment.html#resolveLevel"/>
             <keyword name="resolveTexture" id="QRhiColorAttachment::resolveTexture" ref="qrhicolorattachment.html#resolveTexture"/>
+            <keyword name="resourceSharingHost" id="QRhiInitParams::resourceSharingHost" ref="qrhiinitparams.html#resourceSharingHost-var"/>
             <keyword name="resourceSizeLimit" id="QRhi::resourceSizeLimit" ref="qrhi.html#resourceSizeLimit"/>
             <keyword name="resourceUpdate" id="QRhiCommandBuffer::resourceUpdate" ref="qrhicommandbuffer.html#resourceUpdate"/>
             <keyword name="rgba" id="QRhiColorClearValue::rgba" ref="qrhicolorclearvalue.html#rgba"/>
@@ -829,7 +826,6 @@
             <keyword name="usage" id="QRhiBuffer::usage" ref="qrhibuffer.html#usage"/>
             <keyword name="vertexInputLayout" id="QRhiGraphicsPipeline::vertexInputLayout" ref="qrhigraphicspipeline.html#vertexInputLayout"/>
             <keyword name="viewport" id="QRhiViewport::viewport" ref="qrhiviewport.html#viewport"/>
-            <keyword name="vmemAllocator" id="QRhiVulkanInitParams::vmemAllocator" ref="qrhivulkaninitparams.html#vmemAllocator-var"/>
             <keyword name="vmemAllocator" id="QRhiVulkanNativeHandles::vmemAllocator" ref="qrhivulkannativehandles.html#vmemAllocator-var"/>
             <keyword name="window" id="QRhiGles2InitParams::window" ref="qrhigles2initparams.html#window-var"/>
             <keyword name="window" id="QRhiSwapChain::window" ref="qrhiswapchain.html#window"/>
@@ -837,6 +833,7 @@
             <keyword name="~QRhi" id="QRhi::~QRhi" ref="qrhi.html#dtor.QRhi"/>
             <keyword name="~QRhiProfiler" id="QRhiProfiler::~QRhiProfiler" ref="qrhiprofiler.html#dtor.QRhiProfiler"/>
             <keyword name="~QRhiResource" id="QRhiResource::~QRhiResource" ref="qrhiresource.html#dtor.QRhiResource"/>
+            <keyword name="~QRhiResourceSharingHost" id="QRhiResourceSharingHost::~QRhiResourceSharingHost" ref="qrhiresourcesharinghost.html#dtor.QRhiResourceSharingHost"/>
             <keyword name="~QRhiResourceUpdateBatch" id="QRhiResourceUpdateBatch::~QRhiResourceUpdateBatch" ref="qrhiresourceupdatebatch.html#dtor.QRhiResourceUpdateBatch"/>
             <keyword name="~QRhiShaderResourceBinding" id="QRhiShaderResourceBinding::~QRhiShaderResourceBinding" ref="qrhishaderresourcebinding.html#dtor.QRhiShaderResourceBinding"/>
         </keywords>
@@ -885,6 +882,7 @@
             <file>qrhigraphicspipeline.html</file>
             <file>qrhigraphicsshaderstage-members.html</file>
             <file>qrhigraphicsshaderstage.html</file>
+            <file>qrhiinitparams-members.html</file>
             <file>qrhiinitparams.html</file>
             <file>qrhimetalinitparams-members.html</file>
             <file>qrhimetalinitparams.html</file>
@@ -893,6 +891,7 @@
             <file>qrhimetaltexturenativehandles-members.html</file>
             <file>qrhimetaltexturenativehandles.html</file>
             <file>qrhinativehandles.html</file>
+            <file>qrhinullinitparams-members.html</file>
             <file>qrhinullinitparams.html</file>
             <file>qrhinullnativehandles.html</file>
             <file>qrhinulltexturenativehandles-members.html</file>
@@ -915,6 +914,8 @@
             <file>qrhirendertarget.html</file>
             <file>qrhiresource-members.html</file>
             <file>qrhiresource.html</file>
+            <file>qrhiresourcesharinghost-members.html</file>
+            <file>qrhiresourcesharinghost.html</file>
             <file>qrhiresourceupdatebatch-members.html</file>
             <file>qrhiresourceupdatebatch.html</file>
             <file>qrhisampler-members.html</file>

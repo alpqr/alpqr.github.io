@@ -2773,6 +2773,24 @@
         </member>
     </compound>
     <compound kind="class">
+        <name>QRhiResourceSharingHost</name>
+        <filename>qrhiresourcesharinghost.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QRhiResourceSharingHost</name>
+            <anchorfile>qrhiresourcesharinghost.html</anchorfile>
+            <anchor>QRhiResourceSharingHost</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>~QRhiResourceSharingHost</name>
+            <anchorfile>qrhiresourcesharinghost.html</anchorfile>
+            <anchor>dtor.QRhiResourceSharingHost</anchor>
+            <arglist>()</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
         <name>QRhiInitParams</name>
         <filename>qrhiinitparams.html</filename>
     </compound>
@@ -2877,6 +2895,10 @@
             <anchor>Feature-enum</anchor>
             <arglist></arglist>
         </member>
+        <member name="CrossThreadResourceSharing">
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="enum">
             <name>ResourceSizeLimit</name>
             <anchor>ResourceSizeLimit-enum</anchor>
@@ -2902,7 +2924,7 @@
             <name>create</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>create</anchor>
-            <arglist>(QRhi::Implementation impl, QRhiInitParams *params, QRhi::Flags flags)</arglist>
+            <arglist>(QRhi::Implementation impl, QRhiInitParams *params, QRhi::Flags flags, QRhiNativeHandles *importDevice)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiGraphicsPipeline *</type>
@@ -3106,6 +3128,13 @@
         <name>QRhiGles2InitParams</name>
         <filename>qrhigles2initparams.html</filename>
         <base>QRhiInitParams</base>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QOffscreenSurface *</type>
+            <name>newFallbackSurface</name>
+            <anchorfile>qrhigles2initparams.html</anchorfile>
+            <anchor>newFallbackSurface</anchor>
+            <arglist>()</arglist>
+        </member>
     </compound>
     <compound kind="class">
         <name>QRhiGles2NativeHandles</name>
