@@ -66,6 +66,7 @@
 <p>Contains fields that are relevant to all backends.</p>
 <p><a href="qrhiinitparams.html#resourceSharingHost-var">resourceSharingHost</a> is set to null by default. Setting it to an actual <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> instance is optional. When set, it causes the <a href="qrhi.html">QRhi</a> to share either the graphics device, or, in case of OpenGL, use a context that shares resources, with all other <a href="qrhi.html">QRhi</a> instances that have the same <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> set in their <a href="qrhiinitparams.html">QRhiInitParams</a>. This makes the underlying graphics resources of <a href="qrhiresource.html">QRhiResource</a> subclasses such as <a href="qrhitexture.html">QRhiTexture</a> visible to all the <a href="qrhi.html">QRhi</a> instances that use the same <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>.</p>
 </div>
+<p><b>See also </b><a href="qrhiresource.html#isSharable">QRhiResource::isSharable</a>().</p>
 <!-- @@@QRhiInitParams -->
 <div class="types">
 <h2>Member Type Documentation</h2>

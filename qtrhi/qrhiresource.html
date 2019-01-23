@@ -59,6 +59,7 @@
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#dtor.QRhiResource">~QRhiResource</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#isSharable">isSharable</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#name">name</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#release">release</a></b>() = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#releaseAndDestroy">releaseAndDestroy</a></b>()</td></tr>
@@ -73,7 +74,9 @@
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> quint64 </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#m_reserved-var">m_reserved</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#objectName-var">objectName</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiResourceSharingHostPrivate *</td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#orphanedWithRsh-var">orphanedWithRsh</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiImplementation *</td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#rhi-var">rhi</a></b></td></tr>
 </table></div>
 <a name="details"></a>
@@ -98,6 +101,11 @@
 <h3 class="fn" id="dtor.QRhiResource"><a name="dtor.QRhiResource"></a><code>[virtual] </code>QRhiResource::<span class="name">~QRhiResource</span>()</h3>
 <p>Destructor.</p>
 <!-- @@@~QRhiResource -->
+<!-- $$$isSharable[overload1]$$$isSharable -->
+<h3 class="fn" id="isSharable"><a name="isSharable"></a><code>[virtual] </code><span class="type">bool</span> QRhiResource::<span class="name">isSharable</span>() const</h3>
+<p>Returns true if this resource is sharable between <a href="qrhi.html">QRhi</a> instances via a <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>. It also means that such an <a href="qrhiresource.html">QRhiResource</a> can outlive the <a href="qrhi.html">QRhi</a> on which it was created.</p>
+<p><b>Note: </b>Once a sharable <a href="qrhiresource.html">QRhiResource</a> is <code>orphaned</code>, meaning that the <a href="qrhi.html">QRhi</a> from which it was created gets destroyed, build() is not a valid operation anymore. It can only be used in graphics operations (as the underlying graphics objects are still there and valid) or can be released. This is true as long as the <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>, with which the creator <a href="qrhi.html">QRhi</a> was associated with, has at least one associated <a href="qrhi.html">QRhi</a> alive.</p><p><b>See also </b><a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> and <a href="qrhi.html#Feature-enum">QRhi::CrossThreadResourceSharing</a>.</p>
+<!-- @@@isSharable -->
 <!-- $$$name[overload1]$$$name -->
 <h3 class="fn" id="name"><a name="name"></a><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> QRhiResource::<span class="name">name</span>() const</h3>
 <p>Returns the currently set object name. By default the name is empty.</p>

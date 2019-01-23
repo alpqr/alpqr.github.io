@@ -557,6 +557,7 @@
             <keyword name="inst" id="QRhiVulkanInitParams::inst" ref="qrhivulkaninitparams.html#inst-var"/>
             <keyword name="instanceStepRate" id="QRhiVertexInputBinding::instanceStepRate" ref="qrhivertexinputbinding.html#instanceStepRate"/>
             <keyword name="isFeatureSupported" id="QRhi::isFeatureSupported" ref="qrhi.html#isFeatureSupported"/>
+            <keyword name="isSharable" id="QRhiResource::isSharable" ref="qrhiresource.html#isSharable"/>
             <keyword name="isTextureFormatSupported" id="QRhi::isTextureFormatSupported" ref="qrhi.html#isTextureFormatSupported"/>
             <keyword name="isYUpInFramebuffer" id="QRhi::isYUpInFramebuffer" ref="qrhi.html#isYUpInFramebuffer"/>
             <keyword name="layer" id="QRhiColorAttachment::layer" ref="qrhicolorattachment.html#layer"/>
@@ -598,6 +599,7 @@
             <keyword name="m_reserved" id="QRhiRenderBuffer::m_reserved" ref="qrhirenderbuffer.html#m_reserved-var"/>
             <keyword name="m_reserved" id="QRhiRenderPassDescriptor::m_reserved" ref="qrhirenderpassdescriptor.html#m_reserved-var"/>
             <keyword name="m_reserved" id="QRhiRenderTarget::m_reserved" ref="qrhirendertarget.html#m_reserved-var"/>
+            <keyword name="m_reserved" id="QRhiResource::m_reserved" ref="qrhiresource.html#m_reserved-var"/>
             <keyword name="m_reserved" id="QRhiSampler::m_reserved" ref="qrhisampler.html#m_reserved-var"/>
             <keyword name="m_reserved" id="QRhiShaderResourceBindings::m_reserved" ref="qrhishaderresourcebindings.html#m_reserved-var"/>
             <keyword name="m_reserved" id="QRhiSwapChain::m_reserved" ref="qrhiswapchain.html#m_reserved-var"/>
@@ -654,6 +656,7 @@
             <keyword name="opAlpha" id="TargetBlend::opAlpha" ref="qrhigraphicspipeline-targetblend.html#opAlpha-var"/>
             <keyword name="opColor" id="TargetBlend::opColor" ref="qrhigraphicspipeline-targetblend.html#opColor-var"/>
             <keyword name="operator=" id="QRhiResource::operator=" ref="qrhiresource.html#operator-eq"/>
+            <keyword name="orphanedWithRsh" id="QRhiResource::orphanedWithRsh" ref="qrhiresource.html#orphanedWithRsh-var"/>
             <keyword name="passOp" id="StencilOpState::passOp" ref="qrhigraphicspipeline-stencilopstate.html#passOp-var"/>
             <keyword name="physDev" id="QRhiVulkanNativeHandles::physDev" ref="qrhivulkannativehandles.html#physDev-var"/>
             <keyword name="pixelSize" id="QRhiReadbackResult::pixelSize" ref="qrhireadbackresult.html#pixelSize-var"/>

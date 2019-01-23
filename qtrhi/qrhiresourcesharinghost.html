@@ -65,8 +65,68 @@
 <p>Enables resource sharing and synchronization between <a href="qrhi.html">QRhi</a> instances.</p>
 <p>When a <a href="qrhi.html">QRhi</a> is created with <a href="qrhiinitparams.html#resourceSharingHost-var">QRhiInitParams::resourceSharingHost</a> set, it causes the <a href="qrhi.html">QRhi</a> to share either the graphics device, or, in case of OpenGL, use a context that shares resources, with all other <a href="qrhi.html">QRhi</a> instances that have the same <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> set in their <a href="qrhiinitparams.html">QRhiInitParams</a>.</p>
 <p>Sharing the same device means that when two or more <a href="qrhi.html">QRhi</a> instances have the same QhiResourceSharingHost set, there will only be one native graphics device object, such as, <code>VkDevice</code>, <code>MTLDevice</code>, or <code>ID3D11Device</code>, created, and that device will be available as long as any of the associated <a href="qrhi.html">QRhi</a> instances are alive, thus avoiding lifetime and ownership issues.</p>
-<p>This makes the underlying graphics resources of <a href="qrhiresource.html">QRhiResource</a> subclasses such as <a href="qrhitexture.html">QRhiTexture</a> available to all the <a href="qrhi.html">QRhi</a> instances that use the same <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>.</p>
-<p><b>Note: </b>When creating <a href="qrhi.html">QRhi</a> instances on different threads, using <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> may not be supported, depending on the backend and the underlying graphics API. Support for this is indicated by the <a href="qrhi.html#Feature-enum">QRhi::CrossThreadResourceSharing</a> flag. When not supported, attempting to create a <a href="qrhi.html">QRhi</a> in such a threaded scenario with a <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> will lead to a warning and ignoring resource sharing altogether (as if <a href="qrhiinitparams.html#resourceSharingHost-var">QRhiInitParams::resourceSharingHost</a> was not set).</p><p><b>Note: </b>The <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> can be created on a thread that is different than the threads on which the associated <a href="qrhi.html">QRhi</a> instances will be created. It is however up to the application to organize those threads in a way that the <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> is only destroyed after all associated <a href="qrhi.html">QRhi</a> instances have been fully destroyed.</p></div>
+<p>This makes the underlying graphics resources of <a href="qrhiresource.html">QRhiResource</a> subclasses such as <a href="qrhitexture.html">QRhiTexture</a> available to all the <a href="qrhi.html">QRhi</a> instances that use the same <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>. This applies only to <a href="qrhiresource.html">QRhiResource</a> instances that report <code>true</code> from <a href="qrhiresource.html#isSharable">isSharable()</a>.</p>
+<p>In order to avoid lifetime management issues with shared resources, a sharable <a href="qrhiresource.html">QRhiResource</a> is allowed to be orphaned, meaning the <a href="qrhi.html">QRhi</a> the resource was created from can be destroyed while keeping the <a href="qrhiresource.html">QRhiResource</a> usable (although operations like <code>build()</code> are not allowed anymore then). Applications can thus postpone calling <a href="qrhiresource.html#release">release()</a> on the resource as long as there is at least one <a href="qrhi.html">QRhi</a> associated with the <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> that was associated with the resource's creator <a href="qrhi.html">QRhi</a>.</p>
+<p><b>Note: </b>The <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> does not perform graphics resource operations on its own. Therefore it is important that all relevant <a href="qrhiresource.html">QRhiResource</a> instances are released before the last associated <a href="qrhi.html">QRhi</a> is destroyed. Attempting to release a <a href="qrhiresource.html">QRhiResource</a> after that will lead to graphics resource leaks (assuming the resource sharing host gets destroyed then; if there are new <a href="qrhi.html">QRhi</a> instances created for the same resource sharing host later on then there is no issue, as long as, again, those are alive).</p><p><b>Note: </b>When creating <a href="qrhi.html">QRhi</a> instances on different threads, using <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> may not be supported, depending on the backend and the underlying graphics API. Support for this is indicated by the <a href="qrhi.html#Feature-enum">QRhi::CrossThreadResourceSharing</a> flag. When not supported, attempting to create a <a href="qrhi.html">QRhi</a> in such a threaded scenario with a <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> will lead to a warning and ignoring resource sharing altogether (as if <a href="qrhiinitparams.html#resourceSharingHost-var">QRhiInitParams::resourceSharingHost</a> was not set).</p><p><b>Note: </b>The <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> can be created on a thread that is different than the threads on which the associated <a href="qrhi.html">QRhi</a> instances will be created. It is however up to the application to organize those threads in a way that the <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> is only destroyed after all associated <a href="qrhi.html">QRhi</a> instances have been fully destroyed.</p><p>To illustrate resource sharing, take the following code snippets.</p>
+<p>In many cases an application will use a single <a href="qrhi.html">QRhi</a>. Resources created from it must be always released before destroying the rhi:</p>
+<pre class="cpp plain">
+
+  QRhi *rhi = QRhi::create(initParams);
+  QRhiTexture *tex = rhi-&gt;newTexture(..&#x2e;);
+  ..&#x2e; use tex with rhi
+  tex-&gt;releaseAndDestroy();
+  delete rhi;
+
+</pre>
+<p>Let's introduce a second <a href="qrhi.html">QRhi</a>:</p>
+<pre class="cpp plain">
+
+  QRhi *rhi = QRhi::create(initParams);
+  QRhi *rhi2 = QRhi::create(initParams);
+  QRhiTexture *tex = rhi-&gt;newTexture(..&#x2e;);
+  ..&#x2e; use tex with rhi
+  tex-&gt;releaseAndDestroy();
+  delete rhi;
+  delete rhi2;
+
+</pre>
+<p>Here using <code>tex</code> with <code>rhi2</code> is forbidden. (although it may work with some backends) Let's make it work:</p>
+<pre class="cpp plain">
+
+  QRhiResourceSharingHost *rsh = new QRhiResourceSharingHost;
+  initParams.resourceSharingHost = rsh;
+  QRhi *rhi = QRhi::create(initParams);
+  QRhi *rhi2 = QRhi::create(initParams);
+  QRhiTexture *tex = rhi-&gt;newTexture(..&#x2e;);
+  if (!tex-&gt;isSharable()) { error(&quot;not supported&quot;); }
+  ..&#x2e; use tex with rhi or rhi2
+  tex-&gt;releaseAndDestroy();
+  delete rhi;
+  delete rhi2;
+  delete rsh;
+
+</pre>
+<p>Now <code>tex</code> is usable with <code>rhi2</code> as well.</p>
+<p>What if <code>rhi</code> is destroyed before <code>rhi2</code>?</p>
+<pre class="cpp plain">
+
+  QRhiResourceSharingHost *rsh = new QRhiResourceSharingHost;
+  initParams.resourceSharingHost = rsh;
+  QRhi *rhi = QRhi::create(initParams);
+  QRhi *rhi2 = QRhi::create(initParams);
+  QRhiTexture *tex = rhi-&gt;newTexture(..&#x2e;);
+  if (!tex-&gt;isSharable()) { error(&quot;not supported&quot;); }
+  ..&#x2e; use tex with rhi or rhi2
+  delete rhi;
+  ..&#x2e; use tex with rhi2
+  tex-&gt;releaseAndDestroy();
+  delete rhi2;
+  delete rsh;
+
+</pre>
+<p>This is valid as well. After the <code>delete rhi</code> <code>tex</code> is in an orphaned state so calling <code>build()</code> on it for instance would fail.</p>
+<p><b>Note: </b>Moving the <code>tex-&gt;releaseAndDestroy()</code> call between the <code>delete rhi2</code> and <code>delete rsh</code> statements would be incorrect.</p></div>
+<p><b>See also </b><a href="qrhiresource.html#isSharable">QRhiResource::isSharable</a>(), <a href="qrhi.html#Feature-enum">QRhi::CrossThreadResourceSharing</a>, <a href="qrhiinitparams.html">QRhiInitParams</a>, and <a href="qrhi.html#create">QRhi::create</a>().</p>
 <!-- @@@QRhiResourceSharingHost -->
 <div class="types">
 <h2>Member Type Documentation</h2>
