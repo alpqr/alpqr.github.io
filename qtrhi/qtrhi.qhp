@@ -184,7 +184,6 @@
             <keyword name="Dear ImGui" id="Dear ImGui" ref="qtrhi-attribution-imgui.html"/>
             <keyword name="GpuTime" id="QRhiProfiler::GpuTime" ref="qrhiprofiler-gputime.html"/>
             <keyword name="QRhi" id="QRhi" ref="qrhi.html"/>
-            <keyword name="QRhi::CrossThreadResourceSharing" id="QRhi::CrossThreadResourceSharing" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::CustomInstanceStepRate" id="QRhi::CustomInstanceStepRate" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::D3D11" id="QRhi::D3D11" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhi::DebugMarkers" id="QRhi::DebugMarkers" ref="qrhi.html#Feature-enum"/>
@@ -557,7 +556,7 @@
             <keyword name="inst" id="QRhiVulkanInitParams::inst" ref="qrhivulkaninitparams.html#inst-var"/>
             <keyword name="instanceStepRate" id="QRhiVertexInputBinding::instanceStepRate" ref="qrhivertexinputbinding.html#instanceStepRate"/>
             <keyword name="isFeatureSupported" id="QRhi::isFeatureSupported" ref="qrhi.html#isFeatureSupported"/>
-            <keyword name="isSharable" id="QRhiResource::isSharable" ref="qrhiresource.html#isSharable"/>
+            <keyword name="isShareable" id="QRhiResource::isShareable" ref="qrhiresource.html#isShareable"/>
             <keyword name="isTextureFormatSupported" id="QRhi::isTextureFormatSupported" ref="qrhi.html#isTextureFormatSupported"/>
             <keyword name="isYUpInFramebuffer" id="QRhi::isYUpInFramebuffer" ref="qrhi.html#isYUpInFramebuffer"/>
             <keyword name="layer" id="QRhiColorAttachment::layer" ref="qrhicolorattachment.html#layer"/>

@@ -1104,9 +1104,9 @@
         </member>
         <member kind="function" protection="public" virtualness="virtual" static="no">
             <type>virtual bool</type>
-            <name>isSharable</name>
+            <name>isShareable</name>
             <anchorfile>qrhiresource.html</anchorfile>
-            <anchor>isSharable</anchor>
+            <anchor>isShareable</anchor>
             <arglist>() const const</arglist>
         </member>
         <member kind="function" protection="protected" virtualness="non" static="no">
@@ -2899,10 +2899,6 @@
             <arglist></arglist>
         </member>
         <member name="PrimitiveRestart">
-            <anchor>Feature-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="CrossThreadResourceSharing">
             <anchor>Feature-enum</anchor>
             <arglist></arglist>
         </member>
