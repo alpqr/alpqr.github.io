@@ -58,6 +58,10 @@
 <a name="public-types"></a>
 <h2 id="public-types">Public Types</h2>
 <div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#BeginFrameFlag-enum">BeginFrameFlag</a></b> { }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#BeginFrameFlag-enum">BeginFrameFlags</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#EndFrameFlag-enum">EndFrameFlag</a></b> { SkipPresent }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#EndFrameFlag-enum">EndFrameFlags</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Feature-enum">Feature</a></b> { MultisampleTexture, MultisampleRenderBuffer, DebugMarkers, Timestamps, ..., PrimitiveRestart }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Flag-enum">Flag</a></b> { EnableProfiling, EnableDebugMarkers }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Flag-enum">Flags</a></b></td></tr>
@@ -69,10 +73,10 @@
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#dtor.QRhi">~QRhi</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QRhi::FrameOpResult </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#beginFrame">beginFrame</a></b>(QRhiSwapChain *<i>swapChain</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhi::FrameOpResult </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#beginFrame">beginFrame</a></b>(QRhiSwapChain *<i>swapChain</i>, QRhi::BeginFrameFlags <i>flags</i> = ...)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhi::FrameOpResult </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#beginOffscreenFrame">beginOffscreenFrame</a></b>(QRhiCommandBuffer **<i>cb</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QMatrix4x4 </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#clipSpaceCorrMatrix">clipSpaceCorrMatrix</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QRhi::FrameOpResult </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#endFrame">endFrame</a></b>(QRhiSwapChain *<i>swapChain</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhi::FrameOpResult </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#endFrame">endFrame</a></b>(QRhiSwapChain *<i>swapChain</i>, QRhi::EndFrameFlags <i>flags</i> = ...)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhi::FrameOpResult </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#endOffscreenFrame">endOffscreenFrame</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhi::FrameOpResult </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#finish">finish</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#isFeatureSupported">isFeatureSupported</a></b>(QRhi::Feature <i>feature</i>) const</td></tr>
@@ -182,16 +186,29 @@
 <a name="ownership"></a>
 <h5 >Ownership</h5>
 <p>The general rule is no ownership transfer. Creating a <a href="qrhi.html">QRhi</a> with an already existing graphics device does not mean the <a href="qrhi.html">QRhi</a> takes ownership of the device object. Similarly, ownership is not given away when a device or texture object is &quot;exported&quot; via <a href="qrhi.html#nativeHandles">QRhi::nativeHandles</a>() or <a href="qrhitexture.html#nativeHandles">QRhiTexture::nativeHandles</a>(). Most importantly, passing pointers in structs and via setters does not transfer ownership.</p>
-<a name="threading"></a>
-<h5 >Threading</h5>
+<a name="threading-and-resource-sharing"></a>
+<h5 >Threading and resource sharing</h5>
 <p>A <a href="qrhi.html">QRhi</a> instance can be created and used on any thread but all usage must be limited to that one single thread.</p>
 <p>When it comes to externally created native objects, such as OpenGL contexts passed in via <a href="qrhigles2nativehandles.html">QRhiGles2NativeHandles</a>, it is up to the application to ensure they are not misused by other threads.</p>
-<p>By default any <a href="qrhiresource.html">QRhiResource</a> created from one <a href="qrhi.html">QRhi</a> must only be used with that one <a href="qrhi.html">QRhi</a> and must be released before the <a href="qrhi.html">QRhi</a> is destroyed. This rule is relaxed when a <a href="qrhi.html">QRhi</a> is created with an associated <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>. From then on any <a href="qrhiresource.html">QRhiResource</a> that reports <code>true</code> from <a href="qrhiresource.html#isShareable">isShareable()</a> is usable with other <a href="qrhi.html">QRhi</a> instances as well, as long as they are associated with the same <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>. Resources can also outlive their creating <a href="qrhi.html">QRhi</a> in this case, as long as there is at least one <a href="qrhi.html">QRhi</a> left in the &quot;sharing group&quot;. When the <a href="qrhi.html">QRhi</a> instances live and operate on different threads, additional synchronization may be required. When writing to resources, additional synchronization may be required even when the <a href="qrhi.html">QRhi</a> instances live on the same thread. See <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a> for further discussion.</p>
-</div>
+<p>By default any <a href="qrhiresource.html">QRhiResource</a> created from one <a href="qrhi.html">QRhi</a> must only be used with that one <a href="qrhi.html">QRhi</a> and must be released before the <a href="qrhi.html">QRhi</a> is destroyed. This rule is relaxed when a <a href="qrhi.html">QRhi</a> is created with an associated <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>. From then on any <a href="qrhiresource.html">QRhiResource</a> that reports <code>true</code> from <a href="qrhiresource.html#isShareable">isShareable()</a> is usable with other <a href="qrhi.html">QRhi</a> instances as well, as long as they are associated with the same <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>. Resources can also outlive their creating <a href="qrhi.html">QRhi</a> in this case, as long as there is at least one <a href="qrhi.html">QRhi</a> left in the sharing group.</p>
+<p><b>Note: </b>Support for efficient concurrent access to shared resources from <a href="qrhi.html">QRhi</a> instances operating on different threads, especially when writing (for example, rendering to a texture) is involved, is limited for the time being. Neither GPU-GPU nor GPU-host synchronization facilities (such as, fences or events) are provided in the <a href="qrhi.html">QRhi</a> API at the moment. These may be introduced in the future.</p></div>
 <p><b>See also </b>Qt Shader Tools and <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>.</p>
 <!-- @@@QRhi -->
 <div class="types">
 <h2>Member Type Documentation</h2>
+<!-- $$$BeginFrameFlag -->
+<h3 class="flags" id="BeginFrameFlag-enum"><a name="BeginFrameFlag-enum"></a>enum QRhi::<span class="name">BeginFrameFlag</span><br/>flags QRhi::<span class="name">BeginFrameFlags</span></h3>
+<p>Flag values for <a href="qrhi.html#beginFrame">QRhi::beginFrame</a>()</p>
+<p>The BeginFrameFlags type is a typedef for <a href="../qtcore/qflags.html">QFlags</a>&lt;BeginFrameFlag&gt;. It stores an OR combination of BeginFrameFlag values.</p>
+<!-- @@@BeginFrameFlag -->
+<!-- $$$EndFrameFlag$$$SkipPresent -->
+<h3 class="flags" id="EndFrameFlag-enum"><a name="EndFrameFlag-enum"></a>enum QRhi::<span class="name">EndFrameFlag</span><br/>flags QRhi::<span class="name">EndFrameFlags</span></h3>
+<p>Flag values for <a href="qrhi.html#endFrame">QRhi::endFrame</a>()</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhi::SkipPresent</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">Specifies that no present command is to be queued or no swapBuffers call is to be made. This way no image is presented. Generating multiple frames with all having this flag set is not recommended (except, for example, for benchmarking purposes - but keep in mind that backends may behave differently when it comes to waiting for command completion without presenting so the results are not comparable between them)</td></tr>
+</table></div>
+<p>The EndFrameFlags type is a typedef for <a href="../qtcore/qflags.html">QFlags</a>&lt;EndFrameFlag&gt;. It stores an OR combination of EndFrameFlag values.</p>
+<!-- @@@EndFrameFlag -->
 <!-- $$$Feature$$$MultisampleTexture$$$MultisampleRenderBuffer$$$DebugMarkers$$$Timestamps$$$Instancing$$$CustomInstanceStepRate$$$PrimitiveRestart -->
 <h3 class="fn" id="Feature-enum"><a name="Feature-enum"></a>enum QRhi::<span class="name">Feature</span></h3>
 <p>Flag values to indicate what features are supported by the backend currently in use.</p>
@@ -253,8 +270,8 @@
 <h3 class="fn" id="dtor.QRhi"><a name="dtor.QRhi"></a>QRhi::<span class="name">~QRhi</span>()</h3>
 <p>Destructor. Destroys the backend and releases resources.</p>
 <!-- @@@~QRhi -->
-<!-- $$$beginFrame[overload1]$$$beginFrameQRhiSwapChain* -->
-<h3 class="fn" id="beginFrame"><a name="beginFrame"></a><span class="type"><a href="qrhi.html#FrameOpResult-enum">QRhi::FrameOpResult</a></span> QRhi::<span class="name">beginFrame</span>(<span class="type"><a href="qrhiswapchain.html">QRhiSwapChain</a></span> *<i>swapChain</i>)</h3>
+<!-- $$$beginFrame[overload1]$$$beginFrameQRhiSwapChain*QRhi::BeginFrameFlags -->
+<h3 class="fn" id="beginFrame"><a name="beginFrame"></a><span class="type"><a href="qrhi.html#FrameOpResult-enum">QRhi::FrameOpResult</a></span> QRhi::<span class="name">beginFrame</span>(<span class="type"><a href="qrhiswapchain.html">QRhiSwapChain</a></span> *<i>swapChain</i>, <span class="type"><a href="qrhi.html#BeginFrameFlag-enum">QRhi::BeginFrameFlags</a></span> <i>flags</i> = ...)</h3>
 <p>Starts a new frame targeting the next available buffer of <i>swapChain</i>.</p>
 <p>The high level pattern of rendering into a <a href="../qtgui/qwindow.html">QWindow</a> using a swapchain:</p>
 <ul>
@@ -276,6 +293,7 @@
 </pre>
 </li>
 </ul>
+<p><i>flags</i> is currently unused.</p>
 <p><b>See also </b><a href="qrhi.html#endFrame">endFrame</a>().</p>
 <!-- @@@beginFrame -->
 <!-- $$$beginOffscreenFrame[overload1]$$$beginOffscreenFrameQRhiCommandBuffer** -->
@@ -312,10 +330,11 @@
 <p><i>params</i> must point to an instance of one of the backend-specific subclasses of <a href="qrhiinitparams.html">QRhiInitParams</a>, such as, <a href="qrhivulkaninitparams.html">QRhiVulkanInitParams</a>, <a href="qrhimetalinitparams.html">QRhiMetalInitParams</a>, <a href="qrhid3d11initparams.html">QRhiD3D11InitParams</a>, <a href="qrhigles2initparams.html">QRhiGles2InitParams</a>. See these classes for examples on creating a <a href="qrhi.html">QRhi</a>.</p>
 <p><i>flags</i> is optional. It is used to enable profile and debug related features that are potentially expensive and should only be used during development.</p>
 <!-- @@@create -->
-<!-- $$$endFrame[overload1]$$$endFrameQRhiSwapChain* -->
-<h3 class="fn" id="endFrame"><a name="endFrame"></a><span class="type"><a href="qrhi.html#FrameOpResult-enum">QRhi::FrameOpResult</a></span> QRhi::<span class="name">endFrame</span>(<span class="type"><a href="qrhiswapchain.html">QRhiSwapChain</a></span> *<i>swapChain</i>)</h3>
+<!-- $$$endFrame[overload1]$$$endFrameQRhiSwapChain*QRhi::EndFrameFlags -->
+<h3 class="fn" id="endFrame"><a name="endFrame"></a><span class="type"><a href="qrhi.html#FrameOpResult-enum">QRhi::FrameOpResult</a></span> QRhi::<span class="name">endFrame</span>(<span class="type"><a href="qrhiswapchain.html">QRhiSwapChain</a></span> *<i>swapChain</i>, <span class="type"><a href="qrhi.html#EndFrameFlag-enum">QRhi::EndFrameFlags</a></span> <i>flags</i> = ...)</h3>
 <p>Ends, commits, and presents a frame that was started in the last <a href="qrhi.html#beginFrame">beginFrame</a>() on <i>swapChain</i>.</p>
 <p>Double (or triple) buffering is managed internally by the <a href="qrhiswapchain.html">QRhiSwapChain</a> and <a href="qrhi.html">QRhi</a>.</p>
+<p><i>flags</i> can optionally be used to change the behavior in certain ways. Passing <a href="qrhi.html#EndFrameFlag-enum">QRhi::SkipPresent</a> skips queuing the Present command or calling swapBuffers.</p>
 <p><b>See also </b><a href="qrhi.html#beginFrame">beginFrame</a>().</p>
 <!-- @@@endFrame -->
 <!-- $$$endOffscreenFrame[overload1]$$$endOffscreenFrame -->

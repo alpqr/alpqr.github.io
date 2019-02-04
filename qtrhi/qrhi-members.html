@@ -39,6 +39,10 @@
 <p>This is the complete list of members for <a href="qrhi.html">QRhi</a>, including inherited members.</p>
 <div class="table"><table class="propsummary">
 <tr><td class="topAlign"><ul>
+<li class="fn">enum <span class="name"><b><a href="qrhi.html#BeginFrameFlag-enum">BeginFrameFlag</a></b></span></li>
+<li class="fn">flags <span class="name"><b><a href="qrhi.html#BeginFrameFlag-enum">BeginFrameFlags</a></b></span></li>
+<li class="fn">enum <span class="name"><b><a href="qrhi.html#EndFrameFlag-enum">EndFrameFlag</a></b></span></li>
+<li class="fn">flags <span class="name"><b><a href="qrhi.html#EndFrameFlag-enum">EndFrameFlags</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhi.html#Feature-enum">Feature</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhi.html#Flag-enum">Flag</a></b></span></li>
 <li class="fn">flags <span class="name"><b><a href="qrhi.html#Flag-enum">Flags</a></b></span></li>
@@ -46,17 +50,17 @@
 <li class="fn">enum <span class="name"><b><a href="qrhi.html#Implementation-enum">Implementation</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhi.html#ResourceSizeLimit-enum">ResourceSizeLimit</a></b></span></li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#dtor.QRhi">~QRhi</a></b></span>()</li>
-<li class="fn"><span class="name"><b><a href="qrhi.html#beginFrame">beginFrame</a></b></span>(QRhiSwapChain *) : QRhi::FrameOpResult</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#beginFrame">beginFrame</a></b></span>(QRhiSwapChain *, QRhi::BeginFrameFlags ) : QRhi::FrameOpResult</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#beginOffscreenFrame">beginOffscreenFrame</a></b></span>(QRhiCommandBuffer **) : QRhi::FrameOpResult</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#clipSpaceCorrMatrix">clipSpaceCorrMatrix</a></b></span>() const : QMatrix4x4</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#create">create</a></b></span>(QRhi::Implementation , QRhiInitParams *, QRhi::Flags , QRhiNativeHandles *) : QRhi *</li>
-<li class="fn"><span class="name"><b><a href="qrhi.html#endFrame">endFrame</a></b></span>(QRhiSwapChain *) : QRhi::FrameOpResult</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#endFrame">endFrame</a></b></span>(QRhiSwapChain *, QRhi::EndFrameFlags ) : QRhi::FrameOpResult</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#endOffscreenFrame">endOffscreenFrame</a></b></span>() : QRhi::FrameOpResult</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#finish">finish</a></b></span>() : QRhi::FrameOpResult</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#isFeatureSupported">isFeatureSupported</a></b></span>(QRhi::Feature ) const : bool</li>
+</ul></td><td class="topAlign"><ul>
 <li class="fn"><span class="name"><b><a href="qrhi.html#isTextureFormatSupported">isTextureFormatSupported</a></b></span>(QRhiTexture::Format , QRhiTexture::Flags ) const : bool</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#isYUpInFramebuffer">isYUpInFramebuffer</a></b></span>() const : bool</li>
-</ul></td><td class="topAlign"><ul>
 <li class="fn"><span class="name"><b><a href="qrhi.html#mipLevelsForSize">mipLevelsForSize</a></b></span>(const QSize &amp;) const : int</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#nativeHandles">nativeHandles</a></b></span>() : const QRhiNativeHandles *</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#newBuffer">newBuffer</a></b></span>(QRhiBuffer::Type , QRhiBuffer::UsageFlags , int ) : QRhiBuffer *</li>

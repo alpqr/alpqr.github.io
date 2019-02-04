@@ -184,11 +184,15 @@
             <keyword name="Dear ImGui" id="Dear ImGui" ref="qtrhi-attribution-imgui.html"/>
             <keyword name="GpuTime" id="QRhiProfiler::GpuTime" ref="qrhiprofiler-gputime.html"/>
             <keyword name="QRhi" id="QRhi" ref="qrhi.html"/>
+            <keyword name="QRhi::BeginFrameFlag" id="QRhi::BeginFrameFlag" ref="qrhi.html#BeginFrameFlag-enum"/>
+            <keyword name="QRhi::BeginFrameFlags" id="QRhi::BeginFrameFlags" ref="qrhi.html#BeginFrameFlag-enum"/>
             <keyword name="QRhi::CustomInstanceStepRate" id="QRhi::CustomInstanceStepRate" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::D3D11" id="QRhi::D3D11" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhi::DebugMarkers" id="QRhi::DebugMarkers" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::EnableDebugMarkers" id="QRhi::EnableDebugMarkers" ref="qrhi.html#Flag-enum"/>
             <keyword name="QRhi::EnableProfiling" id="QRhi::EnableProfiling" ref="qrhi.html#Flag-enum"/>
+            <keyword name="QRhi::EndFrameFlag" id="QRhi::EndFrameFlag" ref="qrhi.html#EndFrameFlag-enum"/>
+            <keyword name="QRhi::EndFrameFlags" id="QRhi::EndFrameFlags" ref="qrhi.html#EndFrameFlag-enum"/>
             <keyword name="QRhi::Feature" id="QRhi::Feature" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::Flag" id="QRhi::Flag" ref="qrhi.html#Flag-enum"/>
             <keyword name="QRhi::Flags" id="QRhi::Flags" ref="qrhi.html#Flag-enum"/>
@@ -206,6 +210,7 @@
             <keyword name="QRhi::OpenGLES2" id="QRhi::OpenGLES2" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhi::PrimitiveRestart" id="QRhi::PrimitiveRestart" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::ResourceSizeLimit" id="QRhi::ResourceSizeLimit" ref="qrhi.html#ResourceSizeLimit-enum"/>
+            <keyword name="QRhi::SkipPresent" id="QRhi::SkipPresent" ref="qrhi.html#EndFrameFlag-enum"/>
             <keyword name="QRhi::TextureSizeMax" id="QRhi::TextureSizeMax" ref="qrhi.html#ResourceSizeLimit-enum"/>
             <keyword name="QRhi::TextureSizeMin" id="QRhi::TextureSizeMin" ref="qrhi.html#ResourceSizeLimit-enum"/>
             <keyword name="QRhi::Timestamps" id="QRhi::Timestamps" ref="qrhi.html#Feature-enum"/>
@@ -354,7 +359,6 @@
             <keyword name="QRhiResource" id="QRhiResource" ref="qrhiresource.html"/>
             <keyword name="QRhiResourceSharingHost" id="QRhiResourceSharingHost" ref="qrhiresourcesharinghost.html"/>
             <keyword name="QRhiResourceUpdateBatch" id="QRhiResourceUpdateBatch" ref="qrhiresourceupdatebatch.html"/>
-            <keyword name="QRhiResourceUpdateBatch::TexturePrepareFlags" id="QRhiResourceUpdateBatch::TexturePrepareFlags" ref="qrhiresourceupdatebatch.html#TexturePrepareFlag-enum"/>
             <keyword name="QRhiSampler" id="QRhiSampler" ref="qrhisampler.html"/>
             <keyword name="QRhiSampler::AddressMode" id="QRhiSampler::AddressMode" ref="qrhisampler.html#AddressMode-enum"/>
             <keyword name="QRhiSampler::Border" id="QRhiSampler::Border" ref="qrhisampler.html#AddressMode-enum"/>

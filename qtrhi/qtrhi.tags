@@ -2695,12 +2695,6 @@
     <compound kind="class">
         <name>QRhiResourceUpdateBatch</name>
         <filename>qrhiresourceupdatebatch.html</filename>
-        <member kind="typedef" type="QRhiResourceUpdateBatch::TexturePrepareFlag">
-            <name>TexturePrepareFlags</name>
-            <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
-            <anchor>TexturePrepareFlag-enum</anchor>
-            <arglist></arglist>
-        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
             <name>~QRhiResourceUpdateBatch</name>
@@ -2903,6 +2897,32 @@
             <arglist></arglist>
         </member>
         <member kind="enum">
+            <name>BeginFrameFlag</name>
+            <anchor>BeginFrameFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="typedef" type="QRhi::BeginFrameFlag">
+            <name>BeginFrameFlags</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>BeginFrameFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
+            <name>EndFrameFlag</name>
+            <anchor>EndFrameFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="SkipPresent">
+            <anchor>EndFrameFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="typedef" type="QRhi::EndFrameFlag">
+            <name>EndFrameFlags</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>EndFrameFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
             <name>ResourceSizeLimit</name>
             <anchor>ResourceSizeLimit-enum</anchor>
             <arglist></arglist>
@@ -2990,14 +3010,14 @@
             <name>beginFrame</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>beginFrame</anchor>
-            <arglist>(QRhiSwapChain *swapChain)</arglist>
+            <arglist>(QRhiSwapChain *swapChain, QRhi::BeginFrameFlags flags)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhi::FrameOpResult</type>
             <name>endFrame</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>endFrame</anchor>
-            <arglist>(QRhiSwapChain *swapChain)</arglist>
+            <arglist>(QRhiSwapChain *swapChain, QRhi::EndFrameFlags flags)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhi::FrameOpResult</type>
