@@ -39,6 +39,7 @@
 <h3><a name="toc">Contents</a></h3>
 <ul>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#related-non-members">Related Non-Members</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -60,6 +61,13 @@
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhicolorclearvalue.html#QRhiColorClearValue-2">QRhiColorClearValue</a></b>(float <i>r</i>, float <i>g</i>, float <i>b</i>, float <i>a</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QVector4D </td><td class="memItemRight bottomAlign"><b><a href="qrhicolorclearvalue.html#rgba">rgba</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicolorclearvalue.html#setRgba">setRgba</a></b>(const QVector4D &amp;<i>c</i>)</td></tr>
+</table></div>
+<a name="related-non-members"></a>
+<h2 id="related-non-members">Related Non-Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> uint </td><td class="memItemRight bottomAlign"><b><a href="qrhicolorclearvalue.html#qHash">qHash</a></b>(const QRhiColorClearValue &amp;<i>v</i>, uint <i>seed</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhicolorclearvalue.html#operator-not-eq">operator!=</a></b>(const QRhiColorClearValue &amp;<i>a</i>, const QRhiColorClearValue &amp;<i>b</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhicolorclearvalue.html#operator-eq-eq">operator==</a></b>(const QRhiColorClearValue &amp;<i>a</i>, const QRhiColorClearValue &amp;<i>b</i>)</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$QRhiColorClearValue-description -->
@@ -102,6 +110,18 @@
 </div>
 <div class="relnonmem">
 <h2>Related Non-Members</h2>
+<!-- $$$qHash[overload1]$$$qHashconstQRhiColorClearValue&uint -->
+<h3 class="fn" id="qHash"><a name="qHash"></a><span class="type"><a href="../qtcore/qtglobal.html#uint-typedef">uint</a></span> <span class="name">qHash</span>(const <span class="type"><a href="qrhicolorclearvalue.html#QRhiColorClearValue">QRhiColorClearValue</a></span> &amp;<i>v</i>, <span class="type"><a href="../qtcore/qtglobal.html#uint-typedef">uint</a></span> <i>seed</i> = 0)</h3>
+<p>Returns the hash value for <i>v</i>, using <i>seed</i> to seed the calculation.</p>
+<!-- @@@qHash -->
+<!-- $$$operator!=[overload1]$$$operator!=constQRhiColorClearValue&constQRhiColorClearValue& -->
+<h3 class="fn" id="operator-not-eq"><a name="operator-not-eq"></a><span class="type">bool</span> <span class="name">operator!=</span>(const <span class="type"><a href="qrhicolorclearvalue.html#QRhiColorClearValue">QRhiColorClearValue</a></span> &amp;<i>a</i>, const <span class="type"><a href="qrhicolorclearvalue.html#QRhiColorClearValue">QRhiColorClearValue</a></span> &amp;<i>b</i>)</h3>
+<p>Returns <code>false</code> if the colors in the two <a href="qrhicolorclearvalue.html">QRhiColorClearValue</a> objects <i>a</i> and <i>b</i> are equal; otherwise returns <code>true</code>.</p>
+<!-- @@@operator!= -->
+<!-- $$$operator==[overload1]$$$operator==constQRhiColorClearValue&constQRhiColorClearValue& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><span class="type">bool</span> <span class="name">operator==</span>(const <span class="type"><a href="qrhicolorclearvalue.html#QRhiColorClearValue">QRhiColorClearValue</a></span> &amp;<i>a</i>, const <span class="type"><a href="qrhicolorclearvalue.html#QRhiColorClearValue">QRhiColorClearValue</a></span> &amp;<i>b</i>)</h3>
+<p>Returns <code>true</code> if the colors in the two <a href="qrhicolorclearvalue.html">QRhiColorClearValue</a> objects <i>a</i> and <i>b</i> are equal.</p>
+<!-- @@@operator== -->
 </div>
 <div class="macros">
 <h2>Macro Documentation</h2>

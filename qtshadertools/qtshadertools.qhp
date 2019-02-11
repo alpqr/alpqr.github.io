@@ -163,8 +163,18 @@
             <keyword name="name" id="InOutVariable::name" ref="qshaderdescription-inoutvariable.html#name-var"/>
             <keyword name="name" id="PushConstantBlock::name" ref="qshaderdescription-pushconstantblock.html#name-var"/>
             <keyword name="offset" id="BlockVariable::offset" ref="qshaderdescription-blockvariable.html#offset-var"/>
+            <keyword name="operator!=" id="operator!=" ref="qbakedshader.html#operator-not-eq"/>
+            <keyword name="operator!=" id="operator!=" ref="qbakedshadercode.html#operator-not-eq"/>
+            <keyword name="operator!=" id="operator!=" ref="qbakedshaderkey.html#operator-not-eq"/>
+            <keyword name="operator!=" id="operator!=" ref="qbakedshaderversion.html#operator-not-eq"/>
+            <keyword name="operator==" id="operator==" ref="qbakedshader.html#operator-eq-eq"/>
+            <keyword name="operator==" id="operator==" ref="qbakedshadercode.html#operator-eq-eq"/>
+            <keyword name="operator==" id="operator==" ref="qbakedshaderkey.html#operator-eq-eq"/>
+            <keyword name="operator==" id="operator==" ref="qbakedshaderversion.html#operator-eq-eq"/>
             <keyword name="outputVariables" id="QShaderDescription::outputVariables" ref="qshaderdescription.html#outputVariables"/>
             <keyword name="pushConstantBlocks" id="QShaderDescription::pushConstantBlocks" ref="qshaderdescription.html#pushConstantBlocks"/>
+            <keyword name="qHash" id="qHash" ref="qbakedshader.html#qHash"/>
+            <keyword name="qHash" id="qHash" ref="qbakedshaderkey.html#qHash"/>
             <keyword name="removeShader" id="QBakedShader::removeShader" ref="qbakedshader.html#removeShader"/>
             <keyword name="serialized" id="QBakedShader::serialized" ref="qbakedshader.html#serialized"/>
             <keyword name="setDescription" id="QBakedShader::setDescription" ref="qbakedshader.html#setDescription"/>

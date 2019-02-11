@@ -41,6 +41,7 @@
 <li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#related-non-members">Related Non-Members</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -80,6 +81,13 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> QBakedShader </td><td class="memItemRight bottomAlign"><b><a href="qbakedshader.html#fromSerialized">fromSerialized</a></b>(const QByteArray &amp;<i>data</i>)</td></tr>
 </table></div>
+<a name="related-non-members"></a>
+<h2 id="related-non-members">Related Non-Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> uint </td><td class="memItemRight bottomAlign"><b><a href="qbakedshader.html#qHash">qHash</a></b>(const QBakedShader &amp;<i>s</i>, uint <i>seed</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qbakedshader.html#operator-not-eq">operator!=</a></b>(const QBakedShader &amp;<i>lhs</i>, const QBakedShader &amp;<i>rhs</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qbakedshader.html#operator-eq-eq">operator==</a></b>(const QBakedShader &amp;<i>lhs</i>, const QBakedShader &amp;<i>rhs</i>)</td></tr>
+</table></div>
 <a name="details"></a>
 <!-- $$$QBakedShader-description -->
 <div class="descr">
@@ -99,7 +107,7 @@
 <li>the reflection metadata containing a description of the shader's inputs, outputs and resources like uniform blocks. This is essential when an application or framework needs to discover the inputs of a shader at runtime due to not having advance knowledge of the vertex attributes or the layout of the uniform buffers used by the shader.</li>
 </ul>
 <p><a href="qbakedshader.html">QBakedShader</a> makes no assumption about the shading language that was used as the source for generating the various versions and variants that are included in it.</p>
-<p><a href="qbakedshader.html">QBakedShader</a> uses implicit sharing similarly to many core Qt types, and so can be returned or passed by value.</p>
+<p><a href="qbakedshader.html">QBakedShader</a> uses implicit sharing similarly to many core Qt types, and so can be returned or passed by value. Detach happens implicitly when calling a setter.</p>
 <p>For reference, QRhi expects that a <a href="qbakedshader.html">QBakedShader</a> suitable for all its backends contains at least the following:</p>
 <ul>
 <li>SPIR-V 1.0 bytecode suitable for Vulkan 1.0 or newer</li>
@@ -197,6 +205,18 @@
 </div>
 <div class="relnonmem">
 <h2>Related Non-Members</h2>
+<!-- $$$qHash[overload1]$$$qHashconstQBakedShader&uint -->
+<h3 class="fn" id="qHash"><a name="qHash"></a><span class="type"><a href="../qtcore/qtglobal.html#uint-typedef">uint</a></span> <span class="name">qHash</span>(const <span class="type"><a href="qbakedshader.html#QBakedShader">QBakedShader</a></span> &amp;<i>s</i>, <span class="type"><a href="../qtcore/qtglobal.html#uint-typedef">uint</a></span> <i>seed</i> = 0)</h3>
+<p>Returns the hash value for <i>s</i>, using <i>seed</i> to seed the calculation.</p>
+<!-- @@@qHash -->
+<!-- $$$operator!=[overload1]$$$operator!=constQBakedShader&constQBakedShader& -->
+<h3 class="fn" id="operator-not-eq"><a name="operator-not-eq"></a><span class="type">bool</span> <span class="name">operator!=</span>(const <span class="type"><a href="qbakedshader.html#QBakedShader">QBakedShader</a></span> &amp;<i>lhs</i>, const <span class="type"><a href="qbakedshader.html#QBakedShader">QBakedShader</a></span> &amp;<i>rhs</i>)</h3>
+<p>Returns <code>false</code> if the values in the two <a href="qbakedshader.html">QBakedShader</a> objects <i>a</i> and <i>b</i> are equal; otherwise returns <code>true</code>.</p>
+<!-- @@@operator!= -->
+<!-- $$$operator==[overload1]$$$operator==constQBakedShader&constQBakedShader& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><span class="type">bool</span> <span class="name">operator==</span>(const <span class="type"><a href="qbakedshader.html#QBakedShader">QBakedShader</a></span> &amp;<i>lhs</i>, const <span class="type"><a href="qbakedshader.html#QBakedShader">QBakedShader</a></span> &amp;<i>rhs</i>)</h3>
+<p>Returns <code>true</code> if the two <a href="qbakedshader.html">QBakedShader</a> objects <i>a</i> and <i>b</i> are equal, meaning they are for the same stage with matching sets of shader source or binary code.</p>
+<!-- @@@operator== -->
 </div>
 <div class="macros">
 <h2>Macro Documentation</h2>

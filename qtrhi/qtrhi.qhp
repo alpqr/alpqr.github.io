@@ -658,7 +658,25 @@
             <keyword name="offset" id="QRhiVertexInputAttribute::offset" ref="qrhivertexinputattribute.html#offset"/>
             <keyword name="opAlpha" id="TargetBlend::opAlpha" ref="qrhigraphicspipeline-targetblend.html#opAlpha-var"/>
             <keyword name="opColor" id="TargetBlend::opColor" ref="qrhigraphicspipeline-targetblend.html#opColor-var"/>
+            <keyword name="operator!=" id="operator!=" ref="qrhicolorclearvalue.html#operator-not-eq"/>
+            <keyword name="operator!=" id="operator!=" ref="qrhidepthstencilclearvalue.html#operator-not-eq"/>
+            <keyword name="operator!=" id="operator!=" ref="qrhigraphicsshaderstage.html#operator-not-eq"/>
+            <keyword name="operator!=" id="operator!=" ref="qrhiscissor.html#operator-not-eq"/>
+            <keyword name="operator!=" id="operator!=" ref="qrhishaderresourcebinding.html#operator-not-eq"/>
+            <keyword name="operator!=" id="operator!=" ref="qrhivertexinputattribute.html#operator-not-eq"/>
+            <keyword name="operator!=" id="operator!=" ref="qrhivertexinputbinding.html#operator-not-eq"/>
+            <keyword name="operator!=" id="operator!=" ref="qrhivertexinputlayout.html#operator-not-eq"/>
+            <keyword name="operator!=" id="operator!=" ref="qrhiviewport.html#operator-not-eq"/>
             <keyword name="operator=" id="QRhiResource::operator=" ref="qrhiresource.html#operator-eq"/>
+            <keyword name="operator==" id="operator==" ref="qrhicolorclearvalue.html#operator-eq-eq"/>
+            <keyword name="operator==" id="operator==" ref="qrhidepthstencilclearvalue.html#operator-eq-eq"/>
+            <keyword name="operator==" id="operator==" ref="qrhigraphicsshaderstage.html#operator-eq-eq"/>
+            <keyword name="operator==" id="operator==" ref="qrhiscissor.html#operator-eq-eq"/>
+            <keyword name="operator==" id="operator==" ref="qrhishaderresourcebinding.html#operator-eq-eq"/>
+            <keyword name="operator==" id="operator==" ref="qrhivertexinputattribute.html#operator-eq-eq"/>
+            <keyword name="operator==" id="operator==" ref="qrhivertexinputbinding.html#operator-eq-eq"/>
+            <keyword name="operator==" id="operator==" ref="qrhivertexinputlayout.html#operator-eq-eq"/>
+            <keyword name="operator==" id="operator==" ref="qrhiviewport.html#operator-eq-eq"/>
             <keyword name="orphanedWithRsh" id="QRhiResource::orphanedWithRsh" ref="qrhiresource.html#orphanedWithRsh-var"/>
             <keyword name="passOp" id="StencilOpState::passOp" ref="qrhigraphicspipeline-stencilopstate.html#passOp-var"/>
             <keyword name="physDev" id="QRhiVulkanNativeHandles::physDev" ref="qrhivulkannativehandles.html#physDev-var"/>
@@ -667,6 +685,15 @@
             <keyword name="pixelSize" id="QRhiTexture::pixelSize" ref="qrhitexture.html#pixelSize"/>
             <keyword name="pixelSize" id="QRhiTextureCopyDescription::pixelSize" ref="qrhitexturecopydescription.html#pixelSize"/>
             <keyword name="profiler" id="QRhi::profiler" ref="qrhi.html#profiler"/>
+            <keyword name="qHash" id="qHash" ref="qrhicolorclearvalue.html#qHash"/>
+            <keyword name="qHash" id="qHash" ref="qrhidepthstencilclearvalue.html#qHash"/>
+            <keyword name="qHash" id="qHash" ref="qrhigraphicsshaderstage.html#qHash"/>
+            <keyword name="qHash" id="qHash" ref="qrhiscissor.html#qHash"/>
+            <keyword name="qHash" id="qHash" ref="qrhishaderresourcebinding.html#qHash"/>
+            <keyword name="qHash" id="qHash" ref="qrhivertexinputattribute.html#qHash"/>
+            <keyword name="qHash" id="qHash" ref="qrhivertexinputbinding.html#qHash"/>
+            <keyword name="qHash" id="qHash" ref="qrhivertexinputlayout.html#qHash"/>
+            <keyword name="qHash" id="qHash" ref="qrhiviewport.html#qHash"/>
             <keyword name="readBackTexture" id="QRhiResourceUpdateBatch::readBackTexture" ref="qrhiresourceupdatebatch.html#readBackTexture"/>
             <keyword name="release" id="QRhiResource::release" ref="qrhiresource.html#release"/>
             <keyword name="release" id="QRhiResourceUpdateBatch::release" ref="qrhiresourceupdatebatch.html#release"/>
