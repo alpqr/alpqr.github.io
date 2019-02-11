@@ -560,6 +560,8 @@
             <keyword name="inst" id="QRhiVulkanInitParams::inst" ref="qrhivulkaninitparams.html#inst-var"/>
             <keyword name="instanceStepRate" id="QRhiVertexInputBinding::instanceStepRate" ref="qrhivertexinputbinding.html#instanceStepRate"/>
             <keyword name="isFeatureSupported" id="QRhi::isFeatureSupported" ref="qrhi.html#isFeatureSupported"/>
+            <keyword name="isLayoutCompatible" id="QRhiShaderResourceBinding::isLayoutCompatible" ref="qrhishaderresourcebinding.html#isLayoutCompatible"/>
+            <keyword name="isLayoutCompatible" id="QRhiShaderResourceBindings::isLayoutCompatible" ref="qrhishaderresourcebindings.html#isLayoutCompatible"/>
             <keyword name="isShareable" id="QRhiResource::isShareable" ref="qrhiresource.html#isShareable"/>
             <keyword name="isTextureFormatSupported" id="QRhi::isTextureFormatSupported" ref="qrhi.html#isTextureFormatSupported"/>
             <keyword name="isYUpInFramebuffer" id="QRhi::isYUpInFramebuffer" ref="qrhi.html#isYUpInFramebuffer"/>

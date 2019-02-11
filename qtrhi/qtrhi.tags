@@ -513,6 +513,13 @@
             <anchor>dtor.QRhiShaderResourceBinding</anchor>
             <arglist>()</arglist>
         </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>bool</type>
+            <name>isLayoutCompatible</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>isLayoutCompatible</anchor>
+            <arglist>(const QRhiShaderResourceBinding &amp;other) const const</arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="yes">
             <type>QRhiShaderResourceBinding</type>
             <name>uniformBuffer</name>
@@ -1850,6 +1857,13 @@
             <anchorfile>qrhishaderresourcebindings.html</anchorfile>
             <anchor>setBindings</anchor>
             <arglist>(const QVector&lt;QRhiShaderResourceBinding&gt; &amp;b)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>bool</type>
+            <name>isLayoutCompatible</name>
+            <anchorfile>qrhishaderresourcebindings.html</anchorfile>
+            <anchor>isLayoutCompatible</anchor>
+            <arglist>(const QRhiShaderResourceBindings *other) const const</arglist>
         </member>
         <member kind="function" protection="public" virtualness="pure" static="no">
             <type>virtual bool</type>

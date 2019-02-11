@@ -48,7 +48,7 @@
 <div class="sidebar-content" id="sidebar-content"></div></div>
 <h1 class="title">QRhiShaderResourceBinding Class</h1>
 <!-- $$$QRhiShaderResourceBinding-brief -->
-<p>Specifies the shader resources that are made visible to one or more shader stages. <a href="#details">More...</a></p>
+<p>Describes the shader resource for a single binding point. <a href="#details">More...</a></p>
 <!-- @@@QRhiShaderResourceBinding -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiShaderResourceBinding&gt;</span>
@@ -66,6 +66,7 @@
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#dtor.QRhiShaderResourceBinding">~QRhiShaderResourceBinding</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#isLayoutCompatible">isLayoutCompatible</a></b>(const QRhiShaderResourceBinding &amp;<i>other</i>) const</td></tr>
 </table></div>
 <a name="static-public-members"></a>
 <h2 id="static-public-members">Static Public Members</h2>
@@ -85,7 +86,7 @@
 <!-- $$$QRhiShaderResourceBinding-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>Specifies the shader resources that are made visible to one or more shader stages.</p>
+<p>Describes the shader resource for a single binding point.</p>
 <p>A <a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a> cannot be constructed directly. Instead, use the static functions <a href="qrhishaderresourcebinding.html#uniformBuffer">uniformBuffer</a>(), <a href="qrhishaderresourcebinding.html#sampledTexture">sampledTexture</a>() to get an instance.</p>
 </div>
 <!-- @@@QRhiShaderResourceBinding -->
@@ -120,6 +121,17 @@
 <h3 class="fn" id="dtor.QRhiShaderResourceBinding"><a name="dtor.QRhiShaderResourceBinding"></a>QRhiShaderResourceBinding::<span class="name">~QRhiShaderResourceBinding</span>()</h3>
 <p>Destructor.</p>
 <!-- @@@~QRhiShaderResourceBinding -->
+<!-- $$$isLayoutCompatible[overload1]$$$isLayoutCompatibleconstQRhiShaderResourceBinding& -->
+<h3 class="fn" id="isLayoutCompatible"><a name="isLayoutCompatible"></a><span class="type">bool</span> QRhiShaderResourceBinding::<span class="name">isLayoutCompatible</span>(const <span class="type">QRhiShaderResourceBinding</span> &amp;<i>other</i>) const</h3>
+<p>Returns <code>true</code> if the layout is compatible with <i>other</i>. The layout does not include the actual resource (such as, buffer or texture) and related parameters (such as, offset or size).</p>
+<p>For example, <code>a</code> and <code>b</code> below are not equal, but are compatible layout-wise:</p>
+<pre class="cpp plain">
+
+  auto a = QRhiShaderResourceBinding::uniformBuffer(0, QRhiShaderResourceBinding::VertexStage, buffer);
+  auto b = QRhiShaderResourceBinding::uniformBuffer(0, QRhiShaderResourceBinding::VertexStage, someOtherBuffer, 256);
+
+</pre>
+<!-- @@@isLayoutCompatible -->
 <!-- $$$sampledTexture[overload1]$$$sampledTextureintQRhiShaderResourceBinding::StageFlagsQRhiTexture*QRhiSampler* -->
 <h3 class="fn" id="sampledTexture"><a name="sampledTexture"></a><code>[static] </code><span class="type">QRhiShaderResourceBinding</span> QRhiShaderResourceBinding::<span class="name">sampledTexture</span>(<span class="type">int</span> <i>binding</i>, <span class="type"><a href="qrhishaderresourcebinding.html#StageFlag-enum">QRhiShaderResourceBinding::StageFlags</a></span> <i>stage</i>, <span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>tex</i>, <span class="type"><a href="qrhisampler.html">QRhiSampler</a></span> *<i>sampler</i>)</h3>
 <p>Returns a shader resource binding for the given binding number, pipeline stage, texture, and sampler specified by <i>binding</i>, <i>stage</i>, <i>tex</i>, <i>sampler</i>.</p>
@@ -148,7 +160,7 @@
 <!-- @@@operator!= -->
 <!-- $$$operator==[overload1]$$$operator==constQRhiShaderResourceBinding&constQRhiShaderResourceBinding& -->
 <h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><span class="type">bool</span> <span class="name">operator==</span>(const <span class="type">QRhiShaderResourceBinding</span> &amp;<i>a</i>, const <span class="type">QRhiShaderResourceBinding</span> &amp;<i>b</i>)</h3>
-<p>Returns <code>true</code> if all the bindings in the two <a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a> objects <i>a</i> and <i>b</i> are equal.</p>
+<p>Returns <code>true</code> if the contents of the two <a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a> objects <i>a</i> and <i>b</i> are equal. This includes the resources (buffer, texture) and related parameters (offset, size) as well. To only compare layouts (binding point, pipeline stage, resource type), use <a href="qrhishaderresourcebinding.html#isLayoutCompatible">isLayoutCompatible()</a> instead.</p>
 <!-- @@@operator== -->
 </div>
 <div class="macros">
