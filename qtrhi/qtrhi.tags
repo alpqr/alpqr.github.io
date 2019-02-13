@@ -412,6 +412,10 @@
             <anchor>Type-enum</anchor>
             <arglist></arglist>
         </member>
+        <member name="Geometry">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member name="TessellationControl">
             <anchor>Type-enum</anchor>
             <arglist></arglist>
@@ -432,7 +436,7 @@
             <name>QRhiGraphicsShaderStage</name>
             <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
             <anchor>QRhiGraphicsShaderStage-1</anchor>
-            <arglist>(QRhiGraphicsShaderStage::Type type, const QBakedShader &amp;shader)</arglist>
+            <arglist>(QRhiGraphicsShaderStage::Type type, const QBakedShader &amp;shader, QBakedShaderKey::ShaderVariant v)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiGraphicsShaderStage::Type</type>
@@ -462,6 +466,20 @@
             <anchor>setShader</anchor>
             <arglist>(const QBakedShader &amp;s)</arglist>
         </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QBakedShaderKey::ShaderVariant</type>
+            <name>shaderVariant</name>
+            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchor>shaderVariant</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setShaderVariant</name>
+            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchor>setShaderVariant</anchor>
+            <arglist>(QBakedShaderKey::ShaderVariant v)</arglist>
+        </member>
     </compound>
     <compound kind="class">
         <name>QRhiShaderResourceBinding</name>
@@ -489,6 +507,10 @@
             <arglist></arglist>
         </member>
         <member name="FragmentStage">
+            <anchor>StageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="GeometryStage">
             <anchor>StageFlag-enum</anchor>
             <arglist></arglist>
         </member>
@@ -2910,6 +2932,14 @@
             <anchor>Feature-enum</anchor>
             <arglist></arglist>
         </member>
+        <member name="GeometryShaders">
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="TessellationShaders">
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="enum">
             <name>BeginFrameFlag</name>
             <anchor>BeginFrameFlag-enum</anchor>
@@ -3101,6 +3131,13 @@
             <name>isYUpInFramebuffer</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>isYUpInFramebuffer</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>bool</type>
+            <name>isYUpInNDC</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>isYUpInNDC</anchor>
             <arglist>() const const</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">

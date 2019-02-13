@@ -58,7 +58,7 @@
 <a name="public-types"></a>
 <h2 id="public-types">Public Types</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#StageFlag-enum">StageFlag</a></b> { VertexStage, FragmentStage, TessellationControlStage, TessellationEvaluationStage }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#StageFlag-enum">StageFlag</a></b> { VertexStage, FragmentStage, GeometryStage, TessellationControlStage, TessellationEvaluationStage }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#StageFlag-enum">StageFlags</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#Type-enum">Type</a></b> { UniformBuffer, SampledTexture }</td></tr>
 </table></div>
@@ -92,14 +92,15 @@
 <!-- @@@QRhiShaderResourceBinding -->
 <div class="types">
 <h2>Member Type Documentation</h2>
-<!-- $$$StageFlag$$$VertexStage$$$FragmentStage$$$TessellationControlStage$$$TessellationEvaluationStage -->
+<!-- $$$StageFlag$$$VertexStage$$$FragmentStage$$$GeometryStage$$$TessellationControlStage$$$TessellationEvaluationStage -->
 <h3 class="flags" id="StageFlag-enum"><a name="StageFlag-enum"></a>enum QRhiShaderResourceBinding::<span class="name">StageFlag</span><br/>flags QRhiShaderResourceBinding::<span class="name">StageFlags</span></h3>
 <p>Flag values to indicate which stages the shader resource is visible in</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
 <tr><td class="topAlign"><code>QRhiShaderResourceBinding::VertexStage</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">Vertex stage</td></tr>
 <tr><td class="topAlign"><code>QRhiShaderResourceBinding::FragmentStage</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Fragment (pixel) stage</td></tr>
-<tr><td class="topAlign"><code>QRhiShaderResourceBinding::TessellationControlStage</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">Tessellation control (hull) stage</td></tr>
-<tr><td class="topAlign"><code>QRhiShaderResourceBinding::TessellationEvaluationStage</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 3</code></td><td class="topAlign">Tessellation evaluation (domain) stage</td></tr>
+<tr><td class="topAlign"><code>QRhiShaderResourceBinding::GeometryStage</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">Geometry stage</td></tr>
+<tr><td class="topAlign"><code>QRhiShaderResourceBinding::TessellationControlStage</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 3</code></td><td class="topAlign">Tessellation control (hull) stage</td></tr>
+<tr><td class="topAlign"><code>QRhiShaderResourceBinding::TessellationEvaluationStage</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 4</code></td><td class="topAlign">Tessellation evaluation (domain) stage</td></tr>
 </table></div>
 <p>The StageFlags type is a typedef for <a href="../qtcore/qflags.html">QFlags</a>&lt;StageFlag&gt;. It stores an OR combination of StageFlag values.</p>
 <!-- @@@StageFlag -->

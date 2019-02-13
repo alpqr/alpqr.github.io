@@ -57,16 +57,18 @@
 <a name="public-types"></a>
 <h2 id="public-types">Public Types</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#Type-enum">Type</a></b> { Vertex, Fragment, TessellationControl, TessellationEvaluation }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#Type-enum">Type</a></b> { Vertex, Fragment, Geometry, TessellationControl, TessellationEvaluation }</td></tr>
 </table></div>
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#QRhiGraphicsShaderStage">QRhiGraphicsShaderStage</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#QRhiGraphicsShaderStage-1">QRhiGraphicsShaderStage</a></b>(QRhiGraphicsShaderStage::Type <i>type</i>, const QBakedShader &amp;<i>shader</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#QRhiGraphicsShaderStage-1">QRhiGraphicsShaderStage</a></b>(QRhiGraphicsShaderStage::Type <i>type</i>, const QBakedShader &amp;<i>shader</i>, QBakedShaderKey::ShaderVariant <i>v</i> = QBakedShaderKey::StandardShader)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#setShader">setShader</a></b>(const QBakedShader &amp;<i>s</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#setShaderVariant">setShaderVariant</a></b>(QBakedShaderKey::ShaderVariant <i>v</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#setType">setType</a></b>(QRhiGraphicsShaderStage::Type <i>t</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QBakedShader </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#shader">shader</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QBakedShaderKey::ShaderVariant </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#shaderVariant">shaderVariant</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsShaderStage::Type </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#type">type</a></b>() const</td></tr>
 </table></div>
 <a name="related-non-members"></a>
@@ -81,18 +83,19 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Specifies the type and the shader code for a shader stage in the graphics pipeline.</p>
-<p><b>Note: </b>There is no geometry stage because some graphics APIs (Metal) have no support for it.</p></div>
+<p><b>Note: </b>Some backends only support a subset of the stages. Use <a href="qrhi.html#isFeatureSupported">QRhi::isFeatureSupported</a>() to query for support at runtime. For example, Metal has no geometry shader support, while the OpenGL 2.x backend only supports the vertex and fragment stages.</p></div>
 <!-- @@@QRhiGraphicsShaderStage -->
 <div class="types">
 <h2>Member Type Documentation</h2>
-<!-- $$$Type$$$Vertex$$$Fragment$$$TessellationControl$$$TessellationEvaluation -->
+<!-- $$$Type$$$Vertex$$$Fragment$$$Geometry$$$TessellationControl$$$TessellationEvaluation -->
 <h3 class="fn" id="Type-enum"><a name="Type-enum"></a>enum QRhiGraphicsShaderStage::<span class="name">Type</span></h3>
 <p>Specifies the type of the shader stage.</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
 <tr><td class="topAlign"><code>QRhiGraphicsShaderStage::Vertex</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Vertex stage</td></tr>
 <tr><td class="topAlign"><code>QRhiGraphicsShaderStage::Fragment</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Fragment (pixel) stage</td></tr>
-<tr><td class="topAlign"><code>QRhiGraphicsShaderStage::TessellationControl</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Tessellation control (hull) stage</td></tr>
-<tr><td class="topAlign"><code>QRhiGraphicsShaderStage::TessellationEvaluation</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">Tessellation evaluation (domain) stage</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsShaderStage::Geometry</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Geometry stage</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsShaderStage::TessellationControl</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">Tessellation control (hull) stage</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsShaderStage::TessellationEvaluation</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">Tessellation evaluation (domain) stage</td></tr>
 </table></div>
 <!-- @@@Type -->
 </div>
@@ -105,14 +108,19 @@
 <h3 class="fn" id="QRhiGraphicsShaderStage"><a name="QRhiGraphicsShaderStage"></a>QRhiGraphicsShaderStage::<span class="name">QRhiGraphicsShaderStage</span>()</h3>
 <p>Constructs an empty shader stage description.</p>
 <!-- @@@QRhiGraphicsShaderStage -->
-<!-- $$$QRhiGraphicsShaderStage$$$QRhiGraphicsShaderStageQRhiGraphicsShaderStage::TypeconstQBakedShader& -->
-<h3 class="fn" id="QRhiGraphicsShaderStage-1"><a name="QRhiGraphicsShaderStage-1"></a>QRhiGraphicsShaderStage::<span class="name">QRhiGraphicsShaderStage</span>(<span class="type"><a href="qrhigraphicsshaderstage.html#Type-enum">QRhiGraphicsShaderStage::Type</a></span> <i>type</i>, const <span class="type">QBakedShader</span> &amp;<i>shader</i>)</h3>
+<!-- $$$QRhiGraphicsShaderStage$$$QRhiGraphicsShaderStageQRhiGraphicsShaderStage::TypeconstQBakedShader&QBakedShaderKey::ShaderVariant -->
+<h3 class="fn" id="QRhiGraphicsShaderStage-1"><a name="QRhiGraphicsShaderStage-1"></a>QRhiGraphicsShaderStage::<span class="name">QRhiGraphicsShaderStage</span>(<span class="type"><a href="qrhigraphicsshaderstage.html#Type-enum">QRhiGraphicsShaderStage::Type</a></span> <i>type</i>, const <span class="type">QBakedShader</span> &amp;<i>shader</i>, <span class="type">QBakedShaderKey::ShaderVariant</span> <i>v</i> = QBakedShaderKey::StandardShader)</h3>
 <p>Constructs a shader stage description with the <i>type</i> of the stage and the <i>shader</i>.</p>
+<p>The shader variant <i>v</i> defaults to QBakedShaderKey::StandardShader. A QBakedShader pack contains multiple source and binary versions of a shader. In addition, it can also contain variants of the shader with slightly modified code. <i>v</i> can then be used to select the desired variant.</p>
 <!-- @@@QRhiGraphicsShaderStage -->
 <!-- $$$setShader[overload1]$$$setShaderconstQBakedShader& -->
 <h3 class="fn" id="setShader"><a name="setShader"></a><span class="type">void</span> QRhiGraphicsShaderStage::<span class="name">setShader</span>(const <span class="type">QBakedShader</span> &amp;<i>s</i>)</h3>
 <p><b>See also </b><a href="qrhigraphicsshaderstage.html#shader">shader</a>().</p>
 <!-- @@@setShader -->
+<!-- $$$setShaderVariant[overload1]$$$setShaderVariantQBakedShaderKey::ShaderVariant -->
+<h3 class="fn" id="setShaderVariant"><a name="setShaderVariant"></a><span class="type">void</span> QRhiGraphicsShaderStage::<span class="name">setShaderVariant</span>(<span class="type">QBakedShaderKey::ShaderVariant</span> <i>v</i>)</h3>
+<p><b>See also </b><a href="qrhigraphicsshaderstage.html#shaderVariant">shaderVariant</a>().</p>
+<!-- @@@setShaderVariant -->
 <!-- $$$setType[overload1]$$$setTypeQRhiGraphicsShaderStage::Type -->
 <h3 class="fn" id="setType"><a name="setType"></a><span class="type">void</span> QRhiGraphicsShaderStage::<span class="name">setType</span>(<span class="type"><a href="qrhigraphicsshaderstage.html#Type-enum">QRhiGraphicsShaderStage::Type</a></span> <i>t</i>)</h3>
 <p><b>See also </b><a href="qrhigraphicsshaderstage.html#type">type</a>().</p>
@@ -121,6 +129,10 @@
 <h3 class="fn" id="shader"><a name="shader"></a><span class="type">QBakedShader</span> QRhiGraphicsShaderStage::<span class="name">shader</span>() const</h3>
 <p><b>See also </b><a href="qrhigraphicsshaderstage.html#setShader">setShader</a>().</p>
 <!-- @@@shader -->
+<!-- $$$shaderVariant[overload1]$$$shaderVariant -->
+<h3 class="fn" id="shaderVariant"><a name="shaderVariant"></a><span class="type">QBakedShaderKey::ShaderVariant</span> QRhiGraphicsShaderStage::<span class="name">shaderVariant</span>() const</h3>
+<p><b>See also </b><a href="qrhigraphicsshaderstage.html#setShaderVariant">setShaderVariant</a>().</p>
+<!-- @@@shaderVariant -->
 <!-- $$$type[overload1]$$$type -->
 <h3 class="fn" id="type"><a name="type"></a><span class="type"><a href="qrhigraphicsshaderstage.html#Type-enum">QRhiGraphicsShaderStage::Type</a></span> QRhiGraphicsShaderStage::<span class="name">type</span>() const</h3>
 <p><b>See also </b><a href="qrhigraphicsshaderstage.html#setType">setType</a>().</p>

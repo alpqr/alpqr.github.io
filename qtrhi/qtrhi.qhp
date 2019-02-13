@@ -201,6 +201,7 @@
             <keyword name="QRhi::FrameOpResult" id="QRhi::FrameOpResult" ref="qrhi.html#FrameOpResult-enum"/>
             <keyword name="QRhi::FrameOpSuccess" id="QRhi::FrameOpSuccess" ref="qrhi.html#FrameOpResult-enum"/>
             <keyword name="QRhi::FrameOpSwapChainOutOfDate" id="QRhi::FrameOpSwapChainOutOfDate" ref="qrhi.html#FrameOpResult-enum"/>
+            <keyword name="QRhi::GeometryShaders" id="QRhi::GeometryShaders" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::Implementation" id="QRhi::Implementation" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhi::Instancing" id="QRhi::Instancing" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::Metal" id="QRhi::Metal" ref="qrhi.html#Implementation-enum"/>
@@ -211,6 +212,7 @@
             <keyword name="QRhi::PrimitiveRestart" id="QRhi::PrimitiveRestart" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::ResourceSizeLimit" id="QRhi::ResourceSizeLimit" ref="qrhi.html#ResourceSizeLimit-enum"/>
             <keyword name="QRhi::SkipPresent" id="QRhi::SkipPresent" ref="qrhi.html#EndFrameFlag-enum"/>
+            <keyword name="QRhi::TessellationShaders" id="QRhi::TessellationShaders" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::TextureSizeMax" id="QRhi::TextureSizeMax" ref="qrhi.html#ResourceSizeLimit-enum"/>
             <keyword name="QRhi::TextureSizeMin" id="QRhi::TextureSizeMin" ref="qrhi.html#ResourceSizeLimit-enum"/>
             <keyword name="QRhi::Timestamps" id="QRhi::Timestamps" ref="qrhi.html#Feature-enum"/>
@@ -310,6 +312,7 @@
             <keyword name="QRhiGraphicsPipeline::Zero" id="QRhiGraphicsPipeline::Zero" ref="qrhigraphicspipeline.html#BlendFactor-enum"/>
             <keyword name="QRhiGraphicsShaderStage" id="QRhiGraphicsShaderStage" ref="qrhigraphicsshaderstage.html"/>
             <keyword name="QRhiGraphicsShaderStage::Fragment" id="QRhiGraphicsShaderStage::Fragment" ref="qrhigraphicsshaderstage.html#Type-enum"/>
+            <keyword name="QRhiGraphicsShaderStage::Geometry" id="QRhiGraphicsShaderStage::Geometry" ref="qrhigraphicsshaderstage.html#Type-enum"/>
             <keyword name="QRhiGraphicsShaderStage::TessellationControl" id="QRhiGraphicsShaderStage::TessellationControl" ref="qrhigraphicsshaderstage.html#Type-enum"/>
             <keyword name="QRhiGraphicsShaderStage::TessellationEvaluation" id="QRhiGraphicsShaderStage::TessellationEvaluation" ref="qrhigraphicsshaderstage.html#Type-enum"/>
             <keyword name="QRhiGraphicsShaderStage::Type" id="QRhiGraphicsShaderStage::Type" ref="qrhigraphicsshaderstage.html#Type-enum"/>
@@ -373,6 +376,7 @@
             <keyword name="QRhiScissor" id="QRhiScissor" ref="qrhiscissor.html"/>
             <keyword name="QRhiShaderResourceBinding" id="QRhiShaderResourceBinding" ref="qrhishaderresourcebinding.html"/>
             <keyword name="QRhiShaderResourceBinding::FragmentStage" id="QRhiShaderResourceBinding::FragmentStage" ref="qrhishaderresourcebinding.html#StageFlag-enum"/>
+            <keyword name="QRhiShaderResourceBinding::GeometryStage" id="QRhiShaderResourceBinding::GeometryStage" ref="qrhishaderresourcebinding.html#StageFlag-enum"/>
             <keyword name="QRhiShaderResourceBinding::SampledTexture" id="QRhiShaderResourceBinding::SampledTexture" ref="qrhishaderresourcebinding.html#Type-enum"/>
             <keyword name="QRhiShaderResourceBinding::StageFlag" id="QRhiShaderResourceBinding::StageFlag" ref="qrhishaderresourcebinding.html#StageFlag-enum"/>
             <keyword name="QRhiShaderResourceBinding::StageFlags" id="QRhiShaderResourceBinding::StageFlags" ref="qrhishaderresourcebinding.html#StageFlag-enum"/>
@@ -565,6 +569,7 @@
             <keyword name="isShareable" id="QRhiResource::isShareable" ref="qrhiresource.html#isShareable"/>
             <keyword name="isTextureFormatSupported" id="QRhi::isTextureFormatSupported" ref="qrhi.html#isTextureFormatSupported"/>
             <keyword name="isYUpInFramebuffer" id="QRhi::isYUpInFramebuffer" ref="qrhi.html#isYUpInFramebuffer"/>
+            <keyword name="isYUpInNDC" id="QRhi::isYUpInNDC" ref="qrhi.html#isYUpInNDC"/>
             <keyword name="layer" id="QRhiColorAttachment::layer" ref="qrhicolorattachment.html#layer"/>
             <keyword name="layer" id="QRhiReadbackDescription::layer" ref="qrhireadbackdescription.html#layer"/>
             <keyword name="layers" id="QRhiTextureUploadDescription::layers" ref="qrhitextureuploaddescription.html#layers"/>
@@ -789,6 +794,7 @@
             <keyword name="setShader" id="QRhiGraphicsShaderStage::setShader" ref="qrhigraphicsshaderstage.html#setShader"/>
             <keyword name="setShaderResourceBindings" id="QRhiGraphicsPipeline::setShaderResourceBindings" ref="qrhigraphicspipeline.html#setShaderResourceBindings"/>
             <keyword name="setShaderStages" id="QRhiGraphicsPipeline::setShaderStages" ref="qrhigraphicspipeline.html#setShaderStages"/>
+            <keyword name="setShaderVariant" id="QRhiGraphicsShaderStage::setShaderVariant" ref="qrhigraphicsshaderstage.html#setShaderVariant"/>
             <keyword name="setSize" id="QRhiBuffer::setSize" ref="qrhibuffer.html#setSize"/>
             <keyword name="setSourceLayer" id="QRhiTextureCopyDescription::setSourceLayer" ref="qrhitexturecopydescription.html#setSourceLayer"/>
             <keyword name="setSourceLevel" id="QRhiTextureCopyDescription::setSourceLevel" ref="qrhitexturecopydescription.html#setSourceLevel"/>
@@ -819,6 +825,7 @@
             <keyword name="shader" id="QRhiGraphicsShaderStage::shader" ref="qrhigraphicsshaderstage.html#shader"/>
             <keyword name="shaderResourceBindings" id="QRhiGraphicsPipeline::shaderResourceBindings" ref="qrhigraphicspipeline.html#shaderResourceBindings"/>
             <keyword name="shaderStages" id="QRhiGraphicsPipeline::shaderStages" ref="qrhigraphicspipeline.html#shaderStages"/>
+            <keyword name="shaderVariant" id="QRhiGraphicsShaderStage::shaderVariant" ref="qrhigraphicsshaderstage.html#shaderVariant"/>
             <keyword name="size" id="QRhiBuffer::size" ref="qrhibuffer.html#size"/>
             <keyword name="sizeForMipLevel" id="QRhi::sizeForMipLevel" ref="qrhi.html#sizeForMipLevel"/>
             <keyword name="sizeInPixels" id="QRhiRenderTarget::sizeInPixels" ref="qrhirendertarget.html#sizeInPixels"/>
