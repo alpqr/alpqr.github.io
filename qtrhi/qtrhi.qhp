@@ -207,6 +207,7 @@
             <keyword name="QRhi::Metal" id="QRhi::Metal" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhi::MultisampleRenderBuffer" id="QRhi::MultisampleRenderBuffer" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::MultisampleTexture" id="QRhi::MultisampleTexture" ref="qrhi.html#Feature-enum"/>
+            <keyword name="QRhi::NonDynamicUniformBuffers" id="QRhi::NonDynamicUniformBuffers" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::Null" id="QRhi::Null" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhi::OpenGLES2" id="QRhi::OpenGLES2" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhi::PrimitiveRestart" id="QRhi::PrimitiveRestart" ref="qrhi.html#Feature-enum"/>

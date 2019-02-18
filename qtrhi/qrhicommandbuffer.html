@@ -176,7 +176,7 @@
 <!-- $$$setScissor[overload1]$$$setScissorconstQRhiScissor& -->
 <h3 class="fn" id="setScissor"><a name="setScissor"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">setScissor</span>(const <span class="type"><a href="qrhiscissor.html">QRhiScissor</a></span> &amp;<i>scissor</i>)</h3>
 <p>Records setting the active scissor rectangle specified in <i>scissor</i>.</p>
-<p>This can only be called when the bound pipeline has <a href="qrhigraphicspipeline.html#Flag-enum">QRhiGraphicsPipeline::UsesScissor</a> set.</p>
+<p>This can only be called when the bound pipeline has <a href="qrhigraphicspipeline.html#Flag-enum">UsesScissor</a> set. When the flag is set on the active pipeline, this function must be called because scissor testing will get enabled and so a scissor rectangle must be provided.</p>
 <p><b>Note: </b><a href="qrhi.html">QRhi</a> assumes OpenGL-style viewport coordinates, meaning x and y are bottom-left.</p><p><b>Note: </b>This function can only be called inside a pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() end <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@setScissor -->
 <!-- $$$setStencilRef[overload1]$$$setStencilRefquint32 -->
 <h3 class="fn" id="setStencilRef"><a name="setStencilRef"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">setStencilRef</span>(<span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>refValue</i>)</h3>
@@ -219,6 +219,7 @@
 <!-- $$$setViewport[overload1]$$$setViewportconstQRhiViewport& -->
 <h3 class="fn" id="setViewport"><a name="setViewport"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">setViewport</span>(const <span class="type"><a href="qrhiviewport.html">QRhiViewport</a></span> &amp;<i>viewport</i>)</h3>
 <p>Records setting the active viewport rectangle specified in <i>viewport</i>.</p>
+<p>With backends where the underlying graphics API has scissoring always enabled, this function also sets the scissor to match the viewport whenever the active <a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a> does not have <a href="qrhigraphicspipeline.html#Flag-enum">UsesScissor</a> set.</p>
 <p><b>Note: </b><a href="qrhi.html">QRhi</a> assumes OpenGL-style viewport coordinates, meaning x and y are bottom-left.</p><p><b>Note: </b>This function can only be called inside a pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() end <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@setViewport -->
 </div>
 <div class="vars">
