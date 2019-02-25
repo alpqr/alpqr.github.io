@@ -232,6 +232,7 @@
             <keyword name="QRhiColorAttachment" id="QRhiColorAttachment" ref="qrhicolorattachment.html"/>
             <keyword name="QRhiColorClearValue" id="QRhiColorClearValue" ref="qrhicolorclearvalue.html"/>
             <keyword name="QRhiCommandBuffer" id="QRhiCommandBuffer" ref="qrhicommandbuffer.html"/>
+            <keyword name="QRhiCommandBuffer::DynamicOffset" id="QRhiCommandBuffer::DynamicOffset" ref="qrhicommandbuffer.html#DynamicOffset-typedef"/>
             <keyword name="QRhiCommandBuffer::IndexFormat" id="QRhiCommandBuffer::IndexFormat" ref="qrhicommandbuffer.html#IndexFormat-enum"/>
             <keyword name="QRhiCommandBuffer::IndexUInt16" id="QRhiCommandBuffer::IndexUInt16" ref="qrhicommandbuffer.html#IndexFormat-enum"/>
             <keyword name="QRhiCommandBuffer::IndexUInt32" id="QRhiCommandBuffer::IndexUInt32" ref="qrhicommandbuffer.html#IndexFormat-enum"/>
@@ -795,6 +796,7 @@
             <keyword name="setScissor" id="QRhiScissor::setScissor" ref="qrhiscissor.html#setScissor"/>
             <keyword name="setShader" id="QRhiGraphicsShaderStage::setShader" ref="qrhigraphicsshaderstage.html#setShader"/>
             <keyword name="setShaderResourceBindings" id="QRhiGraphicsPipeline::setShaderResourceBindings" ref="qrhigraphicspipeline.html#setShaderResourceBindings"/>
+            <keyword name="setShaderResources" id="QRhiCommandBuffer::setShaderResources" ref="qrhicommandbuffer.html#setShaderResources"/>
             <keyword name="setShaderStages" id="QRhiGraphicsPipeline::setShaderStages" ref="qrhigraphicspipeline.html#setShaderStages"/>
             <keyword name="setShaderVariant" id="QRhiGraphicsShaderStage::setShaderVariant" ref="qrhigraphicsshaderstage.html#setShaderVariant"/>
             <keyword name="setSize" id="QRhiBuffer::setSize" ref="qrhibuffer.html#setSize"/>
@@ -862,6 +864,7 @@
             <keyword name="ubufAlignment" id="QRhi::ubufAlignment" ref="qrhi.html#ubufAlignment"/>
             <keyword name="uniformBuffer" id="QRhiShaderResourceBinding::uniformBuffer" ref="qrhishaderresourcebinding.html#uniformBuffer"/>
             <keyword name="uniformBuffer" id="QRhiShaderResourceBinding::uniformBuffer" ref="qrhishaderresourcebinding.html#uniformBuffer-1"/>
+            <keyword name="uniformBufferWithDynamicOffset" id="QRhiShaderResourceBinding::uniformBufferWithDynamicOffset" ref="qrhishaderresourcebinding.html#uniformBufferWithDynamicOffset"/>
             <keyword name="updateDynamicBuffer" id="QRhiResourceUpdateBatch::updateDynamicBuffer" ref="qrhiresourceupdatebatch.html#updateDynamicBuffer"/>
             <keyword name="uploadStaticBuffer" id="QRhiResourceUpdateBatch::uploadStaticBuffer" ref="qrhiresourceupdatebatch.html#uploadStaticBuffer"/>
             <keyword name="uploadStaticBuffer" id="QRhiResourceUpdateBatch::uploadStaticBuffer" ref="qrhiresourceupdatebatch.html#uploadStaticBuffer-1"/>

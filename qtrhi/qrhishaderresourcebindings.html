@@ -110,12 +110,13 @@
   ps-&gt;build();
   ..&#x2e;
   cb-&gt;setGraphicsPipeline(ps);
+  cb-&gt;setShaderResources(); // binds srb
 
 </pre>
 <p>This assumes that <code>ubuf</code> is a <a href="qrhibuffer.html">QRhiBuffer</a>, <code>texture</code> is a <a href="qrhitexture.html">QRhiTexture</a>, while <i>sampler</i> is a <a href="qrhisampler.html">QRhiSampler</a>. The example also assumes that the uniform block is present in the vertex shader as well so the same buffer is made visible to the vertex stage too.</p>
 <a name="advanced-usage"></a>
 <h5 >Advanced usage</h5>
-<p>Building on the above example, let's assume that a pass now needs to use the exact same pipeline and shaders with a different texture. Creating a whole separate <a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a> just for this would be an overkill. This is why <a href="qrhicommandbuffer.html#setGraphicsPipeline">QRhiCommandBuffer::setGraphicsPipeline</a>() allows specifying an optional <i>srb</i> argument. As long as the layouts (so the number of bindings and the binding points) match between two <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a>, they can both be used with the same pipeline, assuming the pipeline was built with one of them in the first place.</p>
+<p>Building on the above example, let's assume that a pass now needs to use the exact same pipeline and shaders with a different texture. Creating a whole separate <a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a> just for this would be an overkill. This is why <a href="qrhicommandbuffer.html#setShaderResources">QRhiCommandBuffer::setShaderResources</a>() allows specifying a <i>srb</i> argument. As long as the layouts (so the number of bindings and the binding points) match between two <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a>, they can both be used with the same pipeline, assuming the pipeline was built with one of them in the first place.</p>
 <p>Creating and then using a new <code>srb2</code> that is very similar to <code>srb</code> with the exception of referencing another texture could be implemented like the following:</p>
 <pre class="cpp plain">
 
@@ -125,7 +126,8 @@
   srb2-&gt;setBindings(bindings);
   srb2-&gt;build();
   ..&#x2e;
-  cb-&gt;setGraphicsPipeline(ps, srb2);
+  cb-&gt;setGraphicsPipeline(ps);
+  cb-&gt;setShaderResources(srb2); // binds srb2
 
 </pre>
 </div>
@@ -148,7 +150,8 @@
 <!-- $$$isLayoutCompatible[overload1]$$$isLayoutCompatibleconstQRhiShaderResourceBindings* -->
 <h3 class="fn" id="isLayoutCompatible"><a name="isLayoutCompatible"></a><span class="type">bool</span> QRhiShaderResourceBindings::<span class="name">isLayoutCompatible</span>(const <span class="type">QRhiShaderResourceBindings</span> *<i>other</i>) const</h3>
 <p>Returns <code>true</code> if the layout is compatible with <i>other</i>. The layout does not include the actual resource (such as, buffer or texture) and related parameters (such as, offset or size). It does include the binding point, pipeline stage, and resource type, however. The number and order of the bindings must also match in order to be compatible.</p>
-<p>When there is a <a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a> created with this <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a>, and the function returns <code>true</code>, <i>other</i> can then safely be passed to <a href="qrhicommandbuffer.html#setGraphicsPipeline">QRhiCommandBuffer::setGraphicsPipeline</a>(), and so be used with the pipeline in place of this <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a>.</p>
+<p>When there is a <a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a> created with this <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a>, and the function returns <code>true</code>, <i>other</i> can then safely be passed to <a href="qrhicommandbuffer.html#setShaderResources">QRhiCommandBuffer::setShaderResources</a>(), and so be used with the pipeline in place of this <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a>.</p>
+<p>This function can be called before <a href="qrhishaderresourcebindings.html#build">build</a>() as well. The bindings must already be set via <a href="qrhishaderresourcebindings.html#setBindings">setBindings</a>() however.</p>
 <!-- @@@isLayoutCompatible -->
 <!-- $$$setBindings[overload1]$$$setBindingsconstQVector<QRhiShaderResourceBinding>& -->
 <h3 class="fn" id="setBindings"><a name="setBindings"></a><span class="type">void</span> QRhiShaderResourceBindings::<span class="name">setBindings</span>(const <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a></span>&gt; &amp;<i>b</i>)</h3>

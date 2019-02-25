@@ -558,6 +558,13 @@
         </member>
         <member kind="function" protection="public" virtualness="non" static="yes">
             <type>QRhiShaderResourceBinding</type>
+            <name>uniformBufferWithDynamicOffset</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>uniformBufferWithDynamicOffset</anchor>
+            <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiBuffer *buf, int size)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QRhiShaderResourceBinding</type>
             <name>sampledTexture</name>
             <anchorfile>qrhishaderresourcebinding.html</anchorfile>
             <anchor>sampledTexture</anchor>
@@ -2645,7 +2652,20 @@
             <name>setGraphicsPipeline</name>
             <anchorfile>qrhicommandbuffer.html</anchorfile>
             <anchor>setGraphicsPipeline</anchor>
-            <arglist>(QRhiGraphicsPipeline *ps, QRhiShaderResourceBindings *srb)</arglist>
+            <arglist>(QRhiGraphicsPipeline *ps)</arglist>
+        </member>
+        <member kind="typedef" type="">
+            <name>DynamicOffset</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>DynamicOffset-typedef</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setShaderResources</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>setShaderResources</anchor>
+            <arglist>(QRhiShaderResourceBindings *srb, const QVector&lt;QRhiCommandBuffer::DynamicOffset&gt; &amp;dynamicOffsets)</arglist>
         </member>
         <member kind="typedef" type="">
             <name>VertexInput</name>

@@ -74,6 +74,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBinding </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#sampledTexture">sampledTexture</a></b>(int <i>binding</i>, QRhiShaderResourceBinding::StageFlags <i>stage</i>, QRhiTexture *<i>tex</i>, QRhiSampler *<i>sampler</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBinding </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#uniformBuffer">uniformBuffer</a></b>(int <i>binding</i>, QRhiShaderResourceBinding::StageFlags <i>stage</i>, QRhiBuffer *<i>buf</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBinding </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#uniformBuffer-1">uniformBuffer</a></b>(int <i>binding</i>, QRhiShaderResourceBinding::StageFlags <i>stage</i>, QRhiBuffer *<i>buf</i>, int <i>offset</i>, int <i>size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBinding </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderresourcebinding.html#uniformBufferWithDynamicOffset">uniformBufferWithDynamicOffset</a></b>(int <i>binding</i>, QRhiShaderResourceBinding::StageFlags <i>stage</i>, QRhiBuffer *<i>buf</i>, int <i>size</i>)</td></tr>
 </table></div>
 <a name="related-non-members"></a>
 <h2 id="related-non-members">Related Non-Members</h2>
@@ -135,16 +136,20 @@
 <!-- @@@isLayoutCompatible -->
 <!-- $$$sampledTexture[overload1]$$$sampledTextureintQRhiShaderResourceBinding::StageFlagsQRhiTexture*QRhiSampler* -->
 <h3 class="fn" id="sampledTexture"><a name="sampledTexture"></a><code>[static] </code><span class="type">QRhiShaderResourceBinding</span> QRhiShaderResourceBinding::<span class="name">sampledTexture</span>(<span class="type">int</span> <i>binding</i>, <span class="type"><a href="qrhishaderresourcebinding.html#StageFlag-enum">QRhiShaderResourceBinding::StageFlags</a></span> <i>stage</i>, <span class="type"><a href="qrhitexture.html">QRhiTexture</a></span> *<i>tex</i>, <span class="type"><a href="qrhisampler.html">QRhiSampler</a></span> *<i>sampler</i>)</h3>
-<p>Returns a shader resource binding for the given binding number, pipeline stage, texture, and sampler specified by <i>binding</i>, <i>stage</i>, <i>tex</i>, <i>sampler</i>.</p>
+<p>Returns a shader resource binding for the given binding number, pipeline stages, texture, and sampler specified by <i>binding</i>, <i>stage</i>, <i>tex</i>, <i>sampler</i>.</p>
 <!-- @@@sampledTexture -->
 <!-- $$$uniformBuffer[overload1]$$$uniformBufferintQRhiShaderResourceBinding::StageFlagsQRhiBuffer* -->
 <h3 class="fn" id="uniformBuffer"><a name="uniformBuffer"></a><code>[static] </code><span class="type">QRhiShaderResourceBinding</span> QRhiShaderResourceBinding::<span class="name">uniformBuffer</span>(<span class="type">int</span> <i>binding</i>, <span class="type"><a href="qrhishaderresourcebinding.html#StageFlag-enum">QRhiShaderResourceBinding::StageFlags</a></span> <i>stage</i>, <span class="type"><a href="qrhibuffer.html">QRhiBuffer</a></span> *<i>buf</i>)</h3>
-<p>Returns a shader resource binding for the given binding number, pipeline stage, and buffer specified by <i>binding</i>, <i>stage</i>, and <i>buf</i>.</p>
+<p>Returns a shader resource binding for the given binding number, pipeline stages, and buffer specified by <i>binding</i>, <i>stage</i>, and <i>buf</i>.</p>
 <!-- @@@uniformBuffer -->
 <!-- $$$uniformBuffer$$$uniformBufferintQRhiShaderResourceBinding::StageFlagsQRhiBuffer*intint -->
 <h3 class="fn" id="uniformBuffer-1"><a name="uniformBuffer-1"></a><code>[static] </code><span class="type">QRhiShaderResourceBinding</span> QRhiShaderResourceBinding::<span class="name">uniformBuffer</span>(<span class="type">int</span> <i>binding</i>, <span class="type"><a href="qrhishaderresourcebinding.html#StageFlag-enum">QRhiShaderResourceBinding::StageFlags</a></span> <i>stage</i>, <span class="type"><a href="qrhibuffer.html">QRhiBuffer</a></span> *<i>buf</i>, <span class="type">int</span> <i>offset</i>, <span class="type">int</span> <i>size</i>)</h3>
-<p>Returns a shader resource binding for the given binding number, pipeline stage, and buffer specified by <i>binding</i>, <i>stage</i>, and <i>buf</i>. This overload binds a region only, as specified by <i>offset</i> and <i>size</i>.</p>
+<p>Returns a shader resource binding for the given binding number, pipeline stages, and buffer specified by <i>binding</i>, <i>stage</i>, and <i>buf</i>. This overload binds a region only, as specified by <i>offset</i> and <i>size</i>.</p>
 <p><b>Note: </b>It is up to the user to ensure the offset is aligned to <a href="qrhi.html#ubufAlignment">QRhi::ubufAlignment</a>().</p><!-- @@@uniformBuffer -->
+<!-- $$$uniformBufferWithDynamicOffset[overload1]$$$uniformBufferWithDynamicOffsetintQRhiShaderResourceBinding::StageFlagsQRhiBuffer*int -->
+<h3 class="fn" id="uniformBufferWithDynamicOffset"><a name="uniformBufferWithDynamicOffset"></a><code>[static] </code><span class="type">QRhiShaderResourceBinding</span> QRhiShaderResourceBinding::<span class="name">uniformBufferWithDynamicOffset</span>(<span class="type">int</span> <i>binding</i>, <span class="type"><a href="qrhishaderresourcebinding.html#StageFlag-enum">QRhiShaderResourceBinding::StageFlags</a></span> <i>stage</i>, <span class="type"><a href="qrhibuffer.html">QRhiBuffer</a></span> *<i>buf</i>, <span class="type">int</span> <i>size</i>)</h3>
+<p>Returns a shader resource binding for the given binding number, pipeline stages, and buffer specified by <i>binding</i>, <i>stage</i>, and <i>buf</i>. The uniform buffer is assumed to have dynamic offset. The dynamic offset can be specified in <a href="qrhicommandbuffer.html#setShaderResources">QRhiCommandBuffer::setShaderResources</a>(), thus allowing using varying offset values without creating new bindings for the buffer. The size of the bound region is specified by <i>size</i>. Like with non-dynamic offsets, <code>offset + size</code> cannot exceed the size of <i>buf</i>.</p>
+<!-- @@@uniformBufferWithDynamicOffset -->
 </div>
 <div class="vars">
 <h2>Member Variable Documentation</h2>
