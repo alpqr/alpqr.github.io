@@ -2968,6 +2968,10 @@
             <anchor>Feature-enum</anchor>
             <arglist></arglist>
         </member>
+        <member name="NPOTTextureRepeat">
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="enum">
             <name>BeginFrameFlag</name>
             <anchor>BeginFrameFlag-enum</anchor>
