@@ -1145,6 +1145,13 @@
             <anchor>isShareable</anchor>
             <arglist>() const const</arglist>
         </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>quint64</type>
+            <name>globalResourceId</name>
+            <anchorfile>qrhiresource.html</anchorfile>
+            <anchor>globalResourceId</anchor>
+            <arglist>() const const</arglist>
+        </member>
         <member kind="function" protection="protected" virtualness="non" static="no">
             <type></type>
             <name>QRhiResource</name>

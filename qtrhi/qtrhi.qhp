@@ -559,6 +559,7 @@
             <keyword name="generateMips" id="QRhiResourceUpdateBatch::generateMips" ref="qrhiresourceupdatebatch.html#generateMips"/>
             <keyword name="gfxQueue" id="QRhiVulkanNativeHandles::gfxQueue" ref="qrhivulkannativehandles.html#gfxQueue-var"/>
             <keyword name="gfxQueueFamilyIdx" id="QRhiVulkanNativeHandles::gfxQueueFamilyIdx" ref="qrhivulkannativehandles.html#gfxQueueFamilyIdx-var"/>
+            <keyword name="globalResourceId" id="QRhiResource::globalResourceId" ref="qrhiresource.html#globalResourceId"/>
             <keyword name="gpuFrameTimes" id="QRhiProfiler::gpuFrameTimes" ref="qrhiprofiler.html#gpuFrameTimes"/>
             <keyword name="hasDepthTest" id="QRhiGraphicsPipeline::hasDepthTest" ref="qrhigraphicspipeline.html#hasDepthTest"/>
             <keyword name="hasDepthWrite" id="QRhiGraphicsPipeline::hasDepthWrite" ref="qrhigraphicspipeline.html#hasDepthWrite"/>
@@ -599,9 +600,12 @@
             <keyword name="m_flags" id="QRhiTextureRenderTarget::m_flags" ref="qrhitexturerendertarget.html#m_flags-var"/>
             <keyword name="m_format" id="QRhiTexture::m_format" ref="qrhitexture.html#m_format-var"/>
             <keyword name="m_frontFace" id="QRhiGraphicsPipeline::m_frontFace" ref="qrhigraphicspipeline.html#m_frontFace-var"/>
+            <keyword name="m_id" id="QRhiResource::m_id" ref="qrhiresource.html#m_id-var"/>
             <keyword name="m_magFilter" id="QRhiSampler::m_magFilter" ref="qrhisampler.html#m_magFilter-var"/>
             <keyword name="m_minFilter" id="QRhiSampler::m_minFilter" ref="qrhisampler.html#m_minFilter-var"/>
             <keyword name="m_mipmapMode" id="QRhiSampler::m_mipmapMode" ref="qrhisampler.html#m_mipmapMode-var"/>
+            <keyword name="m_objectName" id="QRhiResource::m_objectName" ref="qrhiresource.html#m_objectName-var"/>
+            <keyword name="m_orphanedWithRsh" id="QRhiResource::m_orphanedWithRsh" ref="qrhiresource.html#m_orphanedWithRsh-var"/>
             <keyword name="m_pixelSize" id="QRhiRenderBuffer::m_pixelSize" ref="qrhirenderbuffer.html#m_pixelSize-var"/>
             <keyword name="m_pixelSize" id="QRhiTexture::m_pixelSize" ref="qrhitexture.html#m_pixelSize-var"/>
             <keyword name="m_renderPassDesc" id="QRhiGraphicsPipeline::m_renderPassDesc" ref="qrhigraphicspipeline.html#m_renderPassDesc-var"/>
@@ -618,6 +622,7 @@
             <keyword name="m_reserved" id="QRhiShaderResourceBindings::m_reserved" ref="qrhishaderresourcebindings.html#m_reserved-var"/>
             <keyword name="m_reserved" id="QRhiSwapChain::m_reserved" ref="qrhiswapchain.html#m_reserved-var"/>
             <keyword name="m_reserved" id="QRhiTexture::m_reserved" ref="qrhitexture.html#m_reserved-var"/>
+            <keyword name="m_rhi" id="QRhiResource::m_rhi" ref="qrhiresource.html#m_rhi-var"/>
             <keyword name="m_sampleCount" id="QRhiGraphicsPipeline::m_sampleCount" ref="qrhigraphicspipeline.html#m_sampleCount-var"/>
             <keyword name="m_sampleCount" id="QRhiRenderBuffer::m_sampleCount" ref="qrhirenderbuffer.html#m_sampleCount-var"/>
             <keyword name="m_sampleCount" id="QRhiSwapChain::m_sampleCount" ref="qrhiswapchain.html#m_sampleCount-var"/>
@@ -665,7 +670,6 @@
             <keyword name="newTexture" id="QRhi::newTexture" ref="qrhi.html#newTexture"/>
             <keyword name="newTextureRenderTarget" id="QRhi::newTextureRenderTarget" ref="qrhi.html#newTextureRenderTarget"/>
             <keyword name="nextResourceUpdateBatch" id="QRhi::nextResourceUpdateBatch" ref="qrhi.html#nextResourceUpdateBatch"/>
-            <keyword name="objectName" id="QRhiResource::objectName" ref="qrhiresource.html#objectName-var"/>
             <keyword name="offset" id="QRhiVertexInputAttribute::offset" ref="qrhivertexinputattribute.html#offset"/>
             <keyword name="opAlpha" id="TargetBlend::opAlpha" ref="qrhigraphicspipeline-targetblend.html#opAlpha-var"/>
             <keyword name="opColor" id="TargetBlend::opColor" ref="qrhigraphicspipeline-targetblend.html#opColor-var"/>
@@ -688,7 +692,6 @@
             <keyword name="operator==" id="operator==" ref="qrhivertexinputbinding.html#operator-eq-eq"/>
             <keyword name="operator==" id="operator==" ref="qrhivertexinputlayout.html#operator-eq-eq"/>
             <keyword name="operator==" id="operator==" ref="qrhiviewport.html#operator-eq-eq"/>
-            <keyword name="orphanedWithRsh" id="QRhiResource::orphanedWithRsh" ref="qrhiresource.html#orphanedWithRsh-var"/>
             <keyword name="passOp" id="StencilOpState::passOp" ref="qrhigraphicspipeline-stencilopstate.html#passOp-var"/>
             <keyword name="physDev" id="QRhiVulkanNativeHandles::physDev" ref="qrhivulkannativehandles.html#physDev-var"/>
             <keyword name="pixelSize" id="QRhiReadbackResult::pixelSize" ref="qrhireadbackresult.html#pixelSize-var"/>
@@ -720,7 +723,6 @@
             <keyword name="resourceSizeLimit" id="QRhi::resourceSizeLimit" ref="qrhi.html#resourceSizeLimit"/>
             <keyword name="resourceUpdate" id="QRhiCommandBuffer::resourceUpdate" ref="qrhicommandbuffer.html#resourceUpdate"/>
             <keyword name="rgba" id="QRhiColorClearValue::rgba" ref="qrhicolorclearvalue.html#rgba"/>
-            <keyword name="rhi" id="QRhiResource::rhi" ref="qrhiresource.html#rhi-var"/>
             <keyword name="sampleCount" id="QRhiGraphicsPipeline::sampleCount" ref="qrhigraphicspipeline.html#sampleCount"/>
             <keyword name="sampleCount" id="QRhiRenderBuffer::sampleCount" ref="qrhirenderbuffer.html#sampleCount"/>
             <keyword name="sampleCount" id="QRhiSwapChain::sampleCount" ref="qrhiswapchain.html#sampleCount"/>
