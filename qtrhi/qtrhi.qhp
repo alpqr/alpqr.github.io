@@ -213,6 +213,7 @@
             <keyword name="QRhi::Null" id="QRhi::Null" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhi::OpenGLES2" id="QRhi::OpenGLES2" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhi::PrimitiveRestart" id="QRhi::PrimitiveRestart" ref="qrhi.html#Feature-enum"/>
+            <keyword name="QRhi::RedOrAlpha8IsRed" id="QRhi::RedOrAlpha8IsRed" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::ResourceSizeLimit" id="QRhi::ResourceSizeLimit" ref="qrhi.html#ResourceSizeLimit-enum"/>
             <keyword name="QRhi::SkipPresent" id="QRhi::SkipPresent" ref="qrhi.html#EndFrameFlag-enum"/>
             <keyword name="QRhi::TessellationShaders" id="QRhi::TessellationShaders" ref="qrhi.html#Feature-enum"/>
@@ -434,6 +435,7 @@
             <keyword name="QRhiTexture::MipMapped" id="QRhiTexture::MipMapped" ref="qrhitexture.html#Flag-enum"/>
             <keyword name="QRhiTexture::R16" id="QRhiTexture::R16" ref="qrhitexture.html#Format-enum"/>
             <keyword name="QRhiTexture::R8" id="QRhiTexture::R8" ref="qrhitexture.html#Format-enum"/>
+            <keyword name="QRhiTexture::RED_OR_ALPHA8" id="QRhiTexture::RED_OR_ALPHA8" ref="qrhitexture.html#Format-enum"/>
             <keyword name="QRhiTexture::RGBA8" id="QRhiTexture::RGBA8" ref="qrhitexture.html#Format-enum"/>
             <keyword name="QRhiTexture::RenderTarget" id="QRhiTexture::RenderTarget" ref="qrhitexture.html#Flag-enum"/>
             <keyword name="QRhiTexture::UnknownFormat" id="QRhiTexture::UnknownFormat" ref="qrhitexture.html#Format-enum"/>

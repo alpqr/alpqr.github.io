@@ -1329,6 +1329,10 @@
             <anchor>Format-enum</anchor>
             <arglist></arglist>
         </member>
+        <member name="RED_OR_ALPHA8">
+            <anchor>Format-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member name="D16">
             <anchor>Format-enum</anchor>
             <arglist></arglist>
@@ -2976,6 +2980,10 @@
             <arglist></arglist>
         </member>
         <member name="NPOTTextureRepeat">
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="RedOrAlpha8IsRed">
             <anchor>Feature-enum</anchor>
             <arglist></arglist>
         </member>

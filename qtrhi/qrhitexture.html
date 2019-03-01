@@ -118,41 +118,42 @@
 </table></div>
 <p>The Flags type is a typedef for <a href="../qtcore/qflags.html">QFlags</a>&lt;Flag&gt;. It stores an OR combination of Flag values.</p>
 <!-- @@@Flag -->
-<!-- $$$Format$$$UnknownFormat$$$RGBA8$$$BGRA8$$$R8$$$R16$$$D16$$$D32$$$BC1$$$BC2$$$BC3$$$BC4$$$BC5$$$BC6H$$$BC7$$$ETC2_RGB8$$$ETC2_RGB8A1$$$ETC2_RGBA8$$$ASTC_4x4$$$ASTC_5x4$$$ASTC_5x5$$$ASTC_6x5$$$ASTC_6x6$$$ASTC_8x5$$$ASTC_8x6$$$ASTC_8x8$$$ASTC_10x5$$$ASTC_10x6$$$ASTC_10x8$$$ASTC_10x10$$$ASTC_12x10$$$ASTC_12x12 -->
+<!-- $$$Format$$$UnknownFormat$$$RGBA8$$$BGRA8$$$R8$$$R16$$$RED_OR_ALPHA8$$$D16$$$D32$$$BC1$$$BC2$$$BC3$$$BC4$$$BC5$$$BC6H$$$BC7$$$ETC2_RGB8$$$ETC2_RGB8A1$$$ETC2_RGBA8$$$ASTC_4x4$$$ASTC_5x4$$$ASTC_5x5$$$ASTC_6x5$$$ASTC_6x6$$$ASTC_8x5$$$ASTC_8x6$$$ASTC_8x8$$$ASTC_10x5$$$ASTC_10x6$$$ASTC_10x8$$$ASTC_10x10$$$ASTC_12x10$$$ASTC_12x12 -->
 <h3 class="fn" id="Format-enum"><a name="Format-enum"></a>enum QRhiTexture::<span class="name">Format</span></h3>
 <p>Specifies the texture format. See also <a href="qrhi.html#isTextureFormatSupported">QRhi::isTextureFormatSupported</a>() and note that <a href="qrhitexture.html#flags">flags</a>() can modify the format when <a href="qrhitexture.html#Flag-enum">QRhiTexture::sRGB</a> is set.</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
 <tr><td class="topAlign"><code>QRhiTexture::UnknownFormat</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Not a valid format. This cannot be passed to <a href="qrhitexture.html#setFormat">setFormat</a>().</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::RGBA8</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::BGRA8</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::R8</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::R16</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::D16</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::D32</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::BC1</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::BC2</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::BC3</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::BC4</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::BC5</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::BC6H</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::BC7</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ETC2_RGB8</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ETC2_RGB8A1</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ETC2_RGBA8</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_4x4</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_5x4</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_5x5</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_6x5</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_6x6</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_8x5</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_8x6</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_8x8</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_10x5</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_10x6</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_10x8</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_10x10</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_12x10</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">&nbsp;</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::ASTC_12x12</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::RGBA8</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Four component, unsigned normalized 8 bit per component. Always supported.</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BGRA8</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Four component, unsigned normalized 8 bit per component.</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::R8</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">One component, unsigned normalized 8 bit.</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::R16</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">One component, unsigned normalized 16 bit.</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::RED_OR_ALPHA8</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">Either same as R8, or is a similar format with the component swizzled to alpha, depending on <a href="qrhi.html#Feature-enum">RedOrAlpha8IsRed</a>.</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::D16</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">16-bit depth (normalized unsigned integer)</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::D32</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">32-bit depth (32-bit float)</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC1</code></td><td class="topAlign tblval"><code>8</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC2</code></td><td class="topAlign tblval"><code>9</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC3</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC4</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC5</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC6H</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::BC7</code></td><td class="topAlign tblval"><code>14</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ETC2_RGB8</code></td><td class="topAlign tblval"><code>15</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ETC2_RGB8A1</code></td><td class="topAlign tblval"><code>16</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ETC2_RGBA8</code></td><td class="topAlign tblval"><code>17</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_4x4</code></td><td class="topAlign tblval"><code>18</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_5x4</code></td><td class="topAlign tblval"><code>19</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_5x5</code></td><td class="topAlign tblval"><code>20</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_6x5</code></td><td class="topAlign tblval"><code>21</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_6x6</code></td><td class="topAlign tblval"><code>22</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_8x5</code></td><td class="topAlign tblval"><code>23</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_8x6</code></td><td class="topAlign tblval"><code>24</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_8x8</code></td><td class="topAlign tblval"><code>25</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_10x5</code></td><td class="topAlign tblval"><code>26</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_10x6</code></td><td class="topAlign tblval"><code>27</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_10x8</code></td><td class="topAlign tblval"><code>28</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_10x10</code></td><td class="topAlign tblval"><code>29</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_12x10</code></td><td class="topAlign tblval"><code>30</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::ASTC_12x12</code></td><td class="topAlign tblval"><code>31</code></td><td class="topAlign">&nbsp;</td></tr>
 </table></div>
 <!-- @@@Format -->
 </div>

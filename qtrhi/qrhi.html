@@ -62,7 +62,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#BeginFrameFlag-enum">BeginFrameFlags</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#EndFrameFlag-enum">EndFrameFlag</a></b> { SkipPresent }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#EndFrameFlag-enum">EndFrameFlags</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Feature-enum">Feature</a></b> { MultisampleTexture, MultisampleRenderBuffer, DebugMarkers, Timestamps, ..., NPOTTextureRepeat }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Feature-enum">Feature</a></b> { MultisampleTexture, MultisampleRenderBuffer, DebugMarkers, Timestamps, ..., RedOrAlpha8IsRed }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Flag-enum">Flag</a></b> { EnableProfiling, EnableDebugMarkers }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Flag-enum">Flags</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#FrameOpResult-enum">FrameOpResult</a></b> { FrameOpSuccess, FrameOpError, FrameOpSwapChainOutOfDate, FrameOpDeviceLost }</td></tr>
@@ -218,7 +218,7 @@
 </table></div>
 <p>The EndFrameFlags type is a typedef for <a href="../qtcore/qflags.html">QFlags</a>&lt;EndFrameFlag&gt;. It stores an OR combination of EndFrameFlag values.</p>
 <!-- @@@EndFrameFlag -->
-<!-- $$$Feature$$$MultisampleTexture$$$MultisampleRenderBuffer$$$DebugMarkers$$$Timestamps$$$Instancing$$$CustomInstanceStepRate$$$PrimitiveRestart$$$GeometryShaders$$$TessellationShaders$$$NonDynamicUniformBuffers$$$NonFourAlignedEffectiveIndexBufferOffset$$$NPOTTextureRepeat -->
+<!-- $$$Feature$$$MultisampleTexture$$$MultisampleRenderBuffer$$$DebugMarkers$$$Timestamps$$$Instancing$$$CustomInstanceStepRate$$$PrimitiveRestart$$$GeometryShaders$$$TessellationShaders$$$NonDynamicUniformBuffers$$$NonFourAlignedEffectiveIndexBufferOffset$$$NPOTTextureRepeat$$$RedOrAlpha8IsRed -->
 <h3 class="fn" id="Feature-enum"><a name="Feature-enum"></a>enum QRhi::<span class="name">Feature</span></h3>
 <p>Flag values to indicate what features are supported by the backend currently in use.</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
@@ -234,6 +234,7 @@
 <tr><td class="topAlign"><code>QRhi::NonDynamicUniformBuffers</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">Indicates that creating buffers with the usage <a href="qrhibuffer.html#UsageFlag-enum">UniformBuffer</a> and the types <a href="qrhibuffer.html#Type-enum">Immutable</a> or <a href="qrhibuffer.html#Type-enum">Static</a> is supported. When reported as unsupported, uniform (constant) buffers must be created as <a href="qrhibuffer.html#Type-enum">Dynamic</a>. (which is recommended regardless)</td></tr>
 <tr><td class="topAlign"><code>QRhi::NonFourAlignedEffectiveIndexBufferOffset</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">Indicates that effective index buffer offsets (<code>indexOffset + firstIndex * indexComponentSize</code>) that are not 4 byte aligned are supported. When not supported, attempting to issue a <a href="qrhicommandbuffer.html#drawIndexed">drawIndexed()</a> with a non-aligned effective offset may lead to unspecified behavior.</td></tr>
 <tr><td class="topAlign"><code>QRhi::NPOTTextureRepeat</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">Indicates that the <a href="qrhisampler.html#AddressMode-enum">Repeat</a> mode is supported for textures with a non-power-of-two size.</td></tr>
+<tr><td class="topAlign"><code>QRhi::RedOrAlpha8IsRed</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">Indicates that the <a href="qrhitexture.html#Format-enum">RED_OR_ALPHA8</a> format maps to a one component 8-bit <code>red</code> format. This is the case for all backends except OpenGL, where <code>GL_ALPHA</code>, a one component 8-bit <code>alpha</code> format, is used instead. This is relevant for shader code that samples from the texture.</td></tr>
 </table></div>
 <!-- @@@Feature -->
 <!-- $$$Flag$$$EnableProfiling$$$EnableDebugMarkers -->
