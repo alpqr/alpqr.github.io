@@ -64,6 +64,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#name">name</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#release">release</a></b>() = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#releaseAndDestroy">releaseAndDestroy</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#releaseAndDestroyLater">releaseAndDestroyLater</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#setName">setName</a></b>(const QByteArray &amp;<i>name</i>)</td></tr>
 </table></div>
 <a name="protected-functions"></a>
@@ -120,13 +121,20 @@
 <!-- @@@name -->
 <!-- $$$release[overload1]$$$release -->
 <h3 class="fn" id="release"><a name="release"></a><code>[pure virtual] </code><span class="type">void</span> QRhiResource::<span class="name">release</span>()</h3>
-<p>Releases the underlying native graphics resources. Safe to call multiple times, subsequent invocations will be a no-op then.</p>
+<p>Releases (or requests defered releasing of) the underlying native graphics resources. Safe to call multiple times, subsequent invocations will be a no-op then.</p>
 <p>Once release() is called, the <a href="qrhiresource.html">QRhiResource</a> instance can be reused, by calling the appropriate <code>build()</code> function again, or destroyed.</p>
+<p><b>Note: </b>Resources referenced by commands for the current frame should not be released until the frame is submitted by <a href="qrhi.html#endFrame">QRhi::endFrame</a>().</p><p><b>See also </b><a href="qrhiresource.html#releaseAndDestroy">releaseAndDestroy</a>() and <a href="qrhiresource.html#releaseAndDestroyLater">releaseAndDestroyLater</a>().</p>
 <!-- @@@release -->
 <!-- $$$releaseAndDestroy[overload1]$$$releaseAndDestroy -->
 <h3 class="fn" id="releaseAndDestroy"><a name="releaseAndDestroy"></a><span class="type">void</span> QRhiResource::<span class="name">releaseAndDestroy</span>()</h3>
-<p>Releases native graphics resources, if there is any, and destroys the <a href="qrhiresource.html">QRhiResource</a>. Equivalent to <code>r-&gt;release(); delete r;</code>.</p>
+<p>Releases (or requests defered releasing of) the native graphics resources, if there are any, and destroys the <a href="qrhiresource.html">QRhiResource</a>. Equivalent to <code>r-&gt;release(); delete r;</code>.</p>
+<p><b>Note: </b>Resources referenced by commands for the current frame should not be released until the frame is submitted by <a href="qrhi.html#endFrame">QRhi::endFrame</a>().</p><p><b>See also </b><a href="qrhiresource.html#release">release</a>() and <a href="qrhiresource.html#releaseAndDestroyLater">releaseAndDestroyLater</a>().</p>
 <!-- @@@releaseAndDestroy -->
+<!-- $$$releaseAndDestroyLater[overload1]$$$releaseAndDestroyLater -->
+<h3 class="fn" id="releaseAndDestroyLater"><a name="releaseAndDestroyLater"></a><span class="type">void</span> QRhiResource::<span class="name">releaseAndDestroyLater</span>()</h3>
+<p>When called without a frame being recorded, this function is equivalent to <a href="qrhiresource.html#releaseAndDestroy">releaseAndDestroy</a>(). Between a <a href="qrhi.html#beginFrame">QRhi::beginFrame</a>() and <a href="qrhi.html#endFrame">QRhi::endFrame</a>() however the behavior is different: the <a href="qrhiresource.html">QRhiResource</a> will not be destroyed until the frame is submitted via <a href="qrhi.html#endFrame">QRhi::endFrame</a>(), thus satisfying the <a href="qrhi.html">QRhi</a> requirement of not altering <a href="qrhiresource.html">QRhiResource</a> objects that are referenced by the frame being recorded.</p>
+<p><b>See also </b><a href="qrhiresource.html#release">release</a>() and <a href="qrhiresource.html#releaseAndDestroy">releaseAndDestroy</a>().</p>
+<!-- @@@releaseAndDestroyLater -->
 <!-- $$$setName[overload1]$$$setNameconstQByteArray& -->
 <h3 class="fn" id="setName"><a name="setName"></a><span class="type">void</span> QRhiResource::<span class="name">setName</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>name</i>)</h3>
 <p>Sets a <i>name</i> for the object.</p>

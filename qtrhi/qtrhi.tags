@@ -1125,6 +1125,13 @@
             <arglist>()</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>releaseAndDestroyLater</name>
+            <anchorfile>qrhiresource.html</anchorfile>
+            <anchor>releaseAndDestroyLater</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
             <type>QByteArray</type>
             <name>name</name>
             <anchorfile>qrhiresource.html</anchorfile>
@@ -3039,6 +3046,20 @@
             <anchorfile>qrhi.html</anchorfile>
             <anchor>create</anchor>
             <arglist>(QRhi::Implementation impl, QRhiInitParams *params, QRhi::Flags flags, QRhiNativeHandles *importDevice)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhi::Implementation</type>
+            <name>backend</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>backend</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QThread *</type>
+            <name>thread</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>thread</anchor>
+            <arglist>() const const</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiGraphicsPipeline *</type>

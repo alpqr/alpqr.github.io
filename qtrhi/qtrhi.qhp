@@ -482,6 +482,7 @@
             <keyword name="attributes" id="QRhiVertexInputLayout::attributes" ref="qrhivertexinputlayout.html#attributes"/>
             <keyword name="avgTime" id="CpuTime::avgTime" ref="qrhiprofiler-cputime.html#avgTime-var"/>
             <keyword name="avgTime" id="GpuTime::avgTime" ref="qrhiprofiler-gputime.html#avgTime-var"/>
+            <keyword name="backend" id="QRhi::backend" ref="qrhi.html#backend"/>
             <keyword name="backingFormat" id="QRhiRenderBuffer::backingFormat" ref="qrhirenderbuffer.html#backingFormat"/>
             <keyword name="beginFrame" id="QRhi::beginFrame" ref="qrhi.html#beginFrame"/>
             <keyword name="beginOffscreenFrame" id="QRhi::beginOffscreenFrame" ref="qrhi.html#beginOffscreenFrame"/>
@@ -714,6 +715,7 @@
             <keyword name="release" id="QRhiResource::release" ref="qrhiresource.html#release"/>
             <keyword name="release" id="QRhiResourceUpdateBatch::release" ref="qrhiresourceupdatebatch.html#release"/>
             <keyword name="releaseAndDestroy" id="QRhiResource::releaseAndDestroy" ref="qrhiresource.html#releaseAndDestroy"/>
+            <keyword name="releaseAndDestroyLater" id="QRhiResource::releaseAndDestroyLater" ref="qrhiresource.html#releaseAndDestroyLater"/>
             <keyword name="renderBuffer" id="QRhiColorAttachment::renderBuffer" ref="qrhicolorattachment.html#renderBuffer"/>
             <keyword name="renderPassDescriptor" id="QRhiGraphicsPipeline::renderPassDescriptor" ref="qrhigraphicspipeline.html#renderPassDescriptor"/>
             <keyword name="renderPassDescriptor" id="QRhiRenderTarget::renderPassDescriptor" ref="qrhirendertarget.html#renderPassDescriptor"/>
@@ -860,6 +862,7 @@
             <keyword name="texture" id="QRhiMetalTextureNativeHandles::texture" ref="qrhimetaltexturenativehandles.html#texture-var"/>
             <keyword name="texture" id="QRhiNullTextureNativeHandles::texture" ref="qrhinulltexturenativehandles.html#texture-var"/>
             <keyword name="texture" id="QRhiReadbackDescription::texture" ref="qrhireadbackdescription.html#texture"/>
+            <keyword name="thread" id="QRhi::thread" ref="qrhi.html#thread"/>
             <keyword name="topology" id="QRhiGraphicsPipeline::topology" ref="qrhigraphicspipeline.html#topology"/>
             <keyword name="type" id="QRhiBuffer::type" ref="qrhibuffer.html#type"/>
             <keyword name="type" id="QRhiGraphicsShaderStage::type" ref="qrhigraphicsshaderstage.html#type"/>
