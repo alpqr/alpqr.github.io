@@ -77,7 +77,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#setSampleCount">setSampleCount</a></b>(int <i>s</i>)</td></tr>
 </table></div>
 <ul>
-<li class="fn">7 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
+<li class="fn">6 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
 </ul>
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
@@ -89,7 +89,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhitexture.html#m_sampleCount-var">m_sampleCount</a></b></td></tr>
 </table></div>
 <ul>
-<li class="fn">5 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
+<li class="fn">4 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
 </ul>
 <h3>Additional Inherited Members</h3>
 <ul>
@@ -112,7 +112,7 @@
 <tr><td class="topAlign"><code>QRhiTexture::ChangesFrequently</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Performance hint to indicate that the texture contents will change frequently and so staging buffers, if any, are to be kept alive to avoid performance hits</td></tr>
 <tr><td class="topAlign"><code>QRhiTexture::CubeMap</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">The texture is a cubemap. Such textures have 6 layers, one for each face in the order of +X, -X, +Y, -Y, +Z, -Z. Cubemap textures cannot be multisample.</td></tr>
 <tr><td class="topAlign"><code>QRhiTexture::MipMapped</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 3</code></td><td class="topAlign">The texture has mipmaps. The appropriate mip count is calculated automatically and can also be retrieved via <a href="qrhi.html#mipLevelsForSize">QRhi::mipLevelsForSize</a>(). The images for the mip levels have to be provided in the texture uploaded or generated via <a href="qrhiresourceupdatebatch.html#generateMips">QRhiResourceUpdateBatch::generateMips</a>(). Multisample textures cannot have mipmaps.</td></tr>
-<tr><td class="topAlign"><code>QRhiTexture::sRGB</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 4</code></td><td class="topAlign">Use an sRGB format</td></tr>
+<tr><td class="topAlign"><code>QRhiTexture::sRGB</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 4</code></td><td class="topAlign">Use an sRGB format.</td></tr>
 <tr><td class="topAlign"><code>QRhiTexture::UsedAsTransferSource</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 5</code></td><td class="topAlign">The texture is used as the source of a texture copy or readback, meaning the texture is given as the source in <a href="qrhiresourceupdatebatch.html#copyTexture">QRhiResourceUpdateBatch::copyTexture</a>() or <a href="qrhiresourceupdatebatch.html#readBackTexture">QRhiResourceUpdateBatch::readBackTexture</a>().</td></tr>
 <tr><td class="topAlign"><code>QRhiTexture::UsedWithGenerateMips</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 6</code></td><td class="topAlign">The texture is going to be used with <a href="qrhiresourceupdatebatch.html#generateMips">QRhiResourceUpdateBatch::generateMips</a>().</td></tr>
 </table></div>

@@ -81,7 +81,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> QWindow *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#window">window</a></b>() const</td></tr>
 </table></div>
 <ul>
-<li class="fn">7 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
+<li class="fn">6 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
 </ul>
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
@@ -96,7 +96,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> QWindow *</td><td class="memItemRight bottomAlign"><b><a href="qrhiswapchain.html#m_window-var">m_window</a></b></td></tr>
 </table></div>
 <ul>
-<li class="fn">5 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
+<li class="fn">4 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
 </ul>
 <h3>Additional Inherited Members</h3>
 <ul>
@@ -217,7 +217,7 @@
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
 <tr><td class="topAlign"><code>QRhiSwapChain::SurfaceHasPreMulAlpha</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">Indicates that the target surface has transparency with premultiplied alpha.</td></tr>
 <tr><td class="topAlign"><code>QRhiSwapChain::SurfaceHasNonPreMulAlpha</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Indicates the target surface has transparencyt with non-premultiplied alpha.</td></tr>
-<tr><td class="topAlign"><code>QRhiSwapChain::sRGB</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">Requests to pick an sRGB format.</td></tr>
+<tr><td class="topAlign"><code>QRhiSwapChain::sRGB</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">Requests to pick an sRGB format for the swapchain and/or its render target views, where applicable. Note that this implies that sRGB framebuffer update and blending will get enabled for all content targeting this swapchain, and opting out is not possible. For OpenGL, set <a href="../qtgui/qsurfaceformat.html#ColorSpace-enum">sRGBColorSpace</a> on the <a href="../qtgui/qsurfaceformat.html">QSurfaceFormat</a> of the <a href="../qtgui/qwindow.html">QWindow</a> in addition.</td></tr>
 <tr><td class="topAlign"><code>QRhiSwapChain::UsedAsTransferSource</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 3</code></td><td class="topAlign">Indicates the the swapchain will be used as the source of a readback in <a href="qrhiresourceupdatebatch.html#readBackTexture">QRhiResourceUpdateBatch::readBackTexture</a>().</td></tr>
 <tr><td class="topAlign"><code>QRhiSwapChain::NoVSync</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 4</code></td><td class="topAlign">Requests disabling waiting for vertical sync, also avoiding throttling the rendering thread. The behavior is backend specific and applicable only where it is possible to control this. Some may ignore the request altogether. For OpenGL, try instead setting the swap interval to 0 on the <a href="../qtgui/qwindow.html">QWindow</a> via <a href="../qtgui/qsurfaceformat.html#setSwapInterval">QSurfaceFormat::setSwapInterval</a>().</td></tr>
 </table></div>

@@ -66,7 +66,7 @@
 <li>Vulkan 1.0, optionally with some extensions that are part of Vulkan 1.1</li>
 <li>Null - A &quot;dummy&quot; backend that issues no graphics calls at all.</li>
 </ul>
-<p>Managing shader code and dealing with shading language differences is not in the scope of this module. Rather, it is delegated to the Qt Shader Tools module. Classes like <a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a> and <a href="qrhigraphicsshaderstage.html">QRhiGraphicsShaderStage</a> are prepared to work directly with QBakedShader instances.</p>
+<p>In order to allow shader code to be written once in Qt applications and libraries, all shaders are expected to be written in a single language which is then compiled into SPIR-V. Versions for various shading language are then generated from that, together with reflection information (inputs, outputs, shader resources). This is then packed into easily and efficiently serializable <a href="qbakedshader.html">QBakedShader</a> instances. The compilers and tools to generate such shaders are not part of the Rhi module, but the core classes for using such shaders, <a href="qbakedshader.html">QBakedShader</a> and <a href="qshaderdescription.html">QShaderDescription</a>, are.</p>
 <a name="table-of-contents"></a>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>

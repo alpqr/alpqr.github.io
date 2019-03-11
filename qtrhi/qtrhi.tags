@@ -1,6 +1,649 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tagfile>
     <compound kind="class">
+        <name>QShaderDescription</name>
+        <filename>qshaderdescription.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QShaderDescription</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>QShaderDescription</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>~QShaderDescription</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>dtor.QShaderDescription</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>bool</type>
+            <name>isValid</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>isValid</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QByteArray</type>
+            <name>toBinaryJson</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>toBinaryJson</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QByteArray</type>
+            <name>toJson</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>toJson</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QShaderDescription</type>
+            <name>fromBinaryJson</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>fromBinaryJson</anchor>
+            <arglist>(const QByteArray &amp;data)</arglist>
+        </member>
+        <member kind="enum">
+            <name>VarType</name>
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Unknown">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Float">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Vec2">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Vec3">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Vec4">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat2">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat2x3">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat2x4">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat3">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat3x2">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat3x4">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat4">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat4x2">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat4x3">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Int">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Int2">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Int3">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Int4">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Uint">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Uint2">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Uint3">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Uint4">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Bool">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Bool2">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Bool3">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Bool4">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Double">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Double2">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Double3">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Double4">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat2">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat2x3">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat2x4">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat3">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat3x2">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat3x4">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat4">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat4x2">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat4x3">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler1D">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler2D">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler2DMS">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler3D">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="SamplerCube">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler1DArray">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler2DArray">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler2DMSArray">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler3DArray">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="SamplerCubeArray">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Struct">
+            <anchor>VarType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <class>QShaderDescription::InOutVariable</class>
+        <class>QShaderDescription::BlockVariable</class>
+        <class>QShaderDescription::UniformBlock</class>
+        <class>QShaderDescription::PushConstantBlock</class>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QShaderDescription::InOutVariable&gt;</type>
+            <name>inputVariables</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>inputVariables</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QShaderDescription::InOutVariable&gt;</type>
+            <name>outputVariables</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>outputVariables</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QShaderDescription::UniformBlock&gt;</type>
+            <name>uniformBlocks</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>uniformBlocks</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QShaderDescription::PushConstantBlock&gt;</type>
+            <name>pushConstantBlocks</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>pushConstantBlocks</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QShaderDescription::InOutVariable&gt;</type>
+            <name>combinedImageSamplers</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>combinedImageSamplers</anchor>
+            <arglist>() const const</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QShaderDescription::InOutVariable</name>
+        <filename>qshaderdescription-inoutvariable.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QShaderDescription::BlockVariable</name>
+        <filename>qshaderdescription-blockvariable.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QShaderDescription::UniformBlock</name>
+        <filename>qshaderdescription-uniformblock.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QShaderDescription::PushConstantBlock</name>
+        <filename>qshaderdescription-pushconstantblock.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QBakedShaderVersion</name>
+        <filename>qbakedshaderversion.html</filename>
+        <member kind="enum">
+            <name>Flag</name>
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="GlslEs">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="typedef" type="QBakedShaderVersion::Flag">
+            <name>Flags</name>
+            <anchorfile>qbakedshaderversion.html</anchorfile>
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QBakedShaderVersion</name>
+            <anchorfile>qbakedshaderversion.html</anchorfile>
+            <anchor>QBakedShaderVersion</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QBakedShaderVersion</name>
+            <anchorfile>qbakedshaderversion.html</anchorfile>
+            <anchor>QBakedShaderVersion-1</anchor>
+            <arglist>(int v, QBakedShaderVersion::Flags f)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>int</type>
+            <name>version</name>
+            <anchorfile>qbakedshaderversion.html</anchorfile>
+            <anchor>version</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setVersion</name>
+            <anchorfile>qbakedshaderversion.html</anchorfile>
+            <anchor>setVersion</anchor>
+            <arglist>(int v)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QBakedShaderVersion::Flags</type>
+            <name>flags</name>
+            <anchorfile>qbakedshaderversion.html</anchorfile>
+            <anchor>flags</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setFlags</name>
+            <anchorfile>qbakedshaderversion.html</anchorfile>
+            <anchor>setFlags</anchor>
+            <arglist>(QBakedShaderVersion::Flags f)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QBakedShaderKey</name>
+        <filename>qbakedshaderkey.html</filename>
+        <member kind="enum">
+            <name>ShaderSource</name>
+            <anchor>ShaderSource-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="SpirvShader">
+            <anchor>ShaderSource-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="GlslShader">
+            <anchor>ShaderSource-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="HlslShader">
+            <anchor>ShaderSource-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DxbcShader">
+            <anchor>ShaderSource-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="MslShader">
+            <anchor>ShaderSource-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DxilShader">
+            <anchor>ShaderSource-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="MetalLibShader">
+            <anchor>ShaderSource-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
+            <name>ShaderVariant</name>
+            <anchor>ShaderVariant-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="StandardShader">
+            <anchor>ShaderVariant-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="BatchableVertexShader">
+            <anchor>ShaderVariant-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QBakedShaderKey</name>
+            <anchorfile>qbakedshaderkey.html</anchorfile>
+            <anchor>QBakedShaderKey</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QBakedShaderKey</name>
+            <anchorfile>qbakedshaderkey.html</anchorfile>
+            <anchor>QBakedShaderKey-1</anchor>
+            <arglist>(QBakedShaderKey::ShaderSource s, const QBakedShaderVersion &amp;sver, QBakedShaderKey::ShaderVariant svar)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QBakedShaderKey::ShaderSource</type>
+            <name>source</name>
+            <anchorfile>qbakedshaderkey.html</anchorfile>
+            <anchor>source</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setSource</name>
+            <anchorfile>qbakedshaderkey.html</anchorfile>
+            <anchor>setSource</anchor>
+            <arglist>(QBakedShaderKey::ShaderSource s)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QBakedShaderVersion</type>
+            <name>sourceVersion</name>
+            <anchorfile>qbakedshaderkey.html</anchorfile>
+            <anchor>sourceVersion</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setSourceVersion</name>
+            <anchorfile>qbakedshaderkey.html</anchorfile>
+            <anchor>setSourceVersion</anchor>
+            <arglist>(const QBakedShaderVersion &amp;sver)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QBakedShaderKey::ShaderVariant</type>
+            <name>sourceVariant</name>
+            <anchorfile>qbakedshaderkey.html</anchorfile>
+            <anchor>sourceVariant</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setSourceVariant</name>
+            <anchorfile>qbakedshaderkey.html</anchorfile>
+            <anchor>setSourceVariant</anchor>
+            <arglist>(QBakedShaderKey::ShaderVariant svar)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QBakedShaderCode</name>
+        <filename>qbakedshadercode.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QBakedShaderCode</name>
+            <anchorfile>qbakedshadercode.html</anchorfile>
+            <anchor>QBakedShaderCode</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QBakedShaderCode</name>
+            <anchorfile>qbakedshadercode.html</anchorfile>
+            <anchor>QBakedShaderCode-1</anchor>
+            <arglist>(const QByteArray &amp;code, const QByteArray &amp;entry)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QByteArray</type>
+            <name>shader</name>
+            <anchorfile>qbakedshadercode.html</anchorfile>
+            <anchor>shader</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setShader</name>
+            <anchorfile>qbakedshadercode.html</anchorfile>
+            <anchor>setShader</anchor>
+            <arglist>(const QByteArray &amp;code)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QByteArray</type>
+            <name>entryPoint</name>
+            <anchorfile>qbakedshadercode.html</anchorfile>
+            <anchor>entryPoint</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setEntryPoint</name>
+            <anchorfile>qbakedshadercode.html</anchorfile>
+            <anchor>setEntryPoint</anchor>
+            <arglist>(const QByteArray &amp;entry)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QBakedShader</name>
+        <filename>qbakedshader.html</filename>
+        <member kind="enum">
+            <name>ShaderStage</name>
+            <anchor>ShaderStage-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="VertexStage">
+            <anchor>ShaderStage-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="TessControlStage">
+            <anchor>ShaderStage-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="TessEvaluationStage">
+            <anchor>ShaderStage-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="GeometryStage">
+            <anchor>ShaderStage-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="FragmentStage">
+            <anchor>ShaderStage-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ComputeStage">
+            <anchor>ShaderStage-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QBakedShader</name>
+            <anchorfile>qbakedshader.html</anchorfile>
+            <anchor>QBakedShader</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>~QBakedShader</name>
+            <anchorfile>qbakedshader.html</anchorfile>
+            <anchor>dtor.QBakedShader</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>bool</type>
+            <name>isValid</name>
+            <anchorfile>qbakedshader.html</anchorfile>
+            <anchor>isValid</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QBakedShader::ShaderStage</type>
+            <name>stage</name>
+            <anchorfile>qbakedshader.html</anchorfile>
+            <anchor>stage</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setStage</name>
+            <anchorfile>qbakedshader.html</anchorfile>
+            <anchor>setStage</anchor>
+            <arglist>(QBakedShader::ShaderStage stage)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QShaderDescription</type>
+            <name>description</name>
+            <anchorfile>qbakedshader.html</anchorfile>
+            <anchor>description</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setDescription</name>
+            <anchorfile>qbakedshader.html</anchorfile>
+            <anchor>setDescription</anchor>
+            <arglist>(const QShaderDescription &amp;desc)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QList&lt;QBakedShaderKey&gt;</type>
+            <name>availableShaders</name>
+            <anchorfile>qbakedshader.html</anchorfile>
+            <anchor>availableShaders</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QBakedShaderCode</type>
+            <name>shader</name>
+            <anchorfile>qbakedshader.html</anchorfile>
+            <anchor>shader</anchor>
+            <arglist>(const QBakedShaderKey &amp;key) const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setShader</name>
+            <anchorfile>qbakedshader.html</anchorfile>
+            <anchor>setShader</anchor>
+            <arglist>(const QBakedShaderKey &amp;key, const QBakedShaderCode &amp;shader)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>removeShader</name>
+            <anchorfile>qbakedshader.html</anchorfile>
+            <anchor>removeShader</anchor>
+            <arglist>(const QBakedShaderKey &amp;key)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QByteArray</type>
+            <name>serialized</name>
+            <anchorfile>qbakedshader.html</anchorfile>
+            <anchor>serialized</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QBakedShader</type>
+            <name>fromSerialized</name>
+            <anchorfile>qbakedshader.html</anchorfile>
+            <anchor>fromSerialized</anchor>
+            <arglist>(const QByteArray &amp;data)</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
         <name>QRhiColorClearValue</name>
         <filename>qrhicolorclearvalue.html</filename>
         <member kind="function" protection="public" virtualness="non" static="no">
@@ -1144,13 +1787,6 @@
             <anchorfile>qrhiresource.html</anchorfile>
             <anchor>setName</anchor>
             <arglist>(const QByteArray &amp;name)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="virtual" static="no">
-            <type>virtual bool</type>
-            <name>isShareable</name>
-            <anchorfile>qrhiresource.html</anchorfile>
-            <anchor>isShareable</anchor>
-            <arglist>() const const</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>quint64</type>
@@ -2845,24 +3481,6 @@
             <anchorfile>qrhiresourceupdatebatch.html</anchorfile>
             <anchor>generateMips</anchor>
             <arglist>(QRhiTexture *tex)</arglist>
-        </member>
-    </compound>
-    <compound kind="class">
-        <name>QRhiResourceSharingHost</name>
-        <filename>qrhiresourcesharinghost.html</filename>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiResourceSharingHost</name>
-            <anchorfile>qrhiresourcesharinghost.html</anchorfile>
-            <anchor>QRhiResourceSharingHost</anchor>
-            <arglist>()</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>~QRhiResourceSharingHost</name>
-            <anchorfile>qrhiresourcesharinghost.html</anchorfile>
-            <anchor>dtor.QRhiResourceSharingHost</anchor>
-            <arglist>()</arglist>
         </member>
     </compound>
     <compound kind="class">

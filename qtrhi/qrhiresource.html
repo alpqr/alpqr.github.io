@@ -60,7 +60,6 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#dtor.QRhiResource">~QRhiResource</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> quint64 </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#globalResourceId">globalResourceId</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#isShareable">isShareable</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#name">name</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#release">release</a></b>() = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#releaseAndDestroy">releaseAndDestroy</a></b>()</td></tr>
@@ -78,7 +77,6 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> quint64 </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#m_id-var">m_id</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#m_objectName-var">m_objectName</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QRhiResourceSharingHostPrivate *</td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#m_orphanedWithRsh-var">m_orphanedWithRsh</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> quint64 </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#m_reserved-var">m_reserved</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiImplementation *</td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#m_rhi-var">m_rhi</a></b></td></tr>
 </table></div>
@@ -109,11 +107,6 @@
 <p>Returns the global, unique identifier of this <a href="qrhiresource.html">QRhiResource</a>.</p>
 <p>User code rarely needs to deal with the value directly. It is used internally for tracking and bookkeeping purposes.</p>
 <!-- @@@globalResourceId -->
-<!-- $$$isShareable[overload1]$$$isShareable -->
-<h3 class="fn" id="isShareable"><a name="isShareable"></a><code>[virtual] </code><span class="type">bool</span> QRhiResource::<span class="name">isShareable</span>() const</h3>
-<p>Returns true if this resource is shareable between <a href="qrhi.html">QRhi</a> instances via a <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>. It also means that such an <a href="qrhiresource.html">QRhiResource</a> can outlive the <a href="qrhi.html">QRhi</a> on which it was created.</p>
-<p><b>Note: </b>Once a shareable <a href="qrhiresource.html">QRhiResource</a> is <code>orphaned</code>, meaning that the <a href="qrhi.html">QRhi</a> from which it was created gets destroyed, <code>build()</code> is not a valid operation anymore. The <a href="qrhiresource.html">QRhiResource</a> can then only be used in graphics operations (as the underlying graphics objects are still there and valid) or can be released, as long as the <a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>, with which the creator <a href="qrhi.html">QRhi</a> was associated with, has at least one associated <a href="qrhi.html">QRhi</a> alive.</p><p><b>Note: </b>Shareable resources typically include buffers, textures, samplers, and renderbuffers. Most backends will not support other type of shareable resources.</p><p><b>See also </b><a href="qrhiresourcesharinghost.html">QRhiResourceSharingHost</a>.</p>
-<!-- @@@isShareable -->
 <!-- $$$name[overload1]$$$name -->
 <h3 class="fn" id="name"><a name="name"></a><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> QRhiResource::<span class="name">name</span>() const</h3>
 <p>Returns the currently set object name. By default the name is empty.</p>

@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- qbakedshader.cpp -->
-  <title>QBakedShader Class | Shader Tools 5.12</title>
+  <title>QBakedShader Class | RHI 5.12</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -26,7 +26,7 @@
     <div class="main-rounded">
       <div class="navigationbar">
         <table><tr>
-<td >Qt 5.12</td><td ><a href="qtshadertools-index.html">Shader Tools</a></td><td ><a href="qtshadertools-module.html">C++ Classes</a></td><td >QBakedShader</td></tr></table><table class="buildversion"><tr>
+<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QBakedShader</td></tr></table><table class="buildversion"><tr>
 <td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
         </tr></table>
       </div>
@@ -52,7 +52,7 @@
 <!-- @@@QBakedShader -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QBakedShader&gt;</span>
-</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += shadertools</td></tr></table></div><ul>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
 <li><a href="qbakedshader-members.html">List of all members, including inherited members</a></li>
 </ul>
 <a name="public-types"></a>
@@ -96,10 +96,10 @@
 <p><a href="qbakedshader.html">QBakedShader</a> is the entry point to shader code in the graphics API agnostic Qt world. Instead of using GLSL shader sources, as was the custom with Qt 5.x, new graphics systems with backends for multiple graphics APIs, such as, Vulkan, Metal, Direct3D, and OpenGL, take <a href="qbakedshader.html">QBakedShader</a> as their input whenever a shader needs to be specified.</p>
 <p>A <a href="qbakedshader.html">QBakedShader</a> instance is empty and thus invalid by default. To get a useful instance, the two typical methods are:</p>
 <ul>
-<li>Generate the contents offline, during build time or earlier, using the <code>qsb</code> command line tool. The result is a binary file that is shipped with the application, read via <a href="../qtcore/qiodevice.html#readAll">QIODevice::readAll</a>(), and then deserialized via <a href="qbakedshader.html#fromSerialized">fromSerialized</a>(). For more information, see <a href="qshaderbaker.html">QShaderBaker</a>.</li>
-<li>Generate at run time via <a href="qshaderbaker.html">QShaderBaker</a>. This is an expensive operation, but allows applications to use user-provided or dynamically generated shader source strings.</li>
+<li>Generate the contents offline, during build time or earlier, using the <code>qsb</code> command line tool. The result is a binary file that is shipped with the application, read via <a href="../qtcore/qiodevice.html#readAll">QIODevice::readAll</a>(), and then deserialized via <a href="qbakedshader.html#fromSerialized">fromSerialized</a>(). For more information, see QShaderBaker.</li>
+<li>Generate at run time via QShaderBaker. This is an expensive operation, but allows applications to use user-provided or dynamically generated shader source strings.</li>
 </ul>
-<p>When used together with the Qt Rendering Hardware Interface and its classes, like QRhiGraphicsPipeline, no further action is needed from the application's side as these classes are prepared to consume a <a href="qbakedshader.html">QBakedShader</a> whenever a shader needs to be specified for a given stage of the graphics pipeline.</p>
+<p>When used together with the Qt Rendering Hardware Interface and its classes, like <a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a>, no further action is needed from the application's side as these classes are prepared to consume a <a href="qbakedshader.html">QBakedShader</a> whenever a shader needs to be specified for a given stage of the graphics pipeline.</p>
 <p>Alternatively, applications can access</p>
 <ul>
 <li>the source or byte code for any of the shading language versions that are included in the <a href="qbakedshader.html">QBakedShader</a>,</li>
@@ -108,7 +108,7 @@
 </ul>
 <p><a href="qbakedshader.html">QBakedShader</a> makes no assumption about the shading language that was used as the source for generating the various versions and variants that are included in it.</p>
 <p><a href="qbakedshader.html">QBakedShader</a> uses implicit sharing similarly to many core Qt types, and so can be returned or passed by value. Detach happens implicitly when calling a setter.</p>
-<p>For reference, QRhi expects that a <a href="qbakedshader.html">QBakedShader</a> suitable for all its backends contains at least the following:</p>
+<p>For reference, <a href="qrhi.html">QRhi</a> expects that a <a href="qbakedshader.html">QBakedShader</a> suitable for all its backends contains at least the following:</p>
 <ul>
 <li>SPIR-V 1.0 bytecode suitable for Vulkan 1.0 or newer</li>
 <li>GLSL/ES 100 source code suitable for OpenGL ES 2.0 or newer</li>
@@ -117,7 +117,7 @@
 <li>Metal Shading Language 1.2 source code or the corresponding bytecode suitable for Metal</li>
 </ul>
 </div>
-<p><b>See also </b><a href="qshaderbaker.html">QShaderBaker</a>.</p>
+<p><b>See also </b>QShaderBaker.</p>
 <!-- @@@QBakedShader -->
 <div class="types">
 <h2>Member Type Documentation</h2>
