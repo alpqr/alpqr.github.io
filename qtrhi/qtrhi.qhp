@@ -485,6 +485,8 @@
             <keyword name="QRhiTexture::R16" id="QRhiTexture::R16" ref="qrhitexture.html#Format-enum"/>
             <keyword name="QRhiTexture::R8" id="QRhiTexture::R8" ref="qrhitexture.html#Format-enum"/>
             <keyword name="QRhiTexture::RED_OR_ALPHA8" id="QRhiTexture::RED_OR_ALPHA8" ref="qrhitexture.html#Format-enum"/>
+            <keyword name="QRhiTexture::RGBA16F" id="QRhiTexture::RGBA16F" ref="qrhitexture.html#Format-enum"/>
+            <keyword name="QRhiTexture::RGBA32F" id="QRhiTexture::RGBA32F" ref="qrhitexture.html#Format-enum"/>
             <keyword name="QRhiTexture::RGBA8" id="QRhiTexture::RGBA8" ref="qrhitexture.html#Format-enum"/>
             <keyword name="QRhiTexture::RenderTarget" id="QRhiTexture::RenderTarget" ref="qrhitexture.html#Flag-enum"/>
             <keyword name="QRhiTexture::UnknownFormat" id="QRhiTexture::UnknownFormat" ref="qrhitexture.html#Format-enum"/>
@@ -588,7 +590,6 @@
             <keyword name="avgTime" id="CpuTime::avgTime" ref="qrhiprofiler-cputime.html#avgTime-var"/>
             <keyword name="avgTime" id="GpuTime::avgTime" ref="qrhiprofiler-gputime.html#avgTime-var"/>
             <keyword name="backend" id="QRhi::backend" ref="qrhi.html#backend"/>
-            <keyword name="backingFormat" id="QRhiRenderBuffer::backingFormat" ref="qrhirenderbuffer.html#backingFormat"/>
             <keyword name="beginFrame" id="QRhi::beginFrame" ref="qrhi.html#beginFrame"/>
             <keyword name="beginOffscreenFrame" id="QRhi::beginOffscreenFrame" ref="qrhi.html#beginOffscreenFrame"/>
             <keyword name="beginPass" id="QRhiCommandBuffer::beginPass" ref="qrhicommandbuffer.html#beginPass"/>
@@ -616,7 +617,6 @@
             <keyword name="combinedImageSamplers" id="QShaderDescription::combinedImageSamplers" ref="qshaderdescription.html#combinedImageSamplers"/>
             <keyword name="compareOp" id="StencilOpState::compareOp" ref="qrhigraphicspipeline-stencilopstate.html#compareOp-var"/>
             <keyword name="completed" id="QRhiReadbackResult::completed" ref="qrhireadbackresult.html#completed-var"/>
-            <keyword name="compressedData" id="QRhiTextureMipLevel::compressedData" ref="qrhitexturemiplevel.html#compressedData"/>
             <keyword name="context" id="QRhiD3D11NativeHandles::context" ref="qrhid3d11nativehandles.html#context-var"/>
             <keyword name="context" id="QRhiGles2NativeHandles::context" ref="qrhigles2nativehandles.html#context-var"/>
             <keyword name="copyTexture" id="QRhiResourceUpdateBatch::copyTexture" ref="qrhiresourceupdatebatch.html#copyTexture"/>
@@ -626,6 +626,7 @@
             <keyword name="currentFrameRenderTarget" id="QRhiSwapChain::currentFrameRenderTarget" ref="qrhiswapchain.html#currentFrameRenderTarget"/>
             <keyword name="currentPixelSize" id="QRhiSwapChain::currentPixelSize" ref="qrhiswapchain.html#currentPixelSize"/>
             <keyword name="data" id="QRhiReadbackResult::data" ref="qrhireadbackresult.html#data-var"/>
+            <keyword name="data" id="QRhiTextureMipLevel::data" ref="qrhitexturemiplevel.html#data"/>
             <keyword name="debugMarkBegin" id="QRhiCommandBuffer::debugMarkBegin" ref="qrhicommandbuffer.html#debugMarkBegin"/>
             <keyword name="debugMarkEnd" id="QRhiCommandBuffer::debugMarkEnd" ref="qrhicommandbuffer.html#debugMarkEnd"/>
             <keyword name="debugMarkMsg" id="QRhiCommandBuffer::debugMarkMsg" ref="qrhicommandbuffer.html#debugMarkMsg"/>
@@ -882,8 +883,8 @@
             <keyword name="setBlendConstants" id="QRhiCommandBuffer::setBlendConstants" ref="qrhicommandbuffer.html#setBlendConstants"/>
             <keyword name="setClassification" id="QRhiVertexInputBinding::setClassification" ref="qrhivertexinputbinding.html#setClassification"/>
             <keyword name="setColorAttachments" id="QRhiTextureRenderTargetDescription::setColorAttachments" ref="qrhitexturerendertargetdescription.html#setColorAttachments"/>
-            <keyword name="setCompressedData" id="QRhiTextureMipLevel::setCompressedData" ref="qrhitexturemiplevel.html#setCompressedData"/>
             <keyword name="setCullMode" id="QRhiGraphicsPipeline::setCullMode" ref="qrhigraphicspipeline.html#setCullMode"/>
+            <keyword name="setData" id="QRhiTextureMipLevel::setData" ref="qrhitexturemiplevel.html#setData"/>
             <keyword name="setDepthClearValue" id="QRhiDepthStencilClearValue::setDepthClearValue" ref="qrhidepthstencilclearvalue.html#setDepthClearValue"/>
             <keyword name="setDepthOp" id="QRhiGraphicsPipeline::setDepthOp" ref="qrhigraphicspipeline.html#setDepthOp"/>
             <keyword name="setDepthStencil" id="QRhiSwapChain::setDepthStencil" ref="qrhiswapchain.html#setDepthStencil"/>

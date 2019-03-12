@@ -1433,7 +1433,7 @@
             <name>QRhiTextureMipLevel</name>
             <anchorfile>qrhitexturemiplevel.html</anchorfile>
             <anchor>QRhiTextureMipLevel-2</anchor>
-            <arglist>(const QByteArray &amp;compressedData)</arglist>
+            <arglist>(const QByteArray &amp;data)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QImage</type>
@@ -1451,16 +1451,16 @@
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QByteArray</type>
-            <name>compressedData</name>
+            <name>data</name>
             <anchorfile>qrhitexturemiplevel.html</anchorfile>
-            <anchor>compressedData</anchor>
+            <anchor>data</anchor>
             <arglist>() const const</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>void</type>
-            <name>setCompressedData</name>
+            <name>setData</name>
             <anchorfile>qrhitexturemiplevel.html</anchorfile>
-            <anchor>setCompressedData</anchor>
+            <anchor>setData</anchor>
             <arglist>(const QByteArray &amp;data)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
@@ -1976,6 +1976,14 @@
             <anchor>Format-enum</anchor>
             <arglist></arglist>
         </member>
+        <member name="RGBA16F">
+            <anchor>Format-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="RGBA32F">
+            <anchor>Format-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member name="D16">
             <anchor>Format-enum</anchor>
             <arglist></arglist>
@@ -2390,13 +2398,6 @@
             <anchorfile>qrhirenderbuffer.html</anchorfile>
             <anchor>build</anchor>
             <arglist>() = 0</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="pure" static="no">
-            <type>virtual QRhiTexture::Format</type>
-            <name>backingFormat</name>
-            <anchorfile>qrhirenderbuffer.html</anchorfile>
-            <anchor>backingFormat</anchor>
-            <arglist>() const const = 0</arglist>
         </member>
     </compound>
     <compound kind="class">

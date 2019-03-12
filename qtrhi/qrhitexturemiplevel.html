@@ -57,11 +57,11 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturemiplevel.html#QRhiTextureMipLevel">QRhiTextureMipLevel</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturemiplevel.html#QRhiTextureMipLevel-1">QRhiTextureMipLevel</a></b>(const QImage &amp;<i>image</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturemiplevel.html#QRhiTextureMipLevel-2">QRhiTextureMipLevel</a></b>(const QByteArray &amp;<i>compressedData</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturemiplevel.html#compressedData">compressedData</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturemiplevel.html#QRhiTextureMipLevel-2">QRhiTextureMipLevel</a></b>(const QByteArray &amp;<i>data</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturemiplevel.html#data">data</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QPoint </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturemiplevel.html#destinationTopLeft">destinationTopLeft</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QImage </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturemiplevel.html#image">image</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturemiplevel.html#setCompressedData">setCompressedData</a></b>(const QByteArray &amp;<i>data</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturemiplevel.html#setData">setData</a></b>(const QByteArray &amp;<i>data</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturemiplevel.html#setDestinationTopLeft">setDestinationTopLeft</a></b>(const QPoint &amp;<i>p</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturemiplevel.html#setImage">setImage</a></b>(const QImage &amp;<i>image</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturemiplevel.html#setSourceSize">setSourceSize</a></b>(const QSize &amp;<i>size</i>)</td></tr>
@@ -74,10 +74,10 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Describes one mip level in a layer in a texture upload operation.</p>
-<p>The source content is specified either as a <a href="../qtgui/qimage.html">QImage</a> or as a raw blob. The former is only allowed for uncompressed textures, while the latter is only supported for compressed ones.</p>
-<p><b>Note: </b><a href="qrhitexturemiplevel.html#image">image</a>() and <a href="qrhitexturemiplevel.html#compressedData">compressedData</a>() cannot be both set at the same time.</p><p><a href="qrhitexturemiplevel.html#destinationTopLeft">destinationTopLeft</a>() specifies the top-left corner of the target rectangle. Defaults to (0, 0).</p>
-<p>An empty <a href="qrhitexturemiplevel.html#sourceSize">sourceSize</a>() (the default) indicates that size is assumed to be the size of the subresource. For uncompressed textures this implies that the size of the source <a href="qrhitexturemiplevel.html#image">image</a>() must match the subresource. For compressed textures sufficient amount of data must be provided in <a href="qrhitexturemiplevel.html#compressedData">compressedData</a>().</p>
-<p><b>Note: </b>With compressed textures the first upload must always match the subresource size due to graphics API limitations with some backends.</p><p><a href="qrhitexturemiplevel.html#sourceTopLeft">sourceTopLeft</a>() is is only supported for uncompressed textures, and specifies the top-left corner of the source rectangle.</p>
+<p>The source content is specified either as a <a href="../qtgui/qimage.html">QImage</a> or as a raw blob. The former is only allowed for uncompressed textures with a format that can be mapped to <a href="../qtgui/qimage.html">QImage</a>, while the latter is only supported for floating point and compressed textures.</p>
+<p><b>Note: </b><a href="qrhitexturemiplevel.html#image">image</a>() and <a href="qrhitexturemiplevel.html#data">data</a>() cannot be both set at the same time.</p><p><a href="qrhitexturemiplevel.html#destinationTopLeft">destinationTopLeft</a>() specifies the top-left corner of the target rectangle. Defaults to (0, 0).</p>
+<p>An empty <a href="qrhitexturemiplevel.html#sourceSize">sourceSize</a>() (the default) indicates that size is assumed to be the size of the subresource. For uncompressed textures this implies that the size of the source <a href="qrhitexturemiplevel.html#image">image</a>() must match the subresource. For floating point and compressed textures sufficient amount of data must be provided in <a href="qrhitexturemiplevel.html#data">data</a>().</p>
+<p><b>Note: </b>With compressed textures the first upload must always match the subresource size due to graphics API limitations with some backends.</p><p><a href="qrhitexturemiplevel.html#sourceTopLeft">sourceTopLeft</a>() is supported only for uncompressed, non-floating point textures, and specifies the top-left corner of the source rectangle.</p>
 <p><b>Note: </b>Setting <a href="qrhitexturemiplevel.html#sourceSize">sourceSize</a>() or <a href="qrhitexturemiplevel.html#sourceTopLeft">sourceTopLeft</a>() may trigger a <a href="../qtgui/qimage.html">QImage</a> copy internally, depending on the format and the backend.</p></div>
 <!-- @@@QRhiTextureMipLevel -->
 <div class="types">
@@ -100,13 +100,13 @@
 <p>To describe a partial upload, call <a href="qrhitexturemiplevel.html#setSourceSize">setSourceSize</a>(), <a href="qrhitexturemiplevel.html#setSourceTopLeft">setSourceTopLeft</a>(), or <a href="qrhitexturemiplevel.html#setDestinationTopLeft">setDestinationTopLeft</a>() afterwards.</p>
 <!-- @@@QRhiTextureMipLevel -->
 <!-- $$$QRhiTextureMipLevel$$$QRhiTextureMipLevelconstQByteArray& -->
-<h3 class="fn" id="QRhiTextureMipLevel-2"><a name="QRhiTextureMipLevel-2"></a>QRhiTextureMipLevel::<span class="name">QRhiTextureMipLevel</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>compressedData</i>)</h3>
-<p>Constructs a mip level description suitable for compressed textures. The compressed data is specified in <i>compressedData</i>.</p>
+<h3 class="fn" id="QRhiTextureMipLevel-2"><a name="QRhiTextureMipLevel-2"></a>QRhiTextureMipLevel::<span class="name">QRhiTextureMipLevel</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>data</i>)</h3>
+<p>Constructs a mip level description suitable for textures with a format that does not map to <a href="../qtgui/qimage.html">QImage</a>. The floating point or compressed data is specified in <i>data</i>.</p>
 <!-- @@@QRhiTextureMipLevel -->
-<!-- $$$compressedData[overload1]$$$compressedData -->
-<h3 class="fn" id="compressedData"><a name="compressedData"></a><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> QRhiTextureMipLevel::<span class="name">compressedData</span>() const</h3>
-<p><b>See also </b><a href="qrhitexturemiplevel.html#setCompressedData">setCompressedData</a>().</p>
-<!-- @@@compressedData -->
+<!-- $$$data[overload1]$$$data -->
+<h3 class="fn" id="data"><a name="data"></a><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> QRhiTextureMipLevel::<span class="name">data</span>() const</h3>
+<p><b>See also </b><a href="qrhitexturemiplevel.html#setData">setData</a>().</p>
+<!-- @@@data -->
 <!-- $$$destinationTopLeft[overload1]$$$destinationTopLeft -->
 <h3 class="fn" id="destinationTopLeft"><a name="destinationTopLeft"></a><span class="type"><a href="../qtcore/qpoint.html">QPoint</a></span> QRhiTextureMipLevel::<span class="name">destinationTopLeft</span>() const</h3>
 <p><b>See also </b><a href="qrhitexturemiplevel.html#setDestinationTopLeft">setDestinationTopLeft</a>().</p>
@@ -115,10 +115,10 @@
 <h3 class="fn" id="image"><a name="image"></a><span class="type"><a href="../qtgui/qimage.html">QImage</a></span> QRhiTextureMipLevel::<span class="name">image</span>() const</h3>
 <p><b>See also </b><a href="qrhitexturemiplevel.html#setImage">setImage</a>().</p>
 <!-- @@@image -->
-<!-- $$$setCompressedData[overload1]$$$setCompressedDataconstQByteArray& -->
-<h3 class="fn" id="setCompressedData"><a name="setCompressedData"></a><span class="type">void</span> QRhiTextureMipLevel::<span class="name">setCompressedData</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>data</i>)</h3>
-<p><b>See also </b><a href="qrhitexturemiplevel.html#compressedData">compressedData</a>().</p>
-<!-- @@@setCompressedData -->
+<!-- $$$setData[overload1]$$$setDataconstQByteArray& -->
+<h3 class="fn" id="setData"><a name="setData"></a><span class="type">void</span> QRhiTextureMipLevel::<span class="name">setData</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>data</i>)</h3>
+<p><b>See also </b><a href="qrhitexturemiplevel.html#data">data</a>().</p>
+<!-- @@@setData -->
 <!-- $$$setDestinationTopLeft[overload1]$$$setDestinationTopLeftconstQPoint& -->
 <h3 class="fn" id="setDestinationTopLeft"><a name="setDestinationTopLeft"></a><span class="type">void</span> QRhiTextureMipLevel::<span class="name">setDestinationTopLeft</span>(const <span class="type"><a href="../qtcore/qpoint.html">QPoint</a></span> &amp;<i>p</i>)</h3>
 <p><b>See also </b><a href="qrhitexturemiplevel.html#destinationTopLeft">destinationTopLeft</a>().</p>
