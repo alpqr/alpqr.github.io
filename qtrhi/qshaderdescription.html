@@ -96,7 +96,24 @@
 <p>Take the following vertex shader:</p>
 <pre class="cpp">
 
+  #version 440
 
+  layout(location = 0) in vec4 position;
+  layout(location = 1) in vec3 color;
+  layout(location = 0) out vec3 v_color;
+
+  layout(std140, binding = 0) uniform buf {
+      mat4 mvp;
+      float opacity;
+  } ubuf;
+
+  out gl_PerVertex { vec4 gl_Position; };
+
+  void main()
+  {
+      v_color = color;
+      gl_Position = ubuf.mvp * position;
+  }
 
 </pre>
 <p>This shader has two inputs: <code>position</code> at location 0 with a type of <code>vec4</code>, and <code>color</code> at location 1 with a type of <code>vec3</code>. It has one output: <code>v_color</code>, although this is typically not interesting for applications. What is more important, there is a uniform block at binding 0 with a size of 68 bytes and two members, a 4x4 matrix named <code>mvp</code> at offset 0, and a float <code>opacity</code> at offset 64.</p>
