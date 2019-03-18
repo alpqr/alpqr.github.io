@@ -254,6 +254,7 @@
             <keyword name="QRhi::GeometryShaders" id="QRhi::GeometryShaders" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::Implementation" id="QRhi::Implementation" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhi::Instancing" id="QRhi::Instancing" ref="qrhi.html#Feature-enum"/>
+            <keyword name="QRhi::MaxColorAttachments" id="QRhi::MaxColorAttachments" ref="qrhi.html#ResourceLimit-enum"/>
             <keyword name="QRhi::Metal" id="QRhi::Metal" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhi::MultisampleRenderBuffer" id="QRhi::MultisampleRenderBuffer" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::MultisampleTexture" id="QRhi::MultisampleTexture" ref="qrhi.html#Feature-enum"/>
@@ -264,11 +265,11 @@
             <keyword name="QRhi::OpenGLES2" id="QRhi::OpenGLES2" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhi::PrimitiveRestart" id="QRhi::PrimitiveRestart" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::RedOrAlpha8IsRed" id="QRhi::RedOrAlpha8IsRed" ref="qrhi.html#Feature-enum"/>
-            <keyword name="QRhi::ResourceSizeLimit" id="QRhi::ResourceSizeLimit" ref="qrhi.html#ResourceSizeLimit-enum"/>
+            <keyword name="QRhi::ResourceLimit" id="QRhi::ResourceLimit" ref="qrhi.html#ResourceLimit-enum"/>
             <keyword name="QRhi::SkipPresent" id="QRhi::SkipPresent" ref="qrhi.html#EndFrameFlag-enum"/>
             <keyword name="QRhi::TessellationShaders" id="QRhi::TessellationShaders" ref="qrhi.html#Feature-enum"/>
-            <keyword name="QRhi::TextureSizeMax" id="QRhi::TextureSizeMax" ref="qrhi.html#ResourceSizeLimit-enum"/>
-            <keyword name="QRhi::TextureSizeMin" id="QRhi::TextureSizeMin" ref="qrhi.html#ResourceSizeLimit-enum"/>
+            <keyword name="QRhi::TextureSizeMax" id="QRhi::TextureSizeMax" ref="qrhi.html#ResourceLimit-enum"/>
+            <keyword name="QRhi::TextureSizeMin" id="QRhi::TextureSizeMin" ref="qrhi.html#ResourceLimit-enum"/>
             <keyword name="QRhi::Timestamps" id="QRhi::Timestamps" ref="qrhi.html#Feature-enum"/>
             <keyword name="QRhi::Vulkan" id="QRhi::Vulkan" ref="qrhi.html#Implementation-enum"/>
             <keyword name="QRhiBuffer" id="QRhiBuffer" ref="qrhibuffer.html"/>
@@ -418,14 +419,23 @@
             <keyword name="QRhiResourceUpdateBatch" id="QRhiResourceUpdateBatch" ref="qrhiresourceupdatebatch.html"/>
             <keyword name="QRhiSampler" id="QRhiSampler" ref="qrhisampler.html"/>
             <keyword name="QRhiSampler::AddressMode" id="QRhiSampler::AddressMode" ref="qrhisampler.html#AddressMode-enum"/>
+            <keyword name="QRhiSampler::Always" id="QRhiSampler::Always" ref="qrhisampler.html#CompareOp-enum"/>
             <keyword name="QRhiSampler::Border" id="QRhiSampler::Border" ref="qrhisampler.html#AddressMode-enum"/>
             <keyword name="QRhiSampler::ClampToEdge" id="QRhiSampler::ClampToEdge" ref="qrhisampler.html#AddressMode-enum"/>
+            <keyword name="QRhiSampler::CompareOp" id="QRhiSampler::CompareOp" ref="qrhisampler.html#CompareOp-enum"/>
+            <keyword name="QRhiSampler::Equal" id="QRhiSampler::Equal" ref="qrhisampler.html#CompareOp-enum"/>
             <keyword name="QRhiSampler::Filter" id="QRhiSampler::Filter" ref="qrhisampler.html#Filter-enum"/>
+            <keyword name="QRhiSampler::Greater" id="QRhiSampler::Greater" ref="qrhisampler.html#CompareOp-enum"/>
+            <keyword name="QRhiSampler::GreaterOrEqual" id="QRhiSampler::GreaterOrEqual" ref="qrhisampler.html#CompareOp-enum"/>
+            <keyword name="QRhiSampler::Less" id="QRhiSampler::Less" ref="qrhisampler.html#CompareOp-enum"/>
+            <keyword name="QRhiSampler::LessOrEqual" id="QRhiSampler::LessOrEqual" ref="qrhisampler.html#CompareOp-enum"/>
             <keyword name="QRhiSampler::Linear" id="QRhiSampler::Linear" ref="qrhisampler.html#Filter-enum"/>
             <keyword name="QRhiSampler::Mirror" id="QRhiSampler::Mirror" ref="qrhisampler.html#AddressMode-enum"/>
             <keyword name="QRhiSampler::MirrorOnce" id="QRhiSampler::MirrorOnce" ref="qrhisampler.html#AddressMode-enum"/>
             <keyword name="QRhiSampler::Nearest" id="QRhiSampler::Nearest" ref="qrhisampler.html#Filter-enum"/>
+            <keyword name="QRhiSampler::Never" id="QRhiSampler::Never" ref="qrhisampler.html#CompareOp-enum"/>
             <keyword name="QRhiSampler::None" id="QRhiSampler::None" ref="qrhisampler.html#Filter-enum"/>
+            <keyword name="QRhiSampler::NotEqual" id="QRhiSampler::NotEqual" ref="qrhisampler.html#CompareOp-enum"/>
             <keyword name="QRhiSampler::Repeat" id="QRhiSampler::Repeat" ref="qrhisampler.html#AddressMode-enum"/>
             <keyword name="QRhiScissor" id="QRhiScissor" ref="qrhiscissor.html"/>
             <keyword name="QRhiShaderResourceBinding" id="QRhiShaderResourceBinding" ref="qrhishaderresourcebinding.html"/>
@@ -474,7 +484,7 @@
             <keyword name="QRhiTexture::ChangesFrequently" id="QRhiTexture::ChangesFrequently" ref="qrhitexture.html#Flag-enum"/>
             <keyword name="QRhiTexture::CubeMap" id="QRhiTexture::CubeMap" ref="qrhitexture.html#Flag-enum"/>
             <keyword name="QRhiTexture::D16" id="QRhiTexture::D16" ref="qrhitexture.html#Format-enum"/>
-            <keyword name="QRhiTexture::D32" id="QRhiTexture::D32" ref="qrhitexture.html#Format-enum"/>
+            <keyword name="QRhiTexture::D32F" id="QRhiTexture::D32F" ref="qrhitexture.html#Format-enum"/>
             <keyword name="QRhiTexture::ETC2_RGB8" id="QRhiTexture::ETC2_RGB8" ref="qrhitexture.html#Format-enum"/>
             <keyword name="QRhiTexture::ETC2_RGB8A1" id="QRhiTexture::ETC2_RGB8A1" ref="qrhitexture.html#Format-enum"/>
             <keyword name="QRhiTexture::ETC2_RGBA8" id="QRhiTexture::ETC2_RGBA8" ref="qrhitexture.html#Format-enum"/>
@@ -709,6 +719,7 @@
             <keyword name="m_addressV" id="QRhiSampler::m_addressV" ref="qrhisampler.html#m_addressV-var"/>
             <keyword name="m_addressW" id="QRhiSampler::m_addressW" ref="qrhisampler.html#m_addressW-var"/>
             <keyword name="m_bindings" id="QRhiShaderResourceBindings::m_bindings" ref="qrhishaderresourcebindings.html#m_bindings-var"/>
+            <keyword name="m_compareOp" id="QRhiSampler::m_compareOp" ref="qrhisampler.html#m_compareOp-var"/>
             <keyword name="m_cullMode" id="QRhiGraphicsPipeline::m_cullMode" ref="qrhigraphicspipeline.html#m_cullMode-var"/>
             <keyword name="m_currentPixelSize" id="QRhiSwapChain::m_currentPixelSize" ref="qrhiswapchain.html#m_currentPixelSize-var"/>
             <keyword name="m_depthOp" id="QRhiGraphicsPipeline::m_depthOp" ref="qrhigraphicspipeline.html#m_depthOp-var"/>
@@ -835,6 +846,7 @@
             <keyword name="physDev" id="QRhiVulkanNativeHandles::physDev" ref="qrhivulkannativehandles.html#physDev-var"/>
             <keyword name="pixelSize" id="QRhiReadbackResult::pixelSize" ref="qrhireadbackresult.html#pixelSize-var"/>
             <keyword name="pixelSize" id="QRhiRenderBuffer::pixelSize" ref="qrhirenderbuffer.html#pixelSize"/>
+            <keyword name="pixelSize" id="QRhiRenderTarget::pixelSize" ref="qrhirendertarget.html#pixelSize"/>
             <keyword name="pixelSize" id="QRhiTexture::pixelSize" ref="qrhitexture.html#pixelSize"/>
             <keyword name="pixelSize" id="QRhiTextureCopyDescription::pixelSize" ref="qrhitexturecopydescription.html#pixelSize"/>
             <keyword name="profiler" id="QRhi::profiler" ref="qrhi.html#profiler"/>
@@ -863,11 +875,12 @@
             <keyword name="resolveLayer" id="QRhiColorAttachment::resolveLayer" ref="qrhicolorattachment.html#resolveLayer"/>
             <keyword name="resolveLevel" id="QRhiColorAttachment::resolveLevel" ref="qrhicolorattachment.html#resolveLevel"/>
             <keyword name="resolveTexture" id="QRhiColorAttachment::resolveTexture" ref="qrhicolorattachment.html#resolveTexture"/>
-            <keyword name="resourceSizeLimit" id="QRhi::resourceSizeLimit" ref="qrhi.html#resourceSizeLimit"/>
+            <keyword name="resourceLimit" id="QRhi::resourceLimit" ref="qrhi.html#resourceLimit"/>
             <keyword name="resourceUpdate" id="QRhiCommandBuffer::resourceUpdate" ref="qrhicommandbuffer.html#resourceUpdate"/>
             <keyword name="rgba" id="QRhiColorClearValue::rgba" ref="qrhicolorclearvalue.html#rgba"/>
             <keyword name="sampleCount" id="QRhiGraphicsPipeline::sampleCount" ref="qrhigraphicspipeline.html#sampleCount"/>
             <keyword name="sampleCount" id="QRhiRenderBuffer::sampleCount" ref="qrhirenderbuffer.html#sampleCount"/>
+            <keyword name="sampleCount" id="QRhiRenderTarget::sampleCount" ref="qrhirendertarget.html#sampleCount"/>
             <keyword name="sampleCount" id="QRhiSwapChain::sampleCount" ref="qrhiswapchain.html#sampleCount"/>
             <keyword name="sampleCount" id="QRhiTexture::sampleCount" ref="qrhitexture.html#sampleCount"/>
             <keyword name="sampledTexture" id="QRhiShaderResourceBinding::sampledTexture" ref="qrhishaderresourcebinding.html#sampledTexture"/>
@@ -972,6 +985,7 @@
             <keyword name="setTargetBlends" id="QRhiGraphicsPipeline::setTargetBlends" ref="qrhigraphicspipeline.html#setTargetBlends"/>
             <keyword name="setTexture" id="QRhiColorAttachment::setTexture" ref="qrhicolorattachment.html#setTexture"/>
             <keyword name="setTexture" id="QRhiReadbackDescription::setTexture" ref="qrhireadbackdescription.html#setTexture"/>
+            <keyword name="setTextureCompareOp" id="QRhiSampler::setTextureCompareOp" ref="qrhisampler.html#setTextureCompareOp"/>
             <keyword name="setTopology" id="QRhiGraphicsPipeline::setTopology" ref="qrhigraphicspipeline.html#setTopology"/>
             <keyword name="setType" id="QRhiBuffer::setType" ref="qrhibuffer.html#setType"/>
             <keyword name="setType" id="QRhiGraphicsShaderStage::setType" ref="qrhigraphicsshaderstage.html#setType"/>
@@ -994,7 +1008,6 @@
             <keyword name="size" id="QRhiBuffer::size" ref="qrhibuffer.html#size"/>
             <keyword name="size" id="UniformBlock::size" ref="qshaderdescription-uniformblock.html#size-var"/>
             <keyword name="sizeForMipLevel" id="QRhi::sizeForMipLevel" ref="qrhi.html#sizeForMipLevel"/>
-            <keyword name="sizeInPixels" id="QRhiRenderTarget::sizeInPixels" ref="qrhirendertarget.html#sizeInPixels"/>
             <keyword name="source" id="QBakedShaderKey::source" ref="qbakedshaderkey.html#source"/>
             <keyword name="sourceLayer" id="QRhiTextureCopyDescription::sourceLayer" ref="qrhitexturecopydescription.html#sourceLayer"/>
             <keyword name="sourceLevel" id="QRhiTextureCopyDescription::sourceLevel" ref="qrhitexturecopydescription.html#sourceLevel"/>
@@ -1023,6 +1036,7 @@
             <keyword name="texture" id="QRhiMetalTextureNativeHandles::texture" ref="qrhimetaltexturenativehandles.html#texture-var"/>
             <keyword name="texture" id="QRhiNullTextureNativeHandles::texture" ref="qrhinulltexturenativehandles.html#texture-var"/>
             <keyword name="texture" id="QRhiReadbackDescription::texture" ref="qrhireadbackdescription.html#texture"/>
+            <keyword name="textureCompareOp" id="QRhiSampler::textureCompareOp" ref="qrhisampler.html#textureCompareOp"/>
             <keyword name="thread" id="QRhi::thread" ref="qrhi.html#thread"/>
             <keyword name="toBinaryJson" id="QShaderDescription::toBinaryJson" ref="qshaderdescription.html#toBinaryJson"/>
             <keyword name="toJson" id="QShaderDescription::toJson" ref="qshaderdescription.html#toJson"/>

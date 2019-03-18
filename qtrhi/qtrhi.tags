@@ -1988,7 +1988,7 @@
             <anchor>Format-enum</anchor>
             <arglist></arglist>
         </member>
-        <member name="D32">
+        <member name="D32F">
             <anchor>Format-enum</anchor>
             <arglist></arglist>
         </member>
@@ -2212,6 +2212,43 @@
             <anchor>AddressMode-enum</anchor>
             <arglist></arglist>
         </member>
+        <member kind="enum">
+            <name>CompareOp</name>
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Never">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Less">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Equal">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="LessOrEqual">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Greater">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="NotEqual">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="GreaterOrEqual">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Always">
+            <anchor>CompareOp-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiSampler::Filter</type>
             <name>magFilter</name>
@@ -2295,6 +2332,20 @@
             <anchorfile>qrhisampler.html</anchorfile>
             <anchor>setAddressW</anchor>
             <arglist>(QRhiSampler::AddressMode mode)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiSampler::CompareOp</type>
+            <name>textureCompareOp</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>textureCompareOp</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setTextureCompareOp</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>setTextureCompareOp</anchor>
+            <arglist>(QRhiSampler::CompareOp op)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="pure" static="no">
             <type>virtual bool</type>
@@ -2431,9 +2482,9 @@
         </member>
         <member kind="function" protection="public" virtualness="pure" static="no">
             <type>virtual QSize</type>
-            <name>sizeInPixels</name>
+            <name>pixelSize</name>
             <anchorfile>qrhirendertarget.html</anchorfile>
-            <anchor>sizeInPixels</anchor>
+            <anchor>pixelSize</anchor>
             <arglist>() const const = 0</arglist>
         </member>
         <member kind="function" protection="public" virtualness="pure" static="no">
@@ -2441,6 +2492,13 @@
             <name>devicePixelRatio</name>
             <anchorfile>qrhirendertarget.html</anchorfile>
             <anchor>devicePixelRatio</anchor>
+            <arglist>() const const = 0</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual int</type>
+            <name>sampleCount</name>
+            <anchorfile>qrhirendertarget.html</anchorfile>
+            <anchor>sampleCount</anchor>
             <arglist>() const const = 0</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
@@ -3640,16 +3698,20 @@
             <arglist></arglist>
         </member>
         <member kind="enum">
-            <name>ResourceSizeLimit</name>
-            <anchor>ResourceSizeLimit-enum</anchor>
+            <name>ResourceLimit</name>
+            <anchor>ResourceLimit-enum</anchor>
             <arglist></arglist>
         </member>
         <member name="TextureSizeMin">
-            <anchor>ResourceSizeLimit-enum</anchor>
+            <anchor>ResourceLimit-enum</anchor>
             <arglist></arglist>
         </member>
         <member name="TextureSizeMax">
-            <anchor>ResourceSizeLimit-enum</anchor>
+            <anchor>ResourceLimit-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="MaxColorAttachments">
+            <anchor>ResourceLimit-enum</anchor>
             <arglist></arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
@@ -3720,7 +3782,7 @@
             <name>newSampler</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>newSampler</anchor>
-            <arglist>(QRhiSampler::Filter magFilter, QRhiSampler::Filter minFilter, QRhiSampler::Filter mipmapMode, QRhiSampler::AddressMode u, QRhiSampler::AddressMode v, QRhiSampler::AddressMode w)</arglist>
+            <arglist>(QRhiSampler::Filter magFilter, QRhiSampler::Filter minFilter, QRhiSampler::Filter mipmapMode, QRhiSampler::AddressMode u, QRhiSampler::AddressMode v)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiTextureRenderTarget *</type>
@@ -3850,10 +3912,10 @@
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>int</type>
-            <name>resourceSizeLimit</name>
+            <name>resourceLimit</name>
             <anchorfile>qrhi.html</anchorfile>
-            <anchor>resourceSizeLimit</anchor>
-            <arglist>(QRhi::ResourceSizeLimit limit) const const</arglist>
+            <anchor>resourceLimit</anchor>
+            <arglist>(QRhi::ResourceLimit limit) const const</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>const QRhiNativeHandles *</type>

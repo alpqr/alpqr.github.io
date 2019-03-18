@@ -321,11 +321,13 @@
 <!-- @@@setDepthOp -->
 <!-- $$$setDepthTest[overload1]$$$setDepthTestbool -->
 <h3 class="fn" id="setDepthTest"><a name="setDepthTest"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setDepthTest</span>(<span class="type">bool</span> <i>enable</i>)</h3>
-<p><b>See also </b><a href="qrhigraphicspipeline.html#hasDepthTest">hasDepthTest</a>().</p>
+<p>Enables or disables depth testing. Both depth test and the writing out of depth data are disabled by default.</p>
+<p><b>See also </b><a href="qrhigraphicspipeline.html#hasDepthTest">hasDepthTest</a>() and <a href="qrhigraphicspipeline.html#setDepthWrite">setDepthWrite</a>().</p>
 <!-- @@@setDepthTest -->
 <!-- $$$setDepthWrite[overload1]$$$setDepthWritebool -->
 <h3 class="fn" id="setDepthWrite"><a name="setDepthWrite"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setDepthWrite</span>(<span class="type">bool</span> <i>enable</i>)</h3>
-<p><b>See also </b><a href="qrhigraphicspipeline.html#hasDepthWrite">hasDepthWrite</a>().</p>
+<p>Controls the writing out of depth data into the depth buffer. By default this is disabled. Depth write is typically enabled together with the depth test.</p>
+<p><b>Note: </b>Enabling depth write without having depth testing enabled may not lead to the desired result, and should be avoided.</p><p><b>See also </b><a href="qrhigraphicspipeline.html#hasDepthWrite">hasDepthWrite</a>() and <a href="qrhigraphicspipeline.html#setDepthTest">setDepthTest</a>().</p>
 <!-- @@@setDepthWrite -->
 <!-- $$$setFlags[overload1]$$$setFlagsQRhiGraphicsPipeline::Flags -->
 <h3 class="fn" id="setFlags"><a name="setFlags"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setFlags</span>(<span class="type"><a href="qrhigraphicspipeline.html#Flag-enum">QRhiGraphicsPipeline::Flags</a></span> <i>f</i>)</h3>

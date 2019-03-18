@@ -64,9 +64,10 @@
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> virtual float </td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#devicePixelRatio">devicePixelRatio</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QSize </td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#pixelSize">pixelSize</a></b>() const = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderPassDescriptor *</td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#renderPassDescriptor">renderPassDescriptor</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual int </td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#sampleCount">sampleCount</a></b>() const = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#setRenderPassDescriptor">setRenderPassDescriptor</a></b>(QRhiRenderPassDescriptor *<i>desc</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> virtual QSize </td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#sizeInPixels">sizeInPixels</a></b>() const = 0</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual QRhiRenderTarget::Type </td><td class="memItemRight bottomAlign"><b><a href="qrhirendertarget.html#type">type</a></b>() const = 0</td></tr>
 </table></div>
 <ul>
@@ -112,18 +113,21 @@
 <h3 class="fn" id="devicePixelRatio"><a name="devicePixelRatio"></a><code>[pure virtual] </code><span class="type">float</span> QRhiRenderTarget::<span class="name">devicePixelRatio</span>() const</h3>
 <p>Returns the device pixel ratio. For <a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a> this is always 1. For targets retrieved from a <a href="qrhiswapchain.html">QRhiSwapChain</a> the value reflects the <a href="../qtgui/qwindow.html#devicePixelRatio">device pixel ratio</a> of the targeted <a href="../qtgui/qwindow.html">QWindow</a>.</p>
 <!-- @@@devicePixelRatio -->
+<!-- $$$pixelSize[overload1]$$$pixelSize -->
+<h3 class="fn" id="pixelSize"><a name="pixelSize"></a><code>[pure virtual] </code><span class="type"><a href="../qtcore/qsize.html">QSize</a></span> QRhiRenderTarget::<span class="name">pixelSize</span>() const</h3>
+<p>Returns the size in pixels.</p>
+<!-- @@@pixelSize -->
 <!-- $$$renderPassDescriptor[overload1]$$$renderPassDescriptor -->
 <h3 class="fn" id="renderPassDescriptor"><a name="renderPassDescriptor"></a><span class="type"><a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a></span> *QRhiRenderTarget::<span class="name">renderPassDescriptor</span>() const</h3>
 <p><b>See also </b><a href="qrhirendertarget.html#setRenderPassDescriptor">setRenderPassDescriptor</a>().</p>
 <!-- @@@renderPassDescriptor -->
+<!-- $$$sampleCount[overload1]$$$sampleCount -->
+<h3 class="fn" id="sampleCount"><a name="sampleCount"></a><code>[pure virtual] </code><span class="type">int</span> QRhiRenderTarget::<span class="name">sampleCount</span>() const</h3>
+<!-- @@@sampleCount -->
 <!-- $$$setRenderPassDescriptor[overload1]$$$setRenderPassDescriptorQRhiRenderPassDescriptor* -->
 <h3 class="fn" id="setRenderPassDescriptor"><a name="setRenderPassDescriptor"></a><span class="type">void</span> QRhiRenderTarget::<span class="name">setRenderPassDescriptor</span>(<span class="type"><a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a></span> *<i>desc</i>)</h3>
 <p><b>See also </b><a href="qrhirendertarget.html#renderPassDescriptor">renderPassDescriptor</a>().</p>
 <!-- @@@setRenderPassDescriptor -->
-<!-- $$$sizeInPixels[overload1]$$$sizeInPixels -->
-<h3 class="fn" id="sizeInPixels"><a name="sizeInPixels"></a><code>[pure virtual] </code><span class="type"><a href="../qtcore/qsize.html">QSize</a></span> QRhiRenderTarget::<span class="name">sizeInPixels</span>() const</h3>
-<p>Returns the size in pixels.</p>
-<!-- @@@sizeInPixels -->
 <!-- $$$type[overload1]$$$type -->
 <h3 class="fn" id="type"><a name="type"></a><code>[pure virtual] </code><span class="type"><a href="qrhirendertarget.html#Type-enum">QRhiRenderTarget::Type</a></span> QRhiRenderTarget::<span class="name">type</span>() const</h3>
 <p>Returns the type of the render target.</p>

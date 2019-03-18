@@ -67,7 +67,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Flag-enum">Flags</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#FrameOpResult-enum">FrameOpResult</a></b> { FrameOpSuccess, FrameOpError, FrameOpSwapChainOutOfDate, FrameOpDeviceLost }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Implementation-enum">Implementation</a></b> { Null, Vulkan, OpenGLES2, D3D11, Metal }</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#ResourceSizeLimit-enum">ResourceSizeLimit</a></b> { TextureSizeMin, TextureSizeMax }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#ResourceLimit-enum">ResourceLimit</a></b> { TextureSizeMin, TextureSizeMax, MaxColorAttachments }</td></tr>
 </table></div>
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
@@ -89,14 +89,14 @@
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newBuffer">newBuffer</a></b>(QRhiBuffer::Type <i>type</i>, QRhiBuffer::UsageFlags <i>usage</i>, int <i>size</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newGraphicsPipeline">newGraphicsPipeline</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newRenderBuffer">newRenderBuffer</a></b>(QRhiRenderBuffer::Type <i>type</i>, const QSize &amp;<i>pixelSize</i>, int <i>sampleCount</i> = 1, QRhiRenderBuffer::Flags <i>flags</i> = ...)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QRhiSampler *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newSampler">newSampler</a></b>(QRhiSampler::Filter <i>magFilter</i>, QRhiSampler::Filter <i>minFilter</i>, QRhiSampler::Filter <i>mipmapMode</i>, QRhiSampler::AddressMode <i>u</i>, QRhiSampler::AddressMode <i>v</i>, QRhiSampler::AddressMode <i>w</i> = QRhiSampler::ClampToEdge)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiSampler *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newSampler">newSampler</a></b>(QRhiSampler::Filter <i>magFilter</i>, QRhiSampler::Filter <i>minFilter</i>, QRhiSampler::Filter <i>mipmapMode</i>, QRhiSampler::AddressMode <i>u</i>, QRhiSampler::AddressMode <i>v</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBindings *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newShaderResourceBindings">newShaderResourceBindings</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiSwapChain *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newSwapChain">newSwapChain</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiTexture *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newTexture">newTexture</a></b>(QRhiTexture::Format <i>format</i>, const QSize &amp;<i>pixelSize</i>, int <i>sampleCount</i> = 1, QRhiTexture::Flags <i>flags</i> = ...)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiTextureRenderTarget *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newTextureRenderTarget">newTextureRenderTarget</a></b>(const QRhiTextureRenderTargetDescription &amp;<i>desc</i>, QRhiTextureRenderTarget::Flags <i>flags</i> = ...)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiResourceUpdateBatch *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#nextResourceUpdateBatch">nextResourceUpdateBatch</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiProfiler *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#profiler">profiler</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#resourceSizeLimit">resourceSizeLimit</a></b>(QRhi::ResourceSizeLimit <i>limit</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#resourceLimit">resourceLimit</a></b>(QRhi::ResourceLimit <i>limit</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QSize </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#sizeForMipLevel">sizeForMipLevel</a></b>(int <i>mipLevel</i>, const QSize &amp;<i>baseLevelSize</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;int&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#supportedSampleCounts">supportedSampleCounts</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QThread *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#thread">thread</a></b>() const</td></tr>
@@ -269,14 +269,15 @@
 <tr><td class="topAlign"><code>QRhi::Metal</code></td><td class="topAlign tblval"><code>4</code></td></tr>
 </table></div>
 <!-- @@@Implementation -->
-<!-- $$$ResourceSizeLimit$$$TextureSizeMin$$$TextureSizeMax -->
-<h3 class="fn" id="ResourceSizeLimit-enum"><a name="ResourceSizeLimit-enum"></a>enum QRhi::<span class="name">ResourceSizeLimit</span></h3>
+<!-- $$$ResourceLimit$$$TextureSizeMin$$$TextureSizeMax$$$MaxColorAttachments -->
+<h3 class="fn" id="ResourceLimit-enum"><a name="ResourceLimit-enum"></a>enum QRhi::<span class="name">ResourceLimit</span></h3>
 <p>Describes the resource limit to query.</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
 <tr><td class="topAlign"><code>QRhi::TextureSizeMin</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Minimum texture width and height. This is typically 1. The minimum texture size is handled gracefully, meaning attempting to create a texture with an empty size will instead create a texture with the minimum size.</td></tr>
 <tr><td class="topAlign"><code>QRhi::TextureSizeMax</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Maximum texture width and height. This depends on the graphics API and sometimes the platform or implementation as well. Typically the value is in the range 4096 - 16384. Attempting to create textures larger than this is expected to fail.</td></tr>
+<tr><td class="topAlign"><code>QRhi::MaxColorAttachments</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">The maximum number of color attachments for a <a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a>, in case multiple render targets are supported. When MRT is not supported, the value is 1. Otherwise this is typically 8, but watch out for the fact that OpenGL only mandates 4 as the minimum, and that is what some OpenGL ES implementations provide.</td></tr>
 </table></div>
-<!-- @@@ResourceSizeLimit -->
+<!-- @@@ResourceLimit -->
 </div>
 <div class="prop">
 <h2>Property Documentation</h2>
@@ -410,9 +411,9 @@
 <p>Returns a new renderbuffer with the specified <i>type</i>, <i>pixelSize</i>, <i>sampleCount</i>, and <i>flags</i>.</p>
 <p><b>See also </b><a href="qrhiresource.html#release">QRhiResource::release</a>() and <a href="qrhiresource.html#releaseAndDestroy">QRhiResource::releaseAndDestroy</a>().</p>
 <!-- @@@newRenderBuffer -->
-<!-- $$$newSampler[overload1]$$$newSamplerQRhiSampler::FilterQRhiSampler::FilterQRhiSampler::FilterQRhiSampler::AddressModeQRhiSampler::AddressModeQRhiSampler::AddressMode -->
-<h3 class="fn" id="newSampler"><a name="newSampler"></a><span class="type"><a href="qrhisampler.html">QRhiSampler</a></span> *QRhi::<span class="name">newSampler</span>(<span class="type"><a href="qrhisampler.html#Filter-enum">QRhiSampler::Filter</a></span> <i>magFilter</i>, <span class="type"><a href="qrhisampler.html#Filter-enum">QRhiSampler::Filter</a></span> <i>minFilter</i>, <span class="type"><a href="qrhisampler.html#Filter-enum">QRhiSampler::Filter</a></span> <i>mipmapMode</i>, <span class="type"><a href="qrhisampler.html#AddressMode-enum">QRhiSampler::AddressMode</a></span> <i>u</i>, <span class="type"><a href="qrhisampler.html#AddressMode-enum">QRhiSampler::AddressMode</a></span> <i>v</i>, <span class="type"><a href="qrhisampler.html#AddressMode-enum">QRhiSampler::AddressMode</a></span> <i>w</i> = QRhiSampler::ClampToEdge)</h3>
-<p>Returns a new sampler with the specified magnification filter <i>magFilter</i>, minification filter <i>minFilter</i>, mipmapping mode <i>mipmapMpde</i>, and S/T/R addressing modes <i>u</i>, <i>v</i>, and <i>w</i>.</p>
+<!-- $$$newSampler[overload1]$$$newSamplerQRhiSampler::FilterQRhiSampler::FilterQRhiSampler::FilterQRhiSampler::AddressModeQRhiSampler::AddressMode -->
+<h3 class="fn" id="newSampler"><a name="newSampler"></a><span class="type"><a href="qrhisampler.html">QRhiSampler</a></span> *QRhi::<span class="name">newSampler</span>(<span class="type"><a href="qrhisampler.html#Filter-enum">QRhiSampler::Filter</a></span> <i>magFilter</i>, <span class="type"><a href="qrhisampler.html#Filter-enum">QRhiSampler::Filter</a></span> <i>minFilter</i>, <span class="type"><a href="qrhisampler.html#Filter-enum">QRhiSampler::Filter</a></span> <i>mipmapMode</i>, <span class="type"><a href="qrhisampler.html#AddressMode-enum">QRhiSampler::AddressMode</a></span> <i>u</i>, <span class="type"><a href="qrhisampler.html#AddressMode-enum">QRhiSampler::AddressMode</a></span> <i>v</i>)</h3>
+<p>Returns a new sampler with the specified magnification filter <i>magFilter</i>, minification filter <i>minFilter</i>, mipmapping mode <i>mipmapMpde</i>, and S/T addressing modes <i>u</i> and <i>v</i>.</p>
 <p><b>See also </b><a href="qrhiresource.html#release">QRhiResource::release</a>() and <a href="qrhiresource.html#releaseAndDestroy">QRhiResource::releaseAndDestroy</a>().</p>
 <!-- @@@newSampler -->
 <!-- $$$newShaderResourceBindings[overload1]$$$newShaderResourceBindings -->
@@ -444,11 +445,11 @@
 <p>Returns the associated <a href="qrhiprofiler.html">QRhiProfiler</a> instance.</p>
 <p>An instance is always available for each <a href="qrhi.html">QRhi</a>, but it is not very useful without <a href="qrhi.html#Flag-enum">EnableProfiling</a> because no data is collected without setting the flag upon creation.</p>
 <!-- @@@profiler -->
-<!-- $$$resourceSizeLimit[overload1]$$$resourceSizeLimitQRhi::ResourceSizeLimit -->
-<h3 class="fn" id="resourceSizeLimit"><a name="resourceSizeLimit"></a><span class="type">int</span> QRhi::<span class="name">resourceSizeLimit</span>(<span class="type"><a href="qrhi.html#ResourceSizeLimit-enum">QRhi::ResourceSizeLimit</a></span> <i>limit</i>) const</h3>
+<!-- $$$resourceLimit[overload1]$$$resourceLimitQRhi::ResourceLimit -->
+<h3 class="fn" id="resourceLimit"><a name="resourceLimit"></a><span class="type">int</span> QRhi::<span class="name">resourceLimit</span>(<span class="type"><a href="qrhi.html#ResourceLimit-enum">QRhi::ResourceLimit</a></span> <i>limit</i>) const</h3>
 <p>Returns the value for the specified resource <i>limit</i>.</p>
 <p>The values are expected to be queried by the backends upon initialization, meaning calling this function is a light operation.</p>
-<!-- @@@resourceSizeLimit -->
+<!-- @@@resourceLimit -->
 <!-- $$$sizeForMipLevel[overload1]$$$sizeForMipLevelintconstQSize& -->
 <h3 class="fn" id="sizeForMipLevel"><a name="sizeForMipLevel"></a><span class="type"><a href="../qtcore/qsize.html">QSize</a></span> QRhi::<span class="name">sizeForMipLevel</span>(<span class="type">int</span> <i>mipLevel</i>, const <span class="type"><a href="../qtcore/qsize.html">QSize</a></span> &amp;<i>baseLevelSize</i>) const</h3>
 <p>Returns the texture image size for a given <i>mipLevel</i>, calculated based on the level 0 size given in <i>baseLevelSize</i>.</p>

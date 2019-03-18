@@ -58,6 +58,7 @@
 <h2 id="public-types">Public Types</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#AddressMode-enum">AddressMode</a></b> { Repeat, ClampToEdge, Border, Mirror, MirrorOnce }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#CompareOp-enum">CompareOp</a></b> { Never, Less, Equal, LessOrEqual, ..., Always }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#Filter-enum">Filter</a></b> { None, Nearest, Linear }</td></tr>
 </table></div>
 <a name="public-functions"></a>
@@ -76,6 +77,8 @@
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#setMagFilter">setMagFilter</a></b>(QRhiSampler::Filter <i>f</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#setMinFilter">setMinFilter</a></b>(QRhiSampler::Filter <i>f</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#setMipmapMode">setMipmapMode</a></b>(QRhiSampler::Filter <i>f</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#setTextureCompareOp">setTextureCompareOp</a></b>(QRhiSampler::CompareOp <i>op</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiSampler::CompareOp </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#textureCompareOp">textureCompareOp</a></b>() const</td></tr>
 </table></div>
 <ul>
 <li class="fn">6 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
@@ -86,6 +89,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiSampler::AddressMode </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#m_addressU-var">m_addressU</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiSampler::AddressMode </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#m_addressV-var">m_addressV</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiSampler::AddressMode </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#m_addressW-var">m_addressW</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiSampler::CompareOp </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#m_compareOp-var">m_compareOp</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiSampler::Filter </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#m_magFilter-var">m_magFilter</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiSampler::Filter </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#m_minFilter-var">m_minFilter</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiSampler::Filter </td><td class="memItemRight bottomAlign"><b><a href="qrhisampler.html#m_mipmapMode-var">m_mipmapMode</a></b></td></tr>
@@ -118,6 +122,20 @@
 <tr><td class="topAlign"><code>QRhiSampler::MirrorOnce</code></td><td class="topAlign tblval"><code>4</code></td></tr>
 </table></div>
 <!-- @@@AddressMode -->
+<!-- $$$CompareOp$$$Never$$$Less$$$Equal$$$LessOrEqual$$$Greater$$$NotEqual$$$GreaterOrEqual$$$Always -->
+<h3 class="fn" id="CompareOp-enum"><a name="CompareOp-enum"></a>enum QRhiSampler::<span class="name">CompareOp</span></h3>
+<p>Specifies the texture comparison function.</p>
+<div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><code>QRhiSampler::Never</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">(default)</td></tr>
+<tr><td class="topAlign"><code>QRhiSampler::Less</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiSampler::Equal</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiSampler::LessOrEqual</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiSampler::Greater</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiSampler::NotEqual</code></td><td class="topAlign tblval"><code>5</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiSampler::GreaterOrEqual</code></td><td class="topAlign tblval"><code>6</code></td><td class="topAlign">&nbsp;</td></tr>
+<tr><td class="topAlign"><code>QRhiSampler::Always</code></td><td class="topAlign tblval"><code>7</code></td><td class="topAlign">&nbsp;</td></tr>
+</table></div>
+<!-- @@@CompareOp -->
 <!-- $$$Filter$$$None$$$Nearest$$$Linear -->
 <h3 class="fn" id="Filter-enum"><a name="Filter-enum"></a>enum QRhiSampler::<span class="name">Filter</span></h3>
 <p>Specifies the minification, magnification, or mipmap filtering</p>
@@ -184,6 +202,14 @@
 <h3 class="fn" id="setMipmapMode"><a name="setMipmapMode"></a><span class="type">void</span> QRhiSampler::<span class="name">setMipmapMode</span>(<span class="type"><a href="qrhisampler.html#Filter-enum">QRhiSampler::Filter</a></span> <i>f</i>)</h3>
 <p><b>See also </b><a href="qrhisampler.html#mipmapMode">mipmapMode</a>().</p>
 <!-- @@@setMipmapMode -->
+<!-- $$$setTextureCompareOp[overload1]$$$setTextureCompareOpQRhiSampler::CompareOp -->
+<h3 class="fn" id="setTextureCompareOp"><a name="setTextureCompareOp"></a><span class="type">void</span> QRhiSampler::<span class="name">setTextureCompareOp</span>(<span class="type"><a href="qrhisampler.html#CompareOp-enum">QRhiSampler::CompareOp</a></span> <i>op</i>)</h3>
+<p><b>See also </b><a href="qrhisampler.html#textureCompareOp">textureCompareOp</a>().</p>
+<!-- @@@setTextureCompareOp -->
+<!-- $$$textureCompareOp[overload1]$$$textureCompareOp -->
+<h3 class="fn" id="textureCompareOp"><a name="textureCompareOp"></a><span class="type"><a href="qrhisampler.html#CompareOp-enum">QRhiSampler::CompareOp</a></span> QRhiSampler::<span class="name">textureCompareOp</span>() const</h3>
+<p><b>See also </b><a href="qrhisampler.html#setTextureCompareOp">setTextureCompareOp</a>().</p>
+<!-- @@@textureCompareOp -->
 </div>
 <div class="vars">
 <h2>Member Variable Documentation</h2>
