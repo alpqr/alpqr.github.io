@@ -140,8 +140,7 @@
   QRhiReadbackResult *rbResult = new QRhiReadbackResult;
   rbResult-&gt;completed = [rbResult] {
       {
-          QImage::Format fmt = rbResult-&gt;format == QRhiTexture::BGRA8 ? QImage::Format_ARGB32_Premultiplied
-                                                                      : QImage::Format_RGBA8888_Premultiplied;
+          const QImage::Format fmt = QImage::Format_RGBA8888_Premultiplied; // fits QRhiTexture::RGBA8
           const uchar *p = reinterpret_cast&lt;const uchar *&gt;(rbResult-&gt;data.constData());
           QImage image(p, rbResult-&gt;pixelSize.width(), rbResult-&gt;pixelSize.height(), fmt);
           image.save(&quot;result.png&quot;);
@@ -155,7 +154,7 @@
   endFrame(sc);
 
 </pre>
-<p><b>Note: </b>The texture must be created with <a href="qrhitexture.html#Flag-enum">QRhiTexture::UsedAsTransferSource</a>.</p><p><b>Note: </b>Multisample textures cannot be read back.</p><!-- @@@readBackTexture -->
+<p><b>Note: </b>The texture must be created with <a href="qrhitexture.html#Flag-enum">QRhiTexture::UsedAsTransferSource</a>.</p><p><b>Note: </b>Multisample textures cannot be read back.</p><p><b>Note: </b>The readback returns raw byte data, in order to allow the applications to interpret it in any way they see fit. Be aware of the blending settings of rendering code: if the blending is set up to rely on premultiplied alpha, the results of the readback must also be interpreted as Premultiplied.</p><p><b>Note: </b>When interpreting the resulting raw data, be aware that the readback happens with a byte ordered format. A <a href="qrhitexture.html#Format-enum">RGBA8</a> texture maps therefore to byte ordered <a href="../qtgui/qimage.html">QImage</a> formats, such as, <a href="../qtgui/qimage.html#Format-enum">QImage::Format_RGBA8888</a>.</p><!-- @@@readBackTexture -->
 <!-- $$$release[overload1]$$$release -->
 <h3 class="fn" id="release"><a name="release"></a><span class="type">void</span> QRhiResourceUpdateBatch::<span class="name">release</span>()</h3>
 <p>Returns the batch to the pool. This should only be used when the batch is not passed to one of <a href="qrhicommandbuffer.html#beginPass">QRhiCommandBuffer::beginPass</a>(), <a href="qrhicommandbuffer.html#endPass">QRhiCommandBuffer::endPass</a>(), or <a href="qrhicommandbuffer.html#resourceUpdate">QRhiCommandBuffer::resourceUpdate</a>() because these implicitly call release().</p>

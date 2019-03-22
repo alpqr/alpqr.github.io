@@ -80,6 +80,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> QRhi::FrameOpResult </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#endFrame">endFrame</a></b>(QRhiSwapChain *<i>swapChain</i>, QRhi::EndFrameFlags <i>flags</i> = ...)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhi::FrameOpResult </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#endOffscreenFrame">endOffscreenFrame</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhi::FrameOpResult </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#finish">finish</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#isClipDepthZeroToOne">isClipDepthZeroToOne</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#isFeatureSupported">isFeatureSupported</a></b>(QRhi::Feature <i>feature</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#isTextureFormatSupported">isTextureFormatSupported</a></b>(QRhiTexture::Format <i>format</i>, QRhiTexture::Flags <i>flags</i> = ...) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#isYUpInFramebuffer">isYUpInFramebuffer</a></b>() const</td></tr>
@@ -113,8 +114,24 @@
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Accelerated 2D/3D graphics API abstraction.</p>
-<p><a href="qrhi.html">QRhi</a> is an abstraction for hardware accelerated graphics APIs, such as, <a href="https://www.khronos.org/opengl/">OpenGL</a>, <a href="https://www.khronos.org/opengles/">OpenGL ES</a>, <a href="https://docs.microsoft.com/en-us/windows/desktop/direct3d">Direct3D</a>, <a href="https://developer.apple.com/metal/">Metal</a>, and <a href="https://www.khronos.org/vulkan/">Vulkan</a>.</p>
+<p>The Qt Rendering Hardware Interface is an abstraction for hardware accelerated graphics APIs, such as, <a href="https://www.khronos.org/opengl/">OpenGL</a>, <a href="https://www.khronos.org/opengles/">OpenGL ES</a>, <a href="https://docs.microsoft.com/en-us/windows/desktop/direct3d">Direct3D</a>, <a href="https://developer.apple.com/metal/">Metal</a>, and <a href="https://www.khronos.org/vulkan/">Vulkan</a>.</p>
+<p>Some of the main design goals are:</p>
+<ul>
+<li>Simple, minimal, understandable, extensible. Follow the proven path of the Qt Quick scenegraph.</li>
+<li>Aim to be a product - and in the bigger picture, part of a product (Qt) - that is usable out of the box both by internal (such as, Qt Quick) and, eventually, external users.</li>
+<li>Not a complete 1:1 wrapper for any of the underlying APIs. The feature set is tuned towards the needs of Qt's 2D and 3D offering (<a href="../qtgui/qpainter.html">QPainter</a>, Qt Quick, Qt 3D Studio). Iterate and evolve in a sustainable manner.</li>
+<li>Intrinsically cross-platform, without reinventing: abstracting cross-platform aspects of certain APIs (such as, OpenGL context creation and windowing system interfaces, Vulkan instance and surface management) is not in scope here. These are delegated to the existing <a href="../qtgui/qtgui-module.html">QtGui</a> facilities (<a href="../qtgui/qwindow.html">QWindow</a>, <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a>, <a href="../qtgui/qvulkaninstance.html">QVulkanInstance</a>) and its backing QPA architecture.</li>
+</ul>
 <p>Each <a href="qrhi.html">QRhi</a> instance is backed by a backend for a specific graphics API. The selection of the backend is a run time choice and is up to the application or library that creates the <a href="qrhi.html">QRhi</a> instance. Some backends are available on multiple platforms (OpenGL, Vulkan, Null), while APIs specific to a given platform are only available when running on the platform in question (Metal on macOS/iOS/tvOS, Direct3D on Windows).</p>
+<p>The available backends currently are:</p>
+<ul>
+<li>OpenGL 2.1 or OpenGL ES 2.0 or newer. Some extensions are utilized when present, for example to enable multisample framebuffers.</li>
+<li>Direct3D 11.1</li>
+<li>Metal</li>
+<li>Vulkan 1.0, optionally with some extensions that are part of Vulkan 1.1</li>
+<li>Null - A &quot;dummy&quot; backend that issues no graphics calls at all.</li>
+</ul>
+<p>In order to allow shader code to be written once in Qt applications and libraries, all shaders are expected to be written in a single language which is then compiled into SPIR-V. Versions for various shading language are then generated from that, together with reflection information (inputs, outputs, shader resources). This is then packed into easily and efficiently serializable <a href="qrhishader.html">QRhiShader</a> instances. The compilers and tools to generate such shaders are not part of <a href="qrhi.html">QRhi</a>, but the core classes for using such shaders, <a href="qrhishader.html">QRhiShader</a> and <a href="qrhishaderdescription.html">QRhiShaderDescription</a>, are.</p>
 <a name="design-fundamentals"></a>
 <h4 >Design Fundamentals</h4>
 <p>A <a href="qrhi.html">QRhi</a> cannot be instantiated directly. Instead, use the <a href="qrhi.html#create">create</a>() function. Delete the <a href="qrhi.html">QRhi</a> instance normally to release the graphics device.</p>
@@ -368,6 +385,11 @@
 <h3 class="fn" id="finish"><a name="finish"></a><span class="type"><a href="qrhi.html#FrameOpResult-enum">QRhi::FrameOpResult</a></span> QRhi::<span class="name">finish</span>()</h3>
 <p>Waits for any work on the graphics queue (where applicable) to complete, then executes all deferred operations, like completing readbacks and resource releases. Can be called inside and outside of a frame, but not inside a pass. Inside a frame it implies submitting any work on the command buffer.</p>
 <p><b>Note: </b>Avoid this function. One case where it may be needed is when the results of an enqueued readback in a swapchain-based frame are needed at a fixed given point and so waiting for the results is desired.</p><!-- @@@finish -->
+<!-- $$$isClipDepthZeroToOne[overload1]$$$isClipDepthZeroToOne -->
+<h3 class="fn" id="isClipDepthZeroToOne"><a name="isClipDepthZeroToOne"></a><span class="type">bool</span> QRhi::<span class="name">isClipDepthZeroToOne</span>() const</h3>
+<p>Returns <code>true</code> if the underlying graphics API uses depth 0 - 1 in clip space.</p>
+<p>In practice this is <code>false</code> for OpenGL only.</p>
+<p><b>Note: </b><a href="qrhi.html#clipSpaceCorrMatrix">clipSpaceCorrMatrix</a>() includes the corresponding adjustment in its returned matrix.</p><!-- @@@isClipDepthZeroToOne -->
 <!-- $$$isFeatureSupported[overload1]$$$isFeatureSupportedQRhi::Feature -->
 <h3 class="fn" id="isFeatureSupported"><a name="isFeatureSupported"></a><span class="type">bool</span> QRhi::<span class="name">isFeatureSupported</span>(<span class="type"><a href="qrhi.html#Feature-enum">QRhi::Feature</a></span> <i>feature</i>) const</h3>
 <p>Returns <code>true</code> if the specified <i>feature</i> is supported</p>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qrhishader.cpp -->
+  <title>QRhiShaderCode Class | RHI 5.12</title>
+  <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
+  <script type="text/javascript">
+    document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
+    // loading style sheet breaks anchors that were jumped to before
+    // so force jumping to anchor again
+    setTimeout(function() {
+        var anchor = location.hash;
+        // need to jump to different anchor first (e.g. none)
+        location.hash = "#";
+        setTimeout(function() {
+            location.hash = anchor;
+        }, 0);
+    }, 0);
+  </script>
+</head>
+<body>
+<div class="header" id="qtdocheader">
+  <div class="main">
+    <div class="main-rounded">
+      <div class="navigationbar">
+        <table><tr>
+<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiShaderCode</td></tr></table><table class="buildversion"><tr>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
+        </tr></table>
+      </div>
+    </div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="sidebar">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#related-non-members">Related Non-Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">QRhiShaderCode Class</h1>
+<!-- $$$QRhiShaderCode-brief -->
+<p>Contains source or binary code for a shader and additional metadata. <a href="#details">More...</a></p>
+<!-- @@@QRhiShaderCode -->
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiShaderCode&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
+<li><a href="qrhishadercode-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhishadercode.html#QRhiShaderCode">QRhiShaderCode</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhishadercode.html#QRhiShaderCode-1">QRhiShaderCode</a></b>(const QByteArray &amp;<i>code</i>, const QByteArray &amp;<i>entry</i> = QByteArray())</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qrhishadercode.html#entryPoint">entryPoint</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhishadercode.html#setEntryPoint">setEntryPoint</a></b>(const QByteArray &amp;<i>entry</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhishadercode.html#setShader">setShader</a></b>(const QByteArray &amp;<i>code</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qrhishadercode.html#shader">shader</a></b>() const</td></tr>
+</table></div>
+<a name="related-non-members"></a>
+<h2 id="related-non-members">Related Non-Members</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qrhishadercode.html#operator-eq-eq">operator==</a></b>(const QRhiShaderCode &amp;<i>lhs</i>, const QRhiShaderCode &amp;<i>rhs</i>)</td></tr>
+</table></div>
+<a name="details"></a>
+<!-- $$$QRhiShaderCode-description -->
+<div class="descr">
+<h2 id="details">Detailed Description</h2>
+<p>Contains source or binary code for a shader and additional metadata.</p>
+<p>When <a href="qrhishadercode.html#shader">shader</a>() is empty after retrieving a <a href="qrhishadercode.html">QRhiShaderCode</a> instance from <a href="qrhishader.html">QRhiShader</a>, it indicates no shader code was found for the requested key.</p>
+</div>
+<!-- @@@QRhiShaderCode -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QRhiShaderCode[overload1]$$$QRhiShaderCode -->
+<h3 class="fn" id="QRhiShaderCode"><a name="QRhiShaderCode"></a>QRhiShaderCode::<span class="name">QRhiShaderCode</span>()</h3>
+<p>Default constructs an instance of QRhiShaderCode.</p><!-- @@@QRhiShaderCode -->
+<!-- $$$QRhiShaderCode$$$QRhiShaderCodeconstQByteArray&constQByteArray& -->
+<h3 class="fn" id="QRhiShaderCode-1"><a name="QRhiShaderCode-1"></a>QRhiShaderCode::<span class="name">QRhiShaderCode</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>code</i>, const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>entry</i> = QByteArray())</h3>
+<p>Default constructs an instance of QRhiShaderCode.</p><!-- @@@QRhiShaderCode -->
+<!-- $$$entryPoint[overload1]$$$entryPoint -->
+<h3 class="fn" id="entryPoint"><a name="entryPoint"></a><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> QRhiShaderCode::<span class="name">entryPoint</span>() const</h3>
+<p><b>See also </b><a href="qrhishadercode.html#setEntryPoint">setEntryPoint</a>().</p>
+<!-- @@@entryPoint -->
+<!-- $$$setEntryPoint[overload1]$$$setEntryPointconstQByteArray& -->
+<h3 class="fn" id="setEntryPoint"><a name="setEntryPoint"></a><span class="type">void</span> QRhiShaderCode::<span class="name">setEntryPoint</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>entry</i>)</h3>
+<p><b>See also </b><a href="qrhishadercode.html#entryPoint">entryPoint</a>().</p>
+<!-- @@@setEntryPoint -->
+<!-- $$$setShader[overload1]$$$setShaderconstQByteArray& -->
+<h3 class="fn" id="setShader"><a name="setShader"></a><span class="type">void</span> QRhiShaderCode::<span class="name">setShader</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>code</i>)</h3>
+<p><b>See also </b><a href="qrhishadercode.html#shader">shader</a>().</p>
+<!-- @@@setShader -->
+<!-- $$$shader[overload1]$$$shader -->
+<h3 class="fn" id="shader"><a name="shader"></a><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> QRhiShaderCode::<span class="name">shader</span>() const</h3>
+<p><b>See also </b><a href="qrhishadercode.html#setShader">setShader</a>().</p>
+<!-- @@@shader -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+<!-- $$$operator==[overload1]$$$operator==constQRhiShaderCode&constQRhiShaderCode& -->
+<h3 class="fn" id="operator-eq-eq"><a name="operator-eq-eq"></a><span class="type">bool</span> <span class="name">operator==</span>(const <span class="type"><a href="qrhishadercode.html#QRhiShaderCode">QRhiShaderCode</a></span> &amp;<i>lhs</i>, const <span class="type"><a href="qrhishadercode.html#QRhiShaderCode">QRhiShaderCode</a></span> &amp;<i>rhs</i>)</h3>
+<p>Returns <code>true</code> if the two <a href="qrhishadercode.html">QRhiShaderCode</a> objects <i>a</i> and <i>b</i> are equal.</p>
+<!-- @@@operator== -->
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+   <p>
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</body>
+</html>

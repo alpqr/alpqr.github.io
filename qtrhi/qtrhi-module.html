@@ -48,15 +48,11 @@
 <a name="classes"></a>
 <h2 id="classes">Classes</h2>
 <div class="table"><table class="annotated">
-<tr class="odd topAlign"><td class="tblName"><p><a href="qshaderdescription-blockvariable.html">QShaderDescription::BlockVariable</a></p></td><td class="tblDescr"><p>Describes a member of a uniform or push constant block</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhishaderdescription-blockvariable.html">QRhiShaderDescription::BlockVariable</a></p></td><td class="tblDescr"><p>Describes a member of a uniform or push constant block</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qrhiprofiler-cputime.html">QRhiProfiler::CpuTime</a></p></td><td class="tblDescr"><p>Contains CPU-side frame timings</p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="qrhiprofiler-gputime.html">QRhiProfiler::GpuTime</a></p></td><td class="tblDescr"><p>Contains GPU-side frame timings</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qshaderdescription-inoutvariable.html">QShaderDescription::InOutVariable</a></p></td><td class="tblDescr"><p>Describes an input or output variable in the shader</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qshaderdescription-pushconstantblock.html">QShaderDescription::PushConstantBlock</a></p></td><td class="tblDescr"><p>Describes a push constant block</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qbakedshader.html">QBakedShader</a></p></td><td class="tblDescr"><p>Contains multiple versions of a shader translated to multiple shading languages, together with reflection metadata</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qbakedshadercode.html">QBakedShaderCode</a></p></td><td class="tblDescr"><p>Contains source or binary code for a shader and additional metadata</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qbakedshaderkey.html">QBakedShaderKey</a></p></td><td class="tblDescr"><p>Specifies the shading language, the version with flags, and the variant</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qbakedshaderversion.html">QBakedShaderVersion</a></p></td><td class="tblDescr"><p>Specifies the shading language version</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhishaderdescription-inoutvariable.html">QRhiShaderDescription::InOutVariable</a></p></td><td class="tblDescr"><p>Describes an input or output variable in the shader</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhishaderdescription-pushconstantblock.html">QRhiShaderDescription::PushConstantBlock</a></p></td><td class="tblDescr"><p>Describes a push constant block</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qrhi.html">QRhi</a></p></td><td class="tblDescr"><p>Accelerated 2D/3D graphics API abstraction</p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="qrhibuffer.html">QRhiBuffer</a></p></td><td class="tblDescr"><p>Vertex, index, or uniform (constant) buffer resource</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qrhicolorattachment.html">QRhiColorAttachment</a></p></td><td class="tblDescr"><p>Describes the a single color attachment of a render target</p></td></tr>
@@ -89,27 +85,31 @@
 <tr class="odd topAlign"><td class="tblName"><p><a href="qrhiresourceupdatebatch.html">QRhiResourceUpdateBatch</a></p></td><td class="tblDescr"><p>Records upload and copy type of operations</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qrhisampler.html">QRhiSampler</a></p></td><td class="tblDescr"><p>Sampler resource</p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="qrhiscissor.html">QRhiScissor</a></p></td><td class="tblDescr"><p>Specifies a scissor rectangle</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhishader.html">QRhiShader</a></p></td><td class="tblDescr"><p>Contains multiple versions of a shader translated to multiple shading languages, together with reflection metadata</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhishadercode.html">QRhiShaderCode</a></p></td><td class="tblDescr"><p>Contains source or binary code for a shader and additional metadata</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhishaderdescription.html">QRhiShaderDescription</a></p></td><td class="tblDescr"><p>Describes the interface of a shader</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhishaderkey.html">QRhiShaderKey</a></p></td><td class="tblDescr"><p>Specifies the shading language, the version with flags, and the variant</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a></p></td><td class="tblDescr"><p>Describes the shader resource for a single binding point</p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a></p></td><td class="tblDescr"><p>Encapsulates resources for making buffer, texture, sampler resources visible to shaders</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhiswapchain.html">QRhiSwapChain</a></p></td><td class="tblDescr"><p>Swapchain resource</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhitexture.html">QRhiTexture</a></p></td><td class="tblDescr"><p>Texture resource</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhitexturecopydescription.html">QRhiTextureCopyDescription</a></p></td><td class="tblDescr"><p>Describes a texture-to-texture copy operation</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhitexturelayer.html">QRhiTextureLayer</a></p></td><td class="tblDescr"><p>Describes one layer (face for cubemaps) in a texture upload operation</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhitexturemiplevel.html">QRhiTextureMipLevel</a></p></td><td class="tblDescr"><p>Describes one mip level in a layer in a texture upload operation</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a></p></td><td class="tblDescr"><p>Texture render target resource</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhitexturerendertargetdescription.html">QRhiTextureRenderTargetDescription</a></p></td><td class="tblDescr"><p>Describes the color and depth or depth/stencil attachments of a render target</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhitextureuploaddescription.html">QRhiTextureUploadDescription</a></p></td><td class="tblDescr"><p>Describes a texture upload operation</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhivertexinputattribute.html">QRhiVertexInputAttribute</a></p></td><td class="tblDescr"><p>Describes a single vertex input element</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhivertexinputbinding.html">QRhiVertexInputBinding</a></p></td><td class="tblDescr"><p>Describes a vertex input binding</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhivertexinputlayout.html">QRhiVertexInputLayout</a></p></td><td class="tblDescr"><p>Describes the layout of vertex inputs consumed by a vertex shader</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhiviewport.html">QRhiViewport</a></p></td><td class="tblDescr"><p>Specifies a viewport rectangle</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhivulkaninitparams.html">QRhiVulkanInitParams</a></p></td><td class="tblDescr"><p>Vulkan specific initialization parameters</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhivulkannativehandles.html">QRhiVulkanNativeHandles</a></p></td><td class="tblDescr"><p>Collects device, queue, and other Vulkan objects that are used by the QRhi</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhivulkantexturenativehandles.html">QRhiVulkanTextureNativeHandles</a></p></td><td class="tblDescr"><p>Holds the Vulkan image object that is backing a QRhiTexture instance</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qshaderdescription.html">QShaderDescription</a></p></td><td class="tblDescr"><p>Describes the interface of a shader</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhishaderversion.html">QRhiShaderVersion</a></p></td><td class="tblDescr"><p>Specifies the shading language version</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhiswapchain.html">QRhiSwapChain</a></p></td><td class="tblDescr"><p>Swapchain resource</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhitexture.html">QRhiTexture</a></p></td><td class="tblDescr"><p>Texture resource</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhitexturecopydescription.html">QRhiTextureCopyDescription</a></p></td><td class="tblDescr"><p>Describes a texture-to-texture copy operation</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhitexturelayer.html">QRhiTextureLayer</a></p></td><td class="tblDescr"><p>Describes one layer (face for cubemaps) in a texture upload operation</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhitexturemiplevel.html">QRhiTextureMipLevel</a></p></td><td class="tblDescr"><p>Describes one mip level in a layer in a texture upload operation</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a></p></td><td class="tblDescr"><p>Texture render target resource</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhitexturerendertargetdescription.html">QRhiTextureRenderTargetDescription</a></p></td><td class="tblDescr"><p>Describes the color and depth or depth/stencil attachments of a render target</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhitextureuploaddescription.html">QRhiTextureUploadDescription</a></p></td><td class="tblDescr"><p>Describes a texture upload operation</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhivertexinputattribute.html">QRhiVertexInputAttribute</a></p></td><td class="tblDescr"><p>Describes a single vertex input element</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhivertexinputbinding.html">QRhiVertexInputBinding</a></p></td><td class="tblDescr"><p>Describes a vertex input binding</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhivertexinputlayout.html">QRhiVertexInputLayout</a></p></td><td class="tblDescr"><p>Describes the layout of vertex inputs consumed by a vertex shader</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhiviewport.html">QRhiViewport</a></p></td><td class="tblDescr"><p>Specifies a viewport rectangle</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhivulkaninitparams.html">QRhiVulkanInitParams</a></p></td><td class="tblDescr"><p>Vulkan specific initialization parameters</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhivulkannativehandles.html">QRhiVulkanNativeHandles</a></p></td><td class="tblDescr"><p>Collects device, queue, and other Vulkan objects that are used by the QRhi</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhivulkantexturenativehandles.html">QRhiVulkanTextureNativeHandles</a></p></td><td class="tblDescr"><p>Holds the Vulkan image object that is backing a QRhiTexture instance</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qrhigraphicspipeline-stencilopstate.html">QRhiGraphicsPipeline::StencilOpState</a></p></td><td class="tblDescr"><p>Describes the stencil operation state</p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="qrhigraphicspipeline-targetblend.html">QRhiGraphicsPipeline::TargetBlend</a></p></td><td class="tblDescr"><p>Describes the blend state for one color attachment</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qshaderdescription-uniformblock.html">QShaderDescription::UniformBlock</a></p></td><td class="tblDescr"><p>Describes a uniform block</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhishaderdescription-uniformblock.html">QRhiShaderDescription::UniformBlock</a></p></td><td class="tblDescr"><p>Describes a uniform block</p></td></tr>
 </table></div>
 <!-- $$$QtRhi-description -->
 <div class="descr"> <a name="details"></a>

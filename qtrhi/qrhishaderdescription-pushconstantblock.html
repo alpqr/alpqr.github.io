@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- qshaderdescription.cpp -->
-  <title>UniformBlock Class | RHI 5.12</title>
+<!-- qrhishaderdescription.cpp -->
+  <title>PushConstantBlock Class | RHI 5.12</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -26,7 +26,7 @@
     <div class="main-rounded">
       <div class="navigationbar">
         <table><tr>
-<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >UniformBlock</td></tr></table><table class="buildversion"><tr>
+<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >PushConstantBlock</td></tr></table><table class="buildversion"><tr>
 <td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
         </tr></table>
       </div>
@@ -43,33 +43,30 @@
 </ul>
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
-<h1 class="title">UniformBlock Class</h1>
-<span class="small-subtitle">(<a href="qshaderdescription-uniformblock.html">QShaderDescription::UniformBlock</a>)<br/></span>
-<!-- $$$UniformBlock-brief -->
-<p>Describes a uniform block. <a href="#details">More...</a></p>
-<!-- @@@UniformBlock -->
+<h1 class="title">PushConstantBlock Class</h1>
+<span class="small-subtitle">(<a href="qrhishaderdescription-pushconstantblock.html">QRhiShaderDescription::PushConstantBlock</a>)<br/></span>
+<!-- $$$PushConstantBlock-brief -->
+<p>Describes a push constant block. <a href="#details">More...</a></p>
+<!-- @@@PushConstantBlock -->
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;UniformBlock&gt;</span>
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;PushConstantBlock&gt;</span>
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
-<li><a href="qshaderdescription-uniformblock-members.html">List of all members, including inherited members</a></li>
+<li><a href="qrhishaderdescription-pushconstantblock-members.html">List of all members, including inherited members</a></li>
 </ul>
 <a name="public-variables"></a>
 <h2 id="public-variables">Public Variables</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qshaderdescription-uniformblock.html#binding-var">binding</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qshaderdescription-uniformblock.html#blockName-var">blockName</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qshaderdescription-uniformblock.html#descriptorSet-var">descriptorSet</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QShaderDescription::BlockVariable&gt; </td><td class="memItemRight bottomAlign"><b><a href="qshaderdescription-uniformblock.html#members-var">members</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qshaderdescription-uniformblock.html#size-var">size</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qshaderdescription-uniformblock.html#structName-var">structName</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiShaderDescription::BlockVariable&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderdescription-pushconstantblock.html#members-var">members</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderdescription-pushconstantblock.html#name-var">name</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderdescription-pushconstantblock.html#size-var">size</a></b></td></tr>
 </table></div>
 <a name="details"></a>
-<!-- $$$UniformBlock-description -->
+<!-- $$$PushConstantBlock-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>Describes a uniform block.</p>
-<p><b>Note: </b>When translating to shading languages without uniform block support (like GLSL 120 or GLSL/ES 100), uniform blocks are replaced with ordinary uniforms in a struct. The name of the struct, and so the prefix for the uniforms generated from the block members, is given by <a href="qshaderdescription-uniformblock.html#structName-var">structName</a>.</p></div>
-<!-- @@@UniformBlock -->
+<p>Describes a push constant block.</p>
+</div>
+<!-- @@@PushConstantBlock -->
 <div class="types">
 <h2>Member Type Documentation</h2>
 </div>

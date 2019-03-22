@@ -29,21 +29,21 @@
             <name>setSourceFileName</name>
             <anchorfile>qshaderbaker.html</anchorfile>
             <anchor>setSourceFileName-1</anchor>
-            <arglist>(const QString &amp;fileName, QBakedShader::ShaderStage stage)</arglist>
+            <arglist>(const QString &amp;fileName, int stage)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>void</type>
             <name>setSourceDevice</name>
             <anchorfile>qshaderbaker.html</anchorfile>
             <anchor>setSourceDevice</anchor>
-            <arglist>(QIODevice *device, QBakedShader::ShaderStage stage, const QString &amp;fileName)</arglist>
+            <arglist>(QIODevice *device, int stage, const QString &amp;fileName)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>void</type>
             <name>setSourceString</name>
             <anchorfile>qshaderbaker.html</anchorfile>
             <anchor>setSourceString</anchor>
-            <arglist>(const QByteArray &amp;sourceString, QBakedShader::ShaderStage stage, const QString &amp;fileName)</arglist>
+            <arglist>(const QByteArray &amp;sourceString, int stage, const QString &amp;fileName)</arglist>
         </member>
         <member kind="typedef" type="">
             <name>GeneratedShader</name>
@@ -63,10 +63,10 @@
             <name>setGeneratedShaderVariants</name>
             <anchorfile>qshaderbaker.html</anchorfile>
             <anchor>setGeneratedShaderVariants</anchor>
-            <arglist>(const QVector&lt;QBakedShaderKey::ShaderVariant&gt; &amp;v)</arglist>
+            <arglist>(const int &amp;v)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QBakedShader</type>
+            <type>int</type>
             <name>bake</name>
             <anchorfile>qshaderbaker.html</anchorfile>
             <anchor>bake</anchor>

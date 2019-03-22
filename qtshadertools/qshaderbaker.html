@@ -64,23 +64,23 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#QShaderBaker">QShaderBaker</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#dtor.QShaderBaker">~QShaderBaker</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QBakedShader </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#bake">bake</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#bake">bake</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#errorMessage">errorMessage</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#setGeneratedShaderVariants">setGeneratedShaderVariants</a></b>(const QVector&lt;QBakedShaderKey::ShaderVariant&gt; &amp;<i>v</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#setGeneratedShaderVariants">setGeneratedShaderVariants</a></b>(const int &amp;<i>v</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#setGeneratedShaders">setGeneratedShaders</a></b>(const QVector&lt;QShaderBaker::GeneratedShader&gt; &amp;<i>v</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#setSourceDevice">setSourceDevice</a></b>(QIODevice *<i>device</i>, QBakedShader::ShaderStage <i>stage</i>, const QString &amp;<i>fileName</i> = QString())</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#setSourceDevice">setSourceDevice</a></b>(QIODevice *<i>device</i>, int <i>stage</i>, const QString &amp;<i>fileName</i> = QString())</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#setSourceFileName">setSourceFileName</a></b>(const QString &amp;<i>fileName</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#setSourceFileName-1">setSourceFileName</a></b>(const QString &amp;<i>fileName</i>, QBakedShader::ShaderStage <i>stage</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#setSourceString">setSourceString</a></b>(const QByteArray &amp;<i>sourceString</i>, QBakedShader::ShaderStage <i>stage</i>, const QString &amp;<i>fileName</i> = QString())</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#setSourceFileName-1">setSourceFileName</a></b>(const QString &amp;<i>fileName</i>, int <i>stage</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qshaderbaker.html#setSourceString">setSourceString</a></b>(const QByteArray &amp;<i>sourceString</i>, int <i>stage</i>, const QString &amp;<i>fileName</i> = QString())</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$QShaderBaker-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
 <p>Compiles a GLSL/Vulkan shader into SPIR-V, translates into other shading languages, and gathers reflection metadata.</p>
-<p><a href="qshaderbaker.html">QShaderBaker</a> takes a graphics (vertex, fragment, etc.) or compute shader, and produces multiple - either source or bytecode - variants of it, together with reflection information. The results are represented by a QBakedShader instance, which also provides simple and fast serialization and deserialization.</p>
-<p><b>Note: </b>Applications and libraries are recommended to avoid using this class directly. Rather, all Qt users are encouraged to rely on offline compilation by invoking the <code>qsb</code> command-line tool at build time. This tool uses <a href="qshaderbaker.html">QShaderBaker</a> itself and writes the serialized version of the generated QBakedShader into a file. The usage of this class should be restricted to cases where run time compilation cannot be avoided, such as when working with user-provided shader source strings.</p><p>The input format is always assumed to be Vulkan-flavored GLSL at the moment. See the <a href="https://github.com/KhronosGroup/GLSL/blob/master/extensions/khr/GL_KHR_vulkan_glsl.txt">GL_KHR_vulkan_glsl specification</a> for an overview, keeping in mind that the Qt Shader Tools module is meant to be used in combination with the QRhi classes from Qt Rendering Hardware Interface module, and therefore a number of concepts and constructs (push constants, storage buffers, subpasses, etc.) are not applicable at the moment. Additional options may be introduced in the future, for example, by enabling <a href="https://docs.microsoft.com/en-us/windows/desktop/direct3dhlsl/dx-graphics-hlsl">HLSL</a> as a source format, once HLSL to SPIR-V compilation is deemed suitable.</p>
-<p>The reflection metadata is retrievable from the resulting QBakedShader by calling QBakedShader::description(). This is essential when having to discover what set of vertex inputs and shader resources a shader expects, and what the layouts of those are, as many modern graphics APIs offer no built-in shader reflection capabilities.</p>
+<p><a href="qshaderbaker.html">QShaderBaker</a> takes a graphics (vertex, fragment, etc.) or compute shader, and produces multiple - either source or bytecode - variants of it, together with reflection information. The results are represented by a QRhiShader instance, which also provides simple and fast serialization and deserialization.</p>
+<p><b>Note: </b>Applications and libraries are recommended to avoid using this class directly. Rather, all Qt users are encouraged to rely on offline compilation by invoking the <code>qsb</code> command-line tool at build time. This tool uses <a href="qshaderbaker.html">QShaderBaker</a> itself and writes the serialized version of the generated QRhiShader into a file. The usage of this class should be restricted to cases where run time compilation cannot be avoided, such as when working with user-provided shader source strings.</p><p>The input format is always assumed to be Vulkan-flavored GLSL at the moment. See the <a href="https://github.com/KhronosGroup/GLSL/blob/master/extensions/khr/GL_KHR_vulkan_glsl.txt">GL_KHR_vulkan_glsl specification</a> for an overview, keeping in mind that the Qt Shader Tools module is meant to be used in combination with the QRhi classes from Qt Rendering Hardware Interface module, and therefore a number of concepts and constructs (push constants, storage buffers, subpasses, etc.) are not applicable at the moment. Additional options may be introduced in the future, for example, by enabling <a href="https://docs.microsoft.com/en-us/windows/desktop/direct3dhlsl/dx-graphics-hlsl">HLSL</a> as a source format, once HLSL to SPIR-V compilation is deemed suitable.</p>
+<p>The reflection metadata is retrievable from the resulting QRhiShader by calling QRhiShader::description(). This is essential when having to discover what set of vertex inputs and shader resources a shader expects, and what the layouts of those are, as many modern graphics APIs offer no built-in shader reflection capabilities.</p>
 <a name="typical-workflow"></a>
 <h4 >Typical Workflow</h4>
 <p>Let's assume an application has a vertex and fragment shader like the following:</p>
@@ -126,7 +126,7 @@
   }
 
 </pre>
-<p>To get QBakedShader instances that can be passed as-is to a QRhiGraphicsPipeline, there are two options: doing the shader pack generation off line, or at run time.</p>
+<p>To get QRhiShader instances that can be passed as-is to a QRhiGraphicsPipeline, there are two options: doing the shader pack generation off line, or at run time.</p>
 <p>The former involves running the <code>qsb</code> tool:</p>
 <pre class="cpp plain">
 
@@ -135,32 +135,32 @@
 
 </pre>
 <p>The example uses the translation targets as appropriate for QRhi. This means GLSL/ES 100, GLSL 120, HLSL Shader Model 5.0, and Metal Shading Language 1.2&#x2e;</p>
-<p>Note how the command line options correspond to what can be specified via <a href="qshaderbaker.html#setGeneratedShaders">setGeneratedShaders</a>(). Once the resulting files are available, they can be shipped with the application (typically embedded into the executable the the Qt Resource System), and can be loaded and passed to QBakedShader::fromSerialized() at run time.</p>
-<p>While not shown here, <code>qsb</code> can do more: it is also able to invoke <code>fxc</code> on Windows or the appropriate XCode tools on macOS to compile the generated HLSL or Metal shader code into bytecode and include the compiled versions in the QBakedShader. After a baked shader pack is written into a file, its contents can be examined by running <code>qsb -d</code> on it. Run <code>qsb</code> with <code>--help</code> for more information.</p>
+<p>Note how the command line options correspond to what can be specified via <a href="qshaderbaker.html#setGeneratedShaders">setGeneratedShaders</a>(). Once the resulting files are available, they can be shipped with the application (typically embedded into the executable the the Qt Resource System), and can be loaded and passed to QRhiShader::fromSerialized() at run time.</p>
+<p>While not shown here, <code>qsb</code> can do more: it is also able to invoke <code>fxc</code> on Windows or the appropriate XCode tools on macOS to compile the generated HLSL or Metal shader code into bytecode and include the compiled versions in the QRhiShader. After a baked shader pack is written into a file, its contents can be examined by running <code>qsb -d</code> on it. Run <code>qsb</code> with <code>--help</code> for more information.</p>
 <p>The alternative approach is to perform the same at run time. This involves creating a <a href="qshaderbaker.html">QShaderBaker</a> instance, calling <a href="qshaderbaker.html#setSourceFileName">setSourceFileName</a>(), and then setting up the translation targets via <a href="qshaderbaker.html#setGeneratedShaders">setGeneratedShaders</a>():</p>
 <pre class="cpp plain">
 
-  baker.setGeneratedShaderVariants({ QBakedShaderKey::StandardShader });
+  baker.setGeneratedShaderVariants({ QRhiShaderKey::StandardShader });
   QVector&lt;QShaderBaker::GeneratedShader&gt; targets;
-  targets.append({ QBakedShaderKey::SpirvShader, QBakedShaderVersion(100) });
-  targets.append({ QBakedShaderKey::GlslShader, QBakedShaderVersion(100, QBakedShaderVersion::GlslEs) });
-  targets.append({ QBakedShaderKey::SpirvShader, QBakedShaderVersion(120) });
-  targets.append({ QBakedShaderKey::HlslShader, QBakedShaderVersion(50) });
-  targets.append({ QBakedShaderKey::MslShader, QBakedShaderVersion(12) });
+  targets.append({ QRhiShaderKey::SpirvShader, QRhiShaderVersion(100) });
+  targets.append({ QRhiShaderKey::GlslShader, QRhiShaderVersion(100, QRhiShaderVersion::GlslEs) });
+  targets.append({ QRhiShaderKey::SpirvShader, QRhiShaderVersion(120) });
+  targets.append({ QRhiShaderKey::HlslShader, QRhiShaderVersion(50) });
+  targets.append({ QRhiShaderKey::MslShader, QRhiShaderVersion(12) });
   baker.setGeneratedShaders(targets);
-  QBakedShader shaders = baker.bake();
+  QRhiShader shaders = baker.bake();
   if (!shaders.isValid())
       qWarning() &lt;&lt; baker.errorMessage();
 
 </pre>
 </div>
-<p><b>See also </b>QBakedShader.</p>
+<p><b>See also </b>QRhiShader.</p>
 <!-- @@@QShaderBaker -->
 <div class="types">
 <h2>Member Type Documentation</h2>
 <!-- $$$GeneratedShader -->
 <h3 class="fn" id="GeneratedShader-typedef"><a name="GeneratedShader-typedef"></a>typedef QShaderBaker::<span class="name">GeneratedShader</span></h3>
-<p>Synonym for <a href="../qtcore/qpair.html">QPair</a>&lt;QBakedShaderKey::ShaderSource, QBakedShaderVersion&gt;.</p>
+<p>Synonym for <a href="../qtcore/qpair.html">QPair</a>&lt;QRhiShaderKey::ShaderSource, QRhiShaderVersion&gt;.</p>
 <!-- @@@GeneratedShader -->
 </div>
 <div class="prop">
@@ -177,32 +177,32 @@
 <p>Destructor.</p>
 <!-- @@@~QShaderBaker -->
 <!-- $$$bake[overload1]$$$bake -->
-<h3 class="fn" id="bake"><a name="bake"></a><span class="type">QBakedShader</span> QShaderBaker::<span class="name">bake</span>()</h3>
+<h3 class="fn" id="bake"><a name="bake"></a><span class="type">int</span> QShaderBaker::<span class="name">bake</span>()</h3>
 <p>Runs the compilation and translation process.</p>
-<p>Returns a QBakedShader instance. To check if the process was successful, call QBakedShader::isValid(). When that indicates <code>false</code>, call <a href="qshaderbaker.html#errorMessage">errorMessage</a>() to retrieve the log.</p>
+<p>Returns a QRhiShader instance. To check if the process was successful, call QRhiShader::isValid(). When that indicates <code>false</code>, call <a href="qshaderbaker.html#errorMessage">errorMessage</a>() to retrieve the log.</p>
 <p>This is an expensive operation. When calling this from applications, it can be advisable to do it on a separate thread.</p>
 <p><b>Note: </b><a href="qshaderbaker.html">QShaderBaker</a> instances are reusable: after calling bake(), the same instance can be used with different inputs again. However, a <a href="qshaderbaker.html">QShaderBaker</a> instance should only be used on one single thread during its lifetime.</p><!-- @@@bake -->
 <!-- $$$errorMessage[overload1]$$$errorMessage -->
 <h3 class="fn" id="errorMessage"><a name="errorMessage"></a><span class="type"><a href="../qtcore/qstring.html">QString</a></span> QShaderBaker::<span class="name">errorMessage</span>() const</h3>
 <p>Returns the error message from the last <a href="qshaderbaker.html#bake">bake</a>() run, or an empty string if there was no error.</p>
-<p><b>Note: </b>Errors include file read errors, compilation, and translation failures. Not requesting any targets or variants does not count as an error even though the resulting QBakedShader is invalid.</p><!-- @@@errorMessage -->
-<!-- $$$setGeneratedShaderVariants[overload1]$$$setGeneratedShaderVariantsconstQVector<QBakedShaderKey::ShaderVariant>& -->
-<h3 class="fn" id="setGeneratedShaderVariants"><a name="setGeneratedShaderVariants"></a><span class="type">void</span> QShaderBaker::<span class="name">setGeneratedShaderVariants</span>(const <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type">QBakedShaderKey::ShaderVariant</span>&gt; &amp;<i>v</i>)</h3>
-<p>Specifies which shader variants are genetated. Each shader version can have multiple variants in the resulting QBakedShader.</p>
-<p>In most cases <i>v</i> contains a single entry, QBakedShaderKey::StandardShader.</p>
-<p><b>Note: </b>when no variants are set, the resulting QBakedShader will be empty and thus invalid.</p><!-- @@@setGeneratedShaderVariants -->
+<p><b>Note: </b>Errors include file read errors, compilation, and translation failures. Not requesting any targets or variants does not count as an error even though the resulting QRhiShader is invalid.</p><!-- @@@errorMessage -->
+<!-- $$$setGeneratedShaderVariants[overload1]$$$setGeneratedShaderVariantsconstint& -->
+<h3 class="fn" id="setGeneratedShaderVariants"><a name="setGeneratedShaderVariants"></a><span class="type">void</span> QShaderBaker::<span class="name">setGeneratedShaderVariants</span>(const <span class="type">int</span> &amp;<i>v</i>)</h3>
+<p>Specifies which shader variants are genetated. Each shader version can have multiple variants in the resulting QRhiShader.</p>
+<p>In most cases <i>v</i> contains a single entry, QRhiShaderKey::StandardShader.</p>
+<p><b>Note: </b>when no variants are set, the resulting QRhiShader will be empty and thus invalid.</p><!-- @@@setGeneratedShaderVariants -->
 <!-- $$$setGeneratedShaders[overload1]$$$setGeneratedShadersconstQVector<QShaderBaker::GeneratedShader>& -->
 <h3 class="fn" id="setGeneratedShaders"><a name="setGeneratedShaders"></a><span class="type">void</span> QShaderBaker::<span class="name">setGeneratedShaders</span>(const <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qshaderbaker.html#GeneratedShader-typedef">QShaderBaker::GeneratedShader</a></span>&gt; &amp;<i>v</i>)</h3>
 <p>Specifies what kind of shaders to compile or translate to. Nothing is generated by default so calling this function before <a href="qshaderbaker.html#bake">bake</a>() is mandatory</p>
-<p><b>Note: </b>when this function is not called or <i>v</i> is empty or contains only invalid entries, the resulting QBakedShader will be empty and thus invalid.</p><p>For example, the minimal possible baking target is SPIR-V, without any additional translations to other languages. To request this, do:</p>
+<p><b>Note: </b>when this function is not called or <i>v</i> is empty or contains only invalid entries, the resulting QRhiShader will be empty and thus invalid.</p><p>For example, the minimal possible baking target is SPIR-V, without any additional translations to other languages. To request this, do:</p>
 <pre class="cpp plain">
 
-  baker.setGeneratedShaders({ QBakedShaderKey::SpirvShader, QBakedShaderVersion(100) });
+  baker.setGeneratedShaders({ QRhiShaderKey::SpirvShader, QRhiShaderVersion(100) });
 
 </pre>
 <!-- @@@setGeneratedShaders -->
-<!-- $$$setSourceDevice[overload1]$$$setSourceDeviceQIODevice*QBakedShader::ShaderStageconstQString& -->
-<h3 class="fn" id="setSourceDevice"><a name="setSourceDevice"></a><span class="type">void</span> QShaderBaker::<span class="name">setSourceDevice</span>(<span class="type"><a href="../qtcore/qiodevice.html">QIODevice</a></span> *<i>device</i>, <span class="type">QBakedShader::ShaderStage</span> <i>stage</i>, const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i>fileName</i> = QString())</h3>
+<!-- $$$setSourceDevice[overload1]$$$setSourceDeviceQIODevice*intconstQString& -->
+<h3 class="fn" id="setSourceDevice"><a name="setSourceDevice"></a><span class="type">void</span> QShaderBaker::<span class="name">setSourceDevice</span>(<span class="type"><a href="../qtcore/qiodevice.html">QIODevice</a></span> *<i>device</i>, <span class="type">int</span> <i>stage</i>, const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i>fileName</i> = QString())</h3>
 <p>Sets the source <i>device</i>. This allows using any <a href="../qtcore/qiodevice.html">QIODevice</a> instead of just files. <i>stage</i> specifies the shader stage, while the optional <i>fileName</i> contains a filename that is used in the error messages.</p>
 <!-- @@@setSourceDevice -->
 <!-- $$$setSourceFileName[overload1]$$$setSourceFileNameconstQString& -->
@@ -218,12 +218,12 @@
 <li><code>.comp</code> - compute shader</li>
 </ul>
 <!-- @@@setSourceFileName -->
-<!-- $$$setSourceFileName$$$setSourceFileNameconstQString&QBakedShader::ShaderStage -->
-<h3 class="fn" id="setSourceFileName-1"><a name="setSourceFileName-1"></a><span class="type">void</span> QShaderBaker::<span class="name">setSourceFileName</span>(const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i>fileName</i>, <span class="type">QBakedShader::ShaderStage</span> <i>stage</i>)</h3>
+<!-- $$$setSourceFileName$$$setSourceFileNameconstQString&int -->
+<h3 class="fn" id="setSourceFileName-1"><a name="setSourceFileName-1"></a><span class="type">void</span> QShaderBaker::<span class="name">setSourceFileName</span>(const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i>fileName</i>, <span class="type">int</span> <i>stage</i>)</h3>
 <p>Sets the name of the shader source file to <i>fileName</i>. This is the file that will be read when calling <a href="qshaderbaker.html#bake">bake</a>(). The shader stage is specified by <i>stage</i>.</p>
 <!-- @@@setSourceFileName -->
-<!-- $$$setSourceString[overload1]$$$setSourceStringconstQByteArray&QBakedShader::ShaderStageconstQString& -->
-<h3 class="fn" id="setSourceString"><a name="setSourceString"></a><span class="type">void</span> QShaderBaker::<span class="name">setSourceString</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>sourceString</i>, <span class="type">QBakedShader::ShaderStage</span> <i>stage</i>, const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i>fileName</i> = QString())</h3>
+<!-- $$$setSourceString[overload1]$$$setSourceStringconstQByteArray&intconstQString& -->
+<h3 class="fn" id="setSourceString"><a name="setSourceString"></a><span class="type">void</span> QShaderBaker::<span class="name">setSourceString</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>sourceString</i>, <span class="type">int</span> <i>stage</i>, const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i>fileName</i> = QString())</h3>
 <p>Sets the input shader <i>sourceString</i>. <i>stage</i> specified the shader stage, while the optional <i>fileName</i> contains a filename that is used in the error messages.</p>
 <!-- @@@setSourceString -->
 </div>
