@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- qrhi.cpp -->
-  <title>QRhiResource Class | RHI 5.12</title>
+  <title>QRhiResource Class | RHI 5.12.0</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -27,7 +27,7 @@
       <div class="navigationbar">
         <table><tr>
 <td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiResource</td></tr></table><table class="buildversion"><tr>
-<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
+<td id="buildversion" width="100%" align="right"><a href="qtrhi-index.html">Qt 5.12.0 Reference Documentation</a></td>
         </tr></table>
       </div>
     </div>
@@ -62,7 +62,6 @@
 <tr><td class="memItemLeft rightAlign topAlign"> quint64 </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#globalResourceId">globalResourceId</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#name">name</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#release">release</a></b>() = 0</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#releaseAndDestroy">releaseAndDestroy</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#releaseAndDestroyLater">releaseAndDestroyLater</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhiresource.html#setName">setName</a></b>(const QByteArray &amp;<i>name</i>)</td></tr>
 </table></div>
@@ -87,12 +86,6 @@
 <p>Base class for classes encapsulating native resource objects.</p>
 </div>
 <!-- @@@QRhiResource -->
-<div class="types">
-<h2>Member Type Documentation</h2>
-</div>
-<div class="prop">
-<h2>Property Documentation</h2>
-</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$QRhiResource[overload1]$$$QRhiResourceconstQRhiResource& -->
@@ -101,6 +94,8 @@
 <!-- $$$~QRhiResource[overload1]$$$~QRhiResource -->
 <h3 class="fn" id="dtor.QRhiResource"><a name="dtor.QRhiResource"></a><code>[virtual] </code>QRhiResource::<span class="name">~QRhiResource</span>()</h3>
 <p>Destructor.</p>
+<p>Releases (or requests deferred releasing of) the underlying native graphics resources, if there are any.</p>
+<p><b>Note: </b>Resources referenced by commands for the current frame should not be released until the frame is submitted by <a href="qrhi.html#endFrame">QRhi::endFrame</a>().</p><p><b>See also </b><a href="qrhiresource.html#release">release</a>().</p>
 <!-- @@@~QRhiResource -->
 <!-- $$$globalResourceId[overload1]$$$globalResourceId -->
 <h3 class="fn" id="globalResourceId"><a name="globalResourceId"></a><span class="type"><a href="../qtcore/qtglobal.html#quint64-typedef">quint64</a></span> QRhiResource::<span class="name">globalResourceId</span>() const</h3>
@@ -114,19 +109,15 @@
 <!-- @@@name -->
 <!-- $$$release[overload1]$$$release -->
 <h3 class="fn" id="release"><a name="release"></a><code>[pure virtual] </code><span class="type">void</span> QRhiResource::<span class="name">release</span>()</h3>
-<p>Releases (or requests defered releasing of) the underlying native graphics resources. Safe to call multiple times, subsequent invocations will be a no-op then.</p>
-<p>Once release() is called, the <a href="qrhiresource.html">QRhiResource</a> instance can be reused, by calling the appropriate <code>build()</code> function again, or destroyed.</p>
-<p><b>Note: </b>Resources referenced by commands for the current frame should not be released until the frame is submitted by <a href="qrhi.html#endFrame">QRhi::endFrame</a>().</p><p><b>See also </b><a href="qrhiresource.html#releaseAndDestroy">releaseAndDestroy</a>() and <a href="qrhiresource.html#releaseAndDestroyLater">releaseAndDestroyLater</a>().</p>
+<p>Releases (or requests deferred releasing of) the underlying native graphics resources. Safe to call multiple times, subsequent invocations will be a no-op then.</p>
+<p>Once release() is called, the <a href="qrhiresource.html">QRhiResource</a> instance can be reused, by calling <code>build()</code> again. That will then result in creating new native graphics resources underneath.</p>
+<p><b>Note: </b>Resources referenced by commands for the current frame should not be released until the frame is submitted by <a href="qrhi.html#endFrame">QRhi::endFrame</a>().</p><p>The <a href="qrhiresource.html">QRhiResource</a> destructor also performs the same task, so calling this function is not necessary before destroying a <a href="qrhiresource.html">QRhiResource</a>.</p>
+<p><b>See also </b><a href="qrhiresource.html#releaseAndDestroyLater">releaseAndDestroyLater</a>().</p>
 <!-- @@@release -->
-<!-- $$$releaseAndDestroy[overload1]$$$releaseAndDestroy -->
-<h3 class="fn" id="releaseAndDestroy"><a name="releaseAndDestroy"></a><span class="type">void</span> QRhiResource::<span class="name">releaseAndDestroy</span>()</h3>
-<p>Releases (or requests defered releasing of) the native graphics resources, if there are any, and destroys the <a href="qrhiresource.html">QRhiResource</a>. Equivalent to <code>r-&gt;release(); delete r;</code>.</p>
-<p><b>Note: </b>Resources referenced by commands for the current frame should not be released until the frame is submitted by <a href="qrhi.html#endFrame">QRhi::endFrame</a>().</p><p><b>See also </b><a href="qrhiresource.html#release">release</a>() and <a href="qrhiresource.html#releaseAndDestroyLater">releaseAndDestroyLater</a>().</p>
-<!-- @@@releaseAndDestroy -->
 <!-- $$$releaseAndDestroyLater[overload1]$$$releaseAndDestroyLater -->
 <h3 class="fn" id="releaseAndDestroyLater"><a name="releaseAndDestroyLater"></a><span class="type">void</span> QRhiResource::<span class="name">releaseAndDestroyLater</span>()</h3>
-<p>When called without a frame being recorded, this function is equivalent to <a href="qrhiresource.html#releaseAndDestroy">releaseAndDestroy</a>(). Between a <a href="qrhi.html#beginFrame">QRhi::beginFrame</a>() and <a href="qrhi.html#endFrame">QRhi::endFrame</a>() however the behavior is different: the <a href="qrhiresource.html">QRhiResource</a> will not be destroyed until the frame is submitted via <a href="qrhi.html#endFrame">QRhi::endFrame</a>(), thus satisfying the <a href="qrhi.html">QRhi</a> requirement of not altering <a href="qrhiresource.html">QRhiResource</a> objects that are referenced by the frame being recorded.</p>
-<p><b>See also </b><a href="qrhiresource.html#release">release</a>() and <a href="qrhiresource.html#releaseAndDestroy">releaseAndDestroy</a>().</p>
+<p>When called without a frame being recorded, this function is equivalent to deleting the object. Between a <a href="qrhi.html#beginFrame">QRhi::beginFrame</a>() and <a href="qrhi.html#endFrame">QRhi::endFrame</a>() however the behavior is different: the <a href="qrhiresource.html">QRhiResource</a> will not be destroyed until the frame is submitted via <a href="qrhi.html#endFrame">QRhi::endFrame</a>(), thus satisfying the <a href="qrhi.html">QRhi</a> requirement of not altering <a href="qrhiresource.html">QRhiResource</a> objects that are referenced by the frame being recorded.</p>
+<p><b>See also </b><a href="qrhiresource.html#release">release</a>().</p>
 <!-- @@@releaseAndDestroyLater -->
 <!-- $$$setName[overload1]$$$setNameconstQByteArray& -->
 <h3 class="fn" id="setName"><a name="setName"></a><span class="type">void</span> QRhiResource::<span class="name">setName</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>name</i>)</h3>
@@ -139,15 +130,6 @@
 <h3 class="fn" id="operator-eq"><a name="operator-eq"></a><code>[protected] </code><span class="type"><a href="qrhiresource.html#QRhiResource">QRhiResource</a></span> &amp;QRhiResource::<span class="name">operator=</span>(<i>const QRhiResource &amp;</i>)</h3>
 <p>Copy-assignment operator.</p><!-- @@@operator= -->
 </div>
-<div class="vars">
-<h2>Member Variable Documentation</h2>
-</div>
-<div class="relnonmem">
-<h2>Related Non-Members</h2>
-</div>
-<div class="macros">
-<h2>Macro Documentation</h2>
-</div>
         </div>
        </div>
    </div>
@@ -155,7 +137,7 @@
 </div>
 <div class="footer">
    <p>
-   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   <acronym title="Copyright">&copy;</acronym> 2019 The Qt Company Ltd.
    Documentation contributions included herein are the copyrights of
    their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
    of their respective owners. </p>

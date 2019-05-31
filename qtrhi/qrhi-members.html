@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- qrhi.cpp -->
-  <title>List of All Members for QRhi | RHI 5.12</title>
+  <title>List of All Members for QRhi | RHI 5.12.0</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -27,7 +27,7 @@
       <div class="navigationbar">
         <table><tr>
 <td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhi</td></tr></table><table class="buildversion"><tr>
-<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
+<td id="buildversion" width="100%" align="right"><a href="qtrhi-index.html">Qt 5.12.0 Reference Documentation</a></td>
         </tr></table>
       </div>
     </div>
@@ -41,6 +41,7 @@
 <tr><td class="topAlign"><ul>
 <li class="fn">enum <span class="name"><b><a href="qrhi.html#BeginFrameFlag-enum">BeginFrameFlag</a></b></span></li>
 <li class="fn">flags <span class="name"><b><a href="qrhi.html#BeginFrameFlag-enum">BeginFrameFlags</a></b></span></li>
+<li class="fn">typedef <span class="name"><b><a href="qrhi.html#CleanupCallback-typedef">CleanupCallback</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhi.html#EndFrameFlag-enum">EndFrameFlag</a></b></span></li>
 <li class="fn">flags <span class="name"><b><a href="qrhi.html#EndFrameFlag-enum">EndFrameFlags</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhi.html#Feature-enum">Feature</a></b></span></li>
@@ -50,17 +51,22 @@
 <li class="fn">enum <span class="name"><b><a href="qrhi.html#Implementation-enum">Implementation</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhi.html#ResourceLimit-enum">ResourceLimit</a></b></span></li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#dtor.QRhi">~QRhi</a></b></span>()</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#MAX_LAYERS-var">MAX_LAYERS</a></b></span> : const int</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#MAX_LEVELS-var">MAX_LEVELS</a></b></span> : const int</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#addCleanupCallback">addCleanupCallback</a></b></span>(const QRhi::CleanupCallback &amp;)</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#backend">backend</a></b></span>() const : QRhi::Implementation</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#beginFrame">beginFrame</a></b></span>(QRhiSwapChain *, QRhi::BeginFrameFlags ) : QRhi::FrameOpResult</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#beginOffscreenFrame">beginOffscreenFrame</a></b></span>(QRhiCommandBuffer **) : QRhi::FrameOpResult</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#clipSpaceCorrMatrix">clipSpaceCorrMatrix</a></b></span>() const : QMatrix4x4</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#create">create</a></b></span>(QRhi::Implementation , QRhiInitParams *, QRhi::Flags , QRhiNativeHandles *) : QRhi *</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#currentFrameSlot">currentFrameSlot</a></b></span>() const : int</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#endFrame">endFrame</a></b></span>(QRhiSwapChain *, QRhi::EndFrameFlags ) : QRhi::FrameOpResult</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#endOffscreenFrame">endOffscreenFrame</a></b></span>() : QRhi::FrameOpResult</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#finish">finish</a></b></span>() : QRhi::FrameOpResult</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#isClipDepthZeroToOne">isClipDepthZeroToOne</a></b></span>() const : bool</li>
-<li class="fn"><span class="name"><b><a href="qrhi.html#isFeatureSupported">isFeatureSupported</a></b></span>(QRhi::Feature ) const : bool</li>
 </ul></td><td class="topAlign"><ul>
+<li class="fn"><span class="name"><b><a href="qrhi.html#isFeatureSupported">isFeatureSupported</a></b></span>(QRhi::Feature ) const : bool</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#isRecordingFrame">isRecordingFrame</a></b></span>() const : bool</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#isTextureFormatSupported">isTextureFormatSupported</a></b></span>(QRhiTexture::Format , QRhiTexture::Flags ) const : bool</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#isYUpInFramebuffer">isYUpInFramebuffer</a></b></span>() const : bool</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#isYUpInNDC">isYUpInNDC</a></b></span>() const : bool</li>
@@ -77,6 +83,7 @@
 <li class="fn"><span class="name"><b><a href="qrhi.html#nextResourceUpdateBatch">nextResourceUpdateBatch</a></b></span>() : QRhiResourceUpdateBatch *</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#profiler">profiler</a></b></span>() : QRhiProfiler *</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#resourceLimit">resourceLimit</a></b></span>(QRhi::ResourceLimit ) const : int</li>
+<li class="fn"><span class="name"><b><a href="qrhi.html#runCleanup">runCleanup</a></b></span>()</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#sizeForMipLevel">sizeForMipLevel</a></b></span>(int , const QSize &amp;) const : QSize</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#supportedSampleCounts">supportedSampleCounts</a></b></span>() const : QVector&lt;int&gt;</li>
 <li class="fn"><span class="name"><b><a href="qrhi.html#thread">thread</a></b></span>() const : QThread *</li>
@@ -92,7 +99,7 @@
 </div>
 <div class="footer">
    <p>
-   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   <acronym title="Copyright">&copy;</acronym> 2019 The Qt Company Ltd.
    Documentation contributions included herein are the copyrights of
    their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
    of their respective owners. </p>

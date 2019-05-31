@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- qrhigles2.cpp -->
-  <title>QRhiGles2InitParams Class | RHI 5.12</title>
+  <title>QRhiGles2InitParams Class | RHI 5.12.0</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -27,7 +27,7 @@
       <div class="navigationbar">
         <table><tr>
 <td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiGles2InitParams</td></tr></table><table class="buildversion"><tr>
-<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
+<td id="buildversion" width="100%" align="right"><a href="qtrhi-index.html">Qt 5.12.0 Reference Documentation</a></td>
         </tr></table>
       </div>
     </div>
@@ -38,6 +38,7 @@
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
 <li class="level1"><a href="#public-variables">Public Variables</a></li>
 <li class="level1"><a href="#static-public-members">Static Public Members</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
@@ -54,16 +55,23 @@
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qrhiinitparams.html">QRhiInitParams</a></td></tr></table></div><ul>
 <li><a href="qrhigles2initparams-members.html">List of all members, including inherited members</a></li>
 </ul>
+<a name="public-functions"></a>
+<h2 id="public-functions">Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhigles2initparams.html#QRhiGles2InitParams">QRhiGles2InitParams</a></b>()</td></tr>
+</table></div>
 <a name="public-variables"></a>
 <h2 id="public-variables">Public Variables</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> QOffscreenSurface *</td><td class="memItemRight bottomAlign"><b><a href="qrhigles2initparams.html#fallbackSurface-var">fallbackSurface</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSurfaceFormat </td><td class="memItemRight bottomAlign"><b><a href="qrhigles2initparams.html#format-var">format</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QWindow *</td><td class="memItemRight bottomAlign"><b><a href="qrhigles2initparams.html#window-var">window</a></b></td></tr>
 </table></div>
 <a name="static-public-members"></a>
 <h2 id="static-public-members">Static Public Members</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> QOffscreenSurface *</td><td class="memItemRight bottomAlign"><b><a href="qrhigles2initparams.html#newFallbackSurface">newFallbackSurface</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSurfaceFormat </td><td class="memItemRight bottomAlign"><b><a href="qrhigles2initparams.html#adjustedFormat">adjustedFormat</a></b>(const QSurfaceFormat &amp;<i>format</i> = QSurfaceFormat::defaultFormat())</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QOffscreenSurface *</td><td class="memItemRight bottomAlign"><b><a href="qrhigles2initparams.html#newFallbackSurface">newFallbackSurface</a></b>(const QSurfaceFormat &amp;<i>format</i> = QSurfaceFormat::defaultFormat())</td></tr>
 </table></div>
 <a name="details"></a>
 <!-- $$$QRhiGles2InitParams-description -->
@@ -80,10 +88,10 @@
   rhi = QRhi::create(QRhi::OpenGLES2, &amp;params);
 
 </pre>
-<p>By default <a href="qrhi.html">QRhi</a> creates a <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a> on its own. The <a href="../qtgui/qsurfaceformat.html">QSurfaceFormat</a> for this context is based on what was set via QSurfaceFormat::setDefaultSurfaceFormat().</p>
-<p><b>Note: </b>The depth and stencil buffer sizes are set automatically to 24 and 8 when no size was explicitly set for these buffers in the default surface format.</p><p>This approach works well in most cases, included threaded scenarios, where there is a dedicated <a href="qrhi.html">QRhi</a> for each rendering thread. As there will be a <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a> for each <a href="qrhi.html">QRhi</a>, the OpenGL context requirements (a context can only be current on one thread) are satisfied. The implicitly created context is destroyed automatically together with the <a href="qrhi.html">QRhi</a>.</p>
-<p>A <a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a> has to be specified in <a href="qrhigles2initparams.html#fallbackSurface-var">fallbackSurface</a>. In order to prevent mistakes in threaded situations, this is never created automatically by the <a href="qrhi.html">QRhi</a> since, like <a href="../qtgui/qwindow.html">QWindow</a>, <a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a> can only be created on the gui/main thread.</p>
-<p>As a convenience, applications can use <a href="qrhigles2initparams.html#newFallbackSurface">newFallbackSurface</a>() which creates and returns a <a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a> that is compatible with the <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a> that is going to be created by the <a href="qrhi.html">QRhi</a> afterwards. Note that the ownership of the returned <a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a> is transfered to the caller and the <a href="qrhi.html">QRhi</a> will not destroy it.</p>
+<p>By default <a href="qrhi.html">QRhi</a> creates a <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a> on its own. This approach works well in most cases, included threaded scenarios, where there is a dedicated <a href="qrhi.html">QRhi</a> for each rendering thread. As there will be a <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a> for each <a href="qrhi.html">QRhi</a>, the OpenGL context requirements (a context can only be current on one thread) are satisfied. The implicitly created context is destroyed automatically together with the <a href="qrhi.html">QRhi</a>.</p>
+<p>The <a href="../qtgui/qsurfaceformat.html">QSurfaceFormat</a> for the context is specified in <a href="qrhigles2initparams.html#format-var">format</a>. The constructor sets this to <a href="../qtgui/qsurfaceformat.html#defaultFormat">QSurfaceFormat::defaultFormat</a>() so applications that use <a href="../qtgui/qsurfaceformat.html#setDefaultFormat">QSurfaceFormat::setDefaultFormat</a>() do not need to set the format again.</p>
+<p><b>Note: </b>The depth and stencil buffer sizes are set automatically to 24 and 8 when no size was explicitly set for these buffers in <a href="qrhigles2initparams.html#format-var">format</a>. As there are possible adjustments to <a href="qrhigles2initparams.html#format-var">format</a>, applications can use <a href="qrhigles2initparams.html#adjustedFormat">adjustedFormat</a>() to query the effective format that is passed to <a href="../qtgui/qopenglcontext.html#setFormat">QOpenGLContext::setFormat</a>() internally.</p><p>A <a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a> has to be specified in <a href="qrhigles2initparams.html#fallbackSurface-var">fallbackSurface</a>. In order to prevent mistakes in threaded situations, this is never created automatically by the <a href="qrhi.html">QRhi</a> since, like <a href="../qtgui/qwindow.html">QWindow</a>, <a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a> can only be created on the gui/main thread.</p>
+<p>As a convenience, applications can use <a href="qrhigles2initparams.html#newFallbackSurface">newFallbackSurface</a>() which creates and returns a <a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a> that is compatible with the <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a> that is going to be created by the <a href="qrhi.html">QRhi</a> afterwards. Note that the ownership of the returned <a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a> is transferred to the caller and the <a href="qrhi.html">QRhi</a> will not destroy it.</p>
 <p><b>Note: </b><a href="qrhiswapchain.html">QRhiSwapChain</a> can only target <a href="../qtgui/qwindow.html">QWindow</a> instances that have their surface type set to <a href="../qtgui/qsurface.html#SurfaceType-enum">QSurface::OpenGLSurface</a>.</p><p><b>Note: </b><a href="qrhigles2initparams.html#window-var">window</a> is optional. It is recommended to specify it whenever possible, in order to avoid problems on multi-adapter and multi-screen systems. When <a href="qrhigles2initparams.html#window-var">window</a> is not set, the very first <a href="../qtgui/qopenglcontext.html#makeCurrent">QOpenGLContext::makeCurrent</a>() happens with <a href="qrhigles2initparams.html#fallbackSurface-var">fallbackSurface</a> which may be an invisible window on some platforms (for example, Windows) and that may trigger unexpected problems in some cases.</p><a name="working-with-existing-opengl-contexts"></a>
 <h4 >Working with existing OpenGL contexts</h4>
 <p>When interoperating with another graphics engine, it may be necessary to get a <a href="qrhi.html">QRhi</a> instance that uses the same OpenGL context. This can be achieved by passing a pointer to a <a href="qrhigles2nativehandles.html">QRhiGles2NativeHandles</a> to <a href="qrhi.html#create">QRhi::create</a>(). The <a href="qrhigles2nativehandles.html#context-var">context</a> must be set to a non-null value.</p>
@@ -91,28 +99,22 @@
 <p>The <a href="qrhi.html">QRhi</a> does not take ownership of the <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a> passed in via <a href="qrhigles2nativehandles.html">QRhiGles2NativeHandles</a>.</p>
 </div>
 <!-- @@@QRhiGles2InitParams -->
-<div class="types">
-<h2>Member Type Documentation</h2>
-</div>
-<div class="prop">
-<h2>Property Documentation</h2>
-</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
-<!-- $$$newFallbackSurface[overload1]$$$newFallbackSurface -->
-<h3 class="fn" id="newFallbackSurface"><a name="newFallbackSurface"></a><code>[static] </code><span class="type"><a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a></span> *QRhiGles2InitParams::<span class="name">newFallbackSurface</span>()</h3>
+<!-- $$$QRhiGles2InitParams[overload1]$$$QRhiGles2InitParams -->
+<h3 class="fn" id="QRhiGles2InitParams"><a name="QRhiGles2InitParams"></a>QRhiGles2InitParams::<span class="name">QRhiGles2InitParams</span>()</h3>
+<p>Constructs a new <a href="qrhigles2initparams.html">QRhiGles2InitParams</a>.</p>
+<p><a href="qrhigles2initparams.html#format-var">format</a> is set to <a href="../qtgui/qsurfaceformat.html#defaultFormat">QSurfaceFormat::defaultFormat</a>().</p>
+<!-- @@@QRhiGles2InitParams -->
+<!-- $$$adjustedFormat[overload1]$$$adjustedFormatconstQSurfaceFormat& -->
+<h3 class="fn" id="adjustedFormat"><a name="adjustedFormat"></a><code>[static] </code><span class="type"><a href="../qtgui/qsurfaceformat.html">QSurfaceFormat</a></span> QRhiGles2InitParams::<span class="name">adjustedFormat</span>(const <span class="type"><a href="../qtgui/qsurfaceformat.html">QSurfaceFormat</a></span> &amp;<i>format</i> = QSurfaceFormat::defaultFormat())</h3>
+<p>Returns the <a href="../qtgui/qsurfaceformat.html">QSurfaceFormat</a> that will be set on the <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a> before calling <a href="../qtgui/qopenglcontext.html#create">QOpenGLContext::create</a>(). This format is based on <i>format</i>, but may be adjusted. Applicable only when <a href="qrhi.html">QRhi</a> creates the context. Applications are advised to set this format on their <a href="../qtgui/qwindow.html">QWindow</a> in order to avoid potential BAD_MATCH failures.</p>
+<!-- @@@adjustedFormat -->
+<!-- $$$newFallbackSurface[overload1]$$$newFallbackSurfaceconstQSurfaceFormat& -->
+<h3 class="fn" id="newFallbackSurface"><a name="newFallbackSurface"></a><code>[static] </code><span class="type"><a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a></span> *QRhiGles2InitParams::<span class="name">newFallbackSurface</span>(const <span class="type"><a href="../qtgui/qsurfaceformat.html">QSurfaceFormat</a></span> &amp;<i>format</i> = QSurfaceFormat::defaultFormat())</h3>
 <p>Returns a new <a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a> that can be used with a <a href="qrhi.html">QRhi</a> by passing it via a <a href="qrhigles2initparams.html">QRhiGles2InitParams</a>.</p>
-<p>The <a href="../qtgui/qoffscreensurface.html#format">format</a> is adjusted as appropriate in order to avoid having problems afterwards due to an incompatible context and surface.</p>
+<p><i>format</i> is adjusted as appropriate in order to avoid having problems afterwards due to an incompatible context and surface.</p>
 <p><b>Note: </b>This function must only be called on the gui/main thread.</p><p><b>Note: </b>It is the application's responsibility to destroy the returned <a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a> on the gui/main thread once the associated <a href="qrhi.html">QRhi</a> has been destroyed. The <a href="qrhi.html">QRhi</a> will not destroy the <a href="../qtgui/qoffscreensurface.html">QOffscreenSurface</a>.</p><!-- @@@newFallbackSurface -->
-</div>
-<div class="vars">
-<h2>Member Variable Documentation</h2>
-</div>
-<div class="relnonmem">
-<h2>Related Non-Members</h2>
-</div>
-<div class="macros">
-<h2>Macro Documentation</h2>
 </div>
         </div>
        </div>
@@ -121,7 +123,7 @@
 </div>
 <div class="footer">
    <p>
-   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   <acronym title="Copyright">&copy;</acronym> 2019 The Qt Company Ltd.
    Documentation contributions included herein are the copyrights of
    their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
    of their respective owners. </p>

@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- qrhishaderdescription.cpp -->
-  <title>QRhiShaderDescription Class | RHI 5.12</title>
+  <title>QRhiShaderDescription Class | RHI 5.12.0</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -27,7 +27,7 @@
       <div class="navigationbar">
         <table><tr>
 <td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiShaderDescription</td></tr></table><table class="buildversion"><tr>
-<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
+<td id="buildversion" width="100%" align="right"><a href="qtrhi-index.html">Qt 5.12.0 Reference Documentation</a></td>
         </tr></table>
       </div>
     </div>
@@ -52,7 +52,7 @@
 <!-- @@@QRhiShaderDescription -->
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiShaderDescription&gt;</span>
-</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Since:</td><td class="memItemRight bottomAlign">  Qt 5.14</td></tr></table></div><ul>
 <li><a href="qrhishaderdescription-members.html">List of all members, including inherited members</a></li>
 </ul>
 <a name="public-types"></a>
@@ -96,24 +96,7 @@
 <p>Take the following vertex shader:</p>
 <pre class="cpp">
 
-  #version 440
 
-  layout(location = 0) in vec4 position;
-  layout(location = 1) in vec3 color;
-  layout(location = 0) out vec3 v_color;
-
-  layout(std140, binding = 0) uniform buf {
-      mat4 mvp;
-      float opacity;
-  } ubuf;
-
-  out gl_PerVertex { vec4 gl_Position; };
-
-  void main()
-  {
-      v_color = color;
-      gl_Position = ubuf.mvp * position;
-  }
 
 </pre>
 <p>This shader has two inputs: <code>position</code> at location 0 with a type of <code>vec4</code>, and <code>color</code> at location 1 with a type of <code>vec3</code>. It has one output: <code>v_color</code>, although this is typically not interesting for applications. What is more important, there is a uniform block at binding 0 with a size of 68 bytes and two members, a 4x4 matrix named <code>mvp</code> at offset 0, and a float <code>opacity</code> at offset 64.</p>
@@ -230,9 +213,6 @@
 </table></div>
 <!-- @@@VarType -->
 </div>
-<div class="prop">
-<h2>Property Documentation</h2>
-</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$QRhiShaderDescription[overload1]$$$QRhiShaderDescription -->
@@ -296,15 +276,6 @@
 <p>Returns the list of uniform blocks.</p>
 <!-- @@@uniformBlocks -->
 </div>
-<div class="vars">
-<h2>Member Variable Documentation</h2>
-</div>
-<div class="relnonmem">
-<h2>Related Non-Members</h2>
-</div>
-<div class="macros">
-<h2>Macro Documentation</h2>
-</div>
         </div>
        </div>
    </div>
@@ -312,7 +283,7 @@
 </div>
 <div class="footer">
    <p>
-   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
+   <acronym title="Copyright">&copy;</acronym> 2019 The Qt Company Ltd.
    Documentation contributions included herein are the copyrights of
    their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
    of their respective owners. </p>

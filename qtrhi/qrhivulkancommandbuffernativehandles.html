@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- qrhishaderdescription.cpp -->
-  <title>PushConstantBlock Class | RHI 5.12.0</title>
+<!-- qrhivulkan.cpp -->
+  <title>QRhiVulkanCommandBufferNativeHandles Class | RHI 5.12.0</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -26,7 +26,7 @@
     <div class="main-rounded">
       <div class="navigationbar">
         <table><tr>
-<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >PushConstantBlock</td></tr></table><table class="buildversion"><tr>
+<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiVulkanCommandBufferNativeHandles</td></tr></table><table class="buildversion"><tr>
 <td id="buildversion" width="100%" align="right"><a href="qtrhi-index.html">Qt 5.12.0 Reference Documentation</a></td>
         </tr></table>
       </div>
@@ -43,30 +43,27 @@
 </ul>
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
-<h1 class="title">PushConstantBlock Class</h1>
-<span class="small-subtitle">(<a href="qrhishaderdescription-pushconstantblock.html">QRhiShaderDescription::PushConstantBlock</a>)<br/></span>
-<!-- $$$PushConstantBlock-brief -->
-<p>Describes a push constant block. <a href="#details">More...</a></p>
-<!-- @@@PushConstantBlock -->
+<h1 class="title">QRhiVulkanCommandBufferNativeHandles Class</h1>
+<!-- $$$QRhiVulkanCommandBufferNativeHandles-brief -->
+<p>Holds the Vulkan command buffer object that is backing a <a href="qrhicommandbuffer.html">QRhiCommandBuffer</a>. <a href="#details">More...</a></p>
+<!-- @@@QRhiVulkanCommandBufferNativeHandles -->
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;PushConstantBlock&gt;</span>
-</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
-<li><a href="qrhishaderdescription-pushconstantblock-members.html">List of all members, including inherited members</a></li>
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiVulkanCommandBufferNativeHandles&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qrhinativehandles.html">QRhiNativeHandles</a></td></tr></table></div><ul>
+<li><a href="qrhivulkancommandbuffernativehandles-members.html">List of all members, including inherited members</a></li>
 </ul>
 <a name="public-variables"></a>
 <h2 id="public-variables">Public Variables</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiShaderDescription::BlockVariable&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderdescription-pushconstantblock.html#members-var">members</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderdescription-pushconstantblock.html#name-var">name</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhishaderdescription-pushconstantblock.html#size-var">size</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhivulkancommandbuffernativehandles.html#commandBuffer-var">commandBuffer</a></b></td></tr>
 </table></div>
 <a name="details"></a>
-<!-- $$$PushConstantBlock-description -->
+<!-- $$$QRhiVulkanCommandBufferNativeHandles-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>Describes a push constant block.</p>
-</div>
-<!-- @@@PushConstantBlock -->
+<p>Holds the Vulkan command buffer object that is backing a <a href="qrhicommandbuffer.html">QRhiCommandBuffer</a>.</p>
+<p><b>Note: </b>The Vulkan command buffer object is only guaranteed to be valid, and in recording state, while recording a frame. That is, between a <a href="qrhi.html#beginFrame">beginFrame()</a> - <a href="qrhi.html#endFrame">endFrame()</a> or <a href="qrhi.html#beginOffscreenFrame">beginOffscreenFrame()</a> - endOffscreenFrame() pair.</p></div>
+<!-- @@@QRhiVulkanCommandBufferNativeHandles -->
         </div>
        </div>
    </div>

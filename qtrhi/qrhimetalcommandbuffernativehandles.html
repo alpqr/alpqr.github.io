@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- qrhid3d11.cpp -->
-  <title>QRhiD3D11TextureNativeHandles Class | RHI 5.12.0</title>
+<!-- qrhimetal.mm -->
+  <title>QRhiMetalCommandBufferNativeHandles Class | RHI 5.12.0</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -26,7 +26,7 @@
     <div class="main-rounded">
       <div class="navigationbar">
         <table><tr>
-<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiD3D11TextureNativeHandles</td></tr></table><table class="buildversion"><tr>
+<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiMetalCommandBufferNativeHandles</td></tr></table><table class="buildversion"><tr>
 <td id="buildversion" width="100%" align="right"><a href="qtrhi-index.html">Qt 5.12.0 Reference Documentation</a></td>
         </tr></table>
       </div>
@@ -43,27 +43,28 @@
 </ul>
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
-<h1 class="title">QRhiD3D11TextureNativeHandles Class</h1>
-<!-- $$$QRhiD3D11TextureNativeHandles-brief -->
-<p>Holds the D3D texture object that is backing a <a href="qrhitexture.html">QRhiTexture</a> instance. <a href="#details">More...</a></p>
-<!-- @@@QRhiD3D11TextureNativeHandles -->
+<h1 class="title">QRhiMetalCommandBufferNativeHandles Class</h1>
+<!-- $$$QRhiMetalCommandBufferNativeHandles-brief -->
+<p>Holds the MTLCommandBuffer and MTLRenderCommandEncoder objects that are backing a <a href="qrhicommandbuffer.html">QRhiCommandBuffer</a>. <a href="#details">More...</a></p>
+<!-- @@@QRhiMetalCommandBufferNativeHandles -->
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiD3D11TextureNativeHandles&gt;</span>
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiMetalCommandBufferNativeHandles&gt;</span>
 </td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qrhinativehandles.html">QRhiNativeHandles</a></td></tr></table></div><ul>
-<li><a href="qrhid3d11texturenativehandles-members.html">List of all members, including inherited members</a></li>
+<li><a href="qrhimetalcommandbuffernativehandles-members.html">List of all members, including inherited members</a></li>
 </ul>
 <a name="public-variables"></a>
 <h2 id="public-variables">Public Variables</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhid3d11texturenativehandles.html#texture-var">texture</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhimetalcommandbuffernativehandles.html#commandBuffer-var">commandBuffer</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhimetalcommandbuffernativehandles.html#encoder-var">encoder</a></b></td></tr>
 </table></div>
 <a name="details"></a>
-<!-- $$$QRhiD3D11TextureNativeHandles-description -->
+<!-- $$$QRhiMetalCommandBufferNativeHandles-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>Holds the D3D texture object that is backing a <a href="qrhitexture.html">QRhiTexture</a> instance.</p>
-<p><b>Note: </b>The class uses <code>void *</code> as the type since including the COM-based <code>d3d11.h</code> headers is not acceptable here. The actual type is <code>ID3D11Texture2D *</code>.</p></div>
-<!-- @@@QRhiD3D11TextureNativeHandles -->
+<p>Holds the MTLCommandBuffer and MTLRenderCommandEncoder objects that are backing a <a href="qrhicommandbuffer.html">QRhiCommandBuffer</a>.</p>
+<p><b>Note: </b>The command buffer object is only guaranteed to be valid while recording a frame, that is, between a <a href="qrhi.html#beginFrame">beginFrame()</a> - <a href="qrhi.html#endFrame">endFrame()</a> or <a href="qrhi.html#beginOffscreenFrame">beginOffscreenFrame()</a> - endOffscreenFrame() pair.</p><p><b>Note: </b>The command encoder is only valid while recording a pass, that is, between <a href="qrhicommandbuffer.html#beginPass">QRhiCommandBuffer::beginPass</a>() - <a href="qrhicommandbuffer.html#endPass">QRhiCommandBuffer::endPass</a>().</p></div>
+<!-- @@@QRhiMetalCommandBufferNativeHandles -->
         </div>
        </div>
    </div>
