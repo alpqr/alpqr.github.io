@@ -139,7 +139,7 @@
 <li>Vulkan 1.0, optionally with some extensions that are part of Vulkan 1.1</li>
 <li>Null - A &quot;dummy&quot; backend that issues no graphics calls at all.</li>
 </ul>
-<p>In order to allow shader code to be written once in Qt applications and libraries, all shaders are expected to be written in a single language which is then compiled into SPIR-V. Versions for various shading language are then generated from that, together with reflection information (inputs, outputs, shader resources). This is then packed into easily and efficiently serializable QShader instances. The compilers and tools to generate such shaders are not part of <a href="qrhi.html">QRhi</a>, but the core classes for using such shaders, QShader and <a href="qshaderdescription.html">QShaderDescription</a>, are.</p>
+<p>In order to allow shader code to be written once in Qt applications and libraries, all shaders are expected to be written in a single language which is then compiled into SPIR-V. Versions for various shading language are then generated from that, together with reflection information (inputs, outputs, shader resources). This is then packed into easily and efficiently serializable <a href="qshader.html">QShader</a> instances. The compilers and tools to generate such shaders are not part of <a href="qrhi.html">QRhi</a>, but the core classes for using such shaders, <a href="qshader.html">QShader</a> and <a href="qshaderdescription.html">QShaderDescription</a>, are.</p>
 <a name="design-fundamentals"></a>
 <h4 >Design Fundamentals</h4>
 <p>A <a href="qrhi.html">QRhi</a> cannot be instantiated directly. Instead, use the <a href="qrhi.html#create">create</a>() function. Delete the <a href="qrhi.html">QRhi</a> instance normally to release the graphics device.</p>
