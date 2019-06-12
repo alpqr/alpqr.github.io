@@ -94,7 +94,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setRenderPassDescriptor">setRenderPassDescriptor</a></b>(QRhiRenderPassDescriptor *<i>desc</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setSampleCount">setSampleCount</a></b>(int <i>s</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setShaderResourceBindings">setShaderResourceBindings</a></b>(QRhiShaderResourceBindings *<i>srb</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setShaderStages">setShaderStages</a></b>(const QVector&lt;QRhiGraphicsShaderStage&gt; &amp;<i>stages</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setShaderStages">setShaderStages</a></b>(const QVector&lt;QRhiShaderStage&gt; &amp;<i>stages</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setStencilBack">setStencilBack</a></b>(const QRhiGraphicsPipeline::StencilOpState &amp;<i>state</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setStencilFront">setStencilFront</a></b>(const QRhiGraphicsPipeline::StencilOpState &amp;<i>state</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setStencilReadMask">setStencilReadMask</a></b>(quint32 <i>mask</i>)</td></tr>
@@ -104,7 +104,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setTopology">setTopology</a></b>(QRhiGraphicsPipeline::Topology <i>t</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#setVertexInputLayout">setVertexInputLayout</a></b>(const QRhiVertexInputLayout &amp;<i>layout</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBindings *</td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#shaderResourceBindings">shaderResourceBindings</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiGraphicsShaderStage&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#shaderStages">shaderStages</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiShaderStage&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#shaderStages">shaderStages</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::StencilOpState </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#stencilBack">stencilBack</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::StencilOpState </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#stencilFront">stencilFront</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> quint32 </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#stencilReadMask">stencilReadMask</a></b>() const</td></tr>
@@ -133,7 +133,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderPassDescriptor *</td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_renderPassDesc-var">m_renderPassDesc</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_sampleCount-var">m_sampleCount</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderResourceBindings *</td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_shaderResourceBindings-var">m_shaderResourceBindings</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiGraphicsShaderStage&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_shaderStages-var">m_shaderStages</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QRhiShaderStage&gt; </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_shaderStages-var">m_shaderStages</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::StencilOpState </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_stencilBack-var">m_stencilBack</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline::StencilOpState </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_stencilFront-var">m_stencilFront</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> quint32 </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicspipeline.html#m_stencilReadMask-var">m_stencilReadMask</a></b></td></tr>
@@ -359,8 +359,8 @@
 <h3 class="fn" id="setShaderResourceBindings"><a name="setShaderResourceBindings"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setShaderResourceBindings</span>(<span class="type"><a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a></span> *<i>srb</i>)</h3>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#shaderResourceBindings">shaderResourceBindings</a>().</p>
 <!-- @@@setShaderResourceBindings -->
-<!-- $$$setShaderStages[overload1]$$$setShaderStagesconstQVector<QRhiGraphicsShaderStage>& -->
-<h3 class="fn" id="setShaderStages"><a name="setShaderStages"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setShaderStages</span>(const <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhigraphicsshaderstage.html">QRhiGraphicsShaderStage</a></span>&gt; &amp;<i>stages</i>)</h3>
+<!-- $$$setShaderStages[overload1]$$$setShaderStagesconstQVector<QRhiShaderStage>& -->
+<h3 class="fn" id="setShaderStages"><a name="setShaderStages"></a><span class="type">void</span> QRhiGraphicsPipeline::<span class="name">setShaderStages</span>(const <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhishaderstage.html">QRhiShaderStage</a></span>&gt; &amp;<i>stages</i>)</h3>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#shaderStages">shaderStages</a>().</p>
 <!-- @@@setShaderStages -->
 <!-- $$$setStencilBack[overload1]$$$setStencilBackconstQRhiGraphicsPipeline::StencilOpState& -->
@@ -402,7 +402,7 @@
 <p><b>See also </b><a href="qrhigraphicspipeline.html#setShaderResourceBindings">setShaderResourceBindings</a>().</p>
 <!-- @@@shaderResourceBindings -->
 <!-- $$$shaderStages[overload1]$$$shaderStages -->
-<h3 class="fn" id="shaderStages"><a name="shaderStages"></a><span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhigraphicsshaderstage.html">QRhiGraphicsShaderStage</a></span>&gt; QRhiGraphicsPipeline::<span class="name">shaderStages</span>() const</h3>
+<h3 class="fn" id="shaderStages"><a name="shaderStages"></a><span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type"><a href="qrhishaderstage.html">QRhiShaderStage</a></span>&gt; QRhiGraphicsPipeline::<span class="name">shaderStages</span>() const</h3>
 <p><b>See also </b><a href="qrhigraphicspipeline.html#setShaderStages">setShaderStages</a>().</p>
 <!-- @@@shaderStages -->
 <!-- $$$stencilBack[overload1]$$$stencilBack -->

@@ -26,6 +26,9 @@
                     <section ref="qrhicommandbuffer.html" title="QRhiCommandBuffer Class Reference">
                         <section ref="qrhicommandbuffer-members.html" title="List of all members"/>
                     </section>
+                    <section ref="qrhicomputepipeline.html" title="QRhiComputePipeline Class Reference">
+                        <section ref="qrhicomputepipeline-members.html" title="List of all members"/>
+                    </section>
                     <section ref="qrhid3d11initparams.html" title="QRhiD3D11InitParams Class Reference">
                         <section ref="qrhid3d11initparams-members.html" title="List of all members"/>
                     </section>
@@ -55,9 +58,6 @@
                     </section>
                     <section ref="qrhigraphicspipeline-targetblend.html" title="QRhiGraphicsPipeline::TargetBlend Class Reference">
                         <section ref="qrhigraphicspipeline-targetblend-members.html" title="List of all members"/>
-                    </section>
-                    <section ref="qrhigraphicsshaderstage.html" title="QRhiGraphicsShaderStage Class Reference">
-                        <section ref="qrhigraphicsshaderstage-members.html" title="List of all members"/>
                     </section>
                     <section ref="qrhiinitparams.html" title="QRhiInitParams Class Reference"/>
                     <section ref="qrhimetalcommandbuffernativehandles.html" title="QRhiMetalCommandBufferNativeHandles Class Reference">
@@ -123,6 +123,9 @@
                     </section>
                     <section ref="qrhishaderresourcebindings.html" title="QRhiShaderResourceBindings Class Reference">
                         <section ref="qrhishaderresourcebindings-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qrhishaderstage.html" title="QRhiShaderStage Class Reference">
+                        <section ref="qrhishaderstage-members.html" title="List of all members"/>
                     </section>
                     <section ref="qrhiswapchain.html" title="QRhiSwapChain Class Reference">
                         <section ref="qrhiswapchain-members.html" title="List of all members"/>
@@ -275,6 +278,7 @@
             <keyword name="QRhiCommandBuffer::IndexUInt16" id="QRhiCommandBuffer::IndexUInt16" ref="qrhicommandbuffer.html#IndexFormat-enum"/>
             <keyword name="QRhiCommandBuffer::IndexUInt32" id="QRhiCommandBuffer::IndexUInt32" ref="qrhicommandbuffer.html#IndexFormat-enum"/>
             <keyword name="QRhiCommandBuffer::VertexInput" id="QRhiCommandBuffer::VertexInput" ref="qrhicommandbuffer.html#VertexInput-typedef"/>
+            <keyword name="QRhiComputePipeline" id="QRhiComputePipeline" ref="qrhicomputepipeline.html"/>
             <keyword name="QRhiD3D11InitParams" id="QRhiD3D11InitParams" ref="qrhid3d11initparams.html"/>
             <keyword name="QRhiD3D11NativeHandles" id="QRhiD3D11NativeHandles" ref="qrhid3d11nativehandles.html"/>
             <keyword name="QRhiD3D11TextureNativeHandles" id="QRhiD3D11TextureNativeHandles" ref="qrhid3d11texturenativehandles.html"/>
@@ -351,11 +355,6 @@
             <keyword name="QRhiGraphicsPipeline::UsesScissor" id="QRhiGraphicsPipeline::UsesScissor" ref="qrhigraphicspipeline.html#Flag-enum"/>
             <keyword name="QRhiGraphicsPipeline::UsesStencilRef" id="QRhiGraphicsPipeline::UsesStencilRef" ref="qrhigraphicspipeline.html#Flag-enum"/>
             <keyword name="QRhiGraphicsPipeline::Zero" id="QRhiGraphicsPipeline::Zero" ref="qrhigraphicspipeline.html#BlendFactor-enum"/>
-            <keyword name="QRhiGraphicsShaderStage" id="QRhiGraphicsShaderStage" ref="qrhigraphicsshaderstage.html"/>
-            <keyword name="QRhiGraphicsShaderStage::Compute" id="QRhiGraphicsShaderStage::Compute" ref="qrhigraphicsshaderstage.html#Type-enum"/>
-            <keyword name="QRhiGraphicsShaderStage::Fragment" id="QRhiGraphicsShaderStage::Fragment" ref="qrhigraphicsshaderstage.html#Type-enum"/>
-            <keyword name="QRhiGraphicsShaderStage::Type" id="QRhiGraphicsShaderStage::Type" ref="qrhigraphicsshaderstage.html#Type-enum"/>
-            <keyword name="QRhiGraphicsShaderStage::Vertex" id="QRhiGraphicsShaderStage::Vertex" ref="qrhigraphicsshaderstage.html#Type-enum"/>
             <keyword name="QRhiInitParams" id="QRhiInitParams" ref="qrhiinitparams.html"/>
             <keyword name="QRhiMetalCommandBufferNativeHandles" id="QRhiMetalCommandBufferNativeHandles" ref="qrhimetalcommandbuffernativehandles.html"/>
             <keyword name="QRhiMetalInitParams" id="QRhiMetalInitParams" ref="qrhimetalinitparams.html"/>
@@ -448,6 +447,11 @@
             <keyword name="QRhiShaderResourceBinding::UniformBuffer" id="QRhiShaderResourceBinding::UniformBuffer" ref="qrhishaderresourcebinding.html#Type-enum"/>
             <keyword name="QRhiShaderResourceBinding::VertexStage" id="QRhiShaderResourceBinding::VertexStage" ref="qrhishaderresourcebinding.html#StageFlag-enum"/>
             <keyword name="QRhiShaderResourceBindings" id="QRhiShaderResourceBindings" ref="qrhishaderresourcebindings.html"/>
+            <keyword name="QRhiShaderStage" id="QRhiShaderStage" ref="qrhishaderstage.html"/>
+            <keyword name="QRhiShaderStage::Compute" id="QRhiShaderStage::Compute" ref="qrhishaderstage.html#Type-enum"/>
+            <keyword name="QRhiShaderStage::Fragment" id="QRhiShaderStage::Fragment" ref="qrhishaderstage.html#Type-enum"/>
+            <keyword name="QRhiShaderStage::Type" id="QRhiShaderStage::Type" ref="qrhishaderstage.html#Type-enum"/>
+            <keyword name="QRhiShaderStage::Vertex" id="QRhiShaderStage::Vertex" ref="qrhishaderstage.html#Type-enum"/>
             <keyword name="QRhiSwapChain" id="QRhiSwapChain" ref="qrhiswapchain.html"/>
             <keyword name="QRhiSwapChain::Flag" id="QRhiSwapChain::Flag" ref="qrhiswapchain.html#Flag-enum"/>
             <keyword name="QRhiSwapChain::Flags" id="QRhiSwapChain::Flags" ref="qrhiswapchain.html#Flag-enum"/>
@@ -708,6 +712,7 @@
             <keyword name="bufferStore" id="QRhiShaderResourceBinding::bufferStore" ref="qrhishaderresourcebinding.html#bufferStore"/>
             <keyword name="bufferStore" id="QRhiShaderResourceBinding::bufferStore" ref="qrhishaderresourcebinding.html#bufferStore-1"/>
             <keyword name="build" id="QRhiBuffer::build" ref="qrhibuffer.html#build"/>
+            <keyword name="build" id="QRhiComputePipeline::build" ref="qrhicomputepipeline.html#build"/>
             <keyword name="build" id="QRhiGraphicsPipeline::build" ref="qrhigraphicspipeline.html#build"/>
             <keyword name="build" id="QRhiRenderBuffer::build" ref="qrhirenderbuffer.html#build"/>
             <keyword name="build" id="QRhiSampler::build" ref="qrhisampler.html#build"/>
@@ -868,7 +873,9 @@
             <keyword name="m_sampleCount" id="QRhiRenderBuffer::m_sampleCount" ref="qrhirenderbuffer.html#m_sampleCount-var"/>
             <keyword name="m_sampleCount" id="QRhiSwapChain::m_sampleCount" ref="qrhiswapchain.html#m_sampleCount-var"/>
             <keyword name="m_sampleCount" id="QRhiTexture::m_sampleCount" ref="qrhitexture.html#m_sampleCount-var"/>
+            <keyword name="m_shaderResourceBindings" id="QRhiComputePipeline::m_shaderResourceBindings" ref="qrhicomputepipeline.html#m_shaderResourceBindings-var"/>
             <keyword name="m_shaderResourceBindings" id="QRhiGraphicsPipeline::m_shaderResourceBindings" ref="qrhigraphicspipeline.html#m_shaderResourceBindings-var"/>
+            <keyword name="m_shaderStage" id="QRhiComputePipeline::m_shaderStage" ref="qrhicomputepipeline.html#m_shaderStage-var"/>
             <keyword name="m_shaderStages" id="QRhiGraphicsPipeline::m_shaderStages" ref="qrhigraphicspipeline.html#m_shaderStages-var"/>
             <keyword name="m_size" id="QRhiBuffer::m_size" ref="qrhibuffer.html#m_size-var"/>
             <keyword name="m_stencilBack" id="QRhiGraphicsPipeline::m_stencilBack" ref="qrhigraphicspipeline.html#m_stencilBack-var"/>
@@ -924,9 +931,9 @@
             <keyword name="opAlpha" id="TargetBlend::opAlpha" ref="qrhigraphicspipeline-targetblend.html#opAlpha-var"/>
             <keyword name="opColor" id="TargetBlend::opColor" ref="qrhigraphicspipeline-targetblend.html#opColor-var"/>
             <keyword name="operator!=" id="operator!=" ref="qrhidepthstencilclearvalue.html#operator-not-eq"/>
-            <keyword name="operator!=" id="operator!=" ref="qrhigraphicsshaderstage.html#operator-not-eq"/>
             <keyword name="operator!=" id="operator!=" ref="qrhiscissor.html#operator-not-eq"/>
             <keyword name="operator!=" id="operator!=" ref="qrhishaderresourcebinding.html#operator-not-eq"/>
+            <keyword name="operator!=" id="operator!=" ref="qrhishaderstage.html#operator-not-eq"/>
             <keyword name="operator!=" id="operator!=" ref="qrhivertexinputattribute.html#operator-not-eq"/>
             <keyword name="operator!=" id="operator!=" ref="qrhivertexinputbinding.html#operator-not-eq"/>
             <keyword name="operator!=" id="operator!=" ref="qrhivertexinputlayout.html#operator-not-eq"/>
@@ -937,9 +944,9 @@
             <keyword name="operator!=" id="operator!=" ref="qshaderversion.html#operator-not-eq"/>
             <keyword name="operator=" id="QRhiResource::operator=" ref="qrhiresource.html#operator-eq"/>
             <keyword name="operator==" id="operator==" ref="qrhidepthstencilclearvalue.html#operator-eq-eq"/>
-            <keyword name="operator==" id="operator==" ref="qrhigraphicsshaderstage.html#operator-eq-eq"/>
             <keyword name="operator==" id="operator==" ref="qrhiscissor.html#operator-eq-eq"/>
             <keyword name="operator==" id="operator==" ref="qrhishaderresourcebinding.html#operator-eq-eq"/>
+            <keyword name="operator==" id="operator==" ref="qrhishaderstage.html#operator-eq-eq"/>
             <keyword name="operator==" id="operator==" ref="qrhivertexinputattribute.html#operator-eq-eq"/>
             <keyword name="operator==" id="operator==" ref="qrhivertexinputbinding.html#operator-eq-eq"/>
             <keyword name="operator==" id="operator==" ref="qrhivertexinputlayout.html#operator-eq-eq"/>
@@ -959,9 +966,9 @@
             <keyword name="profiler" id="QRhi::profiler" ref="qrhi.html#profiler"/>
             <keyword name="pushConstantBlocks" id="QShaderDescription::pushConstantBlocks" ref="qshaderdescription.html#pushConstantBlocks"/>
             <keyword name="qHash" id="qHash" ref="qrhidepthstencilclearvalue.html#qHash"/>
-            <keyword name="qHash" id="qHash" ref="qrhigraphicsshaderstage.html#qHash"/>
             <keyword name="qHash" id="qHash" ref="qrhiscissor.html#qHash"/>
             <keyword name="qHash" id="qHash" ref="qrhishaderresourcebinding.html#qHash"/>
+            <keyword name="qHash" id="qHash" ref="qrhishaderstage.html#qHash"/>
             <keyword name="qHash" id="qHash" ref="qrhivertexinputattribute.html#qHash"/>
             <keyword name="qHash" id="qHash" ref="qrhivertexinputbinding.html#qHash"/>
             <keyword name="qHash" id="qHash" ref="qrhivertexinputlayout.html#qHash"/>
@@ -983,6 +990,7 @@
             <keyword name="resourceLimit" id="QRhi::resourceLimit" ref="qrhi.html#resourceLimit"/>
             <keyword name="resourceType" id="QRhiBuffer::resourceType" ref="qrhibuffer.html#resourceType"/>
             <keyword name="resourceType" id="QRhiCommandBuffer::resourceType" ref="qrhicommandbuffer.html#resourceType"/>
+            <keyword name="resourceType" id="QRhiComputePipeline::resourceType" ref="qrhicomputepipeline.html#resourceType"/>
             <keyword name="resourceType" id="QRhiGraphicsPipeline::resourceType" ref="qrhigraphicspipeline.html#resourceType"/>
             <keyword name="resourceType" id="QRhiRenderBuffer::resourceType" ref="qrhirenderbuffer.html#resourceType"/>
             <keyword name="resourceType" id="QRhiRenderPassDescriptor::resourceType" ref="qrhirenderpassdescriptor.html#resourceType"/>
@@ -1076,13 +1084,15 @@
             <keyword name="setSampleCount" id="QRhiTexture::setSampleCount" ref="qrhitexture.html#setSampleCount"/>
             <keyword name="setScissor" id="QRhiCommandBuffer::setScissor" ref="qrhicommandbuffer.html#setScissor"/>
             <keyword name="setScissor" id="QRhiScissor::setScissor" ref="qrhiscissor.html#setScissor"/>
-            <keyword name="setShader" id="QRhiGraphicsShaderStage::setShader" ref="qrhigraphicsshaderstage.html#setShader"/>
+            <keyword name="setShader" id="QRhiShaderStage::setShader" ref="qrhishaderstage.html#setShader"/>
             <keyword name="setShader" id="QShader::setShader" ref="qshader.html#setShader"/>
             <keyword name="setShader" id="QShaderCode::setShader" ref="qshadercode.html#setShader"/>
+            <keyword name="setShaderResourceBindings" id="QRhiComputePipeline::setShaderResourceBindings" ref="qrhicomputepipeline.html#setShaderResourceBindings"/>
             <keyword name="setShaderResourceBindings" id="QRhiGraphicsPipeline::setShaderResourceBindings" ref="qrhigraphicspipeline.html#setShaderResourceBindings"/>
             <keyword name="setShaderResources" id="QRhiCommandBuffer::setShaderResources" ref="qrhicommandbuffer.html#setShaderResources"/>
+            <keyword name="setShaderStage" id="QRhiComputePipeline::setShaderStage" ref="qrhicomputepipeline.html#setShaderStage"/>
             <keyword name="setShaderStages" id="QRhiGraphicsPipeline::setShaderStages" ref="qrhigraphicspipeline.html#setShaderStages"/>
-            <keyword name="setShaderVariant" id="QRhiGraphicsShaderStage::setShaderVariant" ref="qrhigraphicsshaderstage.html#setShaderVariant"/>
+            <keyword name="setShaderVariant" id="QRhiShaderStage::setShaderVariant" ref="qrhishaderstage.html#setShaderVariant"/>
             <keyword name="setSize" id="QRhiBuffer::setSize" ref="qrhibuffer.html#setSize"/>
             <keyword name="setSource" id="QShaderKey::setSource" ref="qshaderkey.html#setSource"/>
             <keyword name="setSourceLayer" id="QRhiTextureCopyDescription::setSourceLayer" ref="qrhitexturecopydescription.html#setSourceLayer"/>
@@ -1107,8 +1117,8 @@
             <keyword name="setTextureCompareOp" id="QRhiSampler::setTextureCompareOp" ref="qrhisampler.html#setTextureCompareOp"/>
             <keyword name="setTopology" id="QRhiGraphicsPipeline::setTopology" ref="qrhigraphicspipeline.html#setTopology"/>
             <keyword name="setType" id="QRhiBuffer::setType" ref="qrhibuffer.html#setType"/>
-            <keyword name="setType" id="QRhiGraphicsShaderStage::setType" ref="qrhigraphicsshaderstage.html#setType"/>
             <keyword name="setType" id="QRhiRenderBuffer::setType" ref="qrhirenderbuffer.html#setType"/>
+            <keyword name="setType" id="QRhiShaderStage::setType" ref="qrhishaderstage.html#setType"/>
             <keyword name="setUsage" id="QRhiBuffer::setUsage" ref="qrhibuffer.html#setUsage"/>
             <keyword name="setVersion" id="QShaderVersion::setVersion" ref="qshaderversion.html#setVersion"/>
             <keyword name="setVertexInput" id="QRhiCommandBuffer::setVertexInput" ref="qrhicommandbuffer.html#setVertexInput"/>
@@ -1116,12 +1126,14 @@
             <keyword name="setViewport" id="QRhiCommandBuffer::setViewport" ref="qrhicommandbuffer.html#setViewport"/>
             <keyword name="setViewport" id="QRhiViewport::setViewport" ref="qrhiviewport.html#setViewport"/>
             <keyword name="setWindow" id="QRhiSwapChain::setWindow" ref="qrhiswapchain.html#setWindow"/>
-            <keyword name="shader" id="QRhiGraphicsShaderStage::shader" ref="qrhigraphicsshaderstage.html#shader"/>
+            <keyword name="shader" id="QRhiShaderStage::shader" ref="qrhishaderstage.html#shader"/>
             <keyword name="shader" id="QShader::shader" ref="qshader.html#shader"/>
             <keyword name="shader" id="QShaderCode::shader" ref="qshadercode.html#shader"/>
+            <keyword name="shaderResourceBindings" id="QRhiComputePipeline::shaderResourceBindings" ref="qrhicomputepipeline.html#shaderResourceBindings"/>
             <keyword name="shaderResourceBindings" id="QRhiGraphicsPipeline::shaderResourceBindings" ref="qrhigraphicspipeline.html#shaderResourceBindings"/>
+            <keyword name="shaderStage" id="QRhiComputePipeline::shaderStage" ref="qrhicomputepipeline.html#shaderStage"/>
             <keyword name="shaderStages" id="QRhiGraphicsPipeline::shaderStages" ref="qrhigraphicspipeline.html#shaderStages"/>
-            <keyword name="shaderVariant" id="QRhiGraphicsShaderStage::shaderVariant" ref="qrhigraphicsshaderstage.html#shaderVariant"/>
+            <keyword name="shaderVariant" id="QRhiShaderStage::shaderVariant" ref="qrhishaderstage.html#shaderVariant"/>
             <keyword name="size" id="BlockVariable::size" ref="qshaderdescription-blockvariable.html#size-var"/>
             <keyword name="size" id="PushConstantBlock::size" ref="qshaderdescription-pushconstantblock.html#size-var"/>
             <keyword name="size" id="QRhiBuffer::size" ref="qrhibuffer.html#size"/>
@@ -1164,8 +1176,8 @@
             <keyword name="type" id="BlockVariable::type" ref="qshaderdescription-blockvariable.html#type-var"/>
             <keyword name="type" id="InOutVariable::type" ref="qshaderdescription-inoutvariable.html#type-var"/>
             <keyword name="type" id="QRhiBuffer::type" ref="qrhibuffer.html#type"/>
-            <keyword name="type" id="QRhiGraphicsShaderStage::type" ref="qrhigraphicsshaderstage.html#type"/>
             <keyword name="type" id="QRhiRenderBuffer::type" ref="qrhirenderbuffer.html#type"/>
+            <keyword name="type" id="QRhiShaderStage::type" ref="qrhishaderstage.html#type"/>
             <keyword name="ubufAligned" id="QRhi::ubufAligned" ref="qrhi.html#ubufAligned"/>
             <keyword name="ubufAlignment" id="QRhi::ubufAlignment" ref="qrhi.html#ubufAlignment"/>
             <keyword name="uniformBlocks" id="QShaderDescription::uniformBlocks" ref="qshaderdescription.html#uniformBlocks"/>
@@ -1214,6 +1226,8 @@
             <file>qrhicolorattachment.html</file>
             <file>qrhicommandbuffer-members.html</file>
             <file>qrhicommandbuffer.html</file>
+            <file>qrhicomputepipeline-members.html</file>
+            <file>qrhicomputepipeline.html</file>
             <file>qrhid3d11initparams-members.html</file>
             <file>qrhid3d11initparams.html</file>
             <file>qrhid3d11nativehandles-members.html</file>
@@ -1234,8 +1248,6 @@
             <file>qrhigraphicspipeline-targetblend-members.html</file>
             <file>qrhigraphicspipeline-targetblend.html</file>
             <file>qrhigraphicspipeline.html</file>
-            <file>qrhigraphicsshaderstage-members.html</file>
-            <file>qrhigraphicsshaderstage.html</file>
             <file>qrhiinitparams.html</file>
             <file>qrhimetalcommandbuffernativehandles-members.html</file>
             <file>qrhimetalcommandbuffernativehandles.html</file>
@@ -1276,6 +1288,8 @@
             <file>qrhishaderresourcebinding.html</file>
             <file>qrhishaderresourcebindings-members.html</file>
             <file>qrhishaderresourcebindings.html</file>
+            <file>qrhishaderstage-members.html</file>
+            <file>qrhishaderstage.html</file>
             <file>qrhiswapchain-members.html</file>
             <file>qrhiswapchain.html</file>
             <file>qrhitexture-members.html</file>

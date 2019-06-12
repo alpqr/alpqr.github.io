@@ -358,8 +358,8 @@
         </member>
     </compound>
     <compound kind="class">
-        <name>QRhiGraphicsShaderStage</name>
-        <filename>qrhigraphicsshaderstage.html</filename>
+        <name>QRhiShaderStage</name>
+        <filename>qrhishaderstage.html</filename>
         <member kind="enum">
             <name>Type</name>
             <anchor>Type-enum</anchor>
@@ -379,57 +379,57 @@
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
-            <name>QRhiGraphicsShaderStage</name>
-            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
-            <anchor>QRhiGraphicsShaderStage</anchor>
+            <name>QRhiShaderStage</name>
+            <anchorfile>qrhishaderstage.html</anchorfile>
+            <anchor>QRhiShaderStage</anchor>
             <arglist>()</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
-            <name>QRhiGraphicsShaderStage</name>
-            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
-            <anchor>QRhiGraphicsShaderStage-1</anchor>
-            <arglist>(QRhiGraphicsShaderStage::Type type, const int &amp;shader, int v)</arglist>
+            <name>QRhiShaderStage</name>
+            <anchorfile>qrhishaderstage.html</anchorfile>
+            <anchor>QRhiShaderStage-1</anchor>
+            <arglist>(QRhiShaderStage::Type type, const int &amp;shader, int v)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QRhiGraphicsShaderStage::Type</type>
+            <type>QRhiShaderStage::Type</type>
             <name>type</name>
-            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchorfile>qrhishaderstage.html</anchorfile>
             <anchor>type</anchor>
             <arglist>() const const</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>void</type>
             <name>setType</name>
-            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchorfile>qrhishaderstage.html</anchorfile>
             <anchor>setType</anchor>
-            <arglist>(QRhiGraphicsShaderStage::Type t)</arglist>
+            <arglist>(QRhiShaderStage::Type t)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>int</type>
             <name>shader</name>
-            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchorfile>qrhishaderstage.html</anchorfile>
             <anchor>shader</anchor>
             <arglist>() const const</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>void</type>
             <name>setShader</name>
-            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchorfile>qrhishaderstage.html</anchorfile>
             <anchor>setShader</anchor>
             <arglist>(const int &amp;s)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>int</type>
             <name>shaderVariant</name>
-            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchorfile>qrhishaderstage.html</anchorfile>
             <anchor>shaderVariant</anchor>
             <arglist>() const const</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>void</type>
             <name>setShaderVariant</name>
-            <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
+            <anchorfile>qrhishaderstage.html</anchorfile>
             <anchor>setShaderVariant</anchor>
             <arglist>(int v)</arglist>
         </member>
@@ -2634,7 +2634,7 @@
             <arglist>(int s)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QVector&lt;QRhiGraphicsShaderStage&gt;</type>
+            <type>QVector&lt;QRhiShaderStage&gt;</type>
             <name>shaderStages</name>
             <anchorfile>qrhigraphicspipeline.html</anchorfile>
             <anchor>shaderStages</anchor>
@@ -2645,7 +2645,7 @@
             <name>setShaderStages</name>
             <anchorfile>qrhigraphicspipeline.html</anchorfile>
             <anchor>setShaderStages</anchor>
-            <arglist>(const QVector&lt;QRhiGraphicsShaderStage&gt; &amp;stages)</arglist>
+            <arglist>(const QVector&lt;QRhiShaderStage&gt; &amp;stages)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiVertexInputLayout</type>
@@ -2862,6 +2862,53 @@
             <anchorfile>qrhiswapchain.html</anchorfile>
             <anchor>buildOrResize</anchor>
             <arglist>() = 0</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QRhiComputePipeline</name>
+        <filename>qrhicomputepipeline.html</filename>
+        <base>QRhiResource</base>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual QRhiResource::Type</type>
+            <name>resourceType</name>
+            <anchorfile>qrhicomputepipeline.html</anchorfile>
+            <anchor>resourceType</anchor>
+            <arglist>() const const override</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual bool</type>
+            <name>build</name>
+            <anchorfile>qrhicomputepipeline.html</anchorfile>
+            <anchor>build</anchor>
+            <arglist>() = 0</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiShaderStage</type>
+            <name>shaderStage</name>
+            <anchorfile>qrhicomputepipeline.html</anchorfile>
+            <anchor>shaderStage</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setShaderStage</name>
+            <anchorfile>qrhicomputepipeline.html</anchorfile>
+            <anchor>setShaderStage</anchor>
+            <arglist>(const QRhiShaderStage &amp;stage)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiShaderResourceBindings *</type>
+            <name>shaderResourceBindings</name>
+            <anchorfile>qrhicomputepipeline.html</anchorfile>
+            <anchor>shaderResourceBindings</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setShaderResourceBindings</name>
+            <anchorfile>qrhicomputepipeline.html</anchorfile>
+            <anchor>setShaderResourceBindings</anchor>
+            <arglist>(QRhiShaderResourceBindings *srb)</arglist>
         </member>
     </compound>
     <compound kind="class">
