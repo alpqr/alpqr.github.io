@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- qrhi.cpp -->
-  <title>QRhiTextureSubresourceUploadDescription Class | RHI 5.12.0</title>
+  <title>QRhiTextureSubresourceUploadDescription Class | RHI 5.12</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -27,7 +27,7 @@
       <div class="navigationbar">
         <table><tr>
 <td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiTextureSubresourceUploadDescription</td></tr></table><table class="buildversion"><tr>
-<td id="buildversion" width="100%" align="right"><a href="qtrhi-index.html">Qt 5.12.0 Reference Documentation</a></td>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
         </tr></table>
       </div>
     </div>
@@ -57,7 +57,7 @@
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturesubresourceuploaddescription.html#QRhiTextureSubresourceUploadDescription">QRhiTextureSubresourceUploadDescription</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturesubresourceuploaddescription.html#QRhiTextureSubresourceUploadDescription-1">QRhiTextureSubresourceUploadDescription</a></b>(const QImage &amp;<i>image</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturesubresourceuploaddescription.html#QRhiTextureSubresourceUploadDescription-2">QRhiTextureSubresourceUploadDescription</a></b>(const QByteArray &amp;<i>data</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturesubresourceuploaddescription.html#QRhiTextureSubresourceUploadDescription-2">QRhiTextureSubresourceUploadDescription</a></b>(const void *<i>data</i>, int <i>size</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturesubresourceuploaddescription.html#data">data</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QPoint </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturesubresourceuploaddescription.html#destinationTopLeft">destinationTopLeft</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QImage </td><td class="memItemRight bottomAlign"><b><a href="qrhitexturesubresourceuploaddescription.html#image">image</a></b>() const</td></tr>
@@ -81,6 +81,12 @@
 <p><b>Note: </b>Setting <a href="qrhitexturesubresourceuploaddescription.html#sourceSize">sourceSize</a>() or <a href="qrhitexturesubresourceuploaddescription.html#sourceTopLeft">sourceTopLeft</a>() may trigger a <a href="../qtgui/qimage.html">QImage</a> copy internally, depending on the format and the backend.</p><p>When providing raw data, the stride (row pitch, row length in bytes) of the provided data must be equal to <code>width * pixelSize</code> where <code>pixelSize</code> is the number of bytes used for one pixel, and there must be no additional padding between rows. There is no row start alignment requirement.</p>
 <p><b>Note: </b>The format of the source data must be compatible with the texture format. With many graphics APIs the data is copied as-is into a staging buffer, there is no intermediate format conversion provided by <a href="qrhi.html">QRhi</a>. This applies to floating point formats as well, with, for example, RGBA16F requiring half floats in the source data.</p></div>
 <!-- @@@QRhiTextureSubresourceUploadDescription -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$QRhiTextureSubresourceUploadDescription[overload1]$$$QRhiTextureSubresourceUploadDescription -->
@@ -94,9 +100,10 @@
 <p>The bit depth of <i>image</i> must be compatible with the <a href="qrhitexture.html#Format-enum">texture format</a>.</p>
 <p>To describe a partial upload, call <a href="qrhitexturesubresourceuploaddescription.html#setSourceSize">setSourceSize</a>(), <a href="qrhitexturesubresourceuploaddescription.html#setSourceTopLeft">setSourceTopLeft</a>(), or <a href="qrhitexturesubresourceuploaddescription.html#setDestinationTopLeft">setDestinationTopLeft</a>() afterwards.</p>
 <!-- @@@QRhiTextureSubresourceUploadDescription -->
-<!-- $$$QRhiTextureSubresourceUploadDescription$$$QRhiTextureSubresourceUploadDescriptionconstQByteArray& -->
-<h3 class="fn" id="QRhiTextureSubresourceUploadDescription-2"><a name="QRhiTextureSubresourceUploadDescription-2"></a>QRhiTextureSubresourceUploadDescription::<span class="name">QRhiTextureSubresourceUploadDescription</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>data</i>)</h3>
-<p>Constructs a mip level description suitable for textures with a format that does not map to <a href="../qtgui/qimage.html">QImage</a>. The floating point or compressed data is specified in <i>data</i>.</p>
+<!-- $$$QRhiTextureSubresourceUploadDescription$$$QRhiTextureSubresourceUploadDescriptionconstvoid*int -->
+<h3 class="fn" id="QRhiTextureSubresourceUploadDescription-2"><a name="QRhiTextureSubresourceUploadDescription-2"></a>QRhiTextureSubresourceUploadDescription::<span class="name">QRhiTextureSubresourceUploadDescription</span>(const <span class="type">void</span> *<i>data</i>, <span class="type">int</span> <i>size</i>)</h3>
+<p>Constructs a mip level description with the image data is specified by <i>data</i> and <i>size</i>. This is suitable for floating point and compressed formats as well.</p>
+<p><i>data</i> can safely be destroyed or changed once this function returns.</p>
 <!-- @@@QRhiTextureSubresourceUploadDescription -->
 <!-- $$$data[overload1]$$$data -->
 <h3 class="fn" id="data"><a name="data"></a><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> QRhiTextureSubresourceUploadDescription::<span class="name">data</span>() const</h3>
@@ -139,6 +146,15 @@
 <p><b>See also </b><a href="qrhitexturesubresourceuploaddescription.html#setSourceTopLeft">setSourceTopLeft</a>().</p>
 <!-- @@@sourceTopLeft -->
 </div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+</div>
         </div>
        </div>
    </div>
@@ -146,7 +162,7 @@
 </div>
 <div class="footer">
    <p>
-   <acronym title="Copyright">&copy;</acronym> 2019 The Qt Company Ltd.
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
    Documentation contributions included herein are the copyrights of
    their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
    of their respective owners. </p>

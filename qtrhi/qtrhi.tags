@@ -1,382 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tagfile>
     <compound kind="class">
-        <name>QRhiShaderVersion</name>
-        <filename>qrhishaderversion.html</filename>
-        <member kind="enum">
-            <name>Flag</name>
-            <anchor>Flag-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="GlslEs">
-            <anchor>Flag-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member kind="typedef" type="QRhiShaderVersion::Flag">
-            <name>Flags</name>
-            <anchorfile>qrhishaderversion.html</anchorfile>
-            <anchor>Flag-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiShaderVersion</name>
-            <anchorfile>qrhishaderversion.html</anchorfile>
-            <anchor>QRhiShaderVersion</anchor>
-            <arglist>()</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiShaderVersion</name>
-            <anchorfile>qrhishaderversion.html</anchorfile>
-            <anchor>QRhiShaderVersion-1</anchor>
-            <arglist>(int v, QRhiShaderVersion::Flags f)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
-            <name>version</name>
-            <anchorfile>qrhishaderversion.html</anchorfile>
-            <anchor>version</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>setVersion</name>
-            <anchorfile>qrhishaderversion.html</anchorfile>
-            <anchor>setVersion</anchor>
-            <arglist>(int v)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QRhiShaderVersion::Flags</type>
-            <name>flags</name>
-            <anchorfile>qrhishaderversion.html</anchorfile>
-            <anchor>flags</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>setFlags</name>
-            <anchorfile>qrhishaderversion.html</anchorfile>
-            <anchor>setFlags</anchor>
-            <arglist>(QRhiShaderVersion::Flags f)</arglist>
-        </member>
-    </compound>
-    <compound kind="class">
-        <name>QRhiShaderKey</name>
-        <filename>qrhishaderkey.html</filename>
-        <member kind="enum">
-            <name>ShaderSource</name>
-            <anchor>ShaderSource-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="SpirvShader">
-            <anchor>ShaderSource-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="GlslShader">
-            <anchor>ShaderSource-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="HlslShader">
-            <anchor>ShaderSource-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="DxbcShader">
-            <anchor>ShaderSource-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="MslShader">
-            <anchor>ShaderSource-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="DxilShader">
-            <anchor>ShaderSource-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="MetalLibShader">
-            <anchor>ShaderSource-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member kind="enum">
-            <name>ShaderVariant</name>
-            <anchor>ShaderVariant-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="StandardShader">
-            <anchor>ShaderVariant-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="BatchableVertexShader">
-            <anchor>ShaderVariant-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiShaderKey</name>
-            <anchorfile>qrhishaderkey.html</anchorfile>
-            <anchor>QRhiShaderKey</anchor>
-            <arglist>()</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiShaderKey</name>
-            <anchorfile>qrhishaderkey.html</anchorfile>
-            <anchor>QRhiShaderKey-1</anchor>
-            <arglist>(QRhiShaderKey::ShaderSource s, const QRhiShaderVersion &amp;sver, QRhiShaderKey::ShaderVariant svar)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QRhiShaderKey::ShaderSource</type>
-            <name>source</name>
-            <anchorfile>qrhishaderkey.html</anchorfile>
-            <anchor>source</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>setSource</name>
-            <anchorfile>qrhishaderkey.html</anchorfile>
-            <anchor>setSource</anchor>
-            <arglist>(QRhiShaderKey::ShaderSource s)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QRhiShaderVersion</type>
-            <name>sourceVersion</name>
-            <anchorfile>qrhishaderkey.html</anchorfile>
-            <anchor>sourceVersion</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>setSourceVersion</name>
-            <anchorfile>qrhishaderkey.html</anchorfile>
-            <anchor>setSourceVersion</anchor>
-            <arglist>(const QRhiShaderVersion &amp;sver)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QRhiShaderKey::ShaderVariant</type>
-            <name>sourceVariant</name>
-            <anchorfile>qrhishaderkey.html</anchorfile>
-            <anchor>sourceVariant</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>setSourceVariant</name>
-            <anchorfile>qrhishaderkey.html</anchorfile>
-            <anchor>setSourceVariant</anchor>
-            <arglist>(QRhiShaderKey::ShaderVariant svar)</arglist>
-        </member>
-    </compound>
-    <compound kind="class">
-        <name>QRhiShaderCode</name>
-        <filename>qrhishadercode.html</filename>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiShaderCode</name>
-            <anchorfile>qrhishadercode.html</anchorfile>
-            <anchor>QRhiShaderCode</anchor>
-            <arglist>()</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiShaderCode</name>
-            <anchorfile>qrhishadercode.html</anchorfile>
-            <anchor>QRhiShaderCode-1</anchor>
-            <arglist>(const QByteArray &amp;code, const QByteArray &amp;entry)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QByteArray</type>
-            <name>shader</name>
-            <anchorfile>qrhishadercode.html</anchorfile>
-            <anchor>shader</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>setShader</name>
-            <anchorfile>qrhishadercode.html</anchorfile>
-            <anchor>setShader</anchor>
-            <arglist>(const QByteArray &amp;code)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QByteArray</type>
-            <name>entryPoint</name>
-            <anchorfile>qrhishadercode.html</anchorfile>
-            <anchor>entryPoint</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>setEntryPoint</name>
-            <anchorfile>qrhishadercode.html</anchorfile>
-            <anchor>setEntryPoint</anchor>
-            <arglist>(const QByteArray &amp;entry)</arglist>
-        </member>
-    </compound>
-    <compound kind="class">
-        <name>QRhiShader</name>
-        <filename>qrhishader.html</filename>
-        <member kind="enum">
-            <name>ShaderStage</name>
-            <anchor>ShaderStage-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="VertexStage">
-            <anchor>ShaderStage-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="TessControlStage">
-            <anchor>ShaderStage-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="TessEvaluationStage">
-            <anchor>ShaderStage-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="GeometryStage">
-            <anchor>ShaderStage-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="FragmentStage">
-            <anchor>ShaderStage-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="ComputeStage">
-            <anchor>ShaderStage-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiShader</name>
-            <anchorfile>qrhishader.html</anchorfile>
-            <anchor>QRhiShader</anchor>
-            <arglist>()</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>~QRhiShader</name>
-            <anchorfile>qrhishader.html</anchorfile>
-            <anchor>dtor.QRhiShader</anchor>
-            <arglist>()</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>bool</type>
-            <name>isValid</name>
-            <anchorfile>qrhishader.html</anchorfile>
-            <anchor>isValid</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QRhiShader::ShaderStage</type>
-            <name>stage</name>
-            <anchorfile>qrhishader.html</anchorfile>
-            <anchor>stage</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>setStage</name>
-            <anchorfile>qrhishader.html</anchorfile>
-            <anchor>setStage</anchor>
-            <arglist>(QRhiShader::ShaderStage stage)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>int</type>
-            <name>description</name>
-            <anchorfile>qrhishader.html</anchorfile>
-            <anchor>description</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>setDescription</name>
-            <anchorfile>qrhishader.html</anchorfile>
-            <anchor>setDescription</anchor>
-            <arglist>(const int &amp;desc)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QList&lt;QRhiShaderKey&gt;</type>
-            <name>availableShaders</name>
-            <anchorfile>qrhishader.html</anchorfile>
-            <anchor>availableShaders</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QRhiShaderCode</type>
-            <name>shader</name>
-            <anchorfile>qrhishader.html</anchorfile>
-            <anchor>shader</anchor>
-            <arglist>(const QRhiShaderKey &amp;key) const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>setShader</name>
-            <anchorfile>qrhishader.html</anchorfile>
-            <anchor>setShader</anchor>
-            <arglist>(const QRhiShaderKey &amp;key, const QRhiShaderCode &amp;shader)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>removeShader</name>
-            <anchorfile>qrhishader.html</anchorfile>
-            <anchor>removeShader</anchor>
-            <arglist>(const QRhiShaderKey &amp;key)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QByteArray</type>
-            <name>serialized</name>
-            <anchorfile>qrhishader.html</anchorfile>
-            <anchor>serialized</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="yes">
-            <type>QRhiShader</type>
-            <name>fromSerialized</name>
-            <anchorfile>qrhishader.html</anchorfile>
-            <anchor>fromSerialized</anchor>
-            <arglist>(const QByteArray &amp;data)</arglist>
-        </member>
-    </compound>
-    <compound kind="class">
-        <name>QRhiColorClearValue</name>
-        <filename>qrhicolorclearvalue.html</filename>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiColorClearValue</name>
-            <anchorfile>qrhicolorclearvalue.html</anchorfile>
-            <anchor>QRhiColorClearValue</anchor>
-            <arglist>()</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiColorClearValue</name>
-            <anchorfile>qrhicolorclearvalue.html</anchorfile>
-            <anchor>QRhiColorClearValue-1</anchor>
-            <arglist>(const QVector4D &amp;c)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiColorClearValue</name>
-            <anchorfile>qrhicolorclearvalue.html</anchorfile>
-            <anchor>QRhiColorClearValue-2</anchor>
-            <arglist>(float r, float g, float b, float a)</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QVector4D</type>
-            <name>rgba</name>
-            <anchorfile>qrhicolorclearvalue.html</anchorfile>
-            <anchor>rgba</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>void</type>
-            <name>setRgba</name>
-            <anchorfile>qrhicolorclearvalue.html</anchorfile>
-            <anchor>setRgba</anchor>
-            <arglist>(const QVector4D &amp;c)</arglist>
-        </member>
-    </compound>
-    <compound kind="class">
         <name>QRhiDepthStencilClearValue</name>
         <filename>qrhidepthstencilclearvalue.html</filename>
         <member kind="function" protection="public" virtualness="non" static="no">
@@ -440,7 +64,7 @@
             <arglist>(float x, float y, float w, float h, float minDepth, float maxDepth)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QVector4D</type>
+            <type>std::array&lt;float, 4&gt;</type>
             <name>viewport</name>
             <anchorfile>qrhiviewport.html</anchorfile>
             <anchor>viewport</anchor>
@@ -451,7 +75,7 @@
             <name>setViewport</name>
             <anchorfile>qrhiviewport.html</anchorfile>
             <anchor>setViewport</anchor>
-            <arglist>(const QVector4D &amp;v)</arglist>
+            <arglist>(float x, float y, float w, float h)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>float</type>
@@ -500,7 +124,7 @@
             <arglist>(int x, int y, int w, int h)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QVector4D</type>
+            <type>std::array&lt;int, 4&gt;</type>
             <name>scissor</name>
             <anchorfile>qrhiscissor.html</anchorfile>
             <anchor>scissor</anchor>
@@ -511,7 +135,7 @@
             <name>setScissor</name>
             <anchorfile>qrhiscissor.html</anchorfile>
             <anchor>setScissor</anchor>
-            <arglist>(const QVector4D &amp;v)</arglist>
+            <arglist>(int x, int y, int w, int h)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -749,6 +373,10 @@
             <anchor>Type-enum</anchor>
             <arglist></arglist>
         </member>
+        <member name="Compute">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type></type>
             <name>QRhiGraphicsShaderStage</name>
@@ -761,7 +389,7 @@
             <name>QRhiGraphicsShaderStage</name>
             <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
             <anchor>QRhiGraphicsShaderStage-1</anchor>
-            <arglist>(QRhiGraphicsShaderStage::Type type, const QRhiShader &amp;shader, QRhiShaderKey::ShaderVariant v)</arglist>
+            <arglist>(QRhiGraphicsShaderStage::Type type, const int &amp;shader, int v)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiGraphicsShaderStage::Type</type>
@@ -778,7 +406,7 @@
             <arglist>(QRhiGraphicsShaderStage::Type t)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QRhiShader</type>
+            <type>int</type>
             <name>shader</name>
             <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
             <anchor>shader</anchor>
@@ -789,10 +417,10 @@
             <name>setShader</name>
             <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
             <anchor>setShader</anchor>
-            <arglist>(const QRhiShader &amp;s)</arglist>
+            <arglist>(const int &amp;s)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QRhiShaderKey::ShaderVariant</type>
+            <type>int</type>
             <name>shaderVariant</name>
             <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
             <anchor>shaderVariant</anchor>
@@ -803,7 +431,7 @@
             <name>setShaderVariant</name>
             <anchorfile>qrhigraphicsshaderstage.html</anchorfile>
             <anchor>setShaderVariant</anchor>
-            <arglist>(QRhiShaderKey::ShaderVariant v)</arglist>
+            <arglist>(int v)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -822,6 +450,30 @@
             <anchor>Type-enum</anchor>
             <arglist></arglist>
         </member>
+        <member name="ImageLoad">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageStore">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageLoadStore">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="BufferLoad">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="BufferStore">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="BufferLoadStore">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="enum">
             <name>StageFlag</name>
             <anchor>StageFlag-enum</anchor>
@@ -832,6 +484,10 @@
             <arglist></arglist>
         </member>
         <member name="FragmentStage">
+            <anchor>StageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ComputeStage">
             <anchor>StageFlag-enum</anchor>
             <arglist></arglist>
         </member>
@@ -882,6 +538,69 @@
             <anchorfile>qrhishaderresourcebinding.html</anchorfile>
             <anchor>sampledTexture</anchor>
             <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiTexture *tex, QRhiSampler *sampler)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QRhiShaderResourceBinding</type>
+            <name>imageLoad</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>imageLoad</anchor>
+            <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiTexture *tex, int level)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QRhiShaderResourceBinding</type>
+            <name>imageStore</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>imageStore</anchor>
+            <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiTexture *tex, int level)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QRhiShaderResourceBinding</type>
+            <name>imageLoadStore</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>imageLoadStore</anchor>
+            <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiTexture *tex, int level)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QRhiShaderResourceBinding</type>
+            <name>bufferLoad</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>bufferLoad</anchor>
+            <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiBuffer *buf)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QRhiShaderResourceBinding</type>
+            <name>bufferLoad</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>bufferLoad-1</anchor>
+            <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiBuffer *buf, int offset, int size)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QRhiShaderResourceBinding</type>
+            <name>bufferStore</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>bufferStore</anchor>
+            <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiBuffer *buf)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QRhiShaderResourceBinding</type>
+            <name>bufferStore</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>bufferStore-1</anchor>
+            <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiBuffer *buf, int offset, int size)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QRhiShaderResourceBinding</type>
+            <name>bufferLoadStore</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>bufferLoadStore</anchor>
+            <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiBuffer *buf)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QRhiShaderResourceBinding</type>
+            <name>bufferLoadStore</name>
+            <anchorfile>qrhishaderresourcebinding.html</anchorfile>
+            <anchor>bufferLoadStore-1</anchor>
+            <arglist>(int binding, QRhiShaderResourceBinding::StageFlags stage, QRhiBuffer *buf, int offset, int size)</arglist>
         </member>
     </compound>
     <compound kind="class">
@@ -1103,7 +822,7 @@
             <name>QRhiTextureSubresourceUploadDescription</name>
             <anchorfile>qrhitexturesubresourceuploaddescription.html</anchorfile>
             <anchor>QRhiTextureSubresourceUploadDescription-2</anchor>
-            <arglist>(const QByteArray &amp;data)</arglist>
+            <arglist>(const void *data, int size)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QImage</type>
@@ -1458,12 +1177,72 @@
     <compound kind="class">
         <name>QRhiResource</name>
         <filename>qrhiresource.html</filename>
+        <member kind="enum">
+            <name>Type</name>
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Buffer">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Texture">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="RenderBuffer">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="RenderPassDescriptor">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="RenderTarget">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="TextureRenderTarget">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ShaderResourceBindings">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="GraphicsPipeline">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="SwapChain">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ComputePipeline">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="CommandBuffer">
+            <anchor>Type-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="function" protection="public" virtualness="virtual" static="no">
             <type>virtual </type>
             <name>~QRhiResource</name>
             <anchorfile>qrhiresource.html</anchorfile>
             <anchor>dtor.QRhiResource</anchor>
             <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="pure" static="no">
+            <type>virtual QRhiResource::Type</type>
+            <name>resourceType</name>
+            <anchorfile>qrhiresource.html</anchorfile>
+            <anchor>resourceType</anchor>
+            <arglist>() const const = 0</arglist>
         </member>
         <member kind="function" protection="public" virtualness="pure" static="no">
             <type>virtual void</type>
@@ -1553,11 +1332,22 @@
             <anchor>UsageFlag-enum</anchor>
             <arglist></arglist>
         </member>
+        <member name="StorageBuffer">
+            <anchor>UsageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="typedef" type="QRhiBuffer::UsageFlag">
             <name>UsageFlags</name>
             <anchorfile>qrhibuffer.html</anchorfile>
             <anchor>UsageFlag-enum</anchor>
             <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual QRhiResource::Type</type>
+            <name>resourceType</name>
+            <anchorfile>qrhibuffer.html</anchorfile>
+            <anchor>resourceType</anchor>
+            <arglist>() const const override</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiBuffer::Type</type>
@@ -1639,6 +1429,10 @@
             <arglist></arglist>
         </member>
         <member name="UsedWithGenerateMips">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="UsedWithLoadStore">
             <anchor>Flag-enum</anchor>
             <arglist></arglist>
         </member>
@@ -1788,6 +1582,13 @@
         <member name="ASTC_12x12">
             <anchor>Format-enum</anchor>
             <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual QRhiResource::Type</type>
+            <name>resourceType</name>
+            <anchorfile>qrhitexture.html</anchorfile>
+            <anchor>resourceType</anchor>
+            <arglist>() const const override</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiTexture::Format</type>
@@ -1950,6 +1751,13 @@
             <anchor>CompareOp-enum</anchor>
             <arglist></arglist>
         </member>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual QRhiResource::Type</type>
+            <name>resourceType</name>
+            <anchorfile>qrhisampler.html</anchorfile>
+            <anchor>resourceType</anchor>
+            <arglist>() const const override</arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiSampler::Filter</type>
             <name>magFilter</name>
@@ -2088,6 +1896,13 @@
             <anchor>Flag-enum</anchor>
             <arglist></arglist>
         </member>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual QRhiResource::Type</type>
+            <name>resourceType</name>
+            <anchorfile>qrhirenderbuffer.html</anchorfile>
+            <anchor>resourceType</anchor>
+            <arglist>() const const override</arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiRenderBuffer::Type</type>
             <name>type</name>
@@ -2156,30 +1971,24 @@
         <name>QRhiRenderPassDescriptor</name>
         <filename>qrhirenderpassdescriptor.html</filename>
         <base>QRhiResource</base>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual QRhiResource::Type</type>
+            <name>resourceType</name>
+            <anchorfile>qrhirenderpassdescriptor.html</anchorfile>
+            <anchor>resourceType</anchor>
+            <arglist>() const const override</arglist>
+        </member>
     </compound>
     <compound kind="class">
         <name>QRhiRenderTarget</name>
         <filename>qrhirendertarget.html</filename>
         <base>QRhiResource</base>
-        <member kind="enum">
-            <name>Type</name>
-            <anchor>Type-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="RtRef">
-            <anchor>Type-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="RtTexture">
-            <anchor>Type-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="pure" static="no">
-            <type>virtual QRhiRenderTarget::Type</type>
-            <name>type</name>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual QRhiResource::Type</type>
+            <name>resourceType</name>
             <anchorfile>qrhirendertarget.html</anchorfile>
-            <anchor>type</anchor>
-            <arglist>() const const = 0</arglist>
+            <anchor>resourceType</anchor>
+            <arglist>() const const override</arglist>
         </member>
         <member kind="function" protection="public" virtualness="pure" static="no">
             <type>virtual QSize</type>
@@ -2240,6 +2049,13 @@
             <anchor>Flag-enum</anchor>
             <arglist></arglist>
         </member>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual QRhiResource::Type</type>
+            <name>resourceType</name>
+            <anchorfile>qrhitexturerendertarget.html</anchorfile>
+            <anchor>resourceType</anchor>
+            <arglist>() const const override</arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiTextureRenderTargetDescription</type>
             <name>description</name>
@@ -2287,6 +2103,13 @@
         <name>QRhiShaderResourceBindings</name>
         <filename>qrhishaderresourcebindings.html</filename>
         <base>QRhiResource</base>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual QRhiResource::Type</type>
+            <name>resourceType</name>
+            <anchorfile>qrhishaderresourcebindings.html</anchorfile>
+            <anchor>resourceType</anchor>
+            <arglist>() const const override</arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QVector&lt;QRhiShaderResourceBinding&gt;</type>
             <name>bindings</name>
@@ -2607,6 +2430,13 @@
             <arglist></arglist>
         </member>
         <class>QRhiGraphicsPipeline::StencilOpState</class>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual QRhiResource::Type</type>
+            <name>resourceType</name>
+            <anchorfile>qrhigraphicspipeline.html</anchorfile>
+            <anchor>resourceType</anchor>
+            <arglist>() const const override</arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QRhiGraphicsPipeline::Flags</type>
             <name>flags</name>
@@ -2904,11 +2734,22 @@
             <anchor>Flag-enum</anchor>
             <arglist></arglist>
         </member>
+        <member name="MinimalBufferCount">
+            <anchor>Flag-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="typedef" type="QRhiSwapChain::Flag">
             <name>Flags</name>
             <anchorfile>qrhiswapchain.html</anchorfile>
             <anchor>Flag-enum</anchor>
             <arglist></arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual QRhiResource::Type</type>
+            <name>resourceType</name>
+            <anchorfile>qrhiswapchain.html</anchorfile>
+            <anchor>resourceType</anchor>
+            <arglist>() const const override</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>QWindow *</type>
@@ -3040,6 +2881,13 @@
             <anchor>IndexFormat-enum</anchor>
             <arglist></arglist>
         </member>
+        <member kind="function" protection="public" virtualness="virtual" static="no">
+            <type>virtual QRhiResource::Type</type>
+            <name>resourceType</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>resourceType</anchor>
+            <arglist>() const const override</arglist>
+        </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>void</type>
             <name>resourceUpdate</name>
@@ -3052,7 +2900,7 @@
             <name>beginPass</name>
             <anchorfile>qrhicommandbuffer.html</anchorfile>
             <anchor>beginPass</anchor>
-            <arglist>(QRhiRenderTarget *rt, const QRhiColorClearValue &amp;colorClearValue, const QRhiDepthStencilClearValue &amp;depthStencilClearValue, QRhiResourceUpdateBatch *resourceUpdates)</arglist>
+            <arglist>(QRhiRenderTarget *rt, const QColor &amp;colorClearValue, const QRhiDepthStencilClearValue &amp;depthStencilClearValue, QRhiResourceUpdateBatch *resourceUpdates)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>void</type>
@@ -3113,7 +2961,7 @@
             <name>setBlendConstants</name>
             <anchorfile>qrhicommandbuffer.html</anchorfile>
             <anchor>setBlendConstants</anchor>
-            <arglist>(const QVector4D &amp;c)</arglist>
+            <arglist>(const QColor &amp;c)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>void</type>
@@ -3156,6 +3004,34 @@
             <anchorfile>qrhicommandbuffer.html</anchorfile>
             <anchor>debugMarkMsg</anchor>
             <arglist>(const QByteArray &amp;msg)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>beginComputePass</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>beginComputePass</anchor>
+            <arglist>(QRhiResourceUpdateBatch *resourceUpdates)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>endComputePass</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>endComputePass</anchor>
+            <arglist>(QRhiResourceUpdateBatch *resourceUpdates)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>setComputePipeline</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>setComputePipeline</anchor>
+            <arglist>(QRhiComputePipeline *ps)</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>void</type>
+            <name>dispatch</name>
+            <anchorfile>qrhicommandbuffer.html</anchorfile>
+            <anchor>dispatch</anchor>
+            <arglist>(int x, int y, int z)</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
             <type>const QRhiNativeHandles *</type>
@@ -3389,6 +3265,10 @@
             <anchor>Feature-enum</anchor>
             <arglist></arglist>
         </member>
+        <member name="Compute">
+            <anchor>Feature-enum</anchor>
+            <arglist></arglist>
+        </member>
         <member kind="enum">
             <name>BeginFrameFlag</name>
             <anchor>BeginFrameFlag-enum</anchor>
@@ -3489,6 +3369,13 @@
             <name>newGraphicsPipeline</name>
             <anchorfile>qrhi.html</anchorfile>
             <anchor>newGraphicsPipeline</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QRhiComputePipeline *</type>
+            <name>newComputePipeline</name>
+            <anchorfile>qrhi.html</anchorfile>
+            <anchor>newComputePipeline</anchor>
             <arglist>()</arglist>
         </member>
         <member kind="function" protection="public" virtualness="non" static="no">
@@ -3845,7 +3732,7 @@
             <anchor>StreamOp-enum</anchor>
             <arglist></arglist>
         </member>
-        <member name="VMemAllocStats">
+        <member name="GpuMemAllocStats">
             <anchor>StreamOp-enum</anchor>
             <arglist></arglist>
         </member>
@@ -3929,312 +3816,6 @@
         <filename>qrhiprofiler-gputime.html</filename>
     </compound>
     <compound kind="class">
-        <name>QRhiShaderDescription</name>
-        <filename>qrhishaderdescription.html</filename>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>QRhiShaderDescription</name>
-            <anchorfile>qrhishaderdescription.html</anchorfile>
-            <anchor>QRhiShaderDescription</anchor>
-            <arglist>()</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type></type>
-            <name>~QRhiShaderDescription</name>
-            <anchorfile>qrhishaderdescription.html</anchorfile>
-            <anchor>dtor.QRhiShaderDescription</anchor>
-            <arglist>()</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>bool</type>
-            <name>isValid</name>
-            <anchorfile>qrhishaderdescription.html</anchorfile>
-            <anchor>isValid</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QByteArray</type>
-            <name>toBinaryJson</name>
-            <anchorfile>qrhishaderdescription.html</anchorfile>
-            <anchor>toBinaryJson</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QByteArray</type>
-            <name>toJson</name>
-            <anchorfile>qrhishaderdescription.html</anchorfile>
-            <anchor>toJson</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="yes">
-            <type>QRhiShaderDescription</type>
-            <name>fromBinaryJson</name>
-            <anchorfile>qrhishaderdescription.html</anchorfile>
-            <anchor>fromBinaryJson</anchor>
-            <arglist>(const QByteArray &amp;data)</arglist>
-        </member>
-        <member kind="enum">
-            <name>VarType</name>
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Unknown">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Float">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Vec2">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Vec3">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Vec4">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Mat2">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Mat2x3">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Mat2x4">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Mat3">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Mat3x2">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Mat3x4">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Mat4">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Mat4x2">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Mat4x3">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Int">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Int2">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Int3">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Int4">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Uint">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Uint2">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Uint3">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Uint4">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Bool">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Bool2">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Bool3">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Bool4">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Double">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Double2">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Double3">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Double4">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="DMat2">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="DMat2x3">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="DMat2x4">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="DMat3">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="DMat3x2">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="DMat3x4">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="DMat4">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="DMat4x2">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="DMat4x3">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Sampler1D">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Sampler2D">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Sampler2DMS">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Sampler3D">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="SamplerCube">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Sampler1DArray">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Sampler2DArray">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Sampler2DMSArray">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Sampler3DArray">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="SamplerCubeArray">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <member name="Struct">
-            <anchor>VarType-enum</anchor>
-            <arglist></arglist>
-        </member>
-        <class>QRhiShaderDescription::InOutVariable</class>
-        <class>QRhiShaderDescription::BlockVariable</class>
-        <class>QRhiShaderDescription::UniformBlock</class>
-        <class>QRhiShaderDescription::PushConstantBlock</class>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QVector&lt;QRhiShaderDescription::InOutVariable&gt;</type>
-            <name>inputVariables</name>
-            <anchorfile>qrhishaderdescription.html</anchorfile>
-            <anchor>inputVariables</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QVector&lt;QRhiShaderDescription::InOutVariable&gt;</type>
-            <name>outputVariables</name>
-            <anchorfile>qrhishaderdescription.html</anchorfile>
-            <anchor>outputVariables</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QVector&lt;QRhiShaderDescription::UniformBlock&gt;</type>
-            <name>uniformBlocks</name>
-            <anchorfile>qrhishaderdescription.html</anchorfile>
-            <anchor>uniformBlocks</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QVector&lt;QRhiShaderDescription::PushConstantBlock&gt;</type>
-            <name>pushConstantBlocks</name>
-            <anchorfile>qrhishaderdescription.html</anchorfile>
-            <anchor>pushConstantBlocks</anchor>
-            <arglist>() const const</arglist>
-        </member>
-        <member kind="function" protection="public" virtualness="non" static="no">
-            <type>QVector&lt;QRhiShaderDescription::InOutVariable&gt;</type>
-            <name>combinedImageSamplers</name>
-            <anchorfile>qrhishaderdescription.html</anchorfile>
-            <anchor>combinedImageSamplers</anchor>
-            <arglist>() const const</arglist>
-        </member>
-    </compound>
-    <compound kind="class">
-        <name>QRhiShaderDescription::InOutVariable</name>
-        <filename>qrhishaderdescription-inoutvariable.html</filename>
-    </compound>
-    <compound kind="class">
-        <name>QRhiShaderDescription::BlockVariable</name>
-        <filename>qrhishaderdescription-blockvariable.html</filename>
-    </compound>
-    <compound kind="class">
-        <name>QRhiShaderDescription::UniformBlock</name>
-        <filename>qrhishaderdescription-uniformblock.html</filename>
-    </compound>
-    <compound kind="class">
-        <name>QRhiShaderDescription::PushConstantBlock</name>
-        <filename>qrhishaderdescription-pushconstantblock.html</filename>
-    </compound>
-    <compound kind="class">
         <name>QRhiVulkanInitParams</name>
         <filename>qrhivulkaninitparams.html</filename>
         <base>QRhiInitParams</base>
@@ -4253,5 +3834,570 @@
         <name>QRhiVulkanCommandBufferNativeHandles</name>
         <filename>qrhivulkancommandbuffernativehandles.html</filename>
         <base>QRhiNativeHandles</base>
+    </compound>
+    <compound kind="class">
+        <name>QShaderDescription</name>
+        <filename>qshaderdescription.html</filename>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>QShaderDescription</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>QShaderDescription</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type></type>
+            <name>~QShaderDescription</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>dtor.QShaderDescription</anchor>
+            <arglist>()</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>bool</type>
+            <name>isValid</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>isValid</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QByteArray</type>
+            <name>toBinaryJson</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>toBinaryJson</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QByteArray</type>
+            <name>toJson</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>toJson</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="yes">
+            <type>QShaderDescription</type>
+            <name>fromBinaryJson</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>fromBinaryJson</anchor>
+            <arglist>(const QByteArray &amp;data)</arglist>
+        </member>
+        <member kind="enum">
+            <name>VariableType</name>
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Unknown">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Float">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Vec2">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Vec3">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Vec4">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat2">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat2x3">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat2x4">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat3">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat3x2">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat3x4">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat4">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat4x2">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Mat4x3">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Int">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Int2">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Int3">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Int4">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Uint">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Uint2">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Uint3">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Uint4">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Bool">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Bool2">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Bool3">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Bool4">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Double">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Double2">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Double3">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Double4">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat2">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat2x3">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat2x4">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat3">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat3x2">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat3x4">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat4">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat4x2">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="DMat4x3">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler1D">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler2D">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler2DMS">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler3D">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="SamplerCube">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler1DArray">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler2DArray">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler2DMSArray">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Sampler3DArray">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="SamplerCubeArray">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="SamplerRect">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="SamplerBuffer">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Image1D">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Image2D">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Image2DMS">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Image3D">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageCube">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Image1DArray">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Image2DArray">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Image2DMSArray">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Image3DArray">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageCubeArray">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageRect">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageBuffer">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="Struct">
+            <anchor>VariableType-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
+            <name>ImageFormat</name>
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatUnknown">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgba32f">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgba16f">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatR32f">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgba8">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgba8Snorm">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRg32f">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRg16f">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatR11fG11fB10f">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatR16f">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgba16">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgb10A2">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRg16">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRg8">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatR16">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatR8">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgba16Snorm">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRg16Snorm">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRg8Snorm">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatR16Snorm">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatR8Snorm">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgba32i">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgba16i">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgba8i">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatR32i">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRg32i">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRg16i">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRg8i">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatR16i">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatR8i">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgba32ui">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgba16ui">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgba8ui">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatR32ui">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRgb10a2ui">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRg32ui">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRg16ui">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatRg8ui">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatR16ui">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ImageFormatR8ui">
+            <anchor>ImageFormat-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="enum">
+            <name>ImageFlag</name>
+            <anchor>ImageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="ReadOnlyImage">
+            <anchor>ImageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member name="WriteOnlyImage">
+            <anchor>ImageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <member kind="typedef" type="QShaderDescription::ImageFlag">
+            <name>ImageFlags</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>ImageFlag-enum</anchor>
+            <arglist></arglist>
+        </member>
+        <class>QShaderDescription::InOutVariable</class>
+        <class>QShaderDescription::BlockVariable</class>
+        <class>QShaderDescription::UniformBlock</class>
+        <class>QShaderDescription::PushConstantBlock</class>
+        <class>QShaderDescription::StorageBlock</class>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QShaderDescription::InOutVariable&gt;</type>
+            <name>inputVariables</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>inputVariables</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QShaderDescription::InOutVariable&gt;</type>
+            <name>outputVariables</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>outputVariables</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QShaderDescription::UniformBlock&gt;</type>
+            <name>uniformBlocks</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>uniformBlocks</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QShaderDescription::PushConstantBlock&gt;</type>
+            <name>pushConstantBlocks</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>pushConstantBlocks</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QShaderDescription::StorageBlock&gt;</type>
+            <name>storageBlocks</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>storageBlocks</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QShaderDescription::InOutVariable&gt;</type>
+            <name>combinedImageSamplers</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>combinedImageSamplers</anchor>
+            <arglist>() const const</arglist>
+        </member>
+        <member kind="function" protection="public" virtualness="non" static="no">
+            <type>QVector&lt;QShaderDescription::InOutVariable&gt;</type>
+            <name>storageImages</name>
+            <anchorfile>qshaderdescription.html</anchorfile>
+            <anchor>storageImages</anchor>
+            <arglist>() const const</arglist>
+        </member>
+    </compound>
+    <compound kind="class">
+        <name>QShaderDescription::InOutVariable</name>
+        <filename>qshaderdescription-inoutvariable.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QShaderDescription::BlockVariable</name>
+        <filename>qshaderdescription-blockvariable.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QShaderDescription::UniformBlock</name>
+        <filename>qshaderdescription-uniformblock.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QShaderDescription::PushConstantBlock</name>
+        <filename>qshaderdescription-pushconstantblock.html</filename>
+    </compound>
+    <compound kind="class">
+        <name>QShaderDescription::StorageBlock</name>
+        <filename>qshaderdescription-storageblock.html</filename>
     </compound>
 </tagfile>

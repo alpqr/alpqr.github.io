@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- qrhi.cpp -->
-  <title>QRhiBuffer Class | RHI 5.12.0</title>
+  <title>QRhiBuffer Class | RHI 5.12</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -27,7 +27,7 @@
       <div class="navigationbar">
         <table><tr>
 <td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiBuffer</td></tr></table><table class="buildversion"><tr>
-<td id="buildversion" width="100%" align="right"><a href="qtrhi-index.html">Qt 5.12.0 Reference Documentation</a></td>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
         </tr></table>
       </div>
     </div>
@@ -40,6 +40,7 @@
 <ul>
 <li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#reimplemented-public-functions">Reimplemented Public Functions</a></li>
 <li class="level1"><a href="#protected-variables">Protected Variables</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
@@ -58,7 +59,7 @@
 <h2 id="public-types">Public Types</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#Type-enum">Type</a></b> { Immutable, Static, Dynamic }</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#UsageFlag-enum">UsageFlag</a></b> { VertexBuffer, IndexBuffer, UniformBuffer }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#UsageFlag-enum">UsageFlag</a></b> { VertexBuffer, IndexBuffer, UniformBuffer, StorageBuffer }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#UsageFlag-enum">UsageFlags</a></b></td></tr>
 </table></div>
 <a name="public-functions"></a>
@@ -72,17 +73,24 @@
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiBuffer::Type </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#type">type</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiBuffer::UsageFlags </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#usage">usage</a></b>() const</td></tr>
 </table></div>
+<a name="reimplemented-public-functions"></a>
+<h2 id="reimplemented-public-functions">Reimplemented Public Functions</h2>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QRhiResource::Type </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#resourceType">resourceType</a></b>() const override</td></tr>
+</table></div>
 <ul>
-<li class="fn">5 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
+<li class="fn">6 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
 </ul>
 <a name="protected-variables"></a>
 <h2 id="protected-variables">Protected Variables</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> quint64 </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#m_reserved-var">m_reserved</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#m_size-var">m_size</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiBuffer::Type </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#m_type-var">m_type</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiBuffer::UsageFlags </td><td class="memItemRight bottomAlign"><b><a href="qrhibuffer.html#m_usage-var">m_usage</a></b></td></tr>
 </table></div>
+<ul>
+<li class="fn">3 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
+</ul>
 <h3>Additional Inherited Members</h3>
 <ul>
 <li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
@@ -105,16 +113,20 @@
 <tr><td class="topAlign"><code>QRhiBuffer::Dynamic</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Indicates that the data is expected to change frequently. Not recommended for large buffers. Typically backed by host visible memory in 2 copies in order to allow for changing without stalling the graphics pipeline. The double buffering is managed transparently to the applications and is not exposed in the API here in any form. This is the recommended, and, with some backends, the only possible, type for buffers with <a href="qrhibuffer.html#UsageFlag-enum">UniformBuffer</a> usage.</td></tr>
 </table></div>
 <!-- @@@Type -->
-<!-- $$$UsageFlag$$$VertexBuffer$$$IndexBuffer$$$UniformBuffer -->
+<!-- $$$UsageFlag$$$VertexBuffer$$$IndexBuffer$$$UniformBuffer$$$StorageBuffer -->
 <h3 class="flags" id="UsageFlag-enum"><a name="UsageFlag-enum"></a>enum QRhiBuffer::<span class="name">UsageFlag</span><br/>flags QRhiBuffer::<span class="name">UsageFlags</span></h3>
 <p>Flag values to specify how the buffer is going to be used.</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
-<tr><td class="topAlign"><code>QRhiBuffer::VertexBuffer</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">Vertex buffer</td></tr>
-<tr><td class="topAlign"><code>QRhiBuffer::IndexBuffer</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Index buffer</td></tr>
-<tr><td class="topAlign"><code>QRhiBuffer::UniformBuffer</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">Uniform (constant) buffer</td></tr>
+<tr><td class="topAlign"><code>QRhiBuffer::VertexBuffer</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 0</code></td><td class="topAlign">Vertex buffer. This allows the <a href="qrhibuffer.html">QRhiBuffer</a> to be used in QRhiCommandBuffer::setVertexInput().</td></tr>
+<tr><td class="topAlign"><code>QRhiBuffer::IndexBuffer</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 1</code></td><td class="topAlign">Index buffer. This allows the <a href="qrhibuffer.html">QRhiBuffer</a> to be used in QRhiCommandBuffer::setVertexInput().</td></tr>
+<tr><td class="topAlign"><code>QRhiBuffer::UniformBuffer</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 2</code></td><td class="topAlign">Uniform buffer (also called constant buffer). This allows the <a href="qrhibuffer.html">QRhiBuffer</a> to be used in combination with QRhiShaderResourceBinding::UniformBuffer. When <a href="qrhi.html#Feature-enum">NonDynamicUniformBuffers</a> is reported as not supported, this usage can only be combined with the type Dynamic.</td></tr>
+<tr><td class="topAlign"><code>QRhiBuffer::StorageBuffer</code></td><td class="topAlign tblval"><code>1 &lt;&lt; 3</code></td><td class="topAlign">Storage buffer. This allows the <a href="qrhibuffer.html">QRhiBuffer</a> to be used in combination with QRhiShaderResourceBinding::BufferLoad, QRhiShaderResourceBinding::BufferStore, or QRhiShaderResourceBinding::BufferLoadStore. This usage can only be combined with the types Immutable or Static, and is only available when the <a href="qrhi.html#Feature-enum">Compute feature</a> is reported as supported.</td></tr>
 </table></div>
 <p>The UsageFlags type is a typedef for <a href="../qtcore/qflags.html">QFlags</a>&lt;UsageFlag&gt;. It stores an OR combination of UsageFlag values.</p>
 <!-- @@@UsageFlag -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
@@ -123,6 +135,11 @@
 <p>Creates the corresponding native graphics resources. If there are already resources present due to an earlier build() with no corresponding <a href="qrhiresource.html#release">release</a>(), then <a href="qrhiresource.html#release">release</a>() is called implicitly first.</p>
 <p>Returns <code>true</code> when successful, <code>false</code> when a graphics operation failed. Regardless of the return value, calling <a href="qrhiresource.html#release">release</a>() is always safe.</p>
 <!-- @@@build -->
+<!-- $$$resourceType[overload1]$$$resourceType -->
+<h3 class="fn" id="resourceType"><a name="resourceType"></a><code>[override virtual] </code><span class="type"><a href="qrhiresource.html#Type-enum">QRhiResource::Type</a></span> QRhiBuffer::<span class="name">resourceType</span>() const</h3>
+<p>Reimplemented from <a href="qrhiresource.html#resourceType">QRhiResource::resourceType</a>().</p>
+<p>Returns the resource type.</p>
+<!-- @@@resourceType -->
 <!-- $$$setSize[overload1]$$$setSizeint -->
 <h3 class="fn" id="setSize"><a name="setSize"></a><span class="type">void</span> QRhiBuffer::<span class="name">setSize</span>(<span class="type">int</span> <i>sz</i>)</h3>
 <p>Sets the size of the buffer in bytes. The size is normally specified in <a href="qrhi.html#newBuffer">QRhi::newBuffer</a>() so this function is only used when the size has to be changed. As with other setters, the size only takes effect when calling <a href="qrhibuffer.html#build">build</a>(), and for already built buffers this involves releasing the previous native resource and creating new ones under the hood.</p>
@@ -150,6 +167,15 @@
 <p><b>See also </b><a href="qrhibuffer.html#setUsage">setUsage</a>().</p>
 <!-- @@@usage -->
 </div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+</div>
         </div>
        </div>
    </div>
@@ -157,7 +183,7 @@
 </div>
 <div class="footer">
    <p>
-   <acronym title="Copyright">&copy;</acronym> 2019 The Qt Company Ltd.
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
    Documentation contributions included herein are the copyrights of
    their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
    of their respective owners. </p>

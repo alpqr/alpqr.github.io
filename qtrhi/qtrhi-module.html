@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- qtrhi-cpp.qdoc -->
-  <title>Qt Rendering Hardware Interface C++ Classes | RHI 5.12.0</title>
+  <title>Qt Rendering Hardware Interface C++ Classes | RHI 5.12</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -27,7 +27,7 @@
       <div class="navigationbar">
         <table><tr>
 <td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td >Qt Rendering Hardware Interface C++ Classes</td></tr></table><table class="buildversion"><tr>
-<td id="buildversion" width="100%" align="right"><a href="qtrhi-index.html">Qt 5.12.0 Reference Documentation</a></td>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
         </tr></table>
       </div>
     </div>
@@ -48,51 +48,45 @@
 <a name="classes"></a>
 <h2 id="classes">Classes</h2>
 <div class="table"><table class="annotated">
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhishaderdescription-blockvariable.html">QRhiShaderDescription::BlockVariable</a></p></td><td class="tblDescr"><p>Describes a member of a uniform or push constant block</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qshaderdescription-blockvariable.html">QShaderDescription::BlockVariable</a></p></td><td class="tblDescr"><p>Describes a member of a uniform or push constant block</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qrhiprofiler-cputime.html">QRhiProfiler::CpuTime</a></p></td><td class="tblDescr"><p>Contains CPU-side frame timings</p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="qrhiprofiler-gputime.html">QRhiProfiler::GpuTime</a></p></td><td class="tblDescr"><p>Contains GPU-side frame timings</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhishaderdescription-inoutvariable.html">QRhiShaderDescription::InOutVariable</a></p></td><td class="tblDescr"><p>Describes an input or output variable in the shader</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhishaderdescription-pushconstantblock.html">QRhiShaderDescription::PushConstantBlock</a></p></td><td class="tblDescr"><p>Describes a push constant block</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qshaderdescription-inoutvariable.html">QShaderDescription::InOutVariable</a></p></td><td class="tblDescr"><p>Describes an input or output variable in the shader</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qshaderdescription-pushconstantblock.html">QShaderDescription::PushConstantBlock</a></p></td><td class="tblDescr"><p>Describes a push constant block</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qrhi.html">QRhi</a></p></td><td class="tblDescr"><p>Accelerated 2D/3D graphics API abstraction</p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="qrhibuffer.html">QRhiBuffer</a></p></td><td class="tblDescr"><p>Vertex, index, or uniform (constant) buffer resource</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qrhicolorattachment.html">QRhiColorAttachment</a></p></td><td class="tblDescr"><p>Describes the a single color attachment of a render target</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhicolorclearvalue.html">QRhiColorClearValue</a></p></td><td class="tblDescr"><p>Specifies a clear color for a color buffer</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhicommandbuffer.html">QRhiCommandBuffer</a></p></td><td class="tblDescr"><p>Command buffer resource</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhid3d11initparams.html">QRhiD3D11InitParams</a></p></td><td class="tblDescr"><p>Direct3D 11 specific initialization parameters</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhid3d11nativehandles.html">QRhiD3D11NativeHandles</a></p></td><td class="tblDescr"><p>Holds the D3D device and device context used by the QRhi</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhid3d11texturenativehandles.html">QRhiD3D11TextureNativeHandles</a></p></td><td class="tblDescr"><p>Holds the D3D texture object that is backing a QRhiTexture instance</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhidepthstencilclearvalue.html">QRhiDepthStencilClearValue</a></p></td><td class="tblDescr"><p>Specifies clear values for a depth or stencil buffer</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhigles2initparams.html">QRhiGles2InitParams</a></p></td><td class="tblDescr"><p>OpenGL specific initialization parameters</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhigles2nativehandles.html">QRhiGles2NativeHandles</a></p></td><td class="tblDescr"><p>Holds the OpenGL context used by the QRhi</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhigles2texturenativehandles.html">QRhiGles2TextureNativeHandles</a></p></td><td class="tblDescr"><p>Holds the OpenGL texture object that is backing a QRhiTexture instance</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a></p></td><td class="tblDescr"><p>Graphics pipeline state resource</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhigraphicsshaderstage.html">QRhiGraphicsShaderStage</a></p></td><td class="tblDescr"><p>Specifies the type and the shader code for a shader stage in the graphics pipeline</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhiinitparams.html">QRhiInitParams</a></p></td><td class="tblDescr"><p>Base class for backend-specific initialization parameters</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhimetalcommandbuffernativehandles.html">QRhiMetalCommandBufferNativeHandles</a></p></td><td class="tblDescr"><p>Holds the MTLCommandBuffer and MTLRenderCommandEncoder objects that are backing a QRhiCommandBuffer</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhimetalinitparams.html">QRhiMetalInitParams</a></p></td><td class="tblDescr"><p>Metal specific initialization parameters</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhimetalnativehandles.html">QRhiMetalNativeHandles</a></p></td><td class="tblDescr"><p>Holds the Metal device used by the QRhi</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhimetaltexturenativehandles.html">QRhiMetalTextureNativeHandles</a></p></td><td class="tblDescr"><p>Holds the Metal texture object that is backing a QRhiTexture instance</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhinativehandles.html">QRhiNativeHandles</a></p></td><td class="tblDescr"><p>Base class for classes exposing backend-specific collections of native resource objects</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhinullinitparams.html">QRhiNullInitParams</a></p></td><td class="tblDescr"><p>Null backend specific initialization parameters</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhinullnativehandles.html">QRhiNullNativeHandles</a></p></td><td class="tblDescr"><p>Empty</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhinulltexturenativehandles.html">QRhiNullTextureNativeHandles</a></p></td><td class="tblDescr"><p>Empty</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhiprofiler.html">QRhiProfiler</a></p></td><td class="tblDescr"><p>Collects resource and timing information from an active QRhi</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhireadbackdescription.html">QRhiReadbackDescription</a></p></td><td class="tblDescr"><p>Describes a readback (reading back texture contents from possibly GPU-only memory) operation</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhireadbackresult.html">QRhiReadbackResult</a></p></td><td class="tblDescr"><p>Describes the results of a potentially asynchronous readback operation</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhirenderbuffer.html">QRhiRenderBuffer</a></p></td><td class="tblDescr"><p>Renderbuffer resource</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a></p></td><td class="tblDescr"><p>Render pass resource</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhirendertarget.html">QRhiRenderTarget</a></p></td><td class="tblDescr"><p>Represents an onscreen (swapchain) or offscreen (texture) render target</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhiresource.html">QRhiResource</a></p></td><td class="tblDescr"><p>Base class for classes encapsulating native resource objects</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhiresourceupdatebatch.html">QRhiResourceUpdateBatch</a></p></td><td class="tblDescr"><p>Records upload and copy type of operations</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhisampler.html">QRhiSampler</a></p></td><td class="tblDescr"><p>Sampler resource</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhiscissor.html">QRhiScissor</a></p></td><td class="tblDescr"><p>Specifies a scissor rectangle</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhishader.html">QRhiShader</a></p></td><td class="tblDescr"><p>Contains multiple versions of a shader translated to multiple shading languages, together with reflection metadata</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhishadercode.html">QRhiShaderCode</a></p></td><td class="tblDescr"><p>Contains source or binary code for a shader and additional metadata</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhishaderdescription.html">QRhiShaderDescription</a></p></td><td class="tblDescr"><p>Describes the interface of a shader</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhishaderkey.html">QRhiShaderKey</a></p></td><td class="tblDescr"><p>Specifies the shading language, the version with flags, and the variant</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a></p></td><td class="tblDescr"><p>Describes the shader resource for a single binding point</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a></p></td><td class="tblDescr"><p>Encapsulates resources for making buffer, texture, sampler resources visible to shaders</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qrhishaderversion.html">QRhiShaderVersion</a></p></td><td class="tblDescr"><p>Specifies the shading language version</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhicommandbuffer.html">QRhiCommandBuffer</a></p></td><td class="tblDescr"><p>Command buffer resource</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhid3d11initparams.html">QRhiD3D11InitParams</a></p></td><td class="tblDescr"><p>Direct3D 11 specific initialization parameters</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhid3d11nativehandles.html">QRhiD3D11NativeHandles</a></p></td><td class="tblDescr"><p>Holds the D3D device and device context used by the QRhi</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhid3d11texturenativehandles.html">QRhiD3D11TextureNativeHandles</a></p></td><td class="tblDescr"><p>Holds the D3D texture object that is backing a QRhiTexture instance</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhidepthstencilclearvalue.html">QRhiDepthStencilClearValue</a></p></td><td class="tblDescr"><p>Specifies clear values for a depth or stencil buffer</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhigles2initparams.html">QRhiGles2InitParams</a></p></td><td class="tblDescr"><p>OpenGL specific initialization parameters</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhigles2nativehandles.html">QRhiGles2NativeHandles</a></p></td><td class="tblDescr"><p>Holds the OpenGL context used by the QRhi</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhigles2texturenativehandles.html">QRhiGles2TextureNativeHandles</a></p></td><td class="tblDescr"><p>Holds the OpenGL texture object that is backing a QRhiTexture instance</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a></p></td><td class="tblDescr"><p>Graphics pipeline state resource</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhigraphicsshaderstage.html">QRhiGraphicsShaderStage</a></p></td><td class="tblDescr"><p>Specifies the type and the shader code for a shader stage in the graphics pipeline</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhiinitparams.html">QRhiInitParams</a></p></td><td class="tblDescr"><p>Base class for backend-specific initialization parameters</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhimetalcommandbuffernativehandles.html">QRhiMetalCommandBufferNativeHandles</a></p></td><td class="tblDescr"><p>Holds the MTLCommandBuffer and MTLRenderCommandEncoder objects that are backing a QRhiCommandBuffer</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhimetalinitparams.html">QRhiMetalInitParams</a></p></td><td class="tblDescr"><p>Metal specific initialization parameters</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhimetalnativehandles.html">QRhiMetalNativeHandles</a></p></td><td class="tblDescr"><p>Holds the Metal device used by the QRhi</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhimetaltexturenativehandles.html">QRhiMetalTextureNativeHandles</a></p></td><td class="tblDescr"><p>Holds the Metal texture object that is backing a QRhiTexture instance</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhinativehandles.html">QRhiNativeHandles</a></p></td><td class="tblDescr"><p>Base class for classes exposing backend-specific collections of native resource objects</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhinullinitparams.html">QRhiNullInitParams</a></p></td><td class="tblDescr"><p>Null backend specific initialization parameters</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhinullnativehandles.html">QRhiNullNativeHandles</a></p></td><td class="tblDescr"><p>Empty</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhinulltexturenativehandles.html">QRhiNullTextureNativeHandles</a></p></td><td class="tblDescr"><p>Empty</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhiprofiler.html">QRhiProfiler</a></p></td><td class="tblDescr"><p>Collects resource and timing information from an active QRhi</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhireadbackdescription.html">QRhiReadbackDescription</a></p></td><td class="tblDescr"><p>Describes a readback (reading back texture contents from possibly GPU-only memory) operation</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhireadbackresult.html">QRhiReadbackResult</a></p></td><td class="tblDescr"><p>Describes the results of a potentially asynchronous readback operation</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhirenderbuffer.html">QRhiRenderBuffer</a></p></td><td class="tblDescr"><p>Renderbuffer resource</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhirenderpassdescriptor.html">QRhiRenderPassDescriptor</a></p></td><td class="tblDescr"><p>Render pass resource</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhirendertarget.html">QRhiRenderTarget</a></p></td><td class="tblDescr"><p>Represents an onscreen (swapchain) or offscreen (texture) render target</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhiresource.html">QRhiResource</a></p></td><td class="tblDescr"><p>Base class for classes encapsulating native resource objects</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhiresourceupdatebatch.html">QRhiResourceUpdateBatch</a></p></td><td class="tblDescr"><p>Records upload and copy type of operations</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhisampler.html">QRhiSampler</a></p></td><td class="tblDescr"><p>Sampler resource</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhiscissor.html">QRhiScissor</a></p></td><td class="tblDescr"><p>Specifies a scissor rectangle</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a></p></td><td class="tblDescr"><p>Describes the shader resource for a single binding point</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a></p></td><td class="tblDescr"><p>Encapsulates resources for making buffer, texture, sampler resources visible to shaders</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qrhiswapchain.html">QRhiSwapChain</a></p></td><td class="tblDescr"><p>Swapchain resource</p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="qrhitexture.html">QRhiTexture</a></p></td><td class="tblDescr"><p>Texture resource</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qrhitexturecopydescription.html">QRhiTextureCopyDescription</a></p></td><td class="tblDescr"><p>Describes a texture-to-texture copy operation</p></td></tr>
@@ -109,9 +103,11 @@
 <tr class="odd topAlign"><td class="tblName"><p><a href="qrhivulkaninitparams.html">QRhiVulkanInitParams</a></p></td><td class="tblDescr"><p>Vulkan specific initialization parameters</p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qrhivulkannativehandles.html">QRhiVulkanNativeHandles</a></p></td><td class="tblDescr"><p>Collects device, queue, and other Vulkan objects that are used by the QRhi</p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="qrhivulkantexturenativehandles.html">QRhiVulkanTextureNativeHandles</a></p></td><td class="tblDescr"><p>Holds the Vulkan image object that is backing a QRhiTexture</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhigraphicspipeline-stencilopstate.html">QRhiGraphicsPipeline::StencilOpState</a></p></td><td class="tblDescr"><p>Describes the stencil operation state</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qshaderdescription.html">QShaderDescription</a></p></td><td class="tblDescr"><p>Describes the interface of a shader</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qrhigraphicspipeline-stencilopstate.html">QRhiGraphicsPipeline::StencilOpState</a></p></td><td class="tblDescr"><p>Describes the stencil operation state</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qshaderdescription-storageblock.html">QShaderDescription::StorageBlock</a></p></td><td class="tblDescr"><p>Describes a shader storage block</p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="qrhigraphicspipeline-targetblend.html">QRhiGraphicsPipeline::TargetBlend</a></p></td><td class="tblDescr"><p>Describes the blend state for one color attachment</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qrhishaderdescription-uniformblock.html">QRhiShaderDescription::UniformBlock</a></p></td><td class="tblDescr"><p>Describes a uniform block</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qshaderdescription-uniformblock.html">QShaderDescription::UniformBlock</a></p></td><td class="tblDescr"><p>Describes a uniform block</p></td></tr>
 </table></div>
 <!-- $$$QtRhi-description -->
 <div class="descr"> <a name="details"></a>
@@ -136,7 +132,7 @@
 </div>
 <div class="footer">
    <p>
-   <acronym title="Copyright">&copy;</acronym> 2019 The Qt Company Ltd.
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
    Documentation contributions included herein are the copyrights of
    their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
    of their respective owners. </p>

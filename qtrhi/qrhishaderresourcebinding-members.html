@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- qrhi.cpp -->
-  <title>List of All Members for QRhiShaderResourceBinding | RHI 5.12.0</title>
+  <title>List of All Members for QRhiShaderResourceBinding | RHI 5.12</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -27,7 +27,7 @@
       <div class="navigationbar">
         <table><tr>
 <td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiShaderResourceBinding</td></tr></table><table class="buildversion"><tr>
-<td id="buildversion" width="100%" align="right"><a href="qtrhi-index.html">Qt 5.12.0 Reference Documentation</a></td>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
         </tr></table>
       </div>
     </div>
@@ -37,17 +37,30 @@
 <div class="sidebar"><div class="sidebar-content" id="sidebar-content"></div></div>
 <h1 class="title">List of All Members for QRhiShaderResourceBinding</h1>
 <p>This is the complete list of members for <a href="qrhishaderresourcebinding.html">QRhiShaderResourceBinding</a>, including inherited members.</p>
-<ul>
+<div class="table"><table class="propsummary">
+<tr><td class="topAlign"><ul>
 <li class="fn">enum <span class="name"><b><a href="qrhishaderresourcebinding.html#StageFlag-enum">StageFlag</a></b></span></li>
 <li class="fn">flags <span class="name"><b><a href="qrhishaderresourcebinding.html#StageFlag-enum">StageFlags</a></b></span></li>
 <li class="fn">enum <span class="name"><b><a href="qrhishaderresourcebinding.html#Type-enum">Type</a></b></span></li>
 <li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#dtor.QRhiShaderResourceBinding">~QRhiShaderResourceBinding</a></b></span>()</li>
+<li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#bufferLoad">bufferLoad</a></b></span>(int , QRhiShaderResourceBinding::StageFlags , QRhiBuffer *) : QRhiShaderResourceBinding</li>
+<li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#bufferLoad-1">bufferLoad</a></b></span>(int , QRhiShaderResourceBinding::StageFlags , QRhiBuffer *, int , int ) : QRhiShaderResourceBinding</li>
+<li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#bufferLoadStore">bufferLoadStore</a></b></span>(int , QRhiShaderResourceBinding::StageFlags , QRhiBuffer *) : QRhiShaderResourceBinding</li>
+<li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#bufferLoadStore-1">bufferLoadStore</a></b></span>(int , QRhiShaderResourceBinding::StageFlags , QRhiBuffer *, int , int ) : QRhiShaderResourceBinding</li>
+<li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#bufferStore">bufferStore</a></b></span>(int , QRhiShaderResourceBinding::StageFlags , QRhiBuffer *) : QRhiShaderResourceBinding</li>
+</ul></td><td class="topAlign"><ul>
+<li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#bufferStore-1">bufferStore</a></b></span>(int , QRhiShaderResourceBinding::StageFlags , QRhiBuffer *, int , int ) : QRhiShaderResourceBinding</li>
+<li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#imageLoad">imageLoad</a></b></span>(int , QRhiShaderResourceBinding::StageFlags , QRhiTexture *, int ) : QRhiShaderResourceBinding</li>
+<li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#imageLoadStore">imageLoadStore</a></b></span>(int , QRhiShaderResourceBinding::StageFlags , QRhiTexture *, int ) : QRhiShaderResourceBinding</li>
+<li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#imageStore">imageStore</a></b></span>(int , QRhiShaderResourceBinding::StageFlags , QRhiTexture *, int ) : QRhiShaderResourceBinding</li>
 <li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#isLayoutCompatible">isLayoutCompatible</a></b></span>(const QRhiShaderResourceBinding &amp;) const : bool</li>
 <li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#sampledTexture">sampledTexture</a></b></span>(int , QRhiShaderResourceBinding::StageFlags , QRhiTexture *, QRhiSampler *) : QRhiShaderResourceBinding</li>
 <li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#uniformBuffer">uniformBuffer</a></b></span>(int , QRhiShaderResourceBinding::StageFlags , QRhiBuffer *) : QRhiShaderResourceBinding</li>
 <li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#uniformBuffer-1">uniformBuffer</a></b></span>(int , QRhiShaderResourceBinding::StageFlags , QRhiBuffer *, int , int ) : QRhiShaderResourceBinding</li>
 <li class="fn"><span class="name"><b><a href="qrhishaderresourcebinding.html#uniformBufferWithDynamicOffset">uniformBufferWithDynamicOffset</a></b></span>(int , QRhiShaderResourceBinding::StageFlags , QRhiBuffer *, int ) : QRhiShaderResourceBinding</li>
 </ul>
+</td></tr>
+</table></div>
         </div>
        </div>
    </div>
@@ -55,7 +68,7 @@
 </div>
 <div class="footer">
    <p>
-   <acronym title="Copyright">&copy;</acronym> 2019 The Qt Company Ltd.
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
    Documentation contributions included herein are the copyrights of
    their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
    of their respective owners. </p>

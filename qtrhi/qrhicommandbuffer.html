@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- qrhi.cpp -->
-  <title>QRhiCommandBuffer Class | RHI 5.12.0</title>
+  <title>QRhiCommandBuffer Class | RHI 5.12</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -27,7 +27,7 @@
       <div class="navigationbar">
         <table><tr>
 <td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiCommandBuffer</td></tr></table><table class="buildversion"><tr>
-<td id="buildversion" width="100%" align="right"><a href="qtrhi-index.html">Qt 5.12.0 Reference Documentation</a></td>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
         </tr></table>
       </div>
     </div>
@@ -40,7 +40,7 @@
 <ul>
 <li class="level1"><a href="#public-types">Public Types</a></li>
 <li class="level1"><a href="#public-functions">Public Functions</a></li>
-<li class="level1"><a href="#protected-variables">Protected Variables</a></li>
+<li class="level1"><a href="#reimplemented-public-functions">Reimplemented Public Functions</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -64,18 +64,22 @@
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#beginComputePass">beginComputePass</a></b>(QRhiResourceUpdateBatch *<i>resourceUpdates</i> = nullptr)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#beginExternal">beginExternal</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#beginPass">beginPass</a></b>(QRhiRenderTarget *<i>rt</i>, const QRhiColorClearValue &amp;<i>colorClearValue</i>, const QRhiDepthStencilClearValue &amp;<i>depthStencilClearValue</i>, QRhiResourceUpdateBatch *<i>resourceUpdates</i> = nullptr)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#beginPass">beginPass</a></b>(QRhiRenderTarget *<i>rt</i>, const QColor &amp;<i>colorClearValue</i>, const QRhiDepthStencilClearValue &amp;<i>depthStencilClearValue</i>, QRhiResourceUpdateBatch *<i>resourceUpdates</i> = nullptr)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#debugMarkBegin">debugMarkBegin</a></b>(const QByteArray &amp;<i>name</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#debugMarkEnd">debugMarkEnd</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#debugMarkMsg">debugMarkMsg</a></b>(const QByteArray &amp;<i>msg</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#dispatch">dispatch</a></b>(int <i>x</i>, int <i>y</i>, int <i>z</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#draw">draw</a></b>(quint32 <i>vertexCount</i>, quint32 <i>instanceCount</i> = 1, quint32 <i>firstVertex</i> = 0, quint32 <i>firstInstance</i> = 0)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#drawIndexed">drawIndexed</a></b>(quint32 <i>indexCount</i>, quint32 <i>instanceCount</i> = 1, quint32 <i>firstIndex</i> = 0, qint32 <i>vertexOffset</i> = 0, quint32 <i>firstInstance</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#endComputePass">endComputePass</a></b>(QRhiResourceUpdateBatch *<i>resourceUpdates</i> = nullptr)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#endExternal">endExternal</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#endPass">endPass</a></b>(QRhiResourceUpdateBatch *<i>resourceUpdates</i> = nullptr)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> const QRhiNativeHandles *</td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#nativeHandles">nativeHandles</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#resourceUpdate">resourceUpdate</a></b>(QRhiResourceUpdateBatch *<i>resourceUpdates</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#setBlendConstants">setBlendConstants</a></b>(const QVector4D &amp;<i>c</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#setBlendConstants">setBlendConstants</a></b>(const QColor &amp;<i>c</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#setComputePipeline">setComputePipeline</a></b>(QRhiComputePipeline *<i>ps</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#setGraphicsPipeline">setGraphicsPipeline</a></b>(QRhiGraphicsPipeline *<i>ps</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#setScissor">setScissor</a></b>(const QRhiScissor &amp;<i>scissor</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#setShaderResources">setShaderResources</a></b>(QRhiShaderResourceBindings *<i>srb</i> = nullptr, int <i>dynamicOffsetCount</i> = 0, const QRhiCommandBuffer::DynamicOffset *<i>dynamicOffsets</i> = nullptr)</td></tr>
@@ -83,17 +87,18 @@
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#setVertexInput">setVertexInput</a></b>(int <i>startBinding</i>, int <i>bindingCount</i>, const QRhiCommandBuffer::VertexInput *<i>bindings</i>, QRhiBuffer *<i>indexBuf</i> = nullptr, quint32 <i>indexOffset</i> = 0, QRhiCommandBuffer::IndexFormat <i>indexFormat</i> = IndexUInt16)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#setViewport">setViewport</a></b>(const QRhiViewport &amp;<i>viewport</i>)</td></tr>
 </table></div>
-<ul>
-<li class="fn">5 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
-</ul>
-<a name="protected-variables"></a>
-<h2 id="protected-variables">Protected Variables</h2>
+<a name="reimplemented-public-functions"></a>
+<h2 id="reimplemented-public-functions">Reimplemented Public Functions</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> quint64 </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#m_reserved-var">m_reserved</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QRhiResource::Type </td><td class="memItemRight bottomAlign"><b><a href="qrhicommandbuffer.html#resourceType">resourceType</a></b>() const override</td></tr>
 </table></div>
+<ul>
+<li class="fn">6 public functions inherited from <a href="qrhiresource.html#public-functions">QRhiResource</a></li>
+</ul>
 <h3>Additional Inherited Members</h3>
 <ul>
 <li class="fn">1 protected function inherited from <a href="qrhiresource.html#protected-functions">QRhiResource</a></li>
+<li class="fn">3 protected variables inherited from <a href="qrhiresource.html#protected-variables">QRhiResource</a></li>
 </ul>
 <a name="details"></a>
 <!-- $$$QRhiCommandBuffer-description -->
@@ -122,8 +127,16 @@
 <p>Synonym for <a href="../qtcore/qpair.html">QPair</a>&lt;<a href="qrhibuffer.html">QRhiBuffer</a> *, quint32&gt;. The second entry is an offset in the buffer specified by the first.</p>
 <!-- @@@VertexInput -->
 </div>
+<div class="prop">
+<h2>Property Documentation</h2>
+</div>
 <div class="func">
 <h2>Member Function Documentation</h2>
+<!-- $$$beginComputePass[overload1]$$$beginComputePassQRhiResourceUpdateBatch* -->
+<h3 class="fn" id="beginComputePass"><a name="beginComputePass"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">beginComputePass</span>(<span class="type"><a href="qrhiresourceupdatebatch.html">QRhiResourceUpdateBatch</a></span> *<i>resourceUpdates</i> = nullptr)</h3>
+<p>Records starting a new compute pass.</p>
+<p><i>resourceUpdates</i>, when not null, specifies a resource update batch that is to be committed and then released.</p>
+<p><b>Note: </b>Do not assume that any state or resource bindings persist between passes.</p><p><b>Note: </b>A compute pass can record <a href="qrhicommandbuffer.html#setComputePipeline">setComputePipeline</a>(), <a href="qrhicommandbuffer.html#setShaderResources">setShaderResources</a>(), and <a href="qrhicommandbuffer.html#dispatch">dispatch</a>() calls, not graphics ones. General functionality, such as, debug markers and <a href="qrhicommandbuffer.html#beginExternal">beginExternal</a>() is available both in render and compute passes.</p><p><b>Note: </b>Compute is only available when the <a href="qrhi.html#Feature-enum">Compute</a> feature is reported as supported.</p><!-- @@@beginComputePass -->
 <!-- $$$beginExternal[overload1]$$$beginExternal -->
 <h3 class="fn" id="beginExternal"><a name="beginExternal"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">beginExternal</span>()</h3>
 <p>To be called when the application before the application is about to enqueue commands to the current pass' command buffer by calling graphics API functions directly.</p>
@@ -131,8 +144,8 @@
 <p>For OpenGL in particular, this function has an additional task: it makes sure the context is made current on the current thread.</p>
 <p><b>Note: </b>Once beginExternal() is called, no other render pass specific functions (<code>set*</code> or <code>draw*</code>) must be called on the <a href="qrhicommandbuffer.html">QRhiCommandBuffer</a> until <a href="qrhicommandbuffer.html#endExternal">endExternal</a>().</p><p><b>See also </b><a href="qrhicommandbuffer.html#endExternal">endExternal</a>() and <a href="qrhicommandbuffer.html#nativeHandles">nativeHandles</a>().</p>
 <!-- @@@beginExternal -->
-<!-- $$$beginPass[overload1]$$$beginPassQRhiRenderTarget*constQRhiColorClearValue&constQRhiDepthStencilClearValue&QRhiResourceUpdateBatch* -->
-<h3 class="fn" id="beginPass"><a name="beginPass"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">beginPass</span>(<span class="type"><a href="qrhirendertarget.html">QRhiRenderTarget</a></span> *<i>rt</i>, const <span class="type"><a href="qrhicolorclearvalue.html">QRhiColorClearValue</a></span> &amp;<i>colorClearValue</i>, const <span class="type"><a href="qrhidepthstencilclearvalue.html">QRhiDepthStencilClearValue</a></span> &amp;<i>depthStencilClearValue</i>, <span class="type"><a href="qrhiresourceupdatebatch.html">QRhiResourceUpdateBatch</a></span> *<i>resourceUpdates</i> = nullptr)</h3>
+<!-- $$$beginPass[overload1]$$$beginPassQRhiRenderTarget*constQColor&constQRhiDepthStencilClearValue&QRhiResourceUpdateBatch* -->
+<h3 class="fn" id="beginPass"><a name="beginPass"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">beginPass</span>(<span class="type"><a href="qrhirendertarget.html">QRhiRenderTarget</a></span> *<i>rt</i>, const <span class="type"><a href="../qtgui/qcolor.html">QColor</a></span> &amp;<i>colorClearValue</i>, const <span class="type"><a href="qrhidepthstencilclearvalue.html">QRhiDepthStencilClearValue</a></span> &amp;<i>depthStencilClearValue</i>, <span class="type"><a href="qrhiresourceupdatebatch.html">QRhiResourceUpdateBatch</a></span> *<i>resourceUpdates</i> = nullptr)</h3>
 <p>Records starting a new render pass targeting the render target <i>rt</i>.</p>
 <p><i>resourceUpdates</i>, when not null, specifies a resource update batch that is to be committed and then released.</p>
 <p>The color and depth/stencil buffers of the render target are normally cleared. The clear values are specified in <i>colorClearValue</i> and <i>depthStencilClearValue</i>. The exception is when the render target was created with <a href="qrhitexturerendertarget.html#Flag-enum">QRhiTextureRenderTarget::PreserveColorContents</a> and/or <a href="qrhitexturerendertarget.html#Flag-enum">QRhiTextureRenderTarget::PreserveDepthStencilContents</a>. The clear values are ignored then.</p>
@@ -149,18 +162,27 @@
 <h3 class="fn" id="debugMarkMsg"><a name="debugMarkMsg"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">debugMarkMsg</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i>msg</i>)</h3>
 <p>Inserts a debug message <i>msg</i> into the command stream.</p>
 <p><b>Note: </b>Ignored when <a href="qrhi.html#Feature-enum">QRhi::DebugMarkers</a> are not supported or <a href="qrhi.html#Flag-enum">QRhi::EnableDebugMarkers</a> is not set.</p><p><b>Note: </b>With some backends debugMarkMsg() is only supported inside a pass and is ignored when called outside a pass. With others it is recorded anywhere within the frame.</p><!-- @@@debugMarkMsg -->
+<!-- $$$dispatch[overload1]$$$dispatchintintint -->
+<h3 class="fn" id="dispatch"><a name="dispatch"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">dispatch</span>(<span class="type">int</span> <i>x</i>, <span class="type">int</span> <i>y</i>, <span class="type">int</span> <i>z</i>)</h3>
+<p>Records dispatching compute work items, with <i>x</i>, <i>y</i>, and <i>z</i> specifying the number of local workgroups in the corresponding dimension.</p>
+<p><b>Note: </b>This function can only be called inside a compute pass, meaning between a <a href="qrhicommandbuffer.html#beginComputePass">beginComputePass</a>() and <a href="qrhicommandbuffer.html#endComputePass">endComputePass</a>() call.</p><!-- @@@dispatch -->
 <!-- $$$draw[overload1]$$$drawquint32quint32quint32quint32 -->
 <h3 class="fn" id="draw"><a name="draw"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">draw</span>(<span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>vertexCount</i>, <span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>instanceCount</i> = 1, <span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>firstVertex</i> = 0, <span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>firstInstance</i> = 0)</h3>
 <p>Records a non-indexed draw.</p>
 <p>The number of vertices is specified in <i>vertexCount</i>. For instanced drawing set <i>instanceCount</i> to a value other than 1. <i>firstVertex</i> is the index of the first vertex to draw. <i>firstInstance</i> is the instance ID of the first instance to draw.</p>
-<p><b>Note: </b>This function can only be called inside a pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() end <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@draw -->
+<p><b>Note: </b>This function can only be called inside a render pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() and <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@draw -->
 <!-- $$$drawIndexed[overload1]$$$drawIndexedquint32quint32quint32qint32quint32 -->
 <h3 class="fn" id="drawIndexed"><a name="drawIndexed"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">drawIndexed</span>(<span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>indexCount</i>, <span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>instanceCount</i> = 1, <span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>firstIndex</i> = 0, <span class="type"><a href="../qtcore/qtglobal.html#qint32-typedef">qint32</a></span> <i>vertexOffset</i> = 0, <span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>firstInstance</i> = 0)</h3>
 <p>Records an indexed draw.</p>
 <p>The number of vertices is specified in <i>indexCount</i>. <i>firstIndex</i> is the base index. The effective offset in the index buffer is given by <code>indexOffset + firstIndex * n</code> where <code>n</code> is 2 or 4 depending on the index element type. <code>indexOffset</code> is specified in <a href="qrhicommandbuffer.html#setVertexInput">setVertexInput</a>().</p>
 <p><b>Note: </b>The effective offset in the index buffer must be 4 byte aligned with some backends (for example, Metal). With these backends the <a href="qrhi.html#Feature-enum">NonFourAlignedEffectiveIndexBufferOffset</a> feature will be reported as not-supported.</p><p>For instanced drawing set <i>instanceCount</i> to a value other than 1. <i>firstInstance</i> is the instance ID of the first instance to draw.</p>
 <p><i>vertexOffset</i> is added to the vertex index.</p>
-<p><b>Note: </b>This function can only be called inside a pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() end <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@drawIndexed -->
+<p><b>Note: </b>This function can only be called inside a render pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() and <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@drawIndexed -->
+<!-- $$$endComputePass[overload1]$$$endComputePassQRhiResourceUpdateBatch* -->
+<h3 class="fn" id="endComputePass"><a name="endComputePass"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">endComputePass</span>(<span class="type"><a href="qrhiresourceupdatebatch.html">QRhiResourceUpdateBatch</a></span> *<i>resourceUpdates</i> = nullptr)</h3>
+<p>Records ending the current compute pass.</p>
+<p><i>resourceUpdates</i>, when not null, specifies a resource update batch that is to be committed and then released.</p>
+<!-- @@@endComputePass -->
 <!-- $$$endExternal[overload1]$$$endExternal -->
 <h3 class="fn" id="endExternal"><a name="endExternal"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">endExternal</span>()</h3>
 <p>To be called once the externally added commands are recorded to the command buffer or context.</p>
@@ -176,43 +198,52 @@
 <p>Returns a pointer to a backend-specific <a href="qrhinativehandles.html">QRhiNativeHandles</a> subclass, such as <a href="qrhivulkancommandbuffernativehandles.html">QRhiVulkanCommandBufferNativeHandles</a>. The returned value is null when exposing the underlying native resources is not supported by, or not applicable to, the backend.</p>
 <p><b>See also </b><a href="qrhivulkancommandbuffernativehandles.html">QRhiVulkanCommandBufferNativeHandles</a>, <a href="qrhimetalcommandbuffernativehandles.html">QRhiMetalCommandBufferNativeHandles</a>, <a href="qrhicommandbuffer.html#beginExternal">beginExternal</a>(), and <a href="qrhicommandbuffer.html#endExternal">endExternal</a>().</p>
 <!-- @@@nativeHandles -->
+<!-- $$$resourceType[overload1]$$$resourceType -->
+<h3 class="fn" id="resourceType"><a name="resourceType"></a><code>[override virtual] </code><span class="type"><a href="qrhiresource.html#Type-enum">QRhiResource::Type</a></span> QRhiCommandBuffer::<span class="name">resourceType</span>() const</h3>
+<p>Reimplemented from <a href="qrhiresource.html#resourceType">QRhiResource::resourceType</a>().</p>
+<p>Returns the resource type.</p>
+<!-- @@@resourceType -->
 <!-- $$$resourceUpdate[overload1]$$$resourceUpdateQRhiResourceUpdateBatch* -->
 <h3 class="fn" id="resourceUpdate"><a name="resourceUpdate"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">resourceUpdate</span>(<span class="type"><a href="qrhiresourceupdatebatch.html">QRhiResourceUpdateBatch</a></span> *<i>resourceUpdates</i>)</h3>
 <p>Sometimes committing resource updates is necessary without starting a render pass. Not often needed, updates should typically be passed to <a href="qrhicommandbuffer.html#beginPass">beginPass</a> (or <a href="qrhicommandbuffer.html#endPass">endPass</a>, in case of readbacks) instead.</p>
 <p><b>Note: </b>Cannot be called inside a pass.</p><!-- @@@resourceUpdate -->
-<!-- $$$setBlendConstants[overload1]$$$setBlendConstantsconstQVector4D& -->
-<h3 class="fn" id="setBlendConstants"><a name="setBlendConstants"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">setBlendConstants</span>(const <span class="type"><a href="../qtgui/qvector4d.html">QVector4D</a></span> &amp;<i>c</i>)</h3>
+<!-- $$$setBlendConstants[overload1]$$$setBlendConstantsconstQColor& -->
+<h3 class="fn" id="setBlendConstants"><a name="setBlendConstants"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">setBlendConstants</span>(const <span class="type"><a href="../qtgui/qcolor.html">QColor</a></span> &amp;<i>c</i>)</h3>
 <p>Records setting the active blend constants to <i>c</i>.</p>
 <p>This can only be called when the bound pipeline has <a href="qrhigraphicspipeline.html#Flag-enum">QRhiGraphicsPipeline::UsesBlendConstants</a> set.</p>
-<p><b>Note: </b>This function can only be called inside a pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() end <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@setBlendConstants -->
+<p><b>Note: </b>This function can only be called inside a render pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() and <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@setBlendConstants -->
+<!-- $$$setComputePipeline[overload1]$$$setComputePipelineQRhiComputePipeline* -->
+<h3 class="fn" id="setComputePipeline"><a name="setComputePipeline"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">setComputePipeline</span>(<span class="type">QRhiComputePipeline</span> *<i>ps</i>)</h3>
+<p>Records setting a new compute pipeline <i>ps</i>.</p>
+<p><b>Note: </b>This function must be called before recording <a href="qrhicommandbuffer.html#setShaderResources">setShaderResources</a>() or <a href="qrhicommandbuffer.html#dispatch">dispatch</a>() commands on the command buffer.</p><p><b>Note: </b><a href="qrhi.html">QRhi</a> will optimize out unnecessary invocations within a pass, so therefore overoptimizing to avoid calls to this function is not necessary on the applications' side.</p><p><b>Note: </b>This function can only be called inside a compute pass, meaning between a <a href="qrhicommandbuffer.html#beginComputePass">beginComputePass</a>() and <a href="qrhicommandbuffer.html#endComputePass">endComputePass</a>() call.</p><!-- @@@setComputePipeline -->
 <!-- $$$setGraphicsPipeline[overload1]$$$setGraphicsPipelineQRhiGraphicsPipeline* -->
 <h3 class="fn" id="setGraphicsPipeline"><a name="setGraphicsPipeline"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">setGraphicsPipeline</span>(<span class="type"><a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a></span> *<i>ps</i>)</h3>
 <p>Records setting a new graphics pipeline <i>ps</i>.</p>
-<p><b>Note: </b>This function must be called before recording other <code>set</code> or <code>draw</code> commands on the command buffer.</p><p><b>Note: </b><a href="qrhi.html">QRhi</a> will optimize out unnecessary invocations within a pass, so therefore overoptimizing to avoid calls to this function is not necessary on the applications' side.</p><p><b>Note: </b>This function can only be called inside a pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() end <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@setGraphicsPipeline -->
+<p><b>Note: </b>This function must be called before recording other <code>set</code> or <code>draw</code> commands on the command buffer.</p><p><b>Note: </b><a href="qrhi.html">QRhi</a> will optimize out unnecessary invocations within a pass, so therefore overoptimizing to avoid calls to this function is not necessary on the applications' side.</p><p><b>Note: </b>This function can only be called inside a render pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() and <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@setGraphicsPipeline -->
 <!-- $$$setScissor[overload1]$$$setScissorconstQRhiScissor& -->
 <h3 class="fn" id="setScissor"><a name="setScissor"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">setScissor</span>(const <span class="type"><a href="qrhiscissor.html">QRhiScissor</a></span> &amp;<i>scissor</i>)</h3>
 <p>Records setting the active scissor rectangle specified in <i>scissor</i>.</p>
 <p>This can only be called when the bound pipeline has <a href="qrhigraphicspipeline.html#Flag-enum">UsesScissor</a> set. When the flag is set on the active pipeline, this function must be called because scissor testing will get enabled and so a scissor rectangle must be provided.</p>
-<p><b>Note: </b><a href="qrhi.html">QRhi</a> assumes OpenGL-style viewport coordinates, meaning x and y are bottom-left.</p><p><b>Note: </b>This function can only be called inside a pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() end <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@setScissor -->
+<p><b>Note: </b><a href="qrhi.html">QRhi</a> assumes OpenGL-style viewport coordinates, meaning x and y are bottom-left.</p><p><b>Note: </b>This function can only be called inside a render pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() and <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@setScissor -->
 <!-- $$$setShaderResources[overload1]$$$setShaderResourcesQRhiShaderResourceBindings*intconstQRhiCommandBuffer::DynamicOffset* -->
 <h3 class="fn" id="setShaderResources"><a name="setShaderResources"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">setShaderResources</span>(<span class="type"><a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a></span> *<i>srb</i> = nullptr, <span class="type">int</span> <i>dynamicOffsetCount</i> = 0, const <span class="type"><a href="qrhicommandbuffer.html#DynamicOffset-typedef">QRhiCommandBuffer::DynamicOffset</a></span> *<i>dynamicOffsets</i> = nullptr)</h3>
 <p>Records binding a set of shader resources, such as, uniform buffers or textures, that are made visible to one or more shader stages.</p>
-<p><i>srb</i> can be null in which case the current graphics pipeline's associated <a href="qrhigraphicspipeline.html#shaderResourceBindings">QRhiGraphicsPipeline::shaderResourceBindings</a>() is used. When <i>srb</i> is non-null, it must be <a href="qrhishaderresourcebindings.html#isLayoutCompatible">layout-compatible</a>, meaning the layout (number of bindings, the type and binding number of each binding) must fully match the <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a> that was associated with the pipeline at the time of calling <a href="qrhigraphicspipeline.html#build">QRhiGraphicsPipeline::build</a>().</p>
+<p><i>srb</i> can be null in which case the current graphics or compute pipeline's associated <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a> is used. When <i>srb</i> is non-null, it must be <a href="qrhishaderresourcebindings.html#isLayoutCompatible">layout-compatible</a>, meaning the layout (number of bindings, the type and binding number of each binding) must fully match the <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a> that was associated with the pipeline at the time of calling the pipeline's build().</p>
 <p>There are cases when a seemingly unnecessary setShaderResources() call is mandatory: when rebuilding a resource referenced from <i>srb</i>, for example changing the size of a <a href="qrhibuffer.html">QRhiBuffer</a> followed by a <a href="qrhibuffer.html#build">QRhiBuffer::build</a>(), this is the place where associated native objects (such as descriptor sets in case of Vulkan) are updated to refer to the current native resources that back the <a href="qrhibuffer.html">QRhiBuffer</a>, <a href="qrhitexture.html">QRhiTexture</a>, <a href="qrhisampler.html">QRhiSampler</a> objects referenced from <i>srb</i>. In this case setShaderResources() must be called even if <i>srb</i> is the same as in the last call.</p>
 <p><i>dynamicOffsets</i> allows specifying buffer offsets for uniform buffers that were associated with <i>srb</i> via <a href="qrhishaderresourcebinding.html#uniformBufferWithDynamicOffset">QRhiShaderResourceBinding::uniformBufferWithDynamicOffset</a>(). This is different from providing the offset in the <i>srb</i> itself: dynamic offsets do not require building a new <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a> for every different offset, can avoid writing the underlying descriptors (with backends where applicable), and so they may be more efficient. Each element of <i>dynamicOffsets</i> is a <code>binding</code> - <code>offset</code> pair. <i>dynamicOffsetCount</i> specifies the number of elements in <i>dynamicOffsets</i>.</p>
-<p><b>Note: </b>All offsets in <i>dynamicOffsets</i> must be byte aligned to the value returned from <a href="qrhi.html#ubufAlignment">QRhi::ubufAlignment</a>().</p><p><b>Note: </b><a href="qrhi.html">QRhi</a> will optimize out unnecessary invocations within a pass (taking the conditions described above into account), so therefore overoptimizing to avoid calls to this function is not necessary on the applications' side.</p><p><b>Note: </b>This function can only be called inside a pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() end <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@setShaderResources -->
+<p><b>Note: </b>All offsets in <i>dynamicOffsets</i> must be byte aligned to the value returned from <a href="qrhi.html#ubufAlignment">QRhi::ubufAlignment</a>().</p><p><b>Note: </b><a href="qrhi.html">QRhi</a> will optimize out unnecessary invocations within a pass (taking the conditions described above into account), so therefore overoptimizing to avoid calls to this function is not necessary on the applications' side.</p><p><b>Note: </b>This function can only be called inside a render or compute pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() and <a href="qrhicommandbuffer.html#endPass">endPass</a>(), or <a href="qrhicommandbuffer.html#beginComputePass">beginComputePass</a>() and <a href="qrhicommandbuffer.html#endComputePass">endComputePass</a>().</p><!-- @@@setShaderResources -->
 <!-- $$$setStencilRef[overload1]$$$setStencilRefquint32 -->
 <h3 class="fn" id="setStencilRef"><a name="setStencilRef"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">setStencilRef</span>(<span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>refValue</i>)</h3>
 <p>Records setting the active stencil reference value to <i>refValue</i>.</p>
 <p>This can only be called when the bound pipeline has <a href="qrhigraphicspipeline.html#Flag-enum">QRhiGraphicsPipeline::UsesStencilRef</a> set.</p>
-<p><b>Note: </b>This function can only be called inside a pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() end <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@setStencilRef -->
+<p><b>Note: </b>This function can only be called inside a render pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() and <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@setStencilRef -->
 <!-- $$$setVertexInput[overload1]$$$setVertexInputintintconstQRhiCommandBuffer::VertexInput*QRhiBuffer*quint32QRhiCommandBuffer::IndexFormat -->
 <h3 class="fn" id="setVertexInput"><a name="setVertexInput"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">setVertexInput</span>(<span class="type">int</span> <i>startBinding</i>, <span class="type">int</span> <i>bindingCount</i>, const <span class="type"><a href="qrhicommandbuffer.html#VertexInput-typedef">QRhiCommandBuffer::VertexInput</a></span> *<i>bindings</i>, <span class="type"><a href="qrhibuffer.html">QRhiBuffer</a></span> *<i>indexBuf</i> = nullptr, <span class="type"><a href="../qtcore/qtglobal.html#quint32-typedef">quint32</a></span> <i>indexOffset</i> = 0, <span class="type"><a href="qrhicommandbuffer.html#IndexFormat-enum">QRhiCommandBuffer::IndexFormat</a></span> <i>indexFormat</i> = IndexUInt16)</h3>
 <p>Records vertex input bindings.</p>
 <p>The index buffer used by subsequent <a href="qrhicommandbuffer.html#drawIndexed">drawIndexed</a>() commands is specified by <i>indexBuf</i>, <i>indexOffset</i>, and <i>indexFormat</i>. <i>indexBuf</i> can be set to null when indexed drawing is not needed.</p>
 <p>Vertex buffer bindings are batched. <i>startBinding</i> specifies the first binding number. The recorded command then binds each buffer from <i>bindings</i> to the binding point <code>startBinding + i</code> where <code>i</code> is the index in <i>bindings</i>. Each element in <i>bindings</i> specifies a <a href="qrhibuffer.html">QRhiBuffer</a> and an offset.</p>
 <p>Superfluous vertex input and index changes in the same pass are ignored automatically with most backends and therefore applications do not need to overoptimize to avoid calls to this function.</p>
-<p><b>Note: </b>This function can only be called inside a pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() end <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><p>As a simple example, take a vertex shader with two inputs:</p>
+<p><b>Note: </b>This function can only be called inside a render pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() and <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><p>As a simple example, take a vertex shader with two inputs:</p>
 <pre class="cpp plain">
 
   layout(location = 0) in vec4 position;
@@ -244,7 +275,16 @@
 <h3 class="fn" id="setViewport"><a name="setViewport"></a><span class="type">void</span> QRhiCommandBuffer::<span class="name">setViewport</span>(const <span class="type"><a href="qrhiviewport.html">QRhiViewport</a></span> &amp;<i>viewport</i>)</h3>
 <p>Records setting the active viewport rectangle specified in <i>viewport</i>.</p>
 <p>With backends where the underlying graphics API has scissoring always enabled, this function also sets the scissor to match the viewport whenever the active <a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a> does not have <a href="qrhigraphicspipeline.html#Flag-enum">UsesScissor</a> set.</p>
-<p><b>Note: </b><a href="qrhi.html">QRhi</a> assumes OpenGL-style viewport coordinates, meaning x and y are bottom-left.</p><p><b>Note: </b>This function can only be called inside a pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() end <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@setViewport -->
+<p><b>Note: </b><a href="qrhi.html">QRhi</a> assumes OpenGL-style viewport coordinates, meaning x and y are bottom-left.</p><p><b>Note: </b>This function can only be called inside a render pass, meaning between a <a href="qrhicommandbuffer.html#beginPass">beginPass</a>() and <a href="qrhicommandbuffer.html#endPass">endPass</a>() call.</p><!-- @@@setViewport -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
 </div>
         </div>
        </div>
@@ -253,7 +293,7 @@
 </div>
 <div class="footer">
    <p>
-   <acronym title="Copyright">&copy;</acronym> 2019 The Qt Company Ltd.
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
    Documentation contributions included herein are the copyrights of
    their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
    of their respective owners. </p>

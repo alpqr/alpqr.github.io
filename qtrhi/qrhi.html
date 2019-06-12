@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- qrhi.cpp -->
-  <title>QRhi Class | RHI 5.12.0</title>
+  <title>QRhi Class | RHI 5.12</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -27,7 +27,7 @@
       <div class="navigationbar">
         <table><tr>
 <td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhi</td></tr></table><table class="buildversion"><tr>
-<td id="buildversion" width="100%" align="right"><a href="qtrhi-index.html">Qt 5.12.0 Reference Documentation</a></td>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
         </tr></table>
       </div>
     </div>
@@ -63,7 +63,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> typedef </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#CleanupCallback-typedef">CleanupCallback</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#EndFrameFlag-enum">EndFrameFlag</a></b> { SkipPresent }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#EndFrameFlag-enum">EndFrameFlags</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Feature-enum">Feature</a></b> { MultisampleTexture, MultisampleRenderBuffer, DebugMarkers, Timestamps, ..., ElementIndexUint }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Feature-enum">Feature</a></b> { MultisampleTexture, MultisampleRenderBuffer, DebugMarkers, Timestamps, ..., Compute }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Flag-enum">Flag</a></b> { EnableProfiling, EnableDebugMarkers }</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#Flag-enum">Flags</a></b></td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#FrameOpResult-enum">FrameOpResult</a></b> { FrameOpSuccess, FrameOpError, FrameOpSwapChainOutOfDate, FrameOpDeviceLost }</td></tr>
@@ -92,6 +92,7 @@
 <tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#mipLevelsForSize">mipLevelsForSize</a></b>(const QSize &amp;<i>size</i>) const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> const QRhiNativeHandles *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#nativeHandles">nativeHandles</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newBuffer">newBuffer</a></b>(QRhiBuffer::Type <i>type</i>, QRhiBuffer::UsageFlags <i>usage</i>, int <i>size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRhiComputePipeline *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newComputePipeline">newComputePipeline</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsPipeline *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newGraphicsPipeline">newGraphicsPipeline</a></b>()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiRenderBuffer *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newRenderBuffer">newRenderBuffer</a></b>(QRhiRenderBuffer::Type <i>type</i>, const QSize &amp;<i>pixelSize</i>, int <i>sampleCount</i> = 1, QRhiRenderBuffer::Flags <i>flags</i> = ...)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiSampler *</td><td class="memItemRight bottomAlign"><b><a href="qrhi.html#newSampler">newSampler</a></b>(QRhiSampler::Filter <i>magFilter</i>, QRhiSampler::Filter <i>minFilter</i>, QRhiSampler::Filter <i>mipmapMode</i>, QRhiSampler::AddressMode <i>u</i>, QRhiSampler::AddressMode <i>v</i>)</td></tr>
@@ -138,7 +139,7 @@
 <li>Vulkan 1.0, optionally with some extensions that are part of Vulkan 1.1</li>
 <li>Null - A &quot;dummy&quot; backend that issues no graphics calls at all.</li>
 </ul>
-<p>In order to allow shader code to be written once in Qt applications and libraries, all shaders are expected to be written in a single language which is then compiled into SPIR-V. Versions for various shading language are then generated from that, together with reflection information (inputs, outputs, shader resources). This is then packed into easily and efficiently serializable <a href="qrhishader.html">QRhiShader</a> instances. The compilers and tools to generate such shaders are not part of <a href="qrhi.html">QRhi</a>, but the core classes for using such shaders, <a href="qrhishader.html">QRhiShader</a> and <a href="qrhishaderdescription.html">QRhiShaderDescription</a>, are.</p>
+<p>In order to allow shader code to be written once in Qt applications and libraries, all shaders are expected to be written in a single language which is then compiled into SPIR-V. Versions for various shading language are then generated from that, together with reflection information (inputs, outputs, shader resources). This is then packed into easily and efficiently serializable QShader instances. The compilers and tools to generate such shaders are not part of <a href="qrhi.html">QRhi</a>, but the core classes for using such shaders, QShader and <a href="qshaderdescription.html">QShaderDescription</a>, are.</p>
 <a name="design-fundamentals"></a>
 <h4 >Design Fundamentals</h4>
 <p>A <a href="qrhi.html">QRhi</a> cannot be instantiated directly. Instead, use the <a href="qrhi.html#create">create</a>() function. Delete the <a href="qrhi.html">QRhi</a> instance normally to release the graphics device.</p>
@@ -178,7 +179,7 @@
 <a name="resource-synchronization"></a>
 <h5 >Resource synchronization</h5>
 <p><a href="qrhi.html">QRhi</a> does not expose APIs for resource barriers or image layout transitions. Such synchronization is done implicitly by the backends, where applicable (for example, Vulkan), by tracking resource usage as necessary.</p>
-<a name="resource-reuse"></a>
+<p><b>Note: </b>Resources within a frame are expected to be bound to a single usage during that frame. For example, a buffer can be used as vertex, index, uniform, or storage buffer, but not a combination of them.</p><a name="resource-reuse"></a>
 <h5 >Resource reuse</h5>
 <p>From the user's point of view a <a href="qrhiresource.html">QRhiResource</a> is reusable immediately after calling <a href="qrhiresource.html#release">QRhiResource::release</a>(). With the exception of swapchains, calling <code>build()</code> on an already built object does an implicit <code>release()</code>. This provides a handy shortcut to reuse a <a href="qrhiresource.html">QRhiResource</a> instance with different parameters, with a new native graphics object underneath.</p>
 <p>The importance of reusing the same object lies in the fact that some objects reference other objects: for example, a <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a> can reference <a href="qrhibuffer.html">QRhiBuffer</a>, <a href="qrhitexture.html">QRhiTexture</a>, and <a href="qrhisampler.html">QRhiSampler</a> instances. If in a later frame one of these buffers need to be resized or a sampler parameter needs changing, destroying and creating a whole new <a href="qrhibuffer.html">QRhiBuffer</a> or <a href="qrhisampler.html">QRhiSampler</a> would invalidate all references to the old instance. By just changing the appropriate parameters via <a href="qrhibuffer.html#setSize">QRhiBuffer::setSize</a>() or similar and then calling <a href="qrhibuffer.html#build">QRhiBuffer::build</a>(), everything works as expected and there is no need to touch the <a href="qrhishaderresourcebindings.html">QRhiShaderResourceBindings</a> at all, even though there is a good chance that under the hood the <a href="qrhibuffer.html">QRhiBuffer</a> is now backed by a whole new native buffer.</p>
@@ -250,7 +251,7 @@
 </table></div>
 <p>The EndFrameFlags type is a typedef for <a href="../qtcore/qflags.html">QFlags</a>&lt;EndFrameFlag&gt;. It stores an OR combination of EndFrameFlag values.</p>
 <!-- @@@EndFrameFlag -->
-<!-- $$$Feature$$$MultisampleTexture$$$MultisampleRenderBuffer$$$DebugMarkers$$$Timestamps$$$Instancing$$$CustomInstanceStepRate$$$PrimitiveRestart$$$NonDynamicUniformBuffers$$$NonFourAlignedEffectiveIndexBufferOffset$$$NPOTTextureRepeat$$$RedOrAlpha8IsRed$$$ElementIndexUint -->
+<!-- $$$Feature$$$MultisampleTexture$$$MultisampleRenderBuffer$$$DebugMarkers$$$Timestamps$$$Instancing$$$CustomInstanceStepRate$$$PrimitiveRestart$$$NonDynamicUniformBuffers$$$NonFourAlignedEffectiveIndexBufferOffset$$$NPOTTextureRepeat$$$RedOrAlpha8IsRed$$$ElementIndexUint$$$Compute -->
 <h3 class="fn" id="Feature-enum"><a name="Feature-enum"></a>enum QRhi::<span class="name">Feature</span></h3>
 <p>Flag values to indicate what features are supported by the backend currently in use.</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
@@ -266,6 +267,7 @@
 <tr><td class="topAlign"><code>QRhi::NPOTTextureRepeat</code></td><td class="topAlign tblval"><code>10</code></td><td class="topAlign">Indicates that the <a href="qrhisampler.html#AddressMode-enum">Repeat</a> mode is supported for textures with a non-power-of-two size.</td></tr>
 <tr><td class="topAlign"><code>QRhi::RedOrAlpha8IsRed</code></td><td class="topAlign tblval"><code>11</code></td><td class="topAlign">Indicates that the <a href="qrhitexture.html#Format-enum">RED_OR_ALPHA8</a> format maps to a one component 8-bit <code>red</code> format. This is the case for all backends except OpenGL, where <code>GL_ALPHA</code>, a one component 8-bit <code>alpha</code> format, is used instead. This is relevant for shader code that samples from the texture.</td></tr>
 <tr><td class="topAlign"><code>QRhi::ElementIndexUint</code></td><td class="topAlign tblval"><code>12</code></td><td class="topAlign">Indicates that 32-bit unsigned integer elements are supported in the index buffer. In practice this is true everywhere except when running on plain OpenGL ES 2.0 implementations without the necessary extension. When false, only 16-bit unsigned elements are supported in the index buffer.</td></tr>
+<tr><td class="topAlign"><code>QRhi::Compute</code></td><td class="topAlign tblval"><code>13</code></td><td class="topAlign">Indicates that compute shaders are supported.</td></tr>
 </table></div>
 <!-- @@@Feature -->
 <!-- $$$Flag$$$EnableProfiling$$$EnableDebugMarkers -->
@@ -305,9 +307,12 @@
 <tr><td class="topAlign"><code>QRhi::TextureSizeMin</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Minimum texture width and height. This is typically 1. The minimum texture size is handled gracefully, meaning attempting to create a texture with an empty size will instead create a texture with the minimum size.</td></tr>
 <tr><td class="topAlign"><code>QRhi::TextureSizeMax</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Maximum texture width and height. This depends on the graphics API and sometimes the platform or implementation as well. Typically the value is in the range 4096 - 16384. Attempting to create textures larger than this is expected to fail.</td></tr>
 <tr><td class="topAlign"><code>QRhi::MaxColorAttachments</code></td><td class="topAlign tblval"><code>3</code></td><td class="topAlign">The maximum number of color attachments for a <a href="qrhitexturerendertarget.html">QRhiTextureRenderTarget</a>, in case multiple render targets are supported. When MRT is not supported, the value is 1. Otherwise this is typically 8, but watch out for the fact that OpenGL only mandates 4 as the minimum, and that is what some OpenGL ES implementations provide.</td></tr>
-<tr><td class="topAlign"><code>QRhi::FramesInFlight</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">The number of frames the backend may keep &quot;in flight&quot;. The value has no relevance, and is unspecified, with backends like OpenGL and Direct3D 11. With backends like Vulkan or Metal, it is the responsibility of <a href="qrhi.html">QRhi</a> to block whenever starting a new frame and finding the CPU is already N frames ahead of the GPU (because the command buffer submitted in frame no. <code>current</code> - <code>N</code> has not yet completed). The value N is what is returned from here, and is typically 2. This can be relevant to applications that integrate rendering done directly with the graphics API, as such rendering code may want to perform double (if the value is 2) buffering for resources, such as, buffers, similarly to the <a href="qrhi.html">QRhi</a> backends themselves. The current frame slot index (a value running 0, 1, .., N-1, then wrapping around) is retrievable from <a href="qrhi.html#currentFrameSlot">QRhi::currentFrameSlot</a>().</td></tr>
+<tr><td class="topAlign"><code>QRhi::FramesInFlight</code></td><td class="topAlign tblval"><code>4</code></td><td class="topAlign">The number of frames the backend may keep &quot;in flight&quot;. The value has no relevance, and is unspecified, with backends like OpenGL and Direct3D 11. With backends like Vulkan or Metal, it is the responsibility of <a href="qrhi.html">QRhi</a> to block whenever starting a new frame and finding the CPU is already <code>N - 1</code> frames ahead of the GPU (because the command buffer submitted in frame no. <code>current</code> - <code>N</code> has not yet completed). The value N is what is returned from here, and is typically 2. This can be relevant to applications that integrate rendering done directly with the graphics API, as such rendering code may want to perform double (if the value is 2) buffering for resources, such as, buffers, similarly to the <a href="qrhi.html">QRhi</a> backends themselves. The current frame slot index (a value running 0, 1, .., N-1, then wrapping around) is retrievable from <a href="qrhi.html#currentFrameSlot">QRhi::currentFrameSlot</a>().</td></tr>
 </table></div>
 <!-- @@@ResourceLimit -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
@@ -388,7 +393,7 @@
 <!-- $$$currentFrameSlot[overload1]$$$currentFrameSlot -->
 <h3 class="fn" id="currentFrameSlot"><a name="currentFrameSlot"></a><span class="type">int</span> QRhi::<span class="name">currentFrameSlot</span>() const</h3>
 <p>Returns the current frame slot index while recording a frame. Unspecified when called outside an active frame (that is, when <a href="qrhi.html#isRecordingFrame">isRecordingFrame</a>() is <code>false</code>).</p>
-<p>With backends like Vulkan or Metal, it is the responsibility of the <a href="qrhi.html">QRhi</a> backend to block whenever starting a new frame and finding the CPU is already <a href="qrhi.html#ResourceLimit-enum">FramesInFlight</a> frames ahead of the GPU (because the command buffer submitted in frame no. <code>current</code> - <code>FramesInFlight</code> has not yet completed).</p>
+<p>With backends like Vulkan or Metal, it is the responsibility of the <a href="qrhi.html">QRhi</a> backend to block whenever starting a new frame and finding the CPU is already <code>FramesInFlight - 1</code> frames ahead of the GPU (because the command buffer submitted in frame no. <code>current</code> - <code>FramesInFlight</code> has not yet completed).</p>
 <p>Resources that tend to change between frames (such as, the native buffer object backing a <a href="qrhibuffer.html">QRhiBuffer</a> with type <a href="qrhibuffer.html#Type-enum">QRhiBuffer::Dynamic</a>) exist in multiple versions, so that each frame, that can be submitted while a previous one is still being processed, works with its own copy, thus avoiding the need to stall the pipeline when preparing the frame. (The contents of a resource that may still be in use in the GPU should not be touched, but simply always waiting for the previous frame to finish would reduce GPU utilization and ultimately, performance and efficiency.)</p>
 <p>Conceptually this is somewhat similar to copy-on-write schemes used by some C++ containers and other types. It may also be similar to what an OpenGL or Direct 3D 11 implementation performs internally for certain type of objects.</p>
 <p>In practice, such double (or tripple) buffering resources is realized in the Vulkan, Metal, and similar <a href="qrhi.html">QRhi</a> backends by having a fixed number of native resource (such as, VkBuffer) <code>slots</code> behind a <a href="qrhiresource.html">QRhiResource</a>. That can then be indexed by a frame slot index running 0, 1, .., <a href="qrhi.html#ResourceLimit-enum">FramesInFlight</a>-1, and then wrapping around.</p>
@@ -452,8 +457,13 @@
 <!-- $$$newBuffer[overload1]$$$newBufferQRhiBuffer::TypeQRhiBuffer::UsageFlagsint -->
 <h3 class="fn" id="newBuffer"><a name="newBuffer"></a><span class="type"><a href="qrhibuffer.html">QRhiBuffer</a></span> *QRhi::<span class="name">newBuffer</span>(<span class="type"><a href="qrhibuffer.html#Type-enum">QRhiBuffer::Type</a></span> <i>type</i>, <span class="type"><a href="qrhibuffer.html#UsageFlag-enum">QRhiBuffer::UsageFlags</a></span> <i>usage</i>, <span class="type">int</span> <i>size</i>)</h3>
 <p>Returns a new buffer with the specified <i>type</i>, <i>usage</i>, and <i>size</i>.</p>
-<p><b>Note: </b>Some <i>usage</i> and <i>type</i> combinations may not be supported by all backends. See <a href="qrhi.html#Feature-enum">the feature flags</a>.</p><p><b>See also </b><a href="qrhiresource.html#release">QRhiResource::release</a>().</p>
+<p><b>Note: </b>Some <i>usage</i> and <i>type</i> combinations may not be supported by all backends. See <a href="qrhibuffer.html#UsageFlag-enum">UsageFlags</a> and <a href="qrhi.html#Feature-enum">the feature flags</a>.</p><p><b>See also </b><a href="qrhiresource.html#release">QRhiResource::release</a>().</p>
 <!-- @@@newBuffer -->
+<!-- $$$newComputePipeline[overload1]$$$newComputePipeline -->
+<h3 class="fn" id="newComputePipeline"><a name="newComputePipeline"></a><span class="type">QRhiComputePipeline</span> *QRhi::<span class="name">newComputePipeline</span>()</h3>
+<p>Returns a new compute pipeline resource.</p>
+<p><b>Note: </b>Compute is only available when the <a href="qrhi.html#Feature-enum">Compute</a> feature is reported as supported.</p><p><b>See also </b><a href="qrhiresource.html#release">QRhiResource::release</a>().</p>
+<!-- @@@newComputePipeline -->
 <!-- $$$newGraphicsPipeline[overload1]$$$newGraphicsPipeline -->
 <h3 class="fn" id="newGraphicsPipeline"><a name="newGraphicsPipeline"></a><span class="type"><a href="qrhigraphicspipeline.html">QRhiGraphicsPipeline</a></span> *QRhi::<span class="name">newGraphicsPipeline</span>()</h3>
 <p>Returns a new graphics pipeline resource.</p>
@@ -533,6 +543,15 @@
 <p><b>See also </b><a href="qrhi.html#ubufAligned">ubufAligned</a>().</p>
 <!-- @@@ubufAlignment -->
 </div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+</div>
         </div>
        </div>
    </div>
@@ -540,7 +559,7 @@
 </div>
 <div class="footer">
    <p>
-   <acronym title="Copyright">&copy;</acronym> 2019 The Qt Company Ltd.
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
    Documentation contributions included herein are the copyrights of
    their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
    of their respective owners. </p>

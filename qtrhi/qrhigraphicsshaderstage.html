@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- qrhi.cpp -->
-  <title>QRhiGraphicsShaderStage Class | RHI 5.12.0</title>
+  <title>QRhiGraphicsShaderStage Class | RHI 5.12</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -27,7 +27,7 @@
       <div class="navigationbar">
         <table><tr>
 <td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiGraphicsShaderStage</td></tr></table><table class="buildversion"><tr>
-<td id="buildversion" width="100%" align="right"><a href="qtrhi-index.html">Qt 5.12.0 Reference Documentation</a></td>
+<td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
         </tr></table>
       </div>
     </div>
@@ -57,18 +57,18 @@
 <a name="public-types"></a>
 <h2 id="public-types">Public Types</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#Type-enum">Type</a></b> { Vertex, Fragment }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#Type-enum">Type</a></b> { Vertex, Fragment, Compute }</td></tr>
 </table></div>
 <a name="public-functions"></a>
 <h2 id="public-functions">Public Functions</h2>
 <div class="table"><table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#QRhiGraphicsShaderStage">QRhiGraphicsShaderStage</a></b>()</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#QRhiGraphicsShaderStage-1">QRhiGraphicsShaderStage</a></b>(QRhiGraphicsShaderStage::Type <i>type</i>, const QRhiShader &amp;<i>shader</i>, QRhiShaderKey::ShaderVariant <i>v</i> = QRhiShaderKey::StandardShader)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#setShader">setShader</a></b>(const QRhiShader &amp;<i>s</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#setShaderVariant">setShaderVariant</a></b>(QRhiShaderKey::ShaderVariant <i>v</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#QRhiGraphicsShaderStage-1">QRhiGraphicsShaderStage</a></b>(QRhiGraphicsShaderStage::Type <i>type</i>, const int &amp;<i>shader</i>, int <i>v</i> = ...)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#setShader">setShader</a></b>(const int &amp;<i>s</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#setShaderVariant">setShaderVariant</a></b>(int <i>v</i>)</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#setType">setType</a></b>(QRhiGraphicsShaderStage::Type <i>t</i>)</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QRhiShader </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#shader">shader</a></b>() const</td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> QRhiShaderKey::ShaderVariant </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#shaderVariant">shaderVariant</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#shader">shader</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#shaderVariant">shaderVariant</a></b>() const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> QRhiGraphicsShaderStage::Type </td><td class="memItemRight bottomAlign"><b><a href="qrhigraphicsshaderstage.html#type">type</a></b>() const</td></tr>
 </table></div>
 <a name="related-non-members"></a>
@@ -87,32 +87,36 @@
 <!-- @@@QRhiGraphicsShaderStage -->
 <div class="types">
 <h2>Member Type Documentation</h2>
-<!-- $$$Type$$$Vertex$$$Fragment -->
+<!-- $$$Type$$$Vertex$$$Fragment$$$Compute -->
 <h3 class="fn" id="Type-enum"><a name="Type-enum"></a>enum QRhiGraphicsShaderStage::<span class="name">Type</span></h3>
 <p>Specifies the type of the shader stage.</p>
 <div class="table"><table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
 <tr><td class="topAlign"><code>QRhiGraphicsShaderStage::Vertex</code></td><td class="topAlign tblval"><code>0</code></td><td class="topAlign">Vertex stage</td></tr>
 <tr><td class="topAlign"><code>QRhiGraphicsShaderStage::Fragment</code></td><td class="topAlign tblval"><code>1</code></td><td class="topAlign">Fragment (pixel) stage</td></tr>
+<tr><td class="topAlign"><code>QRhiGraphicsShaderStage::Compute</code></td><td class="topAlign tblval"><code>2</code></td><td class="topAlign">Compute stage (this may not always be supported at run time)</td></tr>
 </table></div>
 <!-- @@@Type -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
 </div>
 <div class="func">
 <h2>Member Function Documentation</h2>
 <!-- $$$QRhiGraphicsShaderStage[overload1]$$$QRhiGraphicsShaderStage -->
 <h3 class="fn" id="QRhiGraphicsShaderStage"><a name="QRhiGraphicsShaderStage"></a>QRhiGraphicsShaderStage::<span class="name">QRhiGraphicsShaderStage</span>()</h3>
-<p>Constructs an empty shader stage description.</p>
+<p>Constructs a shader stage description for the vertex stage with an empty QShader.</p>
 <!-- @@@QRhiGraphicsShaderStage -->
-<!-- $$$QRhiGraphicsShaderStage$$$QRhiGraphicsShaderStageQRhiGraphicsShaderStage::TypeconstQRhiShader&QRhiShaderKey::ShaderVariant -->
-<h3 class="fn" id="QRhiGraphicsShaderStage-1"><a name="QRhiGraphicsShaderStage-1"></a>QRhiGraphicsShaderStage::<span class="name">QRhiGraphicsShaderStage</span>(<span class="type"><a href="qrhigraphicsshaderstage.html#Type-enum">QRhiGraphicsShaderStage::Type</a></span> <i>type</i>, const <span class="type"><a href="qrhishader.html">QRhiShader</a></span> &amp;<i>shader</i>, <span class="type"><a href="qrhishaderkey.html#ShaderVariant-enum">QRhiShaderKey::ShaderVariant</a></span> <i>v</i> = QRhiShaderKey::StandardShader)</h3>
+<!-- $$$QRhiGraphicsShaderStage$$$QRhiGraphicsShaderStageQRhiGraphicsShaderStage::Typeconstint&int -->
+<h3 class="fn" id="QRhiGraphicsShaderStage-1"><a name="QRhiGraphicsShaderStage-1"></a>QRhiGraphicsShaderStage::<span class="name">QRhiGraphicsShaderStage</span>(<span class="type"><a href="qrhigraphicsshaderstage.html#Type-enum">QRhiGraphicsShaderStage::Type</a></span> <i>type</i>, const <span class="type">int</span> &amp;<i>shader</i>, <span class="type">int</span> <i>v</i> = ...)</h3>
 <p>Constructs a shader stage description with the <i>type</i> of the stage and the <i>shader</i>.</p>
-<p>The shader variant <i>v</i> defaults to <a href="qrhishaderkey.html#ShaderVariant-enum">QRhiShaderKey::StandardShader</a>. A <a href="qrhishader.html">QRhiShader</a> pack contains multiple source and binary versions of a shader. In addition, it can also contain variants of the shader with slightly modified code. <i>v</i> can then be used to select the desired variant.</p>
+<p>The shader variant <i>v</i> defaults to QShader::StandardShader. A QShader contains multiple source and binary versions of a shader. In addition, it can also contain variants of the shader with slightly modified code. <i>v</i> can then be used to select the desired variant.</p>
 <!-- @@@QRhiGraphicsShaderStage -->
-<!-- $$$setShader[overload1]$$$setShaderconstQRhiShader& -->
-<h3 class="fn" id="setShader"><a name="setShader"></a><span class="type">void</span> QRhiGraphicsShaderStage::<span class="name">setShader</span>(const <span class="type"><a href="qrhishader.html">QRhiShader</a></span> &amp;<i>s</i>)</h3>
+<!-- $$$setShader[overload1]$$$setShaderconstint& -->
+<h3 class="fn" id="setShader"><a name="setShader"></a><span class="type">void</span> QRhiGraphicsShaderStage::<span class="name">setShader</span>(const <span class="type">int</span> &amp;<i>s</i>)</h3>
 <p><b>See also </b><a href="qrhigraphicsshaderstage.html#shader">shader</a>().</p>
 <!-- @@@setShader -->
-<!-- $$$setShaderVariant[overload1]$$$setShaderVariantQRhiShaderKey::ShaderVariant -->
-<h3 class="fn" id="setShaderVariant"><a name="setShaderVariant"></a><span class="type">void</span> QRhiGraphicsShaderStage::<span class="name">setShaderVariant</span>(<span class="type"><a href="qrhishaderkey.html#ShaderVariant-enum">QRhiShaderKey::ShaderVariant</a></span> <i>v</i>)</h3>
+<!-- $$$setShaderVariant[overload1]$$$setShaderVariantint -->
+<h3 class="fn" id="setShaderVariant"><a name="setShaderVariant"></a><span class="type">void</span> QRhiGraphicsShaderStage::<span class="name">setShaderVariant</span>(<span class="type">int</span> <i>v</i>)</h3>
 <p><b>See also </b><a href="qrhigraphicsshaderstage.html#shaderVariant">shaderVariant</a>().</p>
 <!-- @@@setShaderVariant -->
 <!-- $$$setType[overload1]$$$setTypeQRhiGraphicsShaderStage::Type -->
@@ -120,17 +124,20 @@
 <p><b>See also </b><a href="qrhigraphicsshaderstage.html#type">type</a>().</p>
 <!-- @@@setType -->
 <!-- $$$shader[overload1]$$$shader -->
-<h3 class="fn" id="shader"><a name="shader"></a><span class="type"><a href="qrhishader.html">QRhiShader</a></span> QRhiGraphicsShaderStage::<span class="name">shader</span>() const</h3>
+<h3 class="fn" id="shader"><a name="shader"></a><span class="type">int</span> QRhiGraphicsShaderStage::<span class="name">shader</span>() const</h3>
 <p><b>See also </b><a href="qrhigraphicsshaderstage.html#setShader">setShader</a>().</p>
 <!-- @@@shader -->
 <!-- $$$shaderVariant[overload1]$$$shaderVariant -->
-<h3 class="fn" id="shaderVariant"><a name="shaderVariant"></a><span class="type"><a href="qrhishaderkey.html#ShaderVariant-enum">QRhiShaderKey::ShaderVariant</a></span> QRhiGraphicsShaderStage::<span class="name">shaderVariant</span>() const</h3>
+<h3 class="fn" id="shaderVariant"><a name="shaderVariant"></a><span class="type">int</span> QRhiGraphicsShaderStage::<span class="name">shaderVariant</span>() const</h3>
 <p><b>See also </b><a href="qrhigraphicsshaderstage.html#setShaderVariant">setShaderVariant</a>().</p>
 <!-- @@@shaderVariant -->
 <!-- $$$type[overload1]$$$type -->
 <h3 class="fn" id="type"><a name="type"></a><span class="type"><a href="qrhigraphicsshaderstage.html#Type-enum">QRhiGraphicsShaderStage::Type</a></span> QRhiGraphicsShaderStage::<span class="name">type</span>() const</h3>
 <p><b>See also </b><a href="qrhigraphicsshaderstage.html#setType">setType</a>().</p>
 <!-- @@@type -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
 </div>
 <div class="relnonmem">
 <h2>Related Non-Members</h2>
@@ -147,6 +154,9 @@
 <p>Returns <code>true</code> if the values in the two <a href="qrhigraphicsshaderstage.html">QRhiGraphicsShaderStage</a> objects <i>a</i> and <i>b</i> are equal.</p>
 <!-- @@@operator== -->
 </div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+</div>
         </div>
        </div>
    </div>
@@ -154,7 +164,7 @@
 </div>
 <div class="footer">
    <p>
-   <acronym title="Copyright">&copy;</acronym> 2019 The Qt Company Ltd.
+   <acronym title="Copyright">&copy;</acronym> 2018 The Qt Company Ltd.
    Documentation contributions included herein are the copyrights of
    their respective owners.<br/>    The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.<br/>    Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
    of their respective owners. </p>

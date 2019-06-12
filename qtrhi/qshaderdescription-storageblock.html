@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- qrhivulkan.cpp -->
-  <title>QRhiVulkanNativeHandles Class | RHI 5.12</title>
+<!-- qshaderdescription.cpp -->
+  <title>StorageBlock Class | RHI 5.12</title>
   <link rel="stylesheet" type="text/css" href="style/offline-simple.css" />
   <script type="text/javascript">
     document.getElementsByTagName("link").item(0).setAttribute("href", "style/offline.css");
@@ -26,7 +26,7 @@
     <div class="main-rounded">
       <div class="navigationbar">
         <table><tr>
-<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >QRhiVulkanNativeHandles</td></tr></table><table class="buildversion"><tr>
+<td >Qt 5.12</td><td ><a href="qtrhi-index.html">RHI</a></td><td ><a href="qtrhi-module.html">C++ Classes</a></td><td >StorageBlock</td></tr></table><table class="buildversion"><tr>
 <td id="buildversion" width="100%" align="right">Qt 5.12.0 Reference Documentation</td>
         </tr></table>
       </div>
@@ -43,32 +43,33 @@
 </ul>
 </div>
 <div class="sidebar-content" id="sidebar-content"></div></div>
-<h1 class="title">QRhiVulkanNativeHandles Class</h1>
-<!-- $$$QRhiVulkanNativeHandles-brief -->
-<p>Collects device, queue, and other Vulkan objects that are used by the <a href="qrhi.html">QRhi</a>. <a href="#details">More...</a></p>
-<!-- @@@QRhiVulkanNativeHandles -->
+<h1 class="title">StorageBlock Class</h1>
+<span class="small-subtitle">(<a href="qshaderdescription-storageblock.html">QShaderDescription::StorageBlock</a>)<br/></span>
+<!-- $$$StorageBlock-brief -->
+<p>Describes a shader storage block. <a href="#details">More...</a></p>
+<!-- @@@StorageBlock -->
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;QRhiVulkanNativeHandles&gt;</span>
-</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <a href="qrhinativehandles.html">QRhiNativeHandles</a></td></tr></table></div><ul>
-<li><a href="qrhivulkannativehandles-members.html">List of all members, including inherited members</a></li>
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign">   <span class="preprocessor">#include &lt;StorageBlock&gt;</span>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> qmake:</td><td class="memItemRight bottomAlign"> QT += rhi</td></tr></table></div><ul>
+<li><a href="qshaderdescription-storageblock-members.html">List of all members, including inherited members</a></li>
 </ul>
 <a name="public-variables"></a>
 <h2 id="public-variables">Public Variables</h2>
 <div class="table"><table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhivulkannativehandles.html#cmdPool-var">cmdPool</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhivulkannativehandles.html#dev-var">dev</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhivulkannativehandles.html#gfxQueue-var">gfxQueue</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhivulkannativehandles.html#gfxQueueFamilyIdx-var">gfxQueueFamilyIdx</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qrhivulkannativehandles.html#physDev-var">physDev</a></b></td></tr>
-<tr><td class="memItemLeft rightAlign topAlign"> void *</td><td class="memItemRight bottomAlign"><b><a href="qrhivulkannativehandles.html#vmemAllocator-var">vmemAllocator</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qshaderdescription-storageblock.html#binding-var">binding</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qshaderdescription-storageblock.html#blockName-var">blockName</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qshaderdescription-storageblock.html#descriptorSet-var">descriptorSet</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qshaderdescription-storageblock.html#instanceName-var">instanceName</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qshaderdescription-storageblock.html#knownSize-var">knownSize</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVector&lt;QShaderDescription::BlockVariable&gt; </td><td class="memItemRight bottomAlign"><b><a href="qshaderdescription-storageblock.html#members-var">members</a></b></td></tr>
 </table></div>
 <a name="details"></a>
-<!-- $$$QRhiVulkanNativeHandles-description -->
+<!-- $$$StorageBlock-description -->
 <div class="descr">
 <h2 id="details">Detailed Description</h2>
-<p>Collects device, queue, and other Vulkan objects that are used by the <a href="qrhi.html">QRhi</a>.</p>
-<p><b>Note: </b>Ownership of the Vulkan objects is never transferred.</p></div>
-<!-- @@@QRhiVulkanNativeHandles -->
+<p>Describes a shader storage block.</p>
+</div>
+<!-- @@@StorageBlock -->
 <div class="types">
 <h2>Member Type Documentation</h2>
 </div>
